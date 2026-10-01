@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+  --ink: #17212b;
+  --muted: #5c6975;
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+  --line: #dfe5e8;
+  --blue: #176b87;
+  --green: #26734d;
+  --amber: #9a5b00;
+  --red: #a33a32;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.7 "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+main { max-width: 980px; margin: 0 auto; padding: 48px 28px 80px; }
+h1 { font-size: 2.35rem; line-height: 1.15; margin: 0 0 12px; }
+h2 { margin-top: 42px; border-top: 1px solid var(--line); padding-top: 24px; }
+h3 { margin-top: 28px; }
+p, li { max-width: 78ch; }
+.lead { color: var(--muted); font-size: 1.1rem; }
+.card, .flow, .note {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 18px 0;
+}
+.flow { font: 15px/1.7 Consolas, monospace; white-space: pre-wrap; color: var(--blue); }
+.note { border-left: 5px solid var(--amber); }
+.danger { border-left-color: var(--red); }
+.good { border-left-color: var(--green); }
+table { width: 100%; border-collapse: collapse; margin: 18px 0 26px; background: var(--panel); }
+th, td { padding: 11px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: #eef5f6; }
+code { background: #edf1f3; padding: 0.12em 0.34em; border-radius: 4px; }
+pre { overflow-x: auto; background: #13212a; color: #eaf2f4; padding: 18px; border-radius: 10px; }
+a { color: var(--blue); }
+.checklist li { margin: 8px 0; }
+@media print {
+  body { background: white; font-size: 11pt; }
+  main { max-width: none; padding: 0; }
+  .card, .flow, .note { break-inside: avoid; }
+}

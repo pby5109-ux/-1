@@ -1,0 +1,122 @@
+[
+  {
+    "source": "E:/嵌入式学习资料（开发板加freertos）/面试八股文/八股文-外部获取/嵌入式软件开发笔试面试指南_全_202106031(1).pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\06-外部增补\\嵌入式软件开发笔试面试指南_全_202106031(1).pdf",
+    "sha256": "B92A37C18B3616FFBABD040F88A7C7537E4F679C40C8604C95487AAAEFE19B29",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-1.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\原始分册\\嵌入式岗位笔试面试真题讲解1-1.pdf",
+    "sha256": "5C081E29D82E38283AB88A42C975E897F72E27378F6EB3D8A7A6E335F1E1A308",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-2.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\原始分册\\嵌入式岗位笔试面试真题讲解1-2.pdf",
+    "sha256": "4A9CAB400C771625635C493722B0C6D39D26C8DF6B04CC4298A09D1BFC6CA220",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-3.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\原始分册\\嵌入式岗位笔试面试真题讲解1-3.pdf",
+    "sha256": "6C0AE1AE17451D8C77A075A7A772D851628572B489FA854879877B918A6FFB54",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-4.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\原始分册\\嵌入式岗位笔试面试真题讲解1-4.pdf",
+    "sha256": "BFCF232378EC96503AD12BAD2671CBF00CBE1D65B3C82227B819451D0BED527C",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\指针经验总结.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\选读补充\\指针经验总结.pdf",
+    "sha256": "594796CC3EADA157947029916E6239C2562DF1592CE7216DF802BB2F4F29D940",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-5.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\02-数据结构\\嵌入式岗位笔试面试真题讲解1-5.pdf",
+    "sha256": "9B3E74DF87363C31E3991C12FCEE1D3941057CA45ECAE5BE27FE72344A116522",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\8-C&C++高频知识点\\C语言高频知识点.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\02-数据结构\\C语言高频知识点.pdf",
+    "sha256": "45A1F0BB7AB9BE0927C8C06DD02337CE5F66888122D1F7FA48F4F31E493566C5",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\Cortex系列.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\03-Cortex-M\\仅作术语对照\\Cortex系列.pdf",
+    "sha256": "8D27460010B75050ADD9DCB9A5A356B03E98F928CF008EC823F601EFC76A3CD9",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解2-3.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\04-STM32外设\\嵌入式岗位笔试面试真题讲解2-3.pdf",
+    "sha256": "8AAF64D7F30010EC88CF31795446678F146E8B36BA0461A82A45DD3C2AEA906D",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\如何看芯片数据手册.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\04-STM32外设\\如何看芯片数据手册.pdf",
+    "sha256": "C77CF6AA92AF72E6FE471DF7A73781910F2784064A3D96837B9CAE341A832997",
+    "match": true
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\FreeRTOS知识整理.pdf",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\05-FreeRTOS\\FreeRTOS知识整理.pdf",
+    "sha256": "A4EC97C95C8AA15FB2DDD7D7B4A240978238581606838EC10B1A00B4C6658B7B",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/00-使用说明与调研依据.md",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\C语言专项训练集\\00-使用说明与调研依据.md",
+    "sha256": "00EF0F0DCC2FD7D9A422565E58F871911C62B09E67ADEAEA1766D56EB76865EF",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/01-题目卷.md",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\C语言专项训练集\\01-题目卷.md",
+    "sha256": "1BBC06151F499DFF02C5755E695366BF9AD07A237EFBA78F8435C52669F5E9E1",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/02-答案与解析.md",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\C语言专项训练集\\02-答案与解析.md",
+    "sha256": "CEA0601BAC525426572250FCD5E8A2EE2E9BE7F57C45C320587935CD4B53BBD4",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/03-手机自测版.html",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\01-C语言\\C语言专项训练集\\03-手机自测版.html",
+    "sha256": "6259CE9FEE092E8E56D19FEF53025CA3D79EDA1238667BDD2CAD9A1411C18469",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/tmp/mcu-rtos-material-review/pack/00-先看学习顺序.md",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\00-先看学习顺序.md",
+    "sha256": "08F3E810838F13E813F2632FCA7EC899BBAA227416D7825B75B7313B30C00790",
+    "match": true
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/tmp/mcu-rtos-material-review/pack/00-内核手册入口.md",
+    "target": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\03-Cortex-M\\00-内核手册入口.md",
+    "sha256": "C12E197EBB2CC1FD689686E38D3A71001F3C70ACAB641B3C3DBF52765807D510",
+    "match": true
+  }
+]
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "9209FF1F4C957420B0AEE7F170458CAFD9F8D8F78FC70214AE5E749B20BD8D72",
+    "Path": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\STM32中文参考手册.pdf"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A597949EFBB50B73CBB4ED690FA9557D904AEF1B12BE153658848FE1EEA01F59",
+    "Path": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\复习总文件夹\\FreeRTOS实时内核使用指南-中文.pdf"
+  }
+]

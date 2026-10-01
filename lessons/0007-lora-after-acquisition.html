@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>采集之后：LoRa上报与PC网关</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>采集之后，数据去了哪里？</h1>
+  <p class="lead">低功耗传感节点的LoRa上报短课。先看一条链，再理解协议、模块配置和网关处理。</p>
+  <div class="flow">采集结果与有效位 → 编成18字节上行帧 → 节点LoRa模块
+→ 空中传输 → 网关LoRa模块 → PC串口程序
+→ 校验、解析、回11字节ACK → 显示；传感故障另存CSV
+→ 节点让模块休眠，STM32进入Stop</div>
+  <p>模块负责无线收发；报文格式和ACK由节点与PC程序共同约定。这是自定义点对点协议，不是LoRaWAN。</p>
+  <nav aria-label="本页目录"><a href="#when">上报时机</a> · <a href="#structure">代码结构</a> · <a href="#frame">协议</a> · <a href="#config">模块配置</a> · <a href="#send">确认与重试</a> · <a href="#gateway">网关</a></nav>
+
+  <h2 id="when">1. 哪次采集会发出去？</h2>
+  <p>上电首次采集后，RTC按固定15分钟节拍触发周期采集和上报。按键额外采集只用于亮屏查看，不额外无线发送，也不推迟下个周期；两种事件同时到期只采一次。</p>
+  <p>采集后汇总数值、传感器是否有效和是否越阈值。传感器失败也会置报警位，但有效位让接收端分清“本轮没测到”和“测到了异常环境”。</p>
+
+  <h2 id="structure">2. 上报代码分成哪几部分？</h2>
+  <table>
+    <thead><tr><th>文件</th><th>只记职责</th></tr></thead>
+    <tbody>
+      <tr><td><code>main.c</code></td><td>决定是否上报，汇总数值、有效位和报警位。</td></tr>
+      <tr><td><code>lora_protocol.c</code></td><td>按固定格式编码数据、算CRC、检查ACK。</td></tr>
+      <tr><td><code>lora_node.c</code></td><td>切换模块工作/休眠，发送、等待ACK、有限重试。</td></tr>
+      <tr><td><code>lora_gateway.py</code></td><td>PC端收帧、解析、回ACK、显示和记录传感故障。</td></tr>
+    </tbody>
+  </table>
+  <p class="note">当前工程的<strong>LoRaDebug</strong>构建启用这条LoRa链；默认构建仍走串口文字上报。讲当前代码时，应说明使用哪个构建。</p>
+
+  <h2 id="frame">3. 18字节协议怎样理解？</h2>
+  <table>
+    <thead><tr><th>字段</th><th>为什么需要</th></tr></thead>
+    <tbody>
+      <tr><td>帧头A5 5A、版本、类型</td><td>在连续字节流中找到帧，确认它是上行遥测。</td></tr>
+      <tr><td>Node ID、Sequence</td><td>识别节点和本次上报，供ACK匹配、重试标记。</td></tr>
+      <tr><td>Flags</td><td>bit0/1/2为温湿度、光照、雨滴有效；bit7为报警。</td></tr>
+      <tr><td>温湿度、光照、雨滴</td><td>温湿度乘10存整数；光照为lux，雨滴为相对百分比。</td></tr>
+      <tr><td>CRC16</td><td>检查前16字节是否传错。</td></tr>
+    </tbody>
+  </table>
+  <p>字段位置与大端字节序固定，双方不直接发送C结构体。失败时会发送占位值，但网关先看有效位：真实的−1℃仍可能是有效温度。CRC能检错，不能证明传感器数值真实，也不能认证发送者。</p>
+  <p>网关回复的11字节ACK包含帧头、版本、ACK类型、Node ID、Sequence、状态和CRC；节点只接受校验正确且身份、序号匹配、状态为0的ACK。</p>
+
+  <h2 id="config">4. 两块LoRa模块先配置什么？</h2>
+  <p>首次联调用USB转串口分别配置两块模块：串口9600、8N1；透明传输、相同的速率等级和信道。厂商示例是<code>AT+MODE0</code>、<code>AT+LEVEL2</code>、<code>AT+CHANNEL01</code>。接收RSSI尾字节保持关闭，否则当前固定18字节解析要相应调整。密钥开关和密钥若启用，两端也要一致。</p>
+  <p>节点还需预先设置<code>AT+SWITCH1</code>并重启，让M0/M1硬件模式切换生效：都低为工作，都高为休眠；AUX<strong>高为忙、低为完成</strong>。网关侧模块保持可接收。串口9600是MCU与模块间速率，空中速率由模块参数决定。</p>
+  <p class="note">当前固件不会在上电时自动下发这些AT命令；模块实物参数仍需逐项读回核对。具体模式组合与AUX极性只对应本型号及配置。</p>
+
+  <h2 id="send">5. “发送完成”到底是什么意思？</h2>
+  <div class="flow">打包 → 唤醒模块并等AUX空闲 → 发送18字节
+→ 等本地串口完成 → 收11字节ACK
+→ 验证CRC、Node ID、Sequence、状态
+→ 没有合法ACK则用同一Sequence最多再发一次
+→ 序号加1，模块休眠</div>
+  <p><strong>串口完成</strong>只说明MCU到本地模块的发送流程结束；<strong>AUX空闲</strong>说明本地模块不再忙；<strong>匹配ACK</strong>才说明网关应用收到了对应帧。当前ACK先于写故障文件，因此ACK不能解释成“已永久保存”。</p>
+  <p>当前ACK等待窗口为300ms、整帧最多发两次。300ms是否够实际无线往返，仍需两块模块测试。尝试结束后序号都会加1，工程也没有失败帧离线积压队列。</p>
+
+  <h2 id="gateway">6. PC网关收到后做什么？</h2>
+  <p>网关LoRa模块经USB转串口连接电脑。PC程序会缓存任意长度的串口数据，搜索<code>A5 5A</code>，凑齐18字节候选帧，再校验版本、类型和CRC。坏帧向后滑动重新找帧头，所以7字节和11字节分两次到来也能拼成一帧。</p>
+  <p>合法帧按(Node ID, Sequence)判断是否重传。重复帧仍回复ACK，避免上一次ACK丢失导致节点继续重发；终端输出会标<code>duplicate</code>。当前顺序是<strong>先回ACK，再打印带本地时间的JSON</strong>。只有传感器有效位无效时，才在<code>tools/异常记录/faults-日期.csv</code>追加一条故障；仅环境越阈值不会进入这份传感故障文件。</p>
+  <p>正常数据目前只在终端显示，没有数据库和常规历史CSV。写故障文件失败会报错，但ACK不撤回。上报流程结束后，节点将模块休眠，并让STM32进入Stop，等RTC或按键唤醒。</p>
+
+  <h2>7. 自测：先答，再点开</h2>
+  <details><summary>为什么−1℃不一定是传感器故障？</summary><p>−1℃可能是真实温度；要看AHT有效位。无效才按采集故障处理。</p></details>
+  <details><summary>为什么串口完成后还要等ACK？</summary><p>串口完成只覆盖本地发送；匹配ACK说明网关应用收到了对应帧。</p></details>
+  <details><summary>网关先收7字节、再收11字节怎么办？</summary><p>缓存前7字节，凑齐18字节后再校验、解析并回复ACK。</p></details>
+  <p><strong>30秒口述：</strong>“节点周期采集后，连同有效位和序号编码为18字节帧，经串口LoRa模块上报。网关处理半包和粘包，校验CRC，以节点号和序号识别重传，返回11字节ACK。正常值在终端显示，传感故障带时间写入CSV。节点收到匹配ACK后结束本轮并进入休眠。”</p>
+  <p>不清楚的地方可以继续问我。想看函数细节，读<a href="0004-lora-from-zero-implementation.html">LoRa实现结构课</a>；想复习整机，读<a href="0006-low-power-lora-sensor-node-interview-masterclass.html">节点完整总课</a>。</p>
+  <p class="note">依据：当前唯一源码的<code>Core/Src/main.c</code>、<code>BSP/Src/lora_protocol.c</code>、<code>BSP/Src/lora_node.c</code>和<code>tools/lora_gateway.py</code>；模块参数依据<a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf#page=8">DX-LR22串口应用指导</a>。软件已有主机测试与构建记录；真实双模块通信、300ms窗口和射频性能尚需实测。</p>
+</main>
+</body>
+</html>

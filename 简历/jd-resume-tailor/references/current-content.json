@@ -1,0 +1,291 @@
+{
+  "schema_version": 2,
+  "approved": true,
+  "content_revision": "20260928-from-10-pdf-v2",
+  "approval_record": {
+    "approved_by": "user",
+    "approved_on": "2026-09-28",
+    "approval_note": "v1按用户09-27的-01.pdf同步；v2按用户09-28 08:40自导出的-10.pdf增量同步：瞄准简介删\"并开启激光\"。注意：瞄准第二条\"融合定位\"按用户PDF口径收录（用户2026-09-28确认该条为其有意修改、非误粘贴，以PDF为准）；磁盘-10.docx尚未由用户存回，其LoRa槽位简介/职责仍为瞄准文案，LoRa文本以本库为准。",
+    "preview_id": "from-01-20260928-v1"
+  },
+  "sources": {
+    "baseline-20260917": {
+      "path": "D:\\APP\\project_practice\\codex-project\\简历\\定制投递\\通用嵌入式-20260917\\彭博裕-嵌入式软件工程师-简历-20260917.docx",
+      "sha256": "e2160a961da34277ba97fa7511ce3621e81519716e475f9f78e609e9f741a23e",
+      "status": "user_selected_existing_content"
+    },
+    "internship-user": {
+      "status": "user_provided",
+      "reference": "简历内容讨论与定稿记录.md / 2026-09-17实习暂定稿"
+    },
+    "campus-user": {
+      "status": "user_confirmed_facts_condensed",
+      "reference": "科创部部长、人员协调、校级活动及真实设备故障应对"
+    },
+    "content_source": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-01.pdf",
+    "content_source_sha256": "见模板目录当前文件（09-27 20:29 导出）"
+  },
+  "header": {
+    "name": "彭博裕",
+    "target": "嵌入式软件工程师",
+    "contact": "电话：17668025109   邮箱：pbyuqianrushi@163.com   2027届"
+  },
+  "education": [
+    "2023.09—2027.06",
+    "山东建筑大学",
+    "物联网工程｜本科",
+    "专业综合测评排名前10%"
+  ],
+  "honors": [
+    {
+      "label": "比赛获奖",
+      "text": "全国大学生电子设计竞赛省级二等奖；蓝桥杯省级三等奖。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "证书荣誉",
+      "text": "英语四级（CET-4）；三好学生、优秀学生、优秀共青团员；优秀实验项目。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "instrument",
+      "name": "基于STM32与freertos的综合测量平台",
+      "keywords": "FreeRTOS · 实时采集 · 事件驱动",
+      "intro": {
+        "label": "项目简介",
+        "text": "集成示波器、数字万用表、可调直流电源和信号发生器，支持波形实时显示及频率、幅度测量，频率测量误差极小，电压与电阻测量误差1%；支持使用DC-DC升压电路实现直流电压稳定输出；信号发生器输出正弦、方波等，频率档位覆盖50 Hz～80 kHz。",
+        "source_refs": [
+          "instrument.scope",
+          "instrument.freq_range_80k"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "硬件电路设计、软件架构设计与系统开发调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "架构交互",
+          "text": "独立完成FreeRTOS移植与软件分层设计，结合邮箱、事件组及信号量，实现最新测量值传递、lcd屏幕按需局部刷新与DMAC传输同步，保障了多并发任务发生时各部分数据实时性。",
+          "source_refs": [
+            "instrument.architecture"
+          ]
+        },
+        {
+          "label": "并发优化",
+          "text": "针对采集与显示共享缓冲区的读写冲突，设计双缓冲与状态机协同机制，管理波形数据的读写权限和切换时机，保证单帧绘制期间数据一致，避免新旧帧混用，并允许新帧准备与当前帧绘制并行。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "测量与调试",
+          "text": "基于内部参考电压估算VDDA，结合GPIO档位识别、分压与偏置补偿完成多量程换算，提升测量准确性；优化采样率与波表长度配置、定时参数计算及更新时序，修正低频输出偏差，实现频率切换及时生效。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car_contest",
+      "name": "基于MSPM0与K230的移动目标瞄准系统",
+      "keywords": "边缘AI · Python · 机器视觉",
+      "intro": {
+        "label": "项目简介",
+        "text": "面向循迹小车行驶中的激光自动瞄准，结合K230 KPU高速推理单元，实现AI目标检测与几何视觉，完成矩形靶标识别、靶心定位及瞄准偏差反馈。不同环境下目标识别率达98%；整机实测启动后2秒内完成瞄准，打靶误差＜1.5cm，小车稳定行驶时误差＜2cm。",
+        "source_refs": [
+          "car_contest.ai_recognition_eval",
+          "car_contest.kpu_onchip"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "负责AI训练部署、视觉算法、灰度逻辑与人机交互。",
+        "source_refs": [
+          "car_contest.contribution"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "目标筛选",
+          "text": "在矩形检测基础上，融合面积、对边长度差及平行垂直约束校验候选靶框，并按面积优先逐一筛选，避免单一最大框选择造成目标遗漏，最终实现目标精准判定与定位。",
+          "source_refs": [
+            "car_contest.mapping"
+          ]
+        },
+        {
+          "label": "模型训练",
+          "text": "为解决各种环境对识别精度影响，自采多环境靶标图像，通过Make Sense标注并借助AI校验标注质量；在AI Cube完成目标检测模型训练与板端部署，实现不同环境下的矩形靶标的准确识别。",
+          "source_refs": [
+            "car_contest.make_sense_labeling",
+            "car_contest.ai_cube_training"
+          ]
+        },
+        {
+          "label": "融合定位",
+          "text": "将AI检测框与几何四角统一到同帧原图坐标并匹配，优先通过四角对角线交点求心；几何失效但AI有效时通过用户自动切换策略，实现AI视觉和几何识别灵活切换，大幅提高运动过程中的识别精度和抗风险能力。",
+          "source_refs": [
+            "car_contest.make_sense_labeling",
+            "car_contest.ai_cube_training"
+          ]
+        },
+        {
+          "label": "稳健反馈",
+          "text": "结合Otsu阈值重估与面积、对边及角度约束过滤干扰，校验靶心有效性后经串口输出双轴偏差；双路均失效时发送无效状态，避免错误坐标参与团队云台瞄准。",
+          "source_refs": [
+            "car_contest.contribution"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lora_node",
+      "name": "低功耗LoRa环境监测节点",
+      "keywords": "低功耗管理 · 无线通信 · 网关开发",
+      "intro": {
+        "label": "项目简介",
+        "text": "基于STM32F103C8T6，完成集环境数据采集、周期无线上报与网关异常记录于一体的低功耗监测节点，实现整机休眠电流实测约54µA；按1100mAh电池容量及既定上报工况，预留裕量后估算续航约8个月。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "负责方案选型、软件开发与整板调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "系统开发",
+          "text": "分层封装传感器驱动与采集逻辑，设计RTC周期采集与按键唤醒双事件机制，分别维护采样与显示期限，避免临时查看打乱上报节拍；支持无网关条件下现场查看数据，并通过有效性检查标识采集异常，保障不同情况下数据的有效观测。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "功耗优化",
+          "text": "结合Stop模式、代码系统优化、外设供电门控与休眠控制，抑制GPIO漏电并隔离断电外设信号，将整板待机电流控制在µA级。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "协议开发",
+          "text": "设计CRC校验、序号匹配及ACK超时有限重试机制，实现上报确认与传输异常处理；开发PC网关处理半包、粘包及坏帧，按节点与序号去重且对重传仍回ACK，完成数据解析及带时间的故障日志记录，支持采集异常追溯。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    }
+  ],
+  "enterprise": {
+    "name": "烟台东方威思顿电气有限公司",
+    "role": "智能电表测试实习生",
+    "period": "2025.10—2025.11",
+    "bullets": [
+      {
+        "label": "产品认知",
+        "text": "结合智能电表及采集终端PCBA，梳理电源、采样、计量、通信与防护模块，理解三相四线计量及主要器件连接关系。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "开发板实践",
+        "text": "参与电能表开发板操作及测试，结合培训梳理工况事件、远程费控、主动上报的输入条件、软件处理与设备响应。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "通信与排查",
+        "text": "学习RS485、电力线载波及耦合原理，整理“供电接线—信号输入—通信参数—软件状态”分层排查思路，辅助问题定位。",
+        "source_refs": [
+          "internship-user"
+        ]
+      }
+    ]
+  },
+  "campus": {
+    "mode": "long",
+    "name": "山东建筑大学校学生会科创部",
+    "role": "部长",
+    "period": "2023.09—2025.06",
+    "bullets": [
+      {
+        "label": "科创组织",
+        "text": "统筹约50名成员，参与组织电赛、西门子杯、蓝桥杯及国产MCU产品等校级宣讲，负责人员分工、跨部门协调、宣传物料、会场布置与流程安排，保障活动按计划落地。",
+        "source_refs": [
+          "campus.organization"
+        ]
+      },
+      {
+        "label": "现场保障",
+        "text": "参与组织文艺晚会、校园歌手大赛等200余人活动，设置双麦克风及主备音响保障方案；音频设备突发故障后按预案切换备用设备，恢复现场声音并保障活动继续进行。",
+        "source_refs": [
+          "campus.event_recovery"
+        ]
+      }
+    ],
+    "short_text": "担任校学生会科创部部长，统筹成员分工与跨部门协作，组织校级宣讲及校园活动，具备组织协调、现场执行与突发问题处理能力。",
+    "source_refs": [
+      "campus.organization",
+      "campus.event_recovery"
+    ]
+  },
+  "skills": [
+    {
+      "label": "编程基础",
+      "text": "熟悉C语言与Python，掌握常用数据结构，能完成嵌入式模块的代码阅读、改写与调试。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "内核与实时系统",
+      "text": "熟悉ARM Cortex-M3/M4内核与FreeRTOS实时操作系统，完成过FreeRTOS移植与项目配置；具有任务调度、内存管理及多任务并发的实践经验，能够处理中断服务与任务间的数据传递和同步。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "通信与协议",
+      "text": "熟悉UART、I²C、SPI等常用通信协议，具备自定义帧协议设计经验，使用过通信、采集与定时控制类外设。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "开发与调试",
+      "text": "熟练使用Keil、STM32CubeMX、VS Code等开发工具，能使用CMake/GCC、Git完成工程构建与版本管理；结合原理图、数据手册及示波器、万用表等仪器定位软硬件问题。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "AI工具",
+      "text": "熟练使用Codex、Claude Code、DeepSeek Harness、ZCode搭建工作流并实现快速产品设计与开发。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "layout": {
+    "heading_before_twips": 60,
+    "line_twips": 230
+  },
+  "review_notes": "本轮按用户 09-27 版同步：项目顺序 仪器→瞄准→LoRa；瞄准项目关键词改“边缘AI · Python · 机器视觉”，简介与三条为用户 AI 重写版（KPU推理、98%识别率、Make Sense标注、AI Cube训练、模型训练/融合定位/稳健反馈）。证据已登记：car_contest.ai_recognition_eval（200张评测3误）、make_sense_labeling、ai_cube_training、kpu_onchip（verified，芯片自带）。荣誉行并入“优秀实验项目”，项目实践行按用户版移除。80kHz 按用户规则保留（源码九档末档50 kHz 的差异已记录）。瞄准项目“目标识别率达98%”口径：200张照片评测、3张有误（197/200），成功按整机打中判定（用户 09-28 确认）。09-28晚（大华J24089定制，见定制投递/大华股份-嵌入式软件工程师-20260928/）：简介删“并开启激光”入库存档；技能区新增 IAR 与 TCP/UDP、HTTP 仅入大华版（用户确认证据见candidate-profile.json），母版技能行未动；功耗优化行在定制版缩为“代码优化、供电门控”以修“级。”孤行，母版待用户定夺。用户09-28晚确认：08:40 PDF即权威口径，融合定位条为有意修改（同模型训练文案，多一\"的\"字），非误粘贴；本库已按PDF更新该条。09-29按用户08:40的-01.pdf同步瞄准两条：模型训练尾部补\"的\"字；融合定位为用户-01改写版（几何失效但AI有效时通过用户自动切换策略，实现AI视觉和几何识别灵活切换、提高抗风险能力）——注意-10系（大华版）融合定位仍是用户确认的重复文案，两系并存以各自PDF为准。"
+}

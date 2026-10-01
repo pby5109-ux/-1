@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>整机低功耗：从STM32 Stop到DX-BT24</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>整机低功耗：从STM32 Stop到DX-BT24</h1>
+  <p class="lead">目标：不把低功耗理解成“调一个Stop函数”，而是能设计、使用并讲清MCU、传感器、屏幕和蓝牙的整机状态机。</p>
+
+  <section class="card">
+    <strong>一句话方案</strong>
+    <p>正常环境下每30秒由RTC唤醒采样，报警时改为10秒；STM32进入Stop，AHT20使用自身休眠，BH1750使用单次测量后Power Down，CH1116熄屏，DX-BT24使用低功耗广播但仍可被手机连接。</p>
+  </section>
+
+  <h2>1. 先分清四个层次</h2>
+  <table>
+    <thead><tr><th>层次</th><th>节省什么</th><th>本项目手段</th><th>不能忽略的代价</th></tr></thead>
+    <tbody>
+      <tr><td>CPU/时钟域</td><td>MCU核心和高速时钟</td><td>RTC Alarm + Stop + WFI</td><td>醒后要恢复PLL和72MHz时钟树</td></tr>
+      <tr><td>外设状态</td><td>OLED泵、光强连续转换、LED</td><td>Display OFF、BH1750单次模式、熄灯</td><td>唤醒顺序和转换等待不能省</td></tr>
+      <tr><td>无线模块</td><td>广播、接口和发射功耗</td><td>DX-BT24 PWRM0 + 3s广播</td><td>广播越慢，发现/连接延迟越大</td></tr>
+      <tr><td>供电域</td><td>模块静态电流和板上LED/比较器</td><td>可选负载开关/P-MOS</td><td>需防止IO反向灌电，上电后需重新初始化</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 一轮状态机</h2>
+  <div class="flow">SLEEP
+  RTC Alarm匹配
+→ RESUME_CLOCK：恢复HSE/PLL 72MHz、SysTick
+→ WAKE_PERIPHERALS：OLED开显示，BH1750开始单次测量
+→ ACQUIRE：AHT20、BH1750、雨滴ADC
+→ DECIDE：有效性检查+阈值判断
+→ REPORT：更新OLED，蓝牙已连接时UART DMA上报
+→ SELECT_PERIOD：正常30s，异常10s
+→ PREPARE_SLEEP：等DMA完成，OLED OFF，LED OFF，清唤醒标志
+→ ENTER_STOP：设RTC Alarm，暂停SysTick，WFI
+→ SLEEP</div>
+
+  <div class="note good"><strong>设计重点：</strong>主循环决定“下一次什么时候采样”，低功耗模块负责“怎么安全地睡和醒”。</div>
+
+  <h2>3. AHT20：不要为了断电而断电</h2>
+  <p>AHT20手册给出典型测量电流23µA、休眠电流0.25µA。触发测量后等待至少75ms，Busy位变0后读数，测量结束后器件已回到休眠状态。</p>
+  <p>如果每30秒切断AHT20供电，每次还要等待上电40ms、检查校准位并可能重新初始化。这个复杂度换来的只是不到1µA的节省，不是第一优先级。</p>
+
+  <h2>4. BH1750：从连续转换改为单次转换</h2>
+  <p>当前工程上电时发送<code>0x10</code>，让BH1750一直工作在连续高分辨率模式。对于30秒才读一次的节点，中间持续更新数据没有价值。</p>
+  <div class="flow">RTC唤醒
+→ 发0x01 Power On
+→ 发0x20 One-Time H-Resolution
+→ 等待转换（最长留180ms余量）
+→ 读2字节
+→ lux = raw / 1.2
+→ BH1750自动进入Power Down</div>
+  <p>这一改动同时降低休眠期功耗和状态不确定性：每轮明确发起一次新测量，不再依赖“连续模式里最近一帧”。</p>
+
+  <h2>5. CH1116 OLED：Display OFF不等于丢失显存</h2>
+  <p>CH1116的<code>0xAE</code> Display OFF会进入Power Saver：停振荡器、DC-DC和OLED驱动，同时保留显示RAM和操作状态。醒后发<code>0xAF</code>即可恢复，不必每次重建全部显存。</p>
+  <div class="note danger"><strong>当前代码风险：</strong><code>OLED_Init()</code>使用CH1116的<code>0xAD/0x8B</code>，但现有<code>OLED_DisPlay_On/Off()</code>混用<code>0x8D/0x14/0x10</code>，与CH1116手册不匹配。上板前应先纠正命令，不能直接调用旧函数就宣称低功耗成功。</div>
+
+  <h2>6. DX-BT24：低功耗与可连接性的取舍</h2>
+  <table>
+    <thead><tr><th>模式</th><th>手册行为</th><th>约540ms广播间隔的从机电流</th><th>是否适合本项目</th></tr></thead>
+    <tbody>
+      <tr><td>Normal / PWRM1</td><td>未连接时所有接口正常</td><td>约299µA</td><td>功能简单，但空闲功耗不理想</td></tr>
+      <tr><td>Low Power / PWRM0</td><td>未连接只广播，连接后全功能</td><td>约19µA</td><td><strong>推荐</strong>：仍可发现和连接</td></tr>
+      <tr><td>Hibernate / PWRM2</td><td>关广播和所有接口，RST唤醒</td><td>约2µA</td><td>最低，但破坏随时可连接性</td></tr>
+    </tbody>
+  </table>
+
+  <p>推荐配置顺序：</p>
+  <pre>AT
+AT+ADVI
+AT+ADVIB       // 3000ms广播间隔
+AT+POWE
+AT+POWE9       // 先0dBm，后续按距离验证下调
+AT+PWRM0       // 最后执行</pre>
+
+  <p>必须理解一个看似矛盾的现象：蓝牙未连接时，PWRM0把UART关闭，所以MCU不应继续发送透传文本；手机一旦连接，模块自动回到全功能状态，下一采样周期就能收到状态。接入<code>LINK-STATUS</code>后，MCU可以在高电平时才发送，节省串口活动时间。</p>
+
+  <h2>7. 为什么选30秒/异常10秒</h2>
+  <p>节能不是免费的，采样间隔就是最坏响应延迟的主要上限。环境温湿度、光照和雨滴通常比电机控制慢，所以30秒是一个可辩护的节能起点；进入异常后改为10秒，可更快发现恢复。</p>
+  <div class="note"><strong>口试要点：</strong>不要说“30秒最省电”，而要说“30秒是根据被测对象变化速度和可接受报警延迟做的第一版工程取舍”。</div>
+
+  <h2>8. 平均电流模型</h2>
+  <pre>Iavg = (Iactive × tactive + Isleep × tsleep) / (tactive + tsleep)</pre>
+  <p>两条路径同时做才叫整机低功耗：降低<code>Isleep</code>（外设一起睡），以及提高<code>tsleep / T</code>（采样周期不要过密，活动流程不要拖长）。</p>
+  <p>没有功耗仪时，可以验证功能、状态转移和唤醒稳定性，但不能把手册电流当成整板实测电流。</p>
+
+  <h2>9. 真断电时的反向灌电</h2>
+  <p>外设VCC被切断后，如果MCU的TX、SCL或SDA仍然输出高电平，电流可能经外设的IO保护结构反向进入电源域，导致“看似断电，实际半上电”。DX-BT24手册明确要求断VBAT后所有MCU连接IO下拉。</p>
+  <p>因此正确顺序是：先停通信→把相关GPIO改成手册要求的安全状态→关负载开关→Stop。唤醒时则先上电→等稳定→恢复GPIO复用→重新初始化→通信。</p>
+
+  <h2>10. 实施节奏</h2>
+  <ol class="checklist">
+    <li>软件第一版：30s/10s自适应周期、BH1750单次模式、正确CH1116熄屏，不改硬件。</li>
+    <li>蓝牙配置：USB-TTL设置ADVI、POWE和PWRM0，验证未连接可发现、连接后能收数据。</li>
+    <li>硬件第二版：若可飞线，接入LINK-STATUS，未连接时跳过UART DMA。</li>
+    <li>进阶供电域：只在确认电源、空闲GPIO、负载开关和防灌电后，切断雨滴模块等板级负载。</li>
+    <li>验证功能：至少20次连续唤醒，记录采样、OLED、蓝牙和报警模式切换。</li>
+    <li>验证功耗：将来有仪器时再补活动/休眠/平均电流，当前不编造数字。</li>
+  </ol>
+
+  <h2>11. 一分钟面试表达</h2>
+  <p>“我在传感器节点中做的不只是STM32 Stop，而是整机功耗管理。正常时RTC每30秒唤醒一次，报警时改为10秒，以平衡续航和恢复响应。AHT20测量后使用自身休眠，BH1750从连续模式改为单次测量后自动Power Down，CH1116在Stop前Display OFF，蓝牙设置为PWRM0低功耗广播，仍可被手机发现，连接后UART恢复。MCU唤醒后先恢复72MHz时钟树，再采集、判断、显示和DMA上报。我使用活动/休眠占空比模型分析平均功耗，并区分功能验证和电流实测；目前没有功耗仪，所以不虚构续航数据。”</p>
+
+  <h2>12. 自测题</h2>
+  <ol>
+    <li>为什么AHT20不是第一个值得增加MOS断电的外设？</li>
+    <li>为什么本项目选PWRM0而不是电流更低的PWRM2？</li>
+    <li>BH1750的<code>0x10</code>和<code>0x20</code>对一个30秒采样节点分别意味着什么？</li>
+    <li>为什么切断模块VCC后还要改MCU GPIO状态？</li>
+    <li>如果用户抱怨蓝牙很久才在手机上出现，你要调哪个参数，代价是什么？</li>
+    <li>无电流仪时你能验证什么，不能宣称什么？</li>
+  </ol>
+
+  <p class="lead">下一步先确认DX-BT24 LINK-STATUS和可控供电的实际接线，再将这份状态机落到源码，不凭空指定GPIO。</p>
+  <section id="oled-on-demand">
+    <h2>13. 新增：把OLED改为按键查看界面</h2>
+    <p>本节补充OLED按需供电设计，不改写前文历史蓝牙方案，不表示源码已经实现。详细选型和边界见<a href="01-低功耗系统设计决策与实施边界.md">决策文档第13节</a>；当前实施状态只看<a href="../记忆与产物/00-项目接续记忆.md">接续记忆</a>。</p>
+    <p>对3.3V插接OLED，可增加小转接板：高边负载开关只控制OLED VCC，MCU和AHT20保持供电；普通按键接MCU，作为现场查看请求。</p>
+    <div class="flow">默认屏幕关闭 → 按键EXTI唤醒 → 恢复时钟并消抖 → 开电源并等稳定
+→ 接通OLED信号支路 → 初始化并重绘 → 显示最近有效值和更新时间
+→ 无操作超时 → Display OFF → 隔离信号 → 断开OLED电源</div>
+    <div class="note danger"><strong>关键限制：</strong>OLED和AHT20共用PB6/PB7。只切VCC，或只把MCU脚设高阻，都不能保证消除外部上拉经OLED信号脚的反向供电。公共I²C仍需工作时，应隔离OLED支路，不能把整条总线拉低。</div>
+    <ul>
+      <li>电源候选：<a href="https://www.ti.com/product/TPS22919">TPS22919</a>带使能与受控上升沿；小封装建议使用无常亮LED的贴装转接板。简易原型可用<a href="https://www.aosmd.com/res/data_sheets/AO3401A.pdf">AO3401A</a>高边P-MOS，但需检查浪涌及默认关闭。</li>
+      <li>信号候选：<a href="https://www.ti.com/lit/ds/symlink/tmux1122.pdf">TMUX1121</a>双通道开关分别串入OLED的SCL/SDA；自身保持3.3V供电、控制高为导通，默认关闭。电源和信号使能分开，便于遵守上下电时序。</li>
+      <li>软关屏也是有效选项：CH1116的0xAE停止振荡器和DC-DC并保留显存；先测残余电流，再判断增加硬件的收益。旧OLED On/Off函数中的0x8D命令不能直接当作已验证CH1116配置。</li>
+      <li>可以建议30秒无操作关屏，但不能忙等30秒。Stop期间用RTC时间维护显示期限与采样期限，不用停止走时的HAL_GetTick；按键查看不应随意重置采样周期或触发无线重发。</li>
+    </ul>
+    <p>防倒灌原理参考<a href="https://www.ti.com/document-viewer/lit/html/SCDA015">TI信号开关与断电保护说明</a>。判断是否成功，需要比较软关屏和硬关断电流，并验证OLED关闭时AHT20仍正常、反复上下电不死机。对电源路径、EN或信号隔离有疑问，可以直接指出本节继续讨论，无须先做新一轮考题。</p>
+  </section>
+  <section id="rain-power-gating">
+    <h2>14. 新增：雨滴模块的采样窗口供电</h2>
+    <p>雨滴板可在VCC前加高边负载开关，AO仍接PB1/ADC1_IN9，GND共地。具体供电电压以雨滴模块本身为准，不能套用OLED的3.3V确认；5V模块的AO必须先满足ADC输入限制。</p>
+    <p>时序为：上电→等待AO稳定→ADC采8次平均→保存有效结果→停ADC→断电。平均不能替代上电等待，稳定时间需按模块电路/实测确定。</p>
+    <p>PB1保持模拟输入且没有外部常电上拉时，不存在OLED那种必须持续工作的共享I²C支路，通常更容易门控；仍须检查AO/DO倒灌。断电后不得把ADC读数当作干湿结果，HAL_OK只说明ADC转换成功。雨滴模块和OLED应独立控制，避免彼此无谓上电。</p>
+    <p>断电期间也不能依靠DO及时唤醒，周期采样存在检测延迟。详细条件及<a href="https://www.ti.com/product/TPS22919">负载开关候选</a>见<a href="01-低功耗系统设计决策与实施边界.md">决策文档第14节</a>。本节只补方案；对稳定时间或AO安全态有疑问可继续提问。</p>
+  </section>
+</main>
+</body>
+</html>

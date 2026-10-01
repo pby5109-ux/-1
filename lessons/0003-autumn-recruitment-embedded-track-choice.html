@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>秋招嵌入式项目深化路线选择</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>秋招嵌入式项目深化路线选择</h1>
+  <p class="lead">结论：低功耗节点做主深化，小车保留为实时控制与团队项目补充；投递、基础题和项目改进必须并行。</p>
+
+  <h2>1. 当前岗位共同底座</h2>
+  <p>2026年当前岗位小样本反复出现C/C++、MCU/SoC、RTOS、GPIO/UART/SPI/I2C/ADC/PWM、软硬件调试、稳定性和功耗优化。IoT方向进一步要求BLE/Wi-Fi及功耗/内存/性能优化；专业运动控制方向则继续要求电机、FOC、实时总线和控制算法。样本用于方向判断，不是完整市场统计。</p>
+
+  <h2>2. 两条路线对照</h2>
+  <table><thead><tr><th>维度</th><th>低功耗节点</th><th>小车控制</th></tr></thead><tbody>
+    <tr><td>本人所有权</td><td>独立完成，追问风险低</td><td>个人负责五路灰度与交互，PID/电机/IMU为团队接口</td></tr>
+    <tr><td>短期可形成证据</td><td>电流、占空比、平均功耗、续航估算和优化前后对比</td><td>若只复习循迹，新增证据有限</td></tr>
+    <tr><td>岗位覆盖</td><td>通用MCU、IoT、智能硬件、传感终端、工业采集</td><td>机器人/运动控制有价值，但专业岗位要求远超数字循迹</td></tr>
+    <tr><td>继续深化成本</td><td>约2～4天可完成一个量化闭环</td><td>需编码器闭环、PID实测、IMU转向，面向专业控制还需FOC/CAN</td></tr>
+    <tr><td>面试叙事</td><td>需求→睡眠时序→测量→发现整板瓶颈→优化→量化收益</td><td>比赛背景→本人模块→1ms链路→团队接口→真实缺陷与改进</td></tr>
+  </tbody></table>
+
+  <h2>3. 低功耗项目的“含金量”验收线</h2>
+  <ol>
+    <li>验证RTC Alarm唤醒、72MHz时钟恢复、SRAM保持和UART发送完成后入睡。</li>
+    <li>测运行电流、Stop电流和一次采集/发送时长，记录仪器、接线和原始数据。</li>
+    <li>按活动时间和睡眠时间计算平均电流与理论续航，说明理论值和实测值为何不同。</li>
+    <li>找出OLED、蓝牙和传感器等板级静态功耗，至少完成一项关断/休眠优化并给前后对比。</li>
+    <li>准备失败路径：传感器失败保留旧值、UART DMA超时、RTC未唤醒、时钟未恢复导致波特率错误。</li>
+  </ol>
+
+  <h2>4. 何时应该反选小车</h2>
+  <p>只有当目标岗位列表中机器人、伺服、电机控制占明显多数，并且愿意亲自完成一个可测的编码器速度环或角度闭环时，才把小车升为主线。仅继续背五路循迹或学习团队代码，不足以匹配专业控制岗。</p>
+
+  <h2>5. 秋招并行原则</h2>
+  <div class="flow">立即投递并整理目标岗位
+→ 每天复习C/MCU/RTOS与调试基础
+→ 用2～4天完成低功耗量化闭环
+→ 保留小车90秒口述和随机追问
+→ 根据真实面试反馈调整下一轮投入</div>
+
+  <h2>参考岗位</h2>
+  <ul>
+    <li><a href="https://www.espressif.com/zh-hans/join-us/job-search?field_job_classification_tid=All&amp;field_job_location_select_tid%5B0%5D=111&amp;page=6&amp;title=">乐鑫校园招聘</a></li>
+    <li><a href="https://www.telink-semi.cn/campus-recruitment">Telink校园招聘</a></li>
+    <li><a href="https://maker.haier.net/client/job/detail/id/10229087/recommend_record/1">海尔嵌入式岗位</a></li>
+    <li><a href="https://careers.dji.com/zh-CN/campus?source=RM-Title">大疆2027校园招聘</a></li>
+  </ul>
+  <p>如果目标岗位比例发生变化，请把岗位清单交给教师重新评估路线。</p>
+</main>
+</body>
+</html>

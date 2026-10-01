@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174f73">
+  <title>低功耗LoRa环境传感节点：面试完整总课</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      line-height: 1.72;
+      color: #172033;
+      background: #eef3f8;
+      --brand: #174f73;
+      --accent: #2f7ea7;
+      --line: #d8e3ea;
+      --soft: #f2f8fb;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { max-width: 920px; margin: 0 auto; padding: 28px 18px 64px; }
+    main { background: #fff; border-radius: 18px; padding: 30px; box-shadow: 0 14px 40px rgba(28,45,74,.10); }
+    h1, h2, h3 { line-height: 1.35; }
+    h1 { margin-top: 0; color: var(--brand); font-size: clamp(1.65rem, 5.5vw, 2.3rem); }
+    h2 { color: #25607f; }
+    h3 { color: #315f76; }
+    p, li { overflow-wrap: anywhere; }
+    code { background: #edf4f8; padding: 2px 6px; border-radius: 5px; }
+    pre { overflow-x: auto; padding: 13px 15px; background: #13212d; color: #f4f8fb; border-radius: 9px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    a { color: #116b99; text-underline-offset: 3px; }
+    .lead, .rule, .question, .offline-tip { border-left: 5px solid var(--accent); background: var(--soft); padding: 14px 18px; border-radius: 8px; }
+    .offline-tip { margin: 18px 0; border-color: #2f8f5b; background: #eef9f2; }
+    .note { padding: 14px 18px; border-radius: 8px; margin: 16px 0; background: #fff8e6; border-left: 5px solid #d49a21; }
+    .note.danger { background: #fff1f1; border-color: #c44b4b; }
+    .flow { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 18px 0; white-space: pre-line; }
+    .card { border: 1px solid var(--line); padding: 15px; border-radius: 10px; }
+    .ok { border-top: 5px solid #2f8f5b; }
+    .bad { border-top: 5px solid #c44b4b; }
+    table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    th, td { border-bottom: 1px solid #dbe4ea; padding: 10px; text-align: left; vertical-align: top; min-width: 105px; }
+    th { background: #f5f8fa; }
+
+    .mobile-tools { position: sticky; top: 0; z-index: 10; margin: -8px 0 18px; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 7px 22px rgba(28,45,74,.10); backdrop-filter: blur(8px); }
+    .tool-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .mobile-tools input { flex: 1 1 210px; min-width: 0; padding: 10px 12px; border: 1px solid #aebfca; border-radius: 8px; font: inherit; }
+    .mobile-tools button { border: 0; border-radius: 8px; padding: 10px 12px; color: #fff; background: var(--brand); font: inherit; cursor: pointer; }
+    .toc { margin-top: 10px; max-height: 34vh; overflow: auto; border-top: 1px solid #e2eaef; padding-top: 8px; }
+    .toc[hidden] { display: none; }
+    .toc a { display: block; padding: 6px 8px; border-radius: 6px; text-decoration: none; }
+    .toc a:hover, .toc a:focus { background: #edf5f8; }
+    .lesson-section { margin: 12px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; overflow: hidden; }
+    .lesson-section > summary { padding: 15px 16px; color: #25607f; background: #f7fafc; font-size: 1.32rem; font-weight: 700; line-height: 1.35; cursor: pointer; list-style-position: inside; }
+    .lesson-section > :not(summary) { margin-left: 16px; margin-right: 16px; }
+    .lesson-section > :last-child { margin-bottom: 18px; }
+    .lesson-section[hidden] { display: none; }
+    .search-status { min-height: 1.4em; margin: 7px 2px 0; color: #536675; font-size: .9rem; }
+    .local-ref::after { content: " · 电脑端资料"; font-size: .82em; color: #6c7a85; }
+    .back-top { position: fixed; right: 14px; bottom: 16px; z-index: 12; width: 44px; height: 44px; border: 0; border-radius: 50%; color: #fff; background: var(--brand); box-shadow: 0 6px 18px rgba(23,79,115,.28); font-size: 1.1rem; cursor: pointer; }
+
+    @media (max-width: 700px) {
+      body { padding: 0; background: #fff; }
+      main { padding: 18px 14px 52px; border-radius: 0; box-shadow: none; }
+      .flow { grid-template-columns: 1fr; }
+      .lesson-section > summary { font-size: 1.12rem; }
+      .lesson-section > :not(summary) { margin-left: 12px; margin-right: 12px; }
+      th, td { padding: 8px; font-size: .93rem; }
+      ul, ol { padding-left: 1.45rem; }
+    }
+
+    @media print {
+      :root { background: #fff; }
+      body { max-width: none; padding: 0; }
+      main { box-shadow: none; padding: 0; }
+      .mobile-tools, .back-top, .offline-tip { display: none !important; }
+      .lesson-section { border: 0; overflow: visible; break-inside: auto; }
+      .lesson-section > summary { padding: 0; background: none; }
+      .lesson-section > :not(summary) { margin-left: 0; margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>低功耗LoRa环境传感节点：面试完整总课</h1>
+  <p class="lead">目标不是背器件名，而是能够从需求、采集、通信、低功耗、可靠性、验证和个人贡献七个角度讲清整个系统，并在追问时知道每一层“完成”究竟证明了什么。</p>
+
+  <p class="offline-tip"><strong>单文件离线手机版：</strong>本页的正文、样式、目录、搜索和折叠功能都包含在这一个HTML文件中。传到手机后可直接阅读，不需要同时复制CSS。末尾标注“电脑端资料”的链接用于回到原工作区继续查证，离线手机上不影响本页正文。</p>
+
+  <nav class="mobile-tools" aria-label="课程阅读工具">
+    <div class="tool-row">
+      <input id="lesson-search" type="search" placeholder="搜索：ACK、Stop、雨滴、功耗……" aria-label="搜索课程章节">
+      <button id="toc-toggle" type="button">目录</button>
+      <button id="expand-all" type="button">全部展开</button>
+      <button id="collapse-all" type="button">全部折叠</button>
+    </div>
+    <div id="search-status" class="search-status" aria-live="polite"></div>
+    <div id="lesson-toc" class="toc" hidden></div>
+  </nav>
+
+  <div class="note danger">
+    <strong>先固定事实边界：</strong>当前唯一源码已经包含传感采集、RTC Stop、LoRa协议层、节点状态机和在线PC网关；已有主机协议测试和历史双构建通过记录。真实双模块RF、AUX时序、300ms ACK窗口、距离、RSSI、丢包率和整板功耗尚无当前实测证据。OLED按键显示、OLED/雨滴供电门控、BH1750单次模式和新LoRa引脚也仍是升级设计，不能说成已经烧录实现。
+  </div>
+
+  <h2>1. 一句话定义项目</h2>
+  <p>这是一个以STM32F103C8T6为主控的低功耗环境监测节点：周期采集温湿度、光照和雨滴板相对湿润程度，进行有效性与阈值判断，通过串口LoRa模块向PC网关上报；空闲时让LoRa模块休眠、STM32进入RTC可唤醒的Stop模式。</p>
+  <p>项目真正的技术重点不是“接了三个传感器”，而是以下闭环：</p>
+  <div class="flow">可信采集 → 明确数据有效性 → 固定协议编码 → 有限等待与ACK确认
+→ 通信收尾 → 外设低功耗 → RTC Alarm → STM32 Stop → 恢复时钟 → 下一轮</div>
+
+  <h2>2. 为什么选择LoRa，而不是继续使用蓝牙</h2>
+  <p>原节点曾采用蓝牙透传。蓝牙适合近距离手机交互，但校园试验田、温室分区或分散环境监测更关心覆盖距离、低频短包和电池供电。串口LoRa模块把远距离无线调制解调封装起来，STM32仍只处理UART字节和应用协议，开发成本相对可控。</p>
+  <table>
+    <thead><tr><th>方案</th><th>更适合</th><th>主要代价</th></tr></thead>
+    <tbody>
+      <tr><td>BLE</td><td>手机直连、近距离配置、较高交互频率</td><td>覆盖距离有限；节点分散时需要人或网关靠近</td></tr>
+      <tr><td>LoRa点对点</td><td>低频、小数据量、远距离、星型节点到网关</td><td>速率低、需要自建网关与可靠性协议、多节点会碰撞</td></tr>
+      <tr><td>LoRaWAN</td><td>标准化大规模网络、网关与网络服务器体系</td><td>协议与基础设施更复杂</td></tr>
+    </tbody>
+  </table>
+  <p>本工程是“串口LoRa模块＋自定义点对点应用协议”，不是LoRaWAN：源码没有Join流程、会话密钥、LoRaWAN帧计数器和网络服务器。无线调制由模块内部LLCC68完成，也不能说自己在STM32上实现了LoRa基带算法。</p>
+
+  <h2>3. 当前硬件与软件架构</h2>
+  <table>
+    <thead><tr><th>对象</th><th>当前连接/实现</th><th>职责</th></tr></thead>
+    <tbody>
+      <tr><td>STM32F103C8T6</td><td>72MHz，HAL裸机超级循环</td><td>采集、换算、组帧、状态机、RTC Stop</td></tr>
+      <tr><td>AHT20</td><td>I²C1 PB6/PB7，400kHz，与OLED共享</td><td>内部测量温湿度，MCU读取6字节结果</td></tr>
+      <tr><td>BH1750/GY-30</td><td>PA11 SCL、PA10 SDA，GPIO模拟I²C</td><td>内部完成光电转换、积分和ADC，MCU读数字照度</td></tr>
+      <tr><td>雨滴板</td><td>AO→PB1/ADC1_IN9，软件触发，8次平均</td><td>输出与板面导电/润湿程度相关的模拟电压</td></tr>
+      <tr><td>CH1116 OLED</td><td>I²C1 PB6/PB7，128×64，1KB帧缓冲</td><td>当前每轮显示；升级目标为按键按需查看</td></tr>
+      <tr><td>LoRa模块</td><td>USART3 PB10/PB11，9600 8N1；M0/M1/AUX</td><td>UART字节与LoRa无线信号之间转换</td></tr>
+      <tr><td>RTC</td><td>LSE 32.768kHz，Alarm经EXTI17</td><td>Stop期间保持时间并定时唤醒</td></tr>
+    </tbody>
+  </table>
+  <p>当前源码的LoRa控制脚仍是M0=PA8、M1=PA9、AUX=PA1；用户计划到货联调时调整为M0=PA0、M1=PA1、AUX=PB8。计划接线尚未写入源码，而且AUX跨到GPIOB后不能只改宏，还要修正当前写死GPIOA的初始化逻辑。</p>
+
+  <h2>4. 软件为什么分为协议层、节点层、应用层和网关层</h2>
+  <div class="flow">main.c：决定采什么、是否报警、发什么、睡多久
+↓
+lora_node.c：控制M0/M1/AUX，管理UART DMA、ACK、超时与重试
+↓
+lora_protocol.c：定义18B/11B格式、大小端、CRC、编码与解码
+↓
+HAL UART/DMA/GPIO：操作STM32硬件
+
+另一端：
+lora_gateway.py：串口组帧、校验、解析、去重、ACK与CSV</div>
+  <p>这种分层的价值是变化被隔离：修改字段格式主要改协议层；更换UART或控制脚主要改节点层；增加传感器或改变报警策略主要改应用层；PC串口拆包和数据记录不进入单片机固件。它也使协议层可以脱离硬件做固定向量测试。</p>
+
+  <h2>5. 一轮真实运行流程</h2>
+  <ol>
+    <li>RTC Alarm或复位使CPU运行，Stop唤醒后重新建立HSE＋PLL 72MHz并恢复SysTick。</li>
+    <li>AHT20发送测量命令、等待转换、读取并检查I²C状态、Busy和量程。</li>
+    <li>BH1750读取最近完成的连续高分辨率结果；当前尚未改成单次模式。</li>
+    <li>雨滴ADC启动、轮询转换、读取8次、停止并求平均；当前没有控制雨滴板VCC。</li>
+    <li>成功的数据更新保存值；失败则保留上一次成功值，同时把本轮valid位置零。</li>
+    <li>根据有效性和固定阈值判断normal/alert。当前阈值是温度25～35℃、湿度45%～70%、光照不低于1000lx、雨滴相对湿润度不高于60%。</li>
+    <li>LoRa构建把数据转换为定点数和18字节遥测帧，唤醒模块、发送、等待ACK，失败最多重发整帧一次。</li>
+    <li>尝试让LoRa模块进入休眠；STM32根据normal选择休眠30秒、alert选择10秒，然后进入Stop。</li>
+  </ol>
+  <p>“30秒/10秒”当前是休眠时长，不是严格的采样周期。两次采样的间隔还包含传感测量、OLED、UART、无线、ACK等待与重试时间。若要严格周期，应保存绝对采样期限，而不是每次工作结束后再相对延时。</p>
+
+  <h2>6. 三条传感采集链</h2>
+
+  <h3>6.1 AHT20：先证明通信成功，再相信数值</h3>
+  <div class="flow">I²C发送AC 33 00 → 等待约75ms → I²C接收6B → 检查Busy
+→ 提取20位湿度与20位温度 → 换算与范围检查 → 成功才更新</div>
+  <pre>Humidity = rawH / 2^20 × 100%
+Temperature = rawT / 2^20 × 200 - 50℃</pre>
+  <p>若接收失败却继续解析全零缓冲，会得到0%与−50℃，这看起来像极端环境，实际却是通信故障。当前代码已经检查发送、接收、Busy和量程；失败返回0并保留上一次成功数据。AHT20测量期间总线并不需要持续占用，但本项目是裸机，HAL_Delay仍让CPU忙等；不能把智慧农场中的RTOS互斥锁和osDelay说成本项目已有实现。</p>
+
+  <h3>6.2 BH1750：数字传感器，不走STM32 ADC</h3>
+  <p>BH1750内部已经包含光电二极管、模拟前端、积分和ADC，STM32通过I²C读取两字节数字结果。当前代码初始化为连续高分辨率模式0x10，首个结果保守等待180ms，后续按raw/1.2换算lux。连续模式表示模块自己持续转换，不是每180ms主动向MCU推送；MCU读得太快可能仍读到同一结果。</p>
+  <p>低功耗升级应使用单次高分辨率模式：每轮Power On→发一次测量命令→等完成→读取，完成后模块自动Power Down。这个方案尚未写入当前源码。</p>
+
+  <h3>6.3 雨滴板：相对湿润度，不是毫米降雨量</h3>
+  <p>当前ADC1为单通道、软件触发、非连续、239.5采样周期。每次读取8个样本平均，再用干湿端点进行线性映射：</p>
+  <pre>percent = (dry_adc - raw_adc) × 100 / (dry_adc - wet_adc)</pre>
+  <p>默认dry=4095、wet=0只是占位值，不是实物标定。雨滴板反映板面导电/润湿状态，会受水质、污渍、腐蚀、温度和安装方式影响，不能称为专业降雨量计。</p>
+
+  <h2>7. 数据有效性为什么比“有一个数”更重要</h2>
+  <p>系统必须区分三件事：</p>
+  <ul>
+    <li><strong>本轮有效：</strong>这次通信和换算成功，可以把数值当作当前观测。</li>
+    <li><strong>环境异常：</strong>有效数据超出业务阈值。</li>
+    <li><strong>旧值：</strong>本轮失败，为了界面连续性保留了上次成功数据，但它不是本轮新测量。</li>
+  </ul>
+  <p>协议的Flags用bit0、bit1、bit2表示AHT、光照、雨滴有效，bit7表示alert。接收端必须先看valid再解释数值。更完整的升级是保存最后成功时间和连续失败次数，OLED显示“旧值/无效”而不是只显示一个看似正常的数字。</p>
+
+  <h2>8. 18字节遥测帧与11字节ACK</h2>
+  <table>
+    <thead><tr><th>偏移</th><th>字段</th><th>长度</th><th>意义</th></tr></thead>
+    <tbody>
+      <tr><td>0～1</td><td>Magic A5 5A</td><td>2B</td><td>在连续字节流中寻找候选帧起点</td></tr>
+      <tr><td>2</td><td>Version</td><td>1B</td><td>协议格式版本</td></tr>
+      <tr><td>3</td><td>Type 0x10</td><td>1B</td><td>遥测帧类型</td></tr>
+      <tr><td>4～5</td><td>NodeID</td><td>2B</td><td>节点身份</td></tr>
+      <tr><td>6～7</td><td>Sequence</td><td>2B</td><td>ACK匹配、重试去重和丢包统计</td></tr>
+      <tr><td>8</td><td>Flags</td><td>1B</td><td>valid与alert</td></tr>
+      <tr><td>9～10</td><td>温度×10</td><td>2B有符号</td><td>0.1℃定点数，保留负温度</td></tr>
+      <tr><td>11～12</td><td>湿度×10</td><td>2B</td><td>0.1%定点数</td></tr>
+      <tr><td>13～14</td><td>光照</td><td>2B</td><td>lux</td></tr>
+      <tr><td>15</td><td>雨滴</td><td>1B</td><td>0～100相对湿润度</td></tr>
+      <tr><td>16～17</td><td>CRC16</td><td>2B</td><td>校验前16B</td></tr>
+    </tbody>
+  </table>
+  <p>多字节字段显式按大端写入，不能直接发送C结构体：结构体可能有填充，CPU和PC的字节序、浮点表示也可能不同。温度−12.3℃先变为−123，即16位补码0xFF85，大端发送FF 85。</p>
+  <p>CRC16-CCITT使用初值0xFFFF、多项式0x1021。它用于检错，不用于加密、身份认证或判断传感器数值是否真实。ACK固定11字节，包含Magic、Version、Type=0x11、NodeID、Sequence、status和CRC。</p>
+
+  <h2>9. LoRa发送状态机与三层“完成”</h2>
+  <div class="flow">EncodeTelemetry → M0/M1=00唤醒模块 → 等AUX空闲
+→ HAL_UART_Transmit_DMA → UART完成回调
+→ 阻塞接收11B ACK → 检查头/CRC/NodeID/Sequence/status
+→ 失败则同Sequence最多再发一次
+→ Sequence加1 → M0/M1=11 → 等AUX → STM32 Stop</div>
+  <table>
+    <thead><tr><th>观察到的事件</th><th>能证明</th><th>不能证明</th></tr></thead>
+    <tbody>
+      <tr><td>HAL_UART_Transmit_DMA返回HAL_OK</td><td>DMA发送请求被HAL接受</td><td>不能证明串口已发完</td></tr>
+      <tr><td>UART发送完成回调</td><td>STM32本地UART发送流程结束</td><td>不能证明模块已经无线发送</td></tr>
+      <tr><td>AUX由高回低</td><td>本地模块忙状态结束</td><td>不能证明远端收到</td></tr>
+      <tr><td>合法且匹配的ACK</td><td>网关应用收到了对应NodeID/Sequence并确认</td><td>若ACK语义未规定，不能再扩大成永久入库成功</td></tr>
+    </tbody>
+  </table>
+  <p>当前代码里有两种重试：UART为HAL_BUSY时最多尝试启动3次，只是“本地DMA启动重试”；max_retries=1表示整帧没拿到合法ACK后最多再发一次，总计最多2轮无线业务发送。两者不能混为“三次LoRa重发”。</p>
+
+  <h2>10. M0、M1、AUX和模块预配置</h2>
+  <p>按当前DX-LR22方案，需要先通过USB转TTL把两块模块配置成相同串口、透明传输、LEVEL、CHANNEL和KEY，并保存AT+SWITCH=1，使运行时M0/M1可以控制模式。当前约定00为工作/高时效模式，11为休眠；AUX高为忙、低为空闲。这个极性和组合只对当前模块及配置成立，不能推广为所有LoRa模块的通用规则。</p>
+  <p>初次联调应关闭DRSSI，因为开启后模块可能在18字节应用帧后追加RSSI字节，现有固定帧解析器必须随之调整。发射前必须接匹配天线；模块发射存在较大瞬态电流，电源、去耦和共地不足都可能造成掉压和随机丢包。</p>
+
+  <h2>11. PC网关为什么不是“串口助手看见数据”</h2>
+  <p>UART是连续字节流，一次read可能只有7字节，也可能同时包含两帧，还可能从帧中间开始。网关维护buffer并执行：</p>
+  <div class="flow">收到任意chunk → 搜索A5 5A → 不足18B继续缓存
+→ 取18B候选 → 校验版本/类型/CRC
+→ 失败滑动1B重新同步 → 成功解析
+→ 判断(NodeID, Sequence)是否重复
+→ 先回ACK并flush → 再写CSV和终端日志</div>
+  <p>“先ACK、后日志”用于缩短往返时间。若第一包到达但ACK丢失，节点会用同一Sequence重发；网关仍需再次ACK，却只把它作为duplicate而不重复执行业务。这是“至少一次传输＋业务去重”的近似语义，不是天然的严格一次送达。</p>
+
+  <h2>12. RTC Stop唤醒链</h2>
+  <div class="flow">LSE 32.768kHz → RTC预分频形成时间基准 → 32位计数器
+→ CNT与Alarm比较 → RTC Alarm → EXTI17 → NVIC
+→ Cortex-M3退出WFI → RTC ISR → 返回到WFI后下一条指令
+→ SystemClock_Config恢复HSE/PLL 72MHz → HAL_ResumeTick</div>
+  <p>WFI是Wait For Interrupt：CPU执行到这里后停止取指，等待允许的中断事件。Stop不是复位，SRAM和执行上下文仍保留，所以醒后从进入Stop函数的下一条语句继续执行。</p>
+  <table>
+    <thead><tr><th>模式</th><th>典型特征</th><th>本项目取舍</th></tr></thead>
+    <tbody>
+      <tr><td>Sleep</td><td>主要停CPU内核，外设时钟多仍可工作，唤醒快</td><td>省电深度不够</td></tr>
+      <tr><td>Stop</td><td>高速时钟/PLL停止，SRAM保留，可由RTC/EXTI唤醒</td><td>兼顾状态保留和周期唤醒，当前采用</td></tr>
+      <tr><td>Standby</td><td>更低功耗，但大量上下文丢失，唤醒接近重新启动</td><td>恢复复杂，不适合当前状态机</td></tr>
+    </tbody>
+  </table>
+  <p>进入Stop前暂停SysTick，是为了避免周期Tick干扰低功耗；唤醒后PLL不会自动恢复到原72MHz，因此必须重建时钟。否则USART波特率、I²C时序、HAL延时和定时器参数都可能错误。RTC Alarm从Stop唤醒F103还要求EXTI17上升沿路径。</p>
+
+  <h2>13. 真正的低功耗是整机状态管理</h2>
+  <p>只让STM32进入Stop，并不等于整板低功耗。OLED、雨滴模块比较器和指示灯、BH1750连续转换、LoRa未成功休眠、稳压器静态电流以及信号线反向供电，都可能比MCU Stop电流大。</p>
+  <table>
+    <thead><tr><th>器件</th><th>推荐状态</th><th>当前状态</th></tr></thead>
+    <tbody>
+      <tr><td>AHT20</td><td>测量后保持供电，利用器件自身低功耗状态</td><td>每轮触发测量；无需优先增加硬断电</td></tr>
+      <tr><td>BH1750</td><td>单次高分辨率测量，完成后自动Power Down</td><td>仍是连续模式，待改</td></tr>
+      <tr><td>OLED</td><td>默认关闭，按键查看；先验证0xAE软关屏，必要时硬断电</td><td>当前每轮刷新，门控未实施</td></tr>
+      <tr><td>雨滴板</td><td>采样窗口上电，AO稳定后采样，随后断电</td><td>当前常供电假设，只有ADC启停</td></tr>
+      <tr><td>LoRa</td><td>完成或有限失败后M0/M1=11并确认AUX</td><td>代码有休眠动作，但最终返回值被忽略</td></tr>
+      <tr><td>LED/UART/ADC</td><td>休眠前置安全电平、结束活动并按需关时钟</td><td>仍需整板测量确认</td></tr>
+    </tbody>
+  </table>
+  <p>正确思想是race to sleep：尽快完成必要工作，然后尽可能长时间处于低功耗状态。降低主频未必一定省总能量；若低频使工作持续更久，能量可能反而增加。</p>
+
+  <h2>14. OLED按键显示和硬断电升级</h2>
+  <p>新版目标把“周期采样”和“用户查看”拆成两个事件：关屏时仍采集、保存和上报；按键只要求显示最近有效数据，不自动追加一轮采样或LoRa发送，也不能推迟下一次采样期限。</p>
+  <p>软关屏优先：CH1116的Display OFF 0xAE可停止显示驱动、振荡器和DC-DC并保留显示RAM；但当前OLED_On/Off函数混用了与CH1116初始化不一致的0x8D命令，不能直接说已经可靠。若软关屏残余功耗仍高，再考虑TPS22919或P-MOS进行3.3V高边断电。</p>
+  <p>OLED与AHT20共享I²C。仅切OLED VCC时，SCL/SDA仍可能通过上拉或AHT20通信保持高电平，电流经断电OLED的保护结构反向灌入。硬断电方案需要隔离OLED自己的SCL/SDA支路，并保证主总线上仍有常供电上拉；MCU把引脚设为高阻并不能消除板载上拉。</p>
+  <div class="flow">关屏：结束I²C → Display OFF → 隔离OLED SCL/SDA → 关闭高边电源
+开屏：接通电源 → 等供电/复位稳定 → 总线空闲时接通信号
+→ 完整OLED_Init → 清屏并重画缓存数据</div>
+  <p>按键ISR只置事件标志。显示初始化、I²C传输和消抖放到主循环。采样截止时间与显示关闭时间分别保存，用RTC选择最近期限唤醒；即使OLED亮着显示静态内容，MCU也可以再次进入Stop。</p>
+
+  <h2>15. 雨滴模块按需供电升级</h2>
+  <p>雨滴板也可以独立使用高边负载开关，但不能用GPIO直接承担模块电流。推荐链路是：</p>
+  <div class="flow">RTC采样到期 → 打开雨滴电源 → 等AO稳定
+→ ADC 8次平均 → 保存raw/percent与valid
+→ 停ADC → 关闭雨滴电源 → 继续上报</div>
+  <p>平均8次只能降低随机波动，不能代替上电稳定等待。模块断电时ADC仍可能返回HAL_OK，但PB1悬空或被拉低，当前公式可能误判成100%湿润，因此必须让“供电状态＋有效位”约束数据使用。雨滴是独立模拟输入，通常不像共享I²C OLED那样必须双路信号隔离，但仍要核对AO/DO板载上拉和反向供电。</p>
+  <p>周期断电的代价是无法依赖DO即时检测下雨，短暂事件可能被漏掉。若需求是实时雨滴唤醒，就要保留一个常供电低功耗检测通道，不能同时要求彻底断电和即时响应。</p>
+
+  <h2>16. 平均功耗和续航怎样计算</h2>
+  <pre>Iavg = Σ(I状态 × t状态) / T周期
+电池理想续航(h) ≈ 电池容量(mAh) / Iavg(mA)</pre>
+  <p>例如仅作方法演示：若一轮30秒中，活动0.6秒、平均80mA，休眠29.4秒、整板0.2mA，则：</p>
+  <pre>Iavg = (80×0.6 + 0.2×29.4) / 30 ≈ 1.80mA</pre>
+  <p>这不是本项目实测。真实计算还要分传感、OLED、LoRa发射、等待ACK、重试、Stop等阶段，并考虑电池容量折减、稳压效率、自放电和温度。万用表平均档容易漏掉短促发射峰值；更可靠的是功耗分析仪，或小采样电阻＋示波器积分。验证必须测整板完整周期，不能只报芯片手册的最低Stop电流。</p>
+
+  <h2>17. LoRa无线参数如何回答</h2>
+  <table>
+    <thead><tr><th>参数</th><th>提高后的一般趋势</th><th>代价</th></tr></thead>
+    <tbody>
+      <tr><td>带宽BW</td><td>符号更短、速率更高、空中时间更短</td><td>灵敏度通常下降</td></tr>
+      <tr><td>扩频因子SF</td><td>处理增益与灵敏度提高</td><td>符号时间按2^SF/BW增长，功耗与碰撞机会增大</td></tr>
+      <tr><td>编码率CR</td><td>冗余提高，抗部分错误能力增强</td><td>有效速率下降、空中时间增加</td></tr>
+      <tr><td>发射功率</td><td>链路预算增加</td><td>发射电流、干扰和法规压力增加</td></tr>
+    </tbody>
+  </table>
+  <p>不能把SF和功率全部开到最大当作最佳方案。长空中时间会增大能耗、信道占用和多节点碰撞概率。厂商LEVEL把BW/SF/CR封装成档位，当前代码依赖两端预配置一致，并没有直接操作LLCC68寄存器。</p>
+  <p>300ms ACK窗口只是初值。例如LEVEL0标称336bit/s时，18B上行＋11B ACK的净荷本身约需690ms，还未计前导、物理头、UART、切换和PC处理，300ms必然不够；最终应使用逻辑分析仪统计真实往返时间并留裕量。</p>
+
+  <h2>18. 多节点、去重和可靠性</h2>
+  <p>NodeID只解决“是谁”，不能解决“同时发送”。多个节点同一时刻按相同30秒周期上报，可能长期同步碰撞。可以使用随机抖动、失败后随机退避、时隙、分信道或LBT，但这些当前未实现。</p>
+  <p>Sequence是16位，会回绕；节点重启又从0开始，PC当前只保留最近1024个(NodeID, Sequence)。更强设计可以增加Boot/Session ID、给去重项加过期时间或持久化序号，但不应把这些建议说成当前功能。</p>
+  <p>重试必须有限：无线故障时无限重试会把通信问题放大成电池耗尽和信道拥塞问题。当前策略最多一次完整重试，是可靠性、功耗和时延之间的明确折中。</p>
+
+  <h2>19. 当前源码的已知薄弱点</h2>
+  <ul>
+    <li>main忽略LoraNode_Init返回值，初始化失败缺少直接状态记录。</li>
+    <li>发送结束后的SleepRadio返回值被忽略，模式切换失败可能让模块保持高功耗。</li>
+    <li>节点ACK使用固定11字节阻塞接收，没有PC网关那样的流式重同步。</li>
+    <li>300ms ACK窗口尚未结合真实LEVEL和时序验证。</li>
+    <li>LoRa ACK当前不用已生成的RX DMA1 Channel3，不能说“收发都采用DMA”。</li>
+    <li>Sequence掉电归零，网关进程内去重缓存可能与新会话冲突。</li>
+    <li>OLED发送使用HAL_MAX_DELAY并忽略返回值，I²C故障可能阻止系统进入Stop。</li>
+    <li>当前每轮无条件刷新OLED、BH1750连续测量、雨滴常供电假设，整机低功耗还未闭环。</li>
+  </ul>
+
+  <h2>20. 五棵面试故障树</h2>
+  <h3>20.1 不进入Stop</h3>
+  <p>先看主循环是否执行到Enter_Stop_Mode，再查是否卡在AHT/OLED I²C、UART回调、AUX等待或ACK接收。检查所有无限等待与超时返回，不要一开始就断言RTC坏了。</p>
+
+  <h3>20.2 进入Stop但不唤醒</h3>
+  <p>检查LSE和RTC计数是否走、Alarm是否设置到未来、RTOFF写时序、ALR中断、EXTI17上升沿和NVIC。再确认标志清除顺序。调试连接可能改变低功耗行为，应脱离调试器复测。</p>
+
+  <h3>20.3 唤醒后UART乱码</h3>
+  <p>优先确认Stop返回后是否重新执行SystemClock_Config并恢复SysTick；再检查USART波特率、模块串口设置和电源稳定。乱码不等于RF参数错误。</p>
+
+  <h3>20.4 UART完成但收不到ACK</h3>
+  <p>沿“UART完成→AUX→RF上行→PC原始串口→CRC/解析→PC ACK发送→RF下行→节点RX→身份序号匹配”逐层找最后成功证据。UART完成只排除了本地发送未结束。</p>
+
+  <h3>20.5 休眠电流过高</h3>
+  <p>先验证MCU真实Stop，再检查M0/M1=11与AUX、OLED/BH1750/雨滴板、LED、稳压器静态电流、上拉电阻和反向供电。采用逐模块断开或状态切换法测差值，不凭手册单器件电流推断整板。</p>
+
+  <h2>21. 如何做出可让面试官相信的验证证据</h2>
+  <ol class="checklist">
+    <li>保存两块模块的AT配置：串口、模式、LEVEL、信道、KEY、SWITCH、DRSSI和功率。</li>
+    <li>先用两套USB转TTL完成模块透明对传，隔离STM32代码变量。</li>
+    <li>PC网关验证7B＋11B拆包、粘包、垃圾前缀、坏CRC和重复Sequence。</li>
+    <li>节点闭环记录18B上行和11B ACK，检查NodeID/Sequence匹配。</li>
+    <li>逻辑分析仪同时观察TX、RX、M0、M1、AUX，测真实ACK往返时间。</li>
+    <li>关闭网关做故障注入，证明最多2次完整发送后仍能收尾休眠。</li>
+    <li>固定天线、场景、距离、LEVEL、功率和包数，统计首发成功率、重试恢复率、最终丢包率。</li>
+    <li>测正常、异常、ACK丢失和传感失败四类周期的分状态电流与平均电流。</li>
+  </ol>
+  <p>“能收到一包”只能证明基本可通；“跑了1000包、有配置、有日志、有时序、有失败注入”才形成工程证据。</p>
+
+  <h2>22. 当前项目的完成状态矩阵</h2>
+  <table>
+    <thead><tr><th>内容</th><th>当前可宣称</th></tr></thead>
+    <tbody>
+      <tr><td>旧版AHT20、BH1750、雨滴、OLED、UART TX DMA、RTC Stop链</td><td>已有用户上板验证记录</td></tr>
+      <tr><td>固定阈值当前默认版本</td><td>编译通过记录；不能扩大成当前整版重新上板</td></tr>
+      <tr><td>18B/11B协议、CRC、ACK、有限重试、PC在线网关</td><td>代码已实现，7项主机测试和历史双构建记录可讲</td></tr>
+      <tr><td>真实双模块RF、AUX、300ms窗口、距离/RSSI/丢包</td><td>尚未形成当前实测证据</td></tr>
+      <tr><td>整板平均功耗与续航</td><td>只有模型和测试方案，不能给实测结论</td></tr>
+      <tr><td>按键OLED、OLED/雨滴门控、BH1750单次模式</td><td>升级设计，未修改源码、未编译、未上板</td></tr>
+      <tr><td>LoRa新接线PA0/PA1/PB8</td><td>计划，当前源码仍为PA8/PA9/PA1</td></tr>
+    </tbody>
+  </table>
+
+  <h2>23. 面试表达：30秒、90秒和追问展开</h2>
+  <h3>30秒版本</h3>
+  <div class="card">
+    <p>“我独立完成了一个基于STM32F103的低功耗环境传感节点，周期采集温湿度、光照和雨滴状态，通过串口LoRa模块向PC网关上报。通信上设计了固定二进制帧、CRC、NodeID、Sequence、ACK和有限重试，空闲时LoRa模块休眠、MCU由RTC定时从Stop唤醒。当前协议、节点和在线网关软件已有测试与编译记录，真实RF和整板功耗仍按实物计划验证。”</p>
+  </div>
+
+  <h3>90秒版本</h3>
+  <div class="card">
+    <p>“这个项目面向校园试验田或分散环境监测，是我独立完成的STM32F103低功耗LoRa节点。采集端包括AHT20温湿度、BH1750光照和雨滴板模拟量。软件采用裸机主循环，采集成功才更新数据，本轮失败会保留旧值并在Flags中标记无效，避免把通信故障当作环境异常。</p>
+    <p>通信侧我把数据定义成18字节大端帧，包含NodeID、Sequence、传感器有效位、报警位和CRC16。STM32通过USART3 TX DMA把帧交给LoRa模块，M0/M1负责工作与休眠模式，AUX用于判断本地模块忙闲。PC网关能够从连续串口字节流中处理拆包、粘包和错位，校验后优先回复匹配ACK，再去重并写CSV。节点ACK超时后沿用同一Sequence最多重发一次，避免无限重试拖垮功耗。</p>
+    <p>低功耗方面，正常状态休眠30秒、异常10秒，RTC Alarm经EXTI17唤醒Stop，唤醒后恢复72MHz系统时钟。下一步整机优化是BH1750单次模式、按键OLED和雨滴采样供电。这里我会区分软件测试、编译、旧链上板和RF/功耗实测，不把尚未验证的距离或电流写成结果。”</p>
+  </div>
+
+  <h3>追问时按这六条线展开</h3>
+  <ol>
+    <li>问采集：讲返回值、Busy、valid、旧值和标定。</li>
+    <li>问通信：讲18B帧、CRC、NodeID、Sequence、11B ACK。</li>
+    <li>问LoRa：讲串口模块、M0/M1/AUX、LoRa与LoRaWAN边界。</li>
+    <li>问低功耗：讲RTC Alarm/EXTI17/WFI、时钟恢复和整机外设。</li>
+    <li>问可靠性：讲有限重试、重复仍ACK、业务去重和超时。</li>
+    <li>问真实性：主动给出已实现、已测试、旧链上板、待RF/功耗验证的矩阵。</li>
+  </ol>
+
+  <h2>24. 十个必须答稳的追问</h2>
+  <ol>
+    <li><strong>为什么DMA完成不等于网关收到？</strong>DMA/UART只属于MCU本地链，之后还有模块处理、RF上行、网关解析；必须由匹配ACK确认应用层。</li>
+    <li><strong>AUX低说明什么？</strong>说明本地模块忙状态结束，不说明远端接收成功。</li>
+    <li><strong>为什么不用直接发结构体？</strong>避免填充、大小端和浮点表示差异，采用显式固定字节协议。</li>
+    <li><strong>CRC通过说明什么？</strong>只说明收到的字节与CRC规则自洽，不证明数值真实、不提供鉴权。</li>
+    <li><strong>为什么重试沿用同一Sequence？</strong>它仍是同一业务数据，网关可识别ACK丢失造成的重复而避免重复处理。</li>
+    <li><strong>为什么只重试一次？</strong>在偶发丢包恢复与功耗、时延、信道占用之间折中，避免故障无限耗电。</li>
+    <li><strong>为什么Stop醒后要恢复时钟？</strong>PLL与高速时钟停止，若不恢复，UART/I²C/SysTick等时序会偏离配置。</li>
+    <li><strong>为什么MCU Stop不等于整板低功耗？</strong>外设、稳压器、LED、上拉和反向供电仍可能持续耗电。</li>
+    <li><strong>OLED断电为什么还要隔离I²C？</strong>共用总线仍可能为高，断电器件可能经保护结构被反向供电。</li>
+    <li><strong>项目最值得讲什么？</strong>不是传感器数量，而是“可信采集＋可确认通信＋有限失败＋低功耗收尾”的系统闭环。</li>
+  </ol>
+
+  <h2>25. 最后用一条主线记住全部内容</h2>
+  <div class="card">
+    <p><strong>采：</strong>AHT20、BH1750、雨滴ADC，先检查成功再更新。</p>
+    <p><strong>判：</strong>valid与阈值分开，旧值不冒充新值。</p>
+    <p><strong>包：</strong>18B固定大端帧，NodeID、Sequence、Flags、CRC。</p>
+    <p><strong>发：</strong>UART DMA只是第一层，AUX是模块层，ACK是网关应用层。</p>
+    <p><strong>限：</strong>超时与重试有上限，重复包仍ACK但业务去重。</p>
+    <p><strong>睡：</strong>模块先休眠，RTC设Alarm，STM32 Stop，醒后恢复时钟。</p>
+    <p><strong>测：</strong>用时序、日志、故障注入和完整周期电流证明，而不是只说“调用了低功耗函数”。</p>
+  </div>
+
+  <h2>26. 查证入口</h2>
+  <ul>
+    <li><a href="../低功耗项目理解产物/01-低功耗系统设计决策与实施边界.md">整机低功耗、OLED与雨滴供电设计边界</a></li>
+    <li><a href="0004-lora-from-zero-implementation.html">从零配置模块和逐函数理解源码</a></li>
+    <li><a href="../低功耗项目理解产物/08-LoRa剩余知识总览-无线参数可靠性故障与验收.html">LoRa参数、故障树与实物验收</a></li>
+    <li><a href="../记忆与产物/05-面试题库/四项目嵌入式面试完整题库.md#第4章-低功耗lora环境传感节点20题">低功耗节点20道正式面试题</a></li>
+    <li><a href="https://www.st.com/resource/en/application_note/cd00171691-stm32f101xx-stm32f102xx-and-stm32f103xx-lowpower-modes-stmicroelectronics.pdf">ST AN2629：STM32F101/102/103低功耗模式</a></li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22技术手册V2.0</a></li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf">DX-LR22串口应用指导V2.0</a></li>
+    <li><a href="https://www.ti.com/product/TPS22919">TPS22919高边负载开关</a></li>
+  </ul>
+</main>
+<button class="back-top" id="back-top" type="button" aria-label="返回顶部">↑</button>
+<script>
+  (() => {
+    const main = document.querySelector('main');
+    const headings = Array.from(main.querySelectorAll('h2'));
+    const sections = [];
+
+    headings.forEach((heading, index) => {
+      const nextHeading = headings[index + 1] || null;
+      const details = document.createElement('details');
+      details.className = 'lesson-section';
+      details.open = true;
+      details.id = `section-${index + 1}`;
+
+      const summary = document.createElement('summary');
+      summary.innerHTML = heading.innerHTML;
+      details.appendChild(summary);
+      heading.parentNode.insertBefore(details, heading);
+
+      let node = heading.nextSibling;
+      while (node && node !== nextHeading) {
+        const following = node.nextSibling;
+        details.appendChild(node);
+        node = following;
+      }
+      heading.remove();
+      sections.push(details);
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('#')) {
+        link.classList.add('local-ref');
+        link.title = '该链接需要在电脑项目工作区中打开；本页正文仍可离线阅读。';
+      }
+    });
+
+    const toc = document.getElementById('lesson-toc');
+    sections.forEach(section => {
+      const link = document.createElement('a');
+      link.href = `#${section.id}`;
+      link.textContent = section.querySelector('summary').textContent.trim();
+      link.addEventListener('click', () => {
+        section.open = true;
+        toc.hidden = true;
+      });
+      toc.appendChild(link);
+    });
+
+    document.getElementById('toc-toggle').addEventListener('click', () => {
+      toc.hidden = !toc.hidden;
+    });
+    document.getElementById('expand-all').addEventListener('click', () => sections.forEach(section => section.open = true));
+    document.getElementById('collapse-all').addEventListener('click', () => sections.forEach(section => section.open = false));
+    document.getElementById('back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const search = document.getElementById('lesson-search');
+    const status = document.getElementById('search-status');
+    search.addEventListener('input', () => {
+      const keyword = search.value.trim().toLocaleLowerCase('zh-CN');
+      let matches = 0;
+      sections.forEach(section => {
+        const visible = !keyword || section.textContent.toLocaleLowerCase('zh-CN').includes(keyword);
+        section.hidden = !visible;
+        if (visible) {
+          matches += 1;
+          if (keyword) section.open = true;
+        }
+      });
+      status.textContent = keyword ? `找到 ${matches} 个相关章节` : '';
+    });
+
+    let printState = [];
+    window.addEventListener('beforeprint', () => {
+      printState = sections.map(section => section.open);
+      sections.forEach(section => { section.hidden = false; section.open = true; });
+    });
+    window.addEventListener('afterprint', () => sections.forEach((section, index) => { section.open = printState[index]; }));
+  })();
+</script>
+</body>
+</html>

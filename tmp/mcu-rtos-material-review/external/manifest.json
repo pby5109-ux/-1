@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-外部获取\\嵌入式宝典(1).pdf",
+    "pages": 89,
+    "sha256": "fd6c97399e53e6eea72e22acf9026e741398adfbb7ab59a21e59e9c99adc2303",
+    "text": "D:\\APP\\project_practice\\codex-project\\tmp\\mcu-rtos-material-review\\external\\0.txt"
+  },
+  {
+    "id": 1,
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-外部获取\\嵌入式软件开发笔试面试指南_全_202106031(1).pdf",
+    "pages": 316,
+    "sha256": "b92a37c18b3616ffbabd040f88a7c7537e4f679c40c8604c95487aaaefe19b29",
+    "text": "D:\\APP\\project_practice\\codex-project\\tmp\\mcu-rtos-material-review\\external\\1.txt"
+  },
+  {
+    "id": 2,
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-外部获取\\嵌入式面经(1).pdf",
+    "pages": 81,
+    "sha256": "41fe3a7c0b1d9ada2058273db301312889b5e18afa3602cf16d9c0fdb021b78a",
+    "text": "D:\\APP\\project_practice\\codex-project\\tmp\\mcu-rtos-material-review\\external\\2.txt"
+  }
+]

@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "current_wording_source": "current-content.json",
+  "snapshot_notice": "以下为按各条核对日期保存的技术证据历史快照；2026-09-17用户选择的新正文与来源在current-content.json。旧未完成状态遇新用户确认须增量核对，不自动覆盖新正文，也不把新正文当作独立测试结果。",
+  "last_verified": "2026-08-31",
+  "last_updated": "2026-09-28",
+  "verification_note": "2026-09-28增量：瞄准项目AI方向与98%识别率、综合测量平台80kHz为用户测试自述登记（user_confirmed），留痕极短，不得扩张为未记录的量化结论。",
+  "projects": [
+    {
+      "id": "instrument",
+      "name": "基于STM32与FreeRTOS的综合电子测量平台",
+      "period": "2026.03—2026.06",
+      "role": "核心开发与系统调试",
+      "platform": [
+        "C",
+        "STM32F103RCT6",
+        "FreeRTOS",
+        "ADC",
+        "DAC",
+        "DMA",
+        "TIM/TRGO",
+        "EXTI",
+        "SPI"
+      ],
+      "ownership": "基于购买开发板、参考工程和课程设计完成复刻、模块实现、调试及优化；不可称整个平台或LCD/原始波形库从零原创。",
+      "claims": [
+        {
+          "id": "instrument.architecture",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "BSP/GUI/TASK分层；事件组通知界面脏区，长度1覆盖队列保存最新DMM结构体，二值信号量同步SPI DMA完成。",
+          "keywords": [
+            "FreeRTOS",
+            "事件组",
+            "队列",
+            "信号量",
+            "SPI DMA",
+            "分层架构"
+          ]
+        },
+        {
+          "id": "instrument.freertos_port",
+          "status": "user_confirmed_and_source_verified",
+          "resume_policy": "allowed",
+          "summary": "用户确认在综合仪器中完成FreeRTOS移植并配置FreeRTOSConfig.h；源码可核对72 MHz CPU时钟、100 Hz Tick、抢占与同优先级时间片、5级优先级、7000字节heap、动态分配、事件组、互斥锁、计数信号量及栈溢出检查等配置。",
+          "keywords": [
+            "FreeRTOS移植",
+            "FreeRTOSConfig.h",
+            "100 Hz Tick",
+            "抢占调度",
+            "时间片",
+            "heap_4",
+            "栈溢出检查"
+          ]
+        },
+        {
+          "id": "instrument.scope",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "集成示波采集、数字万用表、AWG和稳压电源输出监测，并提供LCD/按键交互。"
+        },
+        {
+          "id": "instrument.oscilloscope_chain",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "比较器→EXTI3→ADC1常规组；TIM3 TRGO提供采样节拍，DMA1 Channel1 Normal模式采1024点，最高配置500 kSa/s。",
+          "keywords": [
+            "比较器",
+            "EXTI",
+            "TIM3 TRGO",
+            "ADC",
+            "DMA",
+            "实时采集"
+          ]
+        },
+        {
+          "id": "instrument.trigger_modes",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "10ms Hold-Off、100ms强制触发以及Auto/One-Shot状态控制；用户确认已编译、烧录并上板运行。"
+        },
+        {
+          "id": "instrument.dmm_vref",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "TIM2 10Hz触发ADC1注入组采集DMM、VREFINT、稳压反馈和触发阈值；按VREFINT反推VDDA并结合GPIO档位完成多量程换算。",
+          "details": "Rank1 PB1/IN9 DMM，Rank2 VREFINT，Rank3 PB0/IN8稳压反馈，Rank4 PA0/IN0触发阈值。"
+        },
+        {
+          "id": "instrument.awg_waveform",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "RAM波形表经DMA2 Channel3循环搬运至DAC，TIM5 TRGO决定更新节拍；采样率封顶500kHz并在高频动态减少有效点数。",
+          "allowed_wording": "循环输出波形",
+          "forbidden_wording": "所有频率固定1000点"
+        },
+        {
+          "id": "instrument.awg_debug",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "定位并修正低频ARR计算/更新范围问题和频率值更新顺序导致的切频滞后一档；用户确认相关修改已上板生效。"
+        },
+        {
+          "id": "instrument.awg_triangle",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "当前shape==2仍是约1V→2V单调上升斜坡，不是真正三角波；母版中的“三角波”表述与源码冲突。"
+        },
+        {
+          "id": "instrument.waveform_tearing",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "共享waveform缓冲存在ISR写/LCD任务读撕裂风险；双缓冲与任务化仅为方案。"
+        },
+        {
+          "id": "instrument.performance_metrics",
+          "status": "prohibited",
+          "resume_policy": "prohibited",
+          "summary": "没有完整精度、带宽、温漂、失真改善比例或长期稳定性数据。"
+        },
+        {
+          "id": "instrument.freq_range_80k",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "用户确认信号发生器频率档位覆盖50 Hz～80 kHz，依据为另一份代码的频率表（末档80k）；本地工作树 panel_generator.c 第166行九档末档仍为50.0e3f（50 kHz），该代码副本不在本地、待提供后核对。最新版简历按用户“最新版内容即规范”规则书写80 kHz。"
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "基于STM32与FreeRTOS的智慧农场环境监测与控制系统",
+      "period": "2025.07—2025.09",
+      "role": "核心开发与系统优化",
+      "platform": [
+        "C",
+        "STM32F103C8T6",
+        "FreeRTOS/CMSIS-RTOS2",
+        "ADC/DMA",
+        "I²C",
+        "UART DMA",
+        "PWM"
+      ],
+      "ownership": "原始代码并非用户从零独立编写；可主张完整理解、联调和本人完成的可靠性优化。",
+      "claims": [
+        {
+          "id": "farm.architecture",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "Sensor、Input、Screen、BLE四任务；farmState保存最新状态，farmSafeRange保存可编辑安全阈值。"
+        },
+        {
+          "id": "farm.sensors",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "AHT20、BH1750、雨滴、NTC和土壤湿度多源采集；ADC1扫描Circular DMA、ADC2连续直读及I²C。"
+        },
+        {
+          "id": "farm.i2c_mutex",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "AHT20与OLED共享I²C1并由互斥锁保护，可解释优先级继承和任务阻塞。"
+        },
+        {
+          "id": "farm.queue_ownership",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "指针消息从SensorTask分配，经队列转移至BLETask，UART DMA期间保持有效并在完成后释放；Put失败由SensorTask立即释放，已修复队列满时动态消息未释放造成的内存泄漏，并由用户确认完成编译、烧录和上板验证。"
+        },
+        {
+          "id": "farm.alert_state",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "持续异常改为进入异常warning和恢复recovered的状态边沿通知，减少重复消息；已编译、烧录并由用户确认上板。"
+        },
+        {
+          "id": "farm.hysteresis",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "水泵按土壤湿度下限开启、下限+5%关闭，形成5%滞回；用户确认已上板有效。"
+        },
+        {
+          "id": "farm.control_loop",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "形成异常检测、执行器联动、蓝牙告警和恢复通知闭环；当前脏工作树Beep_on中的osTimerStart被注释，因此不要写当前蜂鸣器告警已启用。"
+        },
+        {
+          "id": "farm.aht20_delay_fix",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "拆成两段I²C事务并以osDelay替代持锁HAL_Delay(75)只是方案，尚未合入。"
+        },
+        {
+          "id": "farm.uart_dma_reliability",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "BLETask未检查HAL_UART_Transmit_DMA返回值，无完成通知/超时/重试；不能称可靠发送已解决。"
+        },
+        {
+          "id": "farm.sensor_calibration",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "土壤/雨滴使用经验百分比映射，未完成真实物理量标定；只能写相对数据显示。"
+        },
+        {
+          "id": "farm.beeper_current",
+          "status": "prohibited",
+          "resume_policy": "prohibited",
+          "summary": "当前工作树Beep_on中的osTimerStart被注释，不能宣传当前蜂鸣器本地告警已启用。"
+        }
+      ]
+    },
+    {
+      "id": "lora_node",
+      "last_verified": "2026-09-08",
+      "name": "基于STM32的低功耗LoRa环境传感节点",
+      "period": "2025.11—2026.01",
+      "role": "独立开发",
+      "platform": [
+        "C",
+        "STM32F103C8T6",
+        "ADC",
+        "I²C",
+        "UART DMA",
+        "RTC/Stop",
+        "LoRa"
+      ],
+      "ownership": "独立完成需求拆分、Cube配置、基础驱动移植集成、应用流程、协议和调试；不宣称HAL及所有基础驱动从零原创。",
+      "review": {
+        "source_root": "D:\\APP\\project_practice\\sensor_project\\sensor.design",
+        "git": "master；HEAD=3d751c667b4c924ef5bd794d8e6a45c984cf960f（2026-09-05）；本次未fetch或核验服务器最新状态。",
+        "working_tree": "原四项未提交改动仍为注释/空白/文件头变更；执行逻辑新增来自3d751c6，不把未提交注释中的重试次数当作实现。",
+        "reading_scope": "增量核对README、3d751c6提交统计、main双期限/按键/Stop、rain供电包装、OLED上下电及EXTI IRQ。README的常显/每5秒醒表述落后于执行逻辑；以当前函数为准。",
+        "host_test": "2026-09-03重新运行python -B -m unittest discover -s tools -p test_lora_gateway.py -v，7项全部通过；只覆盖Python协议、流式解析、重复标记和CSV，不覆盖C节点控制流程、真实串口或RF。",
+        "firmware_build": "只读确认build/Debug和build/LoRaDebug的sensor.design.elf存在，时间分别为2026-09-05 09:13:39/09:13:44；本轮未重新构建，不单凭产物存在宣称当前工作树重新编译通过。",
+        "board_validation": "新增PC13按键、PB12 OLED供电、PB13 OLED支路隔离、PB14雨滴供电和双期限代码尚无烧录/实物验证；旧基础链上板记录不能覆盖新增硬件链。",
+        "logistics": "模块当前到货状态未知；不沿用旧README中的等待到货表述作现状。"
+      },
+      "claims": [
+        {
+          "id": "lora.independent_integration",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "独立完成环境传感节点的需求、外设配置、驱动集成、应用流程和调试。"
+        },
+        {
+          "id": "lora.architecture",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "裸机主循环分别处理采样期限和OLED显示期限，采样到期才采集/阈值/通信，按键只请求显示；lora_protocol负责编解码/CRC，lora_node负责模式/UART完成/ACK。仍含阻塞等待，不是FreeRTOS或全非阻塞架构。",
+          "keywords": [
+            "裸机",
+            "驱动集成",
+            "协议分层",
+            "模块化"
+          ]
+        },
+        {
+          "id": "lora.sensors",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "AHT20/OLED共享硬件I²C1；BH1750仍为0x10连续模式；雨滴PB1/ADC1_IN9轮询8次平均，无ADC DMA，主循环已调用Rain_ReadPowered包装供电时序；OLED默认关闭、查看窗口内刷新。雨滴为相对量，默认端点未标定。"
+        },
+        {
+          "id": "lora.data_validity",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "采集成功才更新数值，失败保留旧值并清本轮valid位；帧内分别携带AHT/光照/雨滴有效位及alert。未实现最后有效时间戳、完整陈旧显示或传感器故障自动恢复，不称已全面保证数据可信。"
+        },
+        {
+          "id": "lora.stop_cycle",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "暂停SysTick并进入Stop，RTC Alarm经EXTI17/NVIC唤醒；随后恢复PLL/72MHz系统时钟与SysTick，再执行业务。旧基础链有用户上板记录，不等于LoRa整链已实测；RTC寄存器等待等路径仍有边界。"
+        },
+        {
+          "id": "lora.periods",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "采集通信结束后设置sample_deadline：默认构建加5秒，LoRa按传感有效性/阈值加30或10秒；按键和显示期限不重置采样期限，下一次Stop等待两者较早者。30/10是业务结束后采样等待参数，不是每次实际连续休眠时长、严格固定采样周期或异常即时唤醒。"
+        },
+        {
+          "id": "lora.protocol",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "18字节大端遥测帧、CRC16-CCITT、Node ID、Sequence及valid/alert；阻塞接收11字节ACK并检查格式、CRC、ID、序号、status。整帧最多重试1次（最多2次发送尝试），重试沿用同一序号；并非安全认证、必达或恰好一次语义。"
+        },
+        {
+          "id": "lora.tx_lifecycle",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "检查UART DMA启动状态、完成/错误回调及500ms超时；HAL_BUSY最多3次启动尝试，与整帧重试1次分开。发送前等待AUX空闲；UART完成后立即接收ACK，匹配成功后再检查AUX。等待仍是轮询/阻塞，不称DMA使CPU自动休眠或全部故障路径已闭环。"
+        },
+        {
+          "id": "lora.gateway",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "PC在线串口网关已有流式组帧、半帧/粘帧处理、Magic重同步、CRC拒绝、动态ACK、有界重复帧标记及JSON/CSV输出；重复帧仍应答并记录duplicate，缓存不持久化，ACK不保证日志已落盘。网关能力不能套用为节点ACK已支持流式解析。"
+        },
+        {
+          "id": "lora.software_verification",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "2026-09-03重新执行7项Python协议/网关测试全部通过；Debug和LoRaDebug有历史成功构建记录。本次未重新编译、烧录，测试不运行C节点控制流程或无线实物链路。"
+        },
+        {
+          "id": "lora.oled_power_plan",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "历史方案ID保留但禁止用于新版正文；3d751c6已实现对应控制代码。请改用lora.oled_power_code并注明新增硬件链待验证，不得沿用历史方案ID绕过限定。"
+        },
+        {
+          "id": "lora.rain_power_plan",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "历史方案ID保留但禁止用于新版正文；3d751c6已实现对应控制代码。请改用lora.rain_power_code并注明新增硬件链待验证，不得沿用历史方案ID绕过限定。"
+        },
+        {
+          "id": "lora.peripheral_power_plan",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "BH1750改成单次高分辨率后自动Power Down、Stop前统一熄灭LED均未实施；不能把MCU Stop写成所有外设同时休眠。OLED旧开关屏函数命令与CH1116初始化不一致，不能称已验证软关屏省电。"
+        },
+        {
+          "id": "lora.pin_remap",
+          "status": "design_only",
+          "resume_policy": "prohibited",
+          "summary": "源码M0=PA8、M1=PA9、AUX=PA1，USART3=PB10/PB11；计划改为M0=PA0、M1=PA1、AUX=PB8未落实，初始化仍硬编码GPIOA；不能写为现行接线。"
+        },
+        {
+          "id": "lora.sleep_guarantee",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "最终SleepRadio返回值被忽略，只能说调用模块休眠流程，不能保证已成功睡眠后才允许MCU Stop。模块模式与AUX时序仍待RF硬件验证。"
+        },
+        {
+          "id": "lora.remote_config",
+          "status": "prohibited",
+          "resume_policy": "prohibited",
+          "summary": "远程GET/SET阈值功能已停用，当前为编译期固定阈值；不写无线远程调参或Flash参数持久化已实现。"
+        },
+        {
+          "id": "lora.rf_validation",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "双模块RF、M0/M1/AUX实物时序、300ms ACK窗口、距离、RSSI和丢包率尚未实测。"
+        },
+        {
+          "id": "lora.power_metrics",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "模块休眠电流和整板平均功耗没有实测数据，不写μA级或降低比例。"
+        },
+        {
+          "id": "lora.networking_scope",
+          "status": "prohibited",
+          "resume_policy": "prohibited",
+          "summary": "不是LoRaWAN，也没有路由/多节点组网验证；只能写自定义串口LoRa节点协议。"
+        },
+        {
+          "id": "lora.oled_power_code",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "PC13低有效EXTI置事件、主循环20ms消抖；OLED默认关闭，按键切换，开启后30秒到期关闭。PB12控制高边电源、PB13隔离OLED I²C支路，上电10ms→连接1ms→重初始化；关闭0xAE→隔离→断电。源码已实现，有旧链接产物；新增硬件链尚未上板，不能保证无倒灌或量化省电。",
+          "sources": [
+            "Core/Src/main.c:Handle_OLED_Button",
+            "BSP/Src/oled.c:OLED_PowerOn/OLED_PowerOff",
+            "Core/Src/stm32f1xx_it.c:EXTI15_10_IRQHandler"
+          ],
+          "required_qualifier_terms": [
+            "待上板",
+            "待实测",
+            "硬件待验证"
+          ]
+        },
+        {
+          "id": "lora.rain_power_code",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "Rain_ReadPowered控制PB14高边使能，等待20ms后调用8次ADC平均，成功/失败返回前均关电源；GPIO是开关使能而非直接供电。已有控制代码，外部开关/稳定时间/输入范围仍待实物验证。",
+          "sources": [
+            "BSP/Src/rain.c:Rain_ReadPowered",
+            "BSP/Inc/rain.h",
+            "Core/Inc/main.h"
+          ],
+          "required_qualifier_terms": [
+            "待上板",
+            "待实测",
+            "硬件待验证"
+          ]
+        },
+        {
+          "id": "lora.dual_deadline_code",
+          "status": "qualified",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "分别保存采样与OLED关屏的RTC绝对期限，进入Stop前选择较早期限，按键唤醒不推迟采样期限；ISR不执行I²C。源码已实现，含阻塞采集/通信，未验证所有竞争窗口及实物唤醒时序。",
+          "sources": [
+            "Core/Src/main.c:RTC_TimeBefore/Enter_Stop_Until/main"
+          ],
+          "required_qualifier_terms": [
+            "待上板",
+            "待实测",
+            "硬件待验证"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car_contest",
+      "name": "TI杯2025年全国大学生电子设计竞赛E题《简易自行瞄准装置》",
+      "period": "2025.07—2025.08",
+      "role": "循迹与人机交互开发",
+      "platform": [
+        "C",
+        "TI MSPM0G3507",
+        "DriverLib/SysConfig",
+        "GPIO",
+        "OLED",
+        "按键",
+        "PID接口"
+      ],
+      "ownership": "个人贡献仅为按键/OLED交互和五路灰度循迹；其他控制模块属于团队接口。",
+      "claims": [
+        {
+          "id": "car_contest.contribution",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "负责AI训练部署、视觉算法、灰度采集与人机交互；早期“按键/OLED＋五路灰度循迹”为历史口径，已被2026-09-17起的视觉与AI确认扩展。电机、编码器、MPU6050、舵机及完整PID仍属团队模块。"
+        },
+        {
+          "id": "car_contest.mapping",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "五路GPIO拼成5bit状态并映射中心、偏移和转向语义，接入团队位置PID/左右轮差速接口。"
+        },
+        {
+          "id": "car_contest.team_context",
+          "status": "team_context",
+          "resume_policy": "allowed_with_qualifier",
+          "summary": "电机、编码器、MPU6050、视觉坐标、舵机及完整PID属于团队模块，只能写协同联调。"
+        },
+        {
+          "id": "car_contest.award",
+          "status": "user_confirmed",
+          "resume_policy": "prohibited",
+          "summary": "全国大学生电子设计竞赛省级二等奖（2025，用户2026-09-15确认；证书未独立核验）。旧“2025未获奖”口径作废；技术简历荣誉行已按省二书写。"
+        },
+        {
+          "id": "car_contest.current_build",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "2026-08-24最新重建为27 errors/13 warnings且Target not created；旧hex早于main.c，不能称当前源码编译通过。"
+        },
+        {
+          "id": "car_contest.defects",
+          "status": "unresolved",
+          "resume_policy": "prohibited",
+          "summary": "Track_err部分转弯状态返回未初始化error，居中与丢线语义混淆；尚未修复验证。"
+        },
+        {
+          "id": "car_contest.ai_recognition_eval",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "用200张不同环境靶标照片对训练后模型评测，3张识别有误（197/200≈98.5%，简历写约98%）；成功口径按整机打中判定。使用摄像头实测时未发现问题。留痕极短（无系统测试记录），不得扩张为帧率、全工况或纯算法精度结论。"
+        },
+        {
+          "id": "car_contest.kpu_onchip",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "K230 KPU 推理单元为芯片自带（集成在 K230 内部）；AI 目标检测与几何视觉在该单元运行。"
+        },
+        {
+          "id": "car_contest.make_sense_labeling",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "Make Sense 用于标注正确位置，并借助AI校验标注质量；自采多环境靶标图像作为训练与评测来源。"
+        },
+        {
+          "id": "car_contest.ai_cube_training",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "AI Cube 用于训练模型参数权重；训练后模型板端部署，实现不同环境下的矩形靶标准确识别。"
+        }
+      ]
+    },
+    {
+      "id": "car_lab",
+      "name": "基于STM32的红外循迹避障遥控小车",
+      "period": "2025.05—2025.07",
+      "role": "循迹小组负责人",
+      "platform": [
+        "C",
+        "STM32F103C8T6",
+        "GPIO",
+        "五路灰度",
+        "接口设计",
+        "整车联调"
+      ],
+      "ownership": "负责五路灰度数据接收、状态处理和误差输出接口；后级控制、避障和蓝牙遥控只写协同。",
+      "claims": [
+        {
+          "id": "car_lab.contribution",
+          "status": "user_confirmed",
+          "resume_policy": "allowed",
+          "summary": "担任循迹小组负责人，完成五路灰度数据接收、状态处理和循迹误差接口，协同另外两组整车联调。"
+        },
+        {
+          "id": "car_lab.validation",
+          "status": "verified",
+          "resume_policy": "allowed",
+          "summary": "验收报告支持6人分三组，项目和个人评价均为优秀；负责人和五路灰度由用户后续确认。"
+        },
+        {
+          "id": "car_lab.metrics",
+          "status": "prohibited",
+          "resume_policy": "prohibited",
+          "summary": "没有跑偏率、循迹速度或完成时间等量化数据。"
+        }
+      ]
+    }
+  ]
+}

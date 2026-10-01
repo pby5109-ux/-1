@@ -1,0 +1,158 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¶ÃVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 ≈Ì, 1, LIC=FYKYW-Q9JVI-WF9I7-EENF9-VTY5D-QQ3KV
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  D:\Keil5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+D:\APP\project_practice\µÁ»¸_project\24diansai\Keil\M0_G3507.uvprojx
+Project File Date:  08/24/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'D:\Keil5\ARM\ARMCLANG\Bin'
+Rebuild target 'M0_G3507'
+ArmClang.exe: error: unsupported argument 'armasm' to option 'Wa,'
+ArmClang.exe: error: unsupported argument '--diag_suppress=A1950W' to option 'Wa,'
+ArmClang.exe: error: unsupported argument 'armasm' to option 'Wa,'
+ArmClang.exe: error: unsupported argument '--pd' to option 'Wa,'
+ArmClang.exe: error: unsupported argument '__UVISION_VERSION SETA 541' to option 'Wa,'
+ArmClang.exe: error: unsupported argument 'armasm' to option 'Wa,'
+ArmClang.exe: error: unsupported argument '--pd' to option 'Wa,'
+ArmClang.exe: error: unsupported argument '__MSPM0G3507__ SETA 1' to option 'Wa,'
+assembling startup_mspm0g350x_uvision.s...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling main.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling motor_ctrl.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+../MCU_Drivers/ti_msp_dl_config.c(51): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_init(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(51): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_init(void)
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(73): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK bool SYSCFG_DL_saveConfiguration(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(73): error: expected identifier or '('
+SYSCONFIG_WEAK bool SYSCFG_DL_saveConfiguration(void)
+               ^
+D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+../MCU_Drivers/ti_msp_dl_config.c(85): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK bool SYSCFG_DL_restoreConfiguration(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(85): error: expected identifier or '('
+SYSCONFIG_WEAK bool SYSCFG_DL_restoreConfiguration(void)
+               ^
+D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+../MCU_Drivers/ti_msp_dl_config.c(96): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(96): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(116): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(116): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(255): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
+^
+../MCU_Drivers/ti_msp_dl_config.c(255): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(291): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_PWM_0_init(void) {
+^
+../MCU_Drivers/ti_msp_dl_config.c(291): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_PWM_0_init(void) {
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(337): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_PWM_duoji_init(void) {
+^
+../MCU_Drivers/ti_msp_dl_config.c(337): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_PWM_duoji_init(void) {
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(390): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_TIMER_0_init(void) {
+^
+../MCU_Drivers/ti_msp_dl_config.c(390): error: expected identifier or '('
+SYSCONFIG_WEAK void SYSCFG_DL_TIMER_0_init(void) {
+               ^
+../MCU_Drivers/ti_msp_dl_config.c(412): error: unknown type name 'SYSCONFIG_WEAK'
+SYSCONFIG_WEAK void SYSCFG_DL_I2C_0_init(void) {
+^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated.
+compiling ti_msp_dl_config.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling delay.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling Encoder.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling usart.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling gw_gray.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling led.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling mpu6050.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling oled.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling key.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling pid.c...
+warning: unknown warning option '-Wno-reserved-identifier'; did you mean '-Wno-reserved-id-macro'? [-Wunknown-warning-option]
+1 warning generated.
+compiling pwm.c...
+".\Objects\M0_G3507.axf" - 27 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: TexasInstruments
+                https://software-dl.ti.com/msp430/esd/MSPM0-CMSIS/MSPM0G1X0X_G3X0X/latest/exports/TexasInstruments.MSPM0G1X0X_G3X0X_DFP.1.3.1.pack
+                TexasInstruments::MSPM0G1X0X_G3X0X_DFP@1.3.1
+                Device Family Pack for Texas Instruments MSPM0G1X0X_G3X0X Series
+
+<h2>Collection of Component include folders:</h2>
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

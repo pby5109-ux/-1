@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LCD白屏花屏与SPI DMA证据链</title>
+  <link rel="stylesheet" href="assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>LCD白屏/花屏：先认清引脚，再沿发送链取证</h1>
+  <p class="lead">背光亮只证明背光LED支路工作，不证明LCD控制器已复位、收到初始化命令或写入像素。</p>
+
+  <h2>当前工程的真实引脚</h2>
+  <table>
+    <thead><tr><th>引脚</th><th>功能</th><th>如何观察</th></tr></thead>
+    <tbody>
+      <tr><td>PB6 / LCD_BL</td><td>背光开关</td><td>万用表可看静态高低；亮屏只证明背光</td></tr>
+      <tr><td>PB4 / RST</td><td>LCD控制器硬复位</td><td>示波器看低1ms、拉高后等待约125ms</td></tr>
+      <tr><td>PD2 / NSS(CS)</td><td>片选，低电平选中LCD</td><td>逻辑分析仪看传输期间是否拉低</td></tr>
+      <tr><td>PC12 / RS(DC)</td><td>低=命令，高=像素/参数数据</td><td>与SCK/MOSI联合观察，不是背光</td></tr>
+      <tr><td>PB3 / SCK</td><td>SPI时钟</td><td>示波器看电气质量，逻辑分析仪看时序</td></tr>
+      <tr><td>PB5 / MOSI</td><td>主机发给LCD的数据</td><td>逻辑分析仪按SPI模式0解码</td></tr>
+    </tbody>
+  </table>
+  <p class="rule">当前为SPI屏幕，没有I²C设备地址；由NSS/CS选择器件。</p>
+
+  <h2>白屏且无SCK的排查顺序</h2>
+  <ol>
+    <li>万用表确认LCD供电和PB6背光；示波器确认PB4复位时序。</li>
+    <li>调试器确认LCD任务已创建并进入<code>LCD_BSP_Init()</code>，再进入<code>LCD_Init()</code>和<code>SendCommand()</code>。</li>
+    <li>检查<code>HAL_SPI_Init()</code>/<code>HAL_SPI_Transmit()</code>返回值、SPI1状态和错误码。</li>
+    <li>确认SPI1时钟、PB3/PB5复用推挽和SPI1重映射已配置。</li>
+    <li>逻辑分析仪同时接地并观察PD2、PC12、PB3、PB5。若代码已调用Transmit但PB3仍无SCK，再查外设/引脚/线路。</li>
+  </ol>
+  <p>任务栈不足可能导致HardFault或任务异常，但在“初始化函数是否进入、HAL调用是否返回”之前，不应把它列为第一嫌疑。</p>
+
+  <h2>花屏时四个关键配置</h2>
+  <ul>
+    <li><strong>CPOL：</strong>时钟空闲电平；当前LOW。</li>
+    <li><strong>CPHA：</strong>在哪个边沿采样；当前1EDGE，与CPOL LOW组成模式0。错一位常导致整串位移/乱码。</li>
+    <li><strong>频率：</strong>当前SPI1约18MHz；过高或线路质量差会造成边沿、串扰和间歇错误。</li>
+    <li><strong>RS/DC：</strong>命令时低、数据时高；错误会让初始化命令被当像素或像素被当命令。</li>
+  </ul>
+  <p>当前初始化后还补发<code>0x20</code>关闭反色；该命令缺失更偏颜色/反色问题，不等同于完全无SCK。</p>
+
+  <h2>SPI DMA完成到任务继续的真实链</h2>
+  <p class="rule">DMA1 Channel3完成 → DMA IRQHandler → HAL_DMA_IRQHandler → HAL内部SPI DMA完成函数 → HAL_SPI_TxCpltCallback → xSemaphoreGiveFromISR → LCD任务从xSemaphoreTake恢复 → NSS拉高。</p>
+  <p>DMA硬件不会认识FreeRTOS信号量。它只置硬件完成标志并请求中断；应用层回调才释放二值信号量。若NSS一直低且任务永久等待，按上述链逐个打断点/看状态，找到第一个没有发生的节点。</p>
+  <p><strong>当前源码的已确认薄弱点：</strong><code>SendData()</code>没有检查<code>HAL_SPI_Transmit_DMA()</code>返回值。如果返回HAL_BUSY或HAL_ERROR，DMA没有成功启动，后面的永久等待就不会收到完成信号量，NSS也会一直保持低电平。诊断时应首先保存并检查该返回值。</p>
+
+  <p class="question"><strong>自测：</strong>背光亮、RST正常、代码进入SendCommand，但无SCK；这时背光、LCD初始化调用和SPI物理输出分别已经证明到哪一步？下一步最先看哪个HAL返回值和哪两个引脚？</p>
+</main>
+</body>
+</html>

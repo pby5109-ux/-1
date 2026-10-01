@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-09-03T16:59:21.920056+08:00",
+  "source_pdfs": [
+    {
+      "name": "嵌入式岗位笔试面试真题讲解1-1.pdf",
+      "pages": 7,
+      "sha256": "5c081e29d82e38283ab88a42c975e897f72e27378f6eb3d8a7a6e335f1e1a308"
+    },
+    {
+      "name": "嵌入式岗位笔试面试真题讲解1-2.pdf",
+      "pages": 8,
+      "sha256": "4a9cab400c771625635c493722b0c6d39d26c8df6b04cc4298a09d1bfc6ca220"
+    },
+    {
+      "name": "嵌入式岗位笔试面试真题讲解1-3.pdf",
+      "pages": 11,
+      "sha256": "6c0ae1ae17451d8c77a075a7a772d851628572b489fa854879877b918a6ffb54"
+    },
+    {
+      "name": "嵌入式岗位笔试面试真题讲解1-4.pdf",
+      "pages": 6,
+      "sha256": "bfcf232378ec96503ad12bad2671cbf00cbe1d65b3c82227b819451d0bed527c"
+    }
+  ],
+  "checks": [
+    {
+      "name": "host compiler version",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "gcc.exe (GCC) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ARM compiler version",
+      "command": [
+        "D:\\stm32cubeclt\\STM32CubeCLT_1.21.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "arm-none-eabi-gcc.exe (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "mobile JavaScript syntax",
+      "command": [
+        "C:\\Users\\彭\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "--check",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\mobile-script.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "host compile -O0",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Wno-sign-compare",
+        "-Werror",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\测试参考实现.c",
+        "-o",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\test-O0.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "host run -O0",
+      "command": [
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\test-O0.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "Host pointer=8, int=4, long=4, plain_char_signed=1\nPASS: 43065 assertions; defined examples + boundary/property tests.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "host compile -O2",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Wno-sign-compare",
+        "-Werror",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\测试参考实现.c",
+        "-o",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\test-O2.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "host run -O2",
+      "command": [
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\test-O2.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "Host pointer=8, int=4, long=4, plain_char_signed=1\nPASS: 43065 assertions; defined examples + boundary/property tests.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ARM compile 参考实现.c",
+      "command": [
+        "D:\\stm32cubeclt\\STM32CubeCLT_1.21.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Werror",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-c",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\参考实现.c",
+        "-o",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\参考实现.c.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ARM compile 核对ARM模型.c",
+      "command": [
+        "D:\\stm32cubeclt\\STM32CubeCLT_1.21.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Werror",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-c",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\核对ARM模型.c",
+        "-o",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\核对ARM模型.c.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic constant_increment",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\constant_increment.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\constant_increment.c: In function 'f':\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\constant_increment.c:2:19: error: lvalue required as increment operand\n    2 | void f(void){LIMIT++;}\n      |                   ^~\n",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic suffix_after_parens",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\suffix_after_parens.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\suffix_after_parens.c:1:28: error: expected ',' or ';' before 'UL'\n    1 | #define YEAR (60*60*24*365)UL\n      |                            ^~\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\suffix_after_parens.c:2:17: note: in expansion of macro 'YEAR'\n    2 | unsigned long x=YEAR;\n      |                 ^~~~\n",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic pointer_bitwise",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\pointer_bitwise.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\pointer_bitwise.c: In function 'f':\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\pointer_bitwise.c:1:18: error: invalid operands to binary & (have 'int *' and 'int')\n    1 | void f(int *p){p &= ~7;}\n      |                  ^~\n",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic cpp_scope_in_c",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cpp_scope_in_c.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cpp_scope_in_c.c: In function 'f':\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cpp_scope_in_c.c:1:26: error: expected expression before ':' token\n    1 | int x;int f(void){return ::x;}\n      |                          ^\n",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic write_const",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\write_const.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\write_const.c: In function 'f':\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\write_const.c:1:29: error: assignment of read-only variable 'x'\n    1 | void f(void){const int x=1;x=2;}\n      |                             ^\n",
+      "passed": true
+    },
+    {
+      "name": "expected diagnostic cast_array",
+      "command": [
+        "D:\\Program Files\\CLion 2026.1.2\\bin\\mingw\\bin\\gcc.exe",
+        "-std=c11",
+        "-pedantic-errors",
+        "-fsyntax-only",
+        "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cast_array.c"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "D:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cast_array.c: In function 'f':\nD:\\APP\\project_practice\\codex-project\\记忆与产物\\05-面试题库\\C语言专项训练集\\中间文件\\构建缓存\\cast_array.c:1:31: error: cast specifies array type\n    1 | void f(unsigned long x){(void)(int *[])x;}\n      |                               ^\n",
+      "passed": true
+    }
+  ],
+  "structure": {
+    "questions": 52,
+    "levels": {
+      "A": 34,
+      "B": 15,
+      "C": 3
+    },
+    "ids_unique": true,
+    "answers_complete": true,
+    "mobile_cards": 52,
+    "default_open_answers": 0,
+    "extracted_code_ids": [
+      "C09",
+      "C43",
+      "C44",
+      "C45",
+      "C46",
+      "C47",
+      "C48",
+      "C49",
+      "C50"
+    ]
+  },
+  "html_static": {
+    "unique_ids": true,
+    "answers_default_closed": 52,
+    "local_links_valid": true,
+    "external_scripts": 0,
+    "browser_visual_or_click_test": "NOT RUN: browser safety policy blocked file URL; no workaround attempted"
+  },
+  "boundaries": [
+    "Host tests are not hardware tests.",
+    "ARM -c validates compilation/model only, not linking or board execution.",
+    "UB question examples were not executed.",
+    "No source-project build/flash or project code changes."
+  ],
+  "all_passed": true,
+  "reference_code_sha256": "eebd2b0b3401aeda9fa39b81ef01731ebf9c7550b2bc4d92b61d8166e908d972"
+}

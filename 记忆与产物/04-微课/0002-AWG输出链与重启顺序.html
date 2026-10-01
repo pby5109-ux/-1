@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWG 输出链与重启顺序</title>
+  <link rel="stylesheet" href="assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>AWG：什么存在哪里，谁先启动</h1>
+  <p class="lead"><strong>本课只纠正三件事：</strong>波形表在RAM而非TIM5/DAC；本项目以500kHz作为保守上限；启动时先准备DAC DMA，最后启动TIM5触发源。</p>
+
+  <h2>参数改变时的 RestartDAC</h2>
+  <p class="rule">停 TIM5 → 停 DAC DMA → 计算采样率和波形长度、写 TIM5 PSC/ARR → 重建 RAM <code>waveform[]</code> → 启动 DAC DMA → 最后启动 TIM5。</p>
+
+  <table>
+    <thead><tr><th>对象</th><th>保存/负责的内容</th><th>不负责什么</th></tr></thead>
+    <tbody>
+      <tr><td>RAM <code>waveform[]</code></td><td>一个周期的12位DAC数字码</td><td>不产生采样节拍</td></tr>
+      <tr><td>TIM5</td><td>PSC/ARR与TRGO更新节拍</td><td>不保存整张波形表</td></tr>
+      <tr><td>DMA2 Channel 3</td><td>按请求把RAM样本搬到DAC寄存器，循环工作</td><td>不计算波形形状</td></tr>
+      <tr><td>DAC</td><td>把数字码转换为PA4模拟电压</td><td>不保存频率参数或整张表</td></tr>
+    </tbody>
+  </table>
+
+  <h2>连续输出链</h2>
+  <p class="rule">TIM5 更新/TRGO → DAC触发并产生DMA数据需求 → DMA从RAM <code>waveform[]</code>搬下一个数字码 → DAC转换 → PA4模拟电压 → 电压跟随 → 移位/放大 → 幅度与模拟后级 → 约160kHz低通 → 输出端。</p>
+
+  <h2>1000点与500kHz：三类证据</h2>
+  <p>当前代码先令理想采样率为 <code>frequency × 1000</code>，默认每周期1000点。若超过代码设定的500kHz上限，就把采样率封顶到500kHz，并令 <code>waveformLength ≈ 500000 / frequency</code>。例如50kHz只剩约10点/周期。</p>
+  <ul>
+    <li><strong>源码：</strong><code>AutoSampleRate</code>把采样率硬封顶为500kHz。</li>
+    <li><strong>作者教材p9.2：</strong>称查芯片手册后最大采样率为500kHz。</li>
+    <li><strong>ST官方DS5792表63：</strong>小码步进条件的最大更新率为1MS/s；满量程10位跳变建立时间典型3μs、最大4μs。</li>
+  </ul>
+  <p class="rule">因此面试最稳妥的说法是：“本项目结合DAC动态建立时间与模拟后级带宽，把采样率保守限制为500kHz。”不要把不同码阶、精度和负载条件下的指标压缩成一个无条件绝对极限。</p>
+
+  <h2>缺陷状态必须分开说</h2>
+  <ul>
+    <li><strong>已改、未编译/上板：</strong>ARR减1、频率变量先更新再调用、形状与频率调整各只重启一次。</li>
+    <li><strong>已确认、尚未修：</strong>UI称三角波，但当前公式只从约1V单调增加到约2V，实际是上升斜坡/锯齿。</li>
+    <li><strong>设计约束/待实测：</strong>高频时每周期点数减少，模拟低通又会衰减必要高频成分，可能产生阶梯、幅度下降和圆钝；需要示波器验证，不能说已经解决。</li>
+  </ul>
+
+  <h2>源码依据</h2>
+  <ul>
+    <li><code>APP/BSP/Src/waveform_generator.c</code>：<code>AutoSampleRate</code>、<code>PrepareWaveformData</code>、<code>RestartDAC</code>。</li>
+    <li><code>APP/GUI/panel_generator.c</code>：形状/频率选择和当前单次Restart调用位置。</li>
+    <li>作者教材 <code>p9.1～p9.4</code>：设计框图、采样率、波形表与Restart步骤；其中ARR示例和三角波公式需以源码/数学复核。</li>
+    <li>ST官方 <a href="https://www.st.com/resource/en/datasheet/stm32f103rc.pdf">DS5792</a> 表63：DAC建立时间和更新率条件，是本课的首要硬件指标来源。</li>
+  </ul>
+
+  <p class="question"><strong>自测：</strong>为什么必须最后启动TIM5？如果先启动TIM5而DAC DMA还没准备好，第一批触发到来时会发生什么？请向教师解释。</p>
+</main>
+</body>
+</html>

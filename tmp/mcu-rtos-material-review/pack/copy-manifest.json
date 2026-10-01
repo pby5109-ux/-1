@@ -1,0 +1,78 @@
+[
+  {
+    "source": "C:/Users/彭/OneDrive/Desktop/Cortex-M3权威指南.pdf",
+    "relativeTarget": "03-Cortex-M/Cortex-M3权威指南.pdf"
+  },
+  {
+    "source": "E:/嵌入式学习资料（开发板加freertos）/面试八股文/八股文-外部获取/嵌入式软件开发笔试面试指南_全_202106031(1).pdf",
+    "relativeTarget": "06-外部增补/嵌入式软件开发笔试面试指南_全_202106031(1).pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-1.pdf",
+    "relativeTarget": "01-C语言/原始分册/嵌入式岗位笔试面试真题讲解1-1.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-2.pdf",
+    "relativeTarget": "01-C语言/原始分册/嵌入式岗位笔试面试真题讲解1-2.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-3.pdf",
+    "relativeTarget": "01-C语言/原始分册/嵌入式岗位笔试面试真题讲解1-3.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-4.pdf",
+    "relativeTarget": "01-C语言/原始分册/嵌入式岗位笔试面试真题讲解1-4.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\指针经验总结.pdf",
+    "relativeTarget": "01-C语言/选读补充/指针经验总结.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解1-5.pdf",
+    "relativeTarget": "02-数据结构/嵌入式岗位笔试面试真题讲解1-5.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\8-C&C++高频知识点\\C语言高频知识点.pdf",
+    "relativeTarget": "02-数据结构/C语言高频知识点.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\Cortex系列.pdf",
+    "relativeTarget": "03-Cortex-M/仅作术语对照/Cortex系列.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\1-嵌入式软件-面试八股文资料\\7-嵌入式岗位笔试面试题讲解\\嵌入式岗位笔试面试真题讲解2-3.pdf",
+    "relativeTarget": "04-STM32外设/嵌入式岗位笔试面试真题讲解2-3.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\如何看芯片数据手册.pdf",
+    "relativeTarget": "04-STM32外设/如何看芯片数据手册.pdf"
+  },
+  {
+    "source": "E:\\嵌入式学习资料（开发板加freertos）\\面试八股文\\八股文-购买\\嵌入式-面试题八股文&面试题库\\5-2022年更新资料(含嵌入式岗位原题)\\FreeRTOS知识整理.pdf",
+    "relativeTarget": "05-FreeRTOS/FreeRTOS知识整理.pdf"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/00-使用说明与调研依据.md",
+    "relativeTarget": "01-C语言/C语言专项训练集/00-使用说明与调研依据.md"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/01-题目卷.md",
+    "relativeTarget": "01-C语言/C语言专项训练集/01-题目卷.md"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/02-答案与解析.md",
+    "relativeTarget": "01-C语言/C语言专项训练集/02-答案与解析.md"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/记忆与产物/05-面试题库/C语言专项训练集/03-手机自测版.html",
+    "relativeTarget": "01-C语言/C语言专项训练集/03-手机自测版.html"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/tmp/mcu-rtos-material-review/pack/00-先看学习顺序.md",
+    "relativeTarget": "00-先看学习顺序.md"
+  },
+  {
+    "source": "D:/APP/project_practice/codex-project/tmp/mcu-rtos-material-review/pack/00-内核手册入口.md",
+    "relativeTarget": "03-Cortex-M/00-内核手册入口.md"
+  }
+]

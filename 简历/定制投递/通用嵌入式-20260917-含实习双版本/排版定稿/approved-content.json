@@ -1,0 +1,266 @@
+{
+  "schema_version": 2,
+  "approved": true,
+  "content_revision": "20260917-internship-v1",
+  "approval_record": {
+    "source": "本任务用户指定9月17日通用模板并要求加入此前提供的实习、校园一句话/无校园双版；随后授权同步JD与skill",
+    "scope": "保留基准三项目与技能，新增实习，校园压缩；不表示本轮独立复测项目指标"
+  },
+  "sources": {
+    "baseline-20260917": {
+      "path": "D:\\APP\\project_practice\\codex-project\\简历\\定制投递\\通用嵌入式-20260917\\彭博裕-嵌入式软件工程师-简历-20260917.docx",
+      "sha256": "e2160a961da34277ba97fa7511ce3621e81519716e475f9f78e609e9f741a23e",
+      "status": "user_selected_existing_content"
+    },
+    "internship-user": {
+      "status": "user_provided",
+      "reference": "简历内容讨论与定稿记录.md / 2026-09-17实习暂定稿"
+    },
+    "campus-user": {
+      "status": "user_confirmed_facts_condensed",
+      "reference": "科创部部长、人员协调、校级活动及真实设备故障应对"
+    }
+  },
+  "header": {
+    "name": "彭博裕",
+    "target": "嵌入式软件工程师",
+    "contact": "电话：17668025109   邮箱：pbyuqianrushi@163.com   2027届"
+  },
+  "education": [
+    "2023.09—2027.06",
+    "山东建筑大学",
+    "物联网工程｜本科",
+    "专业综合测评排名前10%"
+  ],
+  "honors": [
+    {
+      "label": "比赛获奖",
+      "text": "全国大学生电子设计竞赛省级二等奖；蓝桥杯省级三等奖。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "证书荣誉",
+      "text": "英语四级（CET-4）；三好学生、优秀学生（个人）、优秀共青团员。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "项目实践",
+      "text": "负责组织开放实验项目，并验收优秀。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "instrument",
+      "name": "基于STM32F103RCT6的综合测量平台",
+      "keywords": "FreeRTOS · 实时采集 · 事件驱动",
+      "intro": {
+        "label": "项目简介",
+        "text": "集成示波器、数字万用表、可调直流电源和信号发生器，支持波形实时显示及频率、幅度测量，频率测量误差1 Hz，电压与电阻测量误差1%；支持直流电压稳定输出，信号发生器输出波形与频率可调。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "硬件电路设计、软件架构设计与系统开发调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "架构交互",
+          "text": "独立完成FreeRTOS移植与软件分层设计，结合邮箱、事件组及信号量，实现最新测量值传递、屏幕按需局部刷新与DMA传输同步。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "并发优化",
+          "text": "针对采集与显示共享缓冲区的读写冲突，设计双缓冲与状态机协同机制，管理波形数据的读写权限和切换时机，保证单帧绘制期间数据一致，避免新旧帧混用。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "测量与调试",
+          "text": "采用内部参考电压校准及分压、偏置补偿，提升测量准确性；优化采样率与波表长度配置、定时参数计算及更新时序，修正低频输出偏差，实现频率切换及时生效。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lora_node",
+      "name": "低功耗LoRa环境监测节点",
+      "keywords": "低功耗管理 · 无线通信 · 网关开发",
+      "intro": {
+        "label": "项目简介",
+        "text": "基于STM32F103C8T6，完成集环境数据采集、周期无线上报与网关异常记录于一体的低功耗监测节点，实现整机休眠电流实测约54µA；按1100mAh电池容量及既定上报工况，预留裕量后估算续航约8个月。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "负责方案选型、软件开发与整板调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "系统开发",
+          "text": "分层封装传感器驱动与采集逻辑，设计RTC周期采集与按键唤醒双事件机制，支持无网关条件下现场查看数据，并通过有效性检查标识采集异常。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "功耗优化",
+          "text": "结合Stop模式、外设供电门控与休眠控制，抑制GPIO漏电并隔离断电外设信号，将整板待机电流控制在µA级。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "协议开发",
+          "text": "设计CRC校验、序号匹配及ACK超时有限重试机制，实现上报确认与传输异常处理；开发PC网关完成数据解析及带时间的故障日志记录，支持采集异常追溯。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car_contest",
+      "name": "基于MSPM0与K230的移动目标瞄准系统",
+      "keywords": "机器视觉 · Python · 几何定位",
+      "intro": {
+        "label": "项目简介",
+        "text": "面向小车行驶过程中的激光自动瞄准，采用灰度阈值分割与矩形检测，结合几何约束筛选靶标、解算靶心并输出瞄准偏差。实现启动后2秒内完成瞄准并开启激光，打靶误差＜1.5cm；小车稳定行驶时误差＜2cm。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "负责视觉算法、灰度采集与OLED/按键交互。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "目标筛选",
+          "text": "在矩形检测基础上，融合面积、对边长度差及平行垂直约束校验候选靶框，并按面积优先逐一筛选，避免单一最大框选择造成目标遗漏。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "中心定位",
+          "text": "利用靶框四角的对角线交点定位靶心，结合交点有效性与坐标边界检查排除异常结果；计算靶心相对画面中心的水平、垂直偏差，经串口输出，为云台调整瞄准方向提供依据。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "光照适配",
+          "text": "基于Otsu自动估计灰度阈值，通过按键触发重估、帧间保持阈值，实现不同光环境下的阈值校准；对无灰度对比的画面跳过识别并重试，避免无效画面参与阈值估计。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    }
+  ],
+  "enterprise": {
+    "name": "烟台东方威思顿电气有限公司",
+    "role": "智能电表测试实习生",
+    "period": "2025.10—2025.11",
+    "bullets": [
+      {
+        "label": "产品认知",
+        "text": "结合智能电表及采集终端PCBA，梳理电源、采样、计量、通信与防护模块，理解三相四线计量及主要器件连接关系。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "开发板实践",
+        "text": "参与电能表开发板操作及测试，结合培训梳理工况事件、远程费控、主动上报的输入条件、软件处理与设备响应。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "通信与排查",
+        "text": "学习RS485、电力线载波及耦合原理，整理“供电接线—信号输入—通信参数—软件状态”分层排查思路，辅助问题定位。",
+        "source_refs": [
+          "internship-user"
+        ]
+      }
+    ]
+  },
+  "campus": {
+    "text": "担任校学生会科创部部长，统筹成员分工与跨部门协作，组织校级宣讲及校园活动，具备组织协调、现场执行与突发问题处理能力。",
+    "source_refs": [
+      "campus-user"
+    ]
+  },
+  "skills": [
+    {
+      "label": "编程基础",
+      "text": "熟悉C语言与Python，掌握常用数据结构，能完成嵌入式模块的代码阅读、改写与调试。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "内核与实时系统",
+      "text": "熟悉ARM Cortex-M3/M4内核与FreeRTOS实时操作系统，完成过FreeRTOS移植与项目配置；具有任务调度、内存管理及多任务并发的实践经验，能够处理中断服务与任务间的数据传递和同步。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "通信与协议",
+      "text": "熟悉UART、I²C、SPI等常用通信协议，具备自定义帧协议设计经验，实现过帧格式定义、CRC校验、序号匹配与ACK重传；使用过通信、采集与定时控制类外设。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "开发与调试",
+      "text": "熟练使用Keil、STM32CubeMX、VS Code等开发工具，能使用CMake/GCC、OpenOCD、Git完成工程构建、下载与版本管理；结合原理图、数据手册及示波器、万用表等仪器定位软硬件问题。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "AI工具",
+      "text": "熟练使用Codex、Claude Code、DeepSeek Harness、ZCode辅助代码阅读、调试与文档整理。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "layout": {
+    "heading_before_twips": 60,
+    "line_twips": 230
+  },
+  "review_notes": [
+    "量化及贡献保留用户选定基准，本轮未新做源码或硬件验证。",
+    "旧证据快照与用户新定稿不一致时按事实来源与日期核对，不把批准措辞当作测试证据。",
+    "Python/内核熟练度沿基准保留，针对新JD扩大范围前须核对。"
+  ]
+}

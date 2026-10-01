@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSPM0与五路灰度循迹</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>MSPM0与五路灰度循迹</h1>
+  <p class="lead">只深挖个人贡献：五路数字灰度、按键/OLED；PID、电机、MPU6050和视觉只学习接口关系。</p>
+
+  <h2>1. MSPM0最小知识</h2>
+  <table><thead><tr><th>名称</th><th>在本工程中的职责</th></tr></thead><tbody>
+    <tr><td>MSPM0G3507</td><td>TI Cortex-M0+主控，CPUCLK 80MHz</td></tr>
+    <tr><td>SysConfig</td><td>图形化描述引脚、时钟和外设，生成配置源码</td></tr>
+    <tr><td>ti_msp_dl_config.c/.h</td><td>生成的宏、句柄和初始化函数；实际Keil工程使用MCU_Drivers版本</td></tr>
+    <tr><td>DriverLib</td><td>TI提供的<code>DL_</code>外设API，封装寄存器操作</td></tr>
+    <tr><td>应用代码</td><td>调用<code>SYSCFG_DL_init()</code>和<code>DL_</code>API，完成比赛逻辑</td></tr>
+  </tbody></table>
+
+  <h2>2. 五路输入与位掩码</h2>
+  <div class="flow">IN1 PB24 → bit4
+IN2 PB20 → bit3
+IN3 PA27 → bit2
+IN4 PB19 → bit1
+IN5 PB18 → bit0</div>
+  <p><code>DL_GPIO_readPins(port, pinMask)</code>返回的是位掩码：低电平返回0，高电平返回该引脚对应的非零mask，不保证返回整数1。宏通过<code>result == pinMask ? 1 : 0</code>把它归一化。</p>
+
+  <h2>3. 状态到误差</h2>
+  <table><thead><tr><th>状态</th><th>含义/动作</th><th>error</th></tr></thead><tbody>
+    <tr><td>00100</td><td>中心</td><td>0</td></tr>
+    <tr><td>01100 / 00110</td><td>轻微左/右偏</td><td>+2.3 / −2.3</td></tr>
+    <tr><td>01000 / 00010</td><td>较大左/右偏</td><td>+7 / −7</td></tr>
+    <tr><td>10000 / 00001</td><td>严重左/右偏</td><td>+20 / −20</td></tr>
+    <tr><td>11000、11100</td><td>左转标志</td><td>源码未赋值：缺陷</td></tr>
+    <tr><td>00111、00011</td><td>右转标志</td><td>源码未赋值：缺陷</td></tr>
+  </tbody></table>
+
+  <h2>4. 闭环控制链</h2>
+  <div class="flow">五路GPIO
+→ Get_Infrared_State()拼5bit
+→ Track_err()得到位置误差/转弯标志
+→ position_pid(error, 0)得到修正量
+→ left = base - correction
+→ right = base + correction
+→ 电机差速让车回到黑线中心</div>
+  <p>正误差代表黑线偏向传感器左侧。若PID输出也为正，则右轮变快、左轮变慢，小车向左修正；负误差反之。</p>
+
+  <h3>普通循迹PID与角度转弯不是同一控制器</h3>
+  <ul>
+    <li>普通循迹：<code>position_pid(error_huidu, 0)</code>以灰度位置误差为输入，输出左右轮差速修正。修正量由误差、变化率和PID参数决定，并不天然只是小幅调整。</li>
+    <li>当前转弯：识别转弯图样后保存<code>yaw_now</code>，使用固定左右轮速度主动旋转；Yaw相对变化达到约±70°时直接回到普通循迹。当前没有“达到70°后再执行角度PID缓慢调节”的阶段。</li>
+    <li>可选改进：大角度阶段快速固定差速，接近目标时降速或使用角度PID，以<code>targetYaw-currentYaw</code>为误差；达到角度容差且重新检测到中心线后再切回灰度PID。</li>
+  </ul>
+
+  <h2>5. 约1ms控制节拍</h2>
+  <pre>80MHz / 8 / (255 + 1) = 39062.5Hz
+(LOAD 38 → 39次计数) / 39062.5Hz = 0.9984ms</pre>
+  <p>TIMA1的LOAD中断每约1ms执行一次，并调用<code>datafun()</code>。主循环负责按键和OLED；时间敏感的控制链在中断中运行。</p>
+
+  <h2>6. switch、加权质心与混合分类</h2>
+  <p>五路数字输入共有<code>2^5 = 32</code>种组合。当前<code>switch</code>的优点是能按赛道实测值手工标定误差，也能直接识别转弯图样；缺点是未列出的组合全部落入<code>default</code>，容易把未知状态误当作中心。</p>
+  <p>加权质心法可为五个探头赋位置权重，例如<code>{+20,+7,0,-7,-20}</code>，普通循迹时计算：</p>
+  <pre>error = Σ(sensor[i] × weight[i]) / Σ(sensor[i])</pre>
+  <p>它能连续处理更多组合，但不能独自判断所有场景：<code>00000</code>时分母为0，应判为丢线；<code>11111</code>的加权结果虽为0，却可能是交叉线而不是居中。因此本工程更适合“先分类、再算误差”的混合方案：</p>
+  <div class="flow">读取5bit状态
+→ 00000：TRACK_LOST
+→ 转弯/宽线图样：TURN_LEFT、TURN_RIGHT或INTERSECTION
+→ 普通图样：TRACK_NORMAL并用switch或加权法计算error
+→ 只有TRACK_NORMAL进入位置PID；其他状态切换小车状态机</div>
+  <p>可让检测函数同时返回<code>raw、mode、error</code>，避免用一个<code>error_flag</code>混装“中心、丢线和未知状态”。再对32种输入逐项建立期望模式/误差表，可以在不上车时先验证分类逻辑。</p>
+
+  <h2>7. 1ms中断预算如何验证</h2>
+  <p>TIMA1约每0.9984ms进入一次ISR，因此一次ISR必须在下一次中断到来前完成，并预留明显余量。不能只看代码行数猜测：在ISR入口置高一个空闲调试GPIO，出口置低，用示波器或逻辑分析仪测高脉宽；高脉宽就是本次ISR执行时间，脉冲间隔应约为1ms。</p>
+  <p>若高脉宽达到或超过1ms，会造成中断连续占用、主循环OLED/按键长期得不到时间，控制周期也会失真。应把OLED、串口、复杂姿态解算等非紧急工作移出ISR；ISR只保留必要采样、快速控制输出和置标志。当前源码每1ms调用<code>datafun()</code>，每10次还调用姿态解算和测速，是否超预算必须实测，不能仅凭源码断言。</p>
+
+  <h2>8. 两个必须主动指出的缺陷</h2>
+  <ol>
+    <li>四种转弯状态只置flag，没有给局部<code>error</code>赋值，随后读取并返回未初始化变量，属于未定义行为。</li>
+    <li><code>error_flag = (error == 0)</code>把正常居中、完全丢线和默认未识别状态混为一种语义，无法可靠区分“在中心”与“没找到线”。</li>
+  </ol>
+
+  <h2>9. 贡献边界表达</h2>
+  <p>“我负责五路数字灰度输入的读取、5bit状态编码、状态到位置误差和转弯标志的映射，并把误差交给团队已有的位置PID形成左右轮差速；同时负责按键和OLED调试界面。电机底层、编码器、MPU6050、视觉坐标和PID主体是团队上下游模块，我能说明接口，但不归为自己的实现。”</p>
+</main>
+</body>
+</html>

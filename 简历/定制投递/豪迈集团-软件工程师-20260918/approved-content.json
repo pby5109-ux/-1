@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "approved": true,
+  "content_revision": "himile-software-engineer-20260918-v1",
+  "approval_record": {
+    "approved_by": "user",
+    "approved_on": "2026-09-18",
+    "approval_note": "用户在预览后回复“OK，不用写校园经历了”，批准求职意向改软件工程师、项目组合换成仪器＋节点＋农场、三处关键词替换；校园经历整栏不写。",
+    "preview_id": "himile-20260918-v1"
+  },
+  "sources": {
+    "base_template": "简历/简历修改版本/模板简历（随时跟新）/彭博裕-嵌入式软件工程师-含实习与校园.docx",
+    "base_template_sha256": "E6E1227599E3A226CE0A1EA80887E72228D3DD18A7FCBC637F9AE404A6206236",
+    "jd_source": "用户粘贴文本（豪迈集团 软件工程师）",
+    "build_script": "定制投递/豪迈集团-软件工程师-20260918/build_himile_resume.py",
+    "notes": "只替换 word/document.xml，其余 ZIP 部件与基准逐字节一致。"
+  },
+  "header": {
+    "name": "彭博裕",
+    "target": "软件工程师",
+    "contact": "电话：17668025109   邮箱：pbyuqianrushi@163.com   2027届"
+  },
+  "education": [
+    "2023.09—2027.06",
+    "山东建筑大学",
+    "物联网工程｜本科",
+    "专业综合测评排名前10%"
+  ],
+  "honors": [
+    {
+      "label": "比赛获奖",
+      "text": "全国大学生电子设计竞赛省级二等奖；蓝桥杯省级三等奖。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "证书荣誉",
+      "text": "英语四级（CET-4）；三好学生、优秀学生（个人）、优秀共青团员。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "项目实践",
+      "text": "负责组织开放实验项目，并验收优秀。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "instrument",
+      "name": "基于STM32F103RCT6的综合测量平台",
+      "keywords": "FreeRTOS · 软件分层 · 系统优化",
+      "intro": {
+        "label": "项目简介",
+        "text": "集成示波器、数字万用表、可调直流电源和信号发生器，支持波形实时显示及频率、幅度测量，频率测量误差1 Hz，电压与电阻测量误差1%；支持直流电压稳定输出，信号发生器输出波形与频率可调。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "硬件电路设计、软件架构设计与系统开发调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "架构交互",
+          "text": "独立完成FreeRTOS移植与软件分层设计，结合邮箱、事件组及信号量，实现最新测量值传递、屏幕按需局部刷新与DMA传输同步。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "并发优化",
+          "text": "针对采集与显示共享缓冲区的读写冲突，设计双缓冲与状态机协同机制，管理波形数据的读写权限和切换时机，保证单帧绘制期间数据一致，避免新旧帧混用。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "测量与调试",
+          "text": "采用内部参考电压校准及分压、偏置补偿，提升测量准确性；优化采样率与波表长度配置、定时参数计算及更新时序，修正低频输出偏差，实现频率切换及时生效。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lora_node",
+      "name": "低功耗LoRa环境监测节点",
+      "keywords": "上位机网关 · 协议解析 · 低功耗管理",
+      "intro": {
+        "label": "项目简介",
+        "text": "基于STM32F103C8T6，完成集环境数据采集、周期无线上报与网关异常记录于一体的低功耗监测节点，实现整机休眠电流实测约54µA；按1100mAh电池容量及既定上报工况，预留裕量后估算续航约8个月。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "负责方案选型、软件开发与整板调试。",
+        "source_refs": [
+          "baseline-20260917"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "系统开发",
+          "text": "分层封装传感器驱动与采集逻辑，设计RTC周期采集与按键唤醒双事件机制，支持无网关条件下现场查看数据，并通过有效性检查标识采集异常。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "功耗优化",
+          "text": "结合Stop模式、外设供电门控与休眠控制，抑制GPIO漏电并隔离断电外设信号，将整板待机电流控制在µA级。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        },
+        {
+          "label": "协议开发",
+          "text": "设计CRC校验、序号匹配及ACK超时有限重试机制，实现上报确认与传输异常处理；开发PC网关完成数据解析及带时间的故障日志记录，支持采集异常追溯。",
+          "source_refs": [
+            "baseline-20260917"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "基于STM32与FreeRTOS的智慧农场环境监测与控制系统",
+      "keywords": "多任务架构 · 状态解耦 · 可靠性优化",
+      "intro": {
+        "label": "项目简介",
+        "text": "基于STM32F103C8T6与FreeRTOS的环境监测与自动控制系统，采集空气温湿度、土壤湿度、光照及降雨状态，按安全阈值驱动水泵与风扇并推送蓝牙告警，形成异常检测、执行器联动与恢复通知的控制闭环。",
+        "source_refs": [
+          "farm.architecture",
+          "farm.sensors",
+          "farm.control_loop"
+        ]
+      },
+      "duty": {
+        "label": "项目职责",
+        "text": "核心开发与系统优化。",
+        "source_refs": [
+          "discussion-15.2"
+        ]
+      },
+      "bullets": [
+        {
+          "label": "任务架构",
+          "text": "基于STM32F103C8T6与FreeRTOS搭建环境监测和自动控制系统，将传感采集、按键/编码器、OLED显示和BLE通信划分为Sensor、Input、Screen、BLE四个任务，并以farmState/farmSafeRange解耦实时状态、界面显示与可配置安全阈值。",
+          "source_refs": [
+            "farm.architecture"
+          ]
+        },
+        {
+          "label": "数据采集",
+          "text": "结合AHT20、BH1750及土壤/雨滴传感器采集空气温湿度、土壤温湿度、光照和降雨相对数据，使用ADC1扫描与循环DMA、ADC2连续转换及I²C完成多源读取；以互斥锁保护AHT20与OLED共享的I²C1总线。",
+          "source_refs": [
+            "farm.sensors",
+            "farm.i2c_mutex"
+          ]
+        },
+        {
+          "label": "控制告警",
+          "text": "基于阈值驱动水泵和PWM风扇，通过指针消息队列与UART DMA发送JSON告警；修复队列满时动态消息未释放造成的内存泄漏，将持续报警改为warning/recovered状态边沿，并为水泵加入5%滞回，减少重复消息与临界启停。",
+          "source_refs": [
+            "farm.queue_ownership",
+            "farm.alert_state",
+            "farm.hysteresis"
+          ]
+        }
+      ]
+    }
+  ],
+  "enterprise": {
+    "name": "烟台东方威思顿电气有限公司",
+    "role": "智能电表测试实习生",
+    "period": "2025.10—2025.11",
+    "bullets": [
+      {
+        "label": "产品认知",
+        "text": "结合智能电表及采集终端PCBA，梳理电源、采样、计量、通信与防护模块，理解三相四线计量及主要器件连接关系。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "开发板实践",
+        "text": "参与电能表开发板操作及测试，结合培训梳理工况事件、远程费控、主动上报的输入条件、软件处理与设备响应。",
+        "source_refs": [
+          "internship-user"
+        ]
+      },
+      {
+        "label": "通信与排查",
+        "text": "学习RS485、电力线载波及耦合原理，整理“供电接线—信号输入—通信参数—软件状态”分层排查思路，辅助问题定位。",
+        "source_refs": [
+          "internship-user"
+        ]
+      }
+    ]
+  },
+  "campus": null,
+  "skills": [
+    {
+      "label": "编程基础",
+      "text": "熟悉C语言与Python，掌握常用数据结构，能完成嵌入式模块的代码阅读、改写与调试。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "内核与实时系统",
+      "text": "熟悉ARM Cortex-M3/M4内核与FreeRTOS实时操作系统，完成过FreeRTOS移植与项目配置；具有任务调度、内存管理及多任务并发的实践经验，能够处理中断服务与任务间的数据传递和同步。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "通信与协议",
+      "text": "熟悉UART、I²C、SPI等常用通信协议，具备自定义帧协议设计经验，实现过帧格式定义、CRC校验、序号匹配与ACK重传；使用过通信、采集与定时控制类外设。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "开发与调试",
+      "text": "熟练使用Keil、STM32CubeMX、VS Code等开发工具，能使用CMake/GCC、OpenOCD、Git完成工程构建、下载与版本管理；结合原理图、数据手册及示波器、万用表等仪器定位软硬件问题。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    },
+    {
+      "label": "AI工具",
+      "text": "熟练使用Codex、Claude Code、DeepSeek Harness、ZCode辅助代码阅读、调试与文档整理。",
+      "source_refs": [
+        "baseline-20260917"
+      ]
+    }
+  ],
+  "layout": {
+    "heading_before_twips": 60,
+    "line_twips": 230
+  },
+  "review_notes": "本轮为豪迈集团软件工程师定制：求职意向改软件工程师；项目组合改为仪器＋节点＋农场（换出瞄准系统，仍保留在素材池）；校园经历整栏删除。数据库无任何证据，未写入简历；C++/C#/Qt、AGV/仓储/产线领域同样未写。农场项目简介与职责为本轮新增文字，内容由已确认的农场条目与第15.2节角色（核心开发与系统优化）改写，未新增事实主张。"
+}

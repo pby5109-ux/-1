@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoRa剩余知识总览：无线参数、可靠性、故障树与验收</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>LoRa剩余知识总览</h1>
+  <p class="lead">面向当前STM32F103低功耗传感节点，把协议之后尚未展开的无线参数、节点状态机、多节点可靠性、故障排查、实物验收和面试表达一次讲完整。本文是阅读资料，不设置答题与评分。</p>
+
+  <div class="note danger">
+    <strong>当前证据边界：</strong>节点协议、LoRa状态机、在线Python网关、7项主机测试和两种固件构建已经完成；两块模块已经购买但尚未完成真实COM口、RF、AUX、距离、RSSI、丢包和功耗验证。本文中的测试数值均为方法或计算示例，不能冒充实测结果。
+  </div>
+
+  <h2>1. 余下内容地图</h2>
+  <table>
+    <thead><tr><th>部分</th><th>必须掌握的结论</th><th>与当前源码的关系</th></tr></thead>
+    <tbody>
+      <tr><td>LoRa参数</td><td>频率/信道、BW、SF、CR、发射功率共同决定速率、灵敏度、空中时间和能耗</td><td>源码没有运行时配置AT参数，依赖模块预配置一致</td></tr>
+      <tr><td>三层完成事件</td><td>UART完成、AUX空闲、匹配ACK分别证明不同层级</td><td><code>lora_node.c</code>逐层等待并返回状态</td></tr>
+      <tr><td>可靠性</td><td>同Sequence重试、重复包仍ACK、业务只处理一次、重试有上限</td><td>节点最多重试一次；PC使用1024项有界去重</td></tr>
+      <tr><td>多节点</td><td>NodeID解决身份，不解决空中碰撞；需要错峰、退避、LBT或分信道</td><td>当前仅完成单网关应用协议，没有调度算法</td></tr>
+      <tr><td>故障树</td><td>按UART→模块模式→RF→网关→应用ACK分层定位</td><td>状态枚举和日志是故障证据入口</td></tr>
+      <tr><td>实物验收</td><td>保存模块配置、时序、CSV、距离/RSSI/丢包和功耗原始数据</td><td>模块到货后执行，当前不可写成已完成</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 先固定三层边界</h2>
+  <table>
+    <thead><tr><th>层级</th><th>本项目做什么</th><th>常见误解</th></tr></thead>
+    <tbody>
+      <tr><td>应用协议层</td><td>18B遥测、11B ACK、Magic、NodeID、Sequence、Flags、CRC</td><td>把Sequence或Flags说成信道/频率</td></tr>
+      <tr><td>UART/模块接口层</td><td>STM32通过9600 8N1发送字节，M0/M1切模式，AUX报告模块忙闲</td><td>把DMA完成说成网关已经收到</td></tr>
+      <tr><td>LoRa RF层</td><td>模块内部LLCC68完成调制、发射、接收和解调</td><td>把自定义点对点协议说成LoRaWAN</td></tr>
+    </tbody>
+  </table>
+  <p>当前系统是“串口LoRa模块＋自定义点对点/星型应用协议”。LoRaWAN则包含标准MAC、网关转发和网络服务器，典型结构是星中之星；当前代码没有Join、设备会话密钥、帧计数器和网络服务器，因此不能称为LoRaWAN。</p>
+
+  <h2>3. 模块必须先完成的一次性配置</h2>
+  <p>当前STM32代码不在启动时执行AT配置，只负责M0/M1、AUX和业务收发。因此两块模块必须事先通过USB转TTL配置，并保存一致参数：</p>
+  <ol>
+    <li><strong>串口：</strong>9600、8N1，与USART3一致。</li>
+    <li><strong>传输模式：</strong>透明传输，当前18B帧直接交给模块，不带定点模式的目标地址和信道前缀。</li>
+    <li><strong>LEVEL、CHANNEL、OPENKEY/KEY：</strong>两端一致，否则不能可靠互通。</li>
+    <li><strong>硬件模式控制：</strong>设置<code>AT+SWITCH=1</code>并重启，使M0/M1成为模式输入。</li>
+    <li><strong>DRSSI：</strong>当前解析器按固定18B帧工作，首次联调保持关闭。开启后接收包尾会多一个RSSI字节，必须同步修改网关解析。</li>
+    <li><strong>天线和电源：</strong>先接匹配天线再发射；模块发射电流约173～174mA，电源必须有足够瞬态能力和就近去耦。</li>
+  </ol>
+  <div class="note">厂商默认值包括LEVEL2、433.15MHz、22dBm、透明传输和高时效模式，但不能因为“默认”就不查询。正式测试前应把两端<code>AT+HELP</code>或逐项查询结果保存为配置证据。</div>
+
+  <h2>4. 频率和信道</h2>
+  <p>厂商把信道00定义为433.15MHz，之后每增加一个信道编号，中心频率增加1MHz。信道是模块RF配置，不出现在本项目18B应用帧中。两端中心频率不同通常无法通信；附近同频设备越多，碰撞和丢包风险越高。</p>
+  <p>选信道时要同时考虑当地无线电法规、模块允许范围、天线匹配和现场噪声。不能只因为模块支持433～532MHz就任意使用全部频率。当前课程不替代法规核对，也不把某个频率写成对所有部署都合法。</p>
+
+  <h2>5. BW、SF、CR和功率如何权衡</h2>
+  <table>
+    <thead><tr><th>参数</th><th>增大后通常发生什么</th><th>工程代价</th></tr></thead>
+    <tbody>
+      <tr><td>BW带宽</td><td>符号更短、速率更高、空中时间更短</td><td>接收灵敏度通常降低，远距离能力变差</td></tr>
+      <tr><td>SF扩频因子</td><td>每个符号使用更多扩频码片，处理增益和灵敏度提高</td><td>符号时间按<code>2^SF/BW</code>增长，速率下降、占空时间和能耗上升</td></tr>
+      <tr><td>CR编码率</td><td>冗余增加，对部分错误更有恢复能力</td><td>有效载荷占比降低，空中时间增加</td></tr>
+      <tr><td>发射功率</td><td>链路预算提高</td><td>发射电流、干扰和法规压力上升；不能解决所有天线和碰撞问题</td></tr>
+    </tbody>
+  </table>
+  <p><strong>核心关系：</strong>更慢、更窄、更高SF通常换来更强接收能力，但每包占用信道更久；更快、更宽、更低SF可缩短空中时间和单包能量，却可能缩短距离。最大发射功率和最大SF并不是“最优设置”，因为长空中时间会提高碰撞概率并拖慢ACK。</p>
+  <p>dBm是对数单位。功率增加3dB约为2倍，增加10dB为10倍。22dBm约等于158mW射频输出，但不等于模块只消耗158mW；模块手册在默认参数下给出的发射电流约173mA。</p>
+
+  <h2>6. 厂商LEVEL档位与当前300ms ACK窗口</h2>
+  <table>
+    <thead><tr><th>LEVEL</th><th>SF</th><th>BW</th><th>CR</th><th>标称空中速率</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>11</td><td>125kHz</td><td>4/8</td><td>336bit/s</td></tr>
+      <tr><td>1</td><td>11</td><td>250kHz</td><td>4/5</td><td>1075bit/s</td></tr>
+      <tr><td>2</td><td>11</td><td>500kHz</td><td>4/5</td><td>2148bit/s</td></tr>
+      <tr><td>3</td><td>8</td><td>250kHz</td><td>4/5</td><td>6250bit/s</td></tr>
+      <tr><td>4</td><td>8</td><td>500kHz</td><td>4/6</td><td>10417bit/s</td></tr>
+      <tr><td>5</td><td>7</td><td>500kHz</td><td>4/6</td><td>18229bit/s</td></tr>
+      <tr><td>6</td><td>6</td><td>500kHz</td><td>4/5</td><td>37500bit/s</td></tr>
+      <tr><td>7</td><td>5</td><td>500kHz</td><td>4/5</td><td>62500bit/s</td></tr>
+    </tbody>
+  </table>
+  <p>只按应用净荷估算，18B上行加11B ACK共29B：</p>
+  <pre>LEVEL2：29 × 8 / 2148 ≈ 108 ms
+LEVEL0：29 × 8 / 336  ≈ 690 ms</pre>
+  <p>这还没有加入LoRa前导码、物理头、模式切换、网关解析、收发转换和两段UART时间。因此300ms在LEVEL2下只能称为一个可能可用的初值；在LEVEL0下仅净荷时间就超过300ms，必然不够。最终超时应根据逻辑分析仪测得的ACK往返时延分布设置，例如取高分位值再留裕量，不能凭感觉确定。</p>
+  <div class="note">厂商LEVEL是把BW/SF/CR封装后的组合档位。面试时优先说“当前模块用LEVEL统一配置，底层对应BW/SF/CR组合”，不要假装代码直接操作LLCC68寄存器。</div>
+
+  <h2>7. 链路预算与距离为什么不能只看“8km”</h2>
+  <p>链路预算的简化思想是：</p>
+  <pre>接收余量 ≈ 发射功率 + 发射天线增益 + 接收天线增益
+          - 路径损耗 - 馈线/连接/遮挡损耗 - 接收灵敏度门限</pre>
+  <p>模块给出的22dBm和-134dBm可形成很大的理论预算，但8km是特定空旷、天线高度和参数下的参考值，不是产品保证。实际距离还受天线匹配、安装高度、金属遮挡、地面反射、供电跌落、同频干扰、湿度和测试环境影响。</p>
+  <p>距离不足时不要第一步就把功率开满。先核对天线、供电、信道/LEVEL一致性和现场噪声，再在法规允许范围内调整功率和速率。</p>
+
+  <h2>8. M0/M1、AUX和当前状态机</h2>
+  <table>
+    <thead><tr><th>M0</th><th>M1</th><th>模式</th><th>当前用途</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>高时效模式</td><td>节点唤醒后发送和接收ACK</td></tr>
+      <tr><td>1</td><td>0</td><td>空中唤醒模式</td><td>当前节点代码未使用</td></tr>
+      <tr><td>0</td><td>1</td><td>AT模式</td><td>预配置或调试使用，当前运行时未进入</td></tr>
+      <tr><td>1</td><td>1</td><td>休眠模式</td><td>发送流程结束后降低模块功耗</td></tr>
+    </tbody>
+  </table>
+  <p>AUX高表示模块正在发送、接收或切换模式；AUX低表示这些忙状态完成。AUX是本地模块状态，不证明远端网关收到数据。</p>
+  <div class="flow">LoraNode_Init
+→ M0/M1=11
+→ 等AUX低
+→ initialized=true
+
+每轮发送
+→ 组18B帧（本轮Sequence固定）
+→ M0/M1=00唤醒
+→ 等AUX低
+→ 启动USART3 TX DMA
+→ 等UART完成回调/错误/超时
+→ 阻塞接收11B ACK，窗口300ms
+→ 校验Magic/Version/Type/CRC/NodeID/Sequence/status
+→ 失败则同帧同Sequence再试一次
+→ Sequence加1
+→ M0/M1=11休眠
+→ 正常30s、异常10s进入MCU Stop</div>
+
+  <h2>9. 三层完成事件必须严格区分</h2>
+  <table>
+    <thead><tr><th>事件</th><th>可以证明</th><th>不能证明</th></tr></thead>
+    <tbody>
+      <tr><td><code>HAL_UART_Transmit_DMA()==HAL_OK</code></td><td>本次DMA发送请求成功启动</td><td>不能证明UART发送完成，更不能证明RF成功</td></tr>
+      <tr><td>UART TX完成回调</td><td>STM32本次UART发送流程完成</td><td>不能证明模块已发完空中数据或网关收到</td></tr>
+      <tr><td>AUX由高回到低</td><td>本地模块忙状态结束</td><td>不能证明远端应用校验通过</td></tr>
+      <tr><td>匹配的合法ACK</td><td>网关应用至少接收、解析并确认了该NodeID/Sequence</td><td>不能证明业务存储永久成功，除非ACK语义专门这样定义</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. ACK、重试和“至少一次”语义</h2>
+  <p>当前<code>max_retries=1</code>表示首次发送失败后最多再发一次，总尝试次数为2次。18B帧在进入循环前已生成，因此两次使用相同Sequence。这样如果网关已经收到第一包、只是ACK丢失，第二包会被识别为重复包。</p>
+  <p>网关对重复包仍然回复ACK，否则节点会继续判定失败；但业务数据、数据库写入或报警动作只执行一次。这形成接近“至少一次送达＋业务去重”的语义，而不是天然的严格一次送达。</p>
+  <p>重试必须有限，因为每次重试都包含唤醒、发射、接收等待和ACK窗口。无限重试会把通信故障转化为电池耗尽故障，也可能加重信道拥塞。</p>
+
+  <h2>11. Sequence的价值与当前边界</h2>
+  <ul>
+    <li><strong>ACK匹配：</strong>拒绝其他节点或旧帧的ACK。</li>
+    <li><strong>重复识别：</strong>同NodeID＋Sequence再次到达时标记duplicate。</li>
+    <li><strong>丢包估计：</strong>观察序号间隙，区分首发成功、重试恢复和最终丢失。</li>
+    <li><strong>当前行为：</strong>一次调用无论最终成功失败，退出前都会把Sequence加1。</li>
+  </ul>
+  <p>Sequence是16位，最终会回绕；节点重启又从0开始。PC只缓存最近1024个<code>(NodeID, Sequence)</code>，可以限制内存，但节点刚重启时仍可能与缓存中的旧键冲突。可选改进是增加Boot/Session ID、把Sequence持久化或给去重项加时间有效期；这些都尚未实现。</p>
+
+  <h2>12. 多节点时NodeID为什么不够</h2>
+  <p>多个节点在同一透明信道上传时，NodeID只能让网关知道“数据属于谁”，无法避免两个节点同时发射造成的空中碰撞。尤其所有节点同时上电并采用完全相同的30秒周期时，很容易长期同步碰撞。</p>
+  <table>
+    <thead><tr><th>策略</th><th>作用</th><th>代价</th></tr></thead>
+    <tbody>
+      <tr><td>随机抖动</td><td>每周期增加小随机偏移，打散长期同步</td><td>周期不再完全固定</td></tr>
+      <tr><td>指数/随机退避</td><td>失败后等待随机窗口再重试</td><td>增加最坏时延和状态机复杂度</td></tr>
+      <tr><td>时隙</td><td>给节点分配固定上传窗口</td><td>需要时钟同步和节点管理</td></tr>
+      <tr><td>分信道</td><td>把节点分散到不同中心频率</td><td>网关需要多接收资源或切换信道</td></tr>
+      <tr><td>LBT</td><td>发送前监听信道是否忙</td><td>增加监听功耗和时延，仍不能完全解决隐藏节点</td></tr>
+    </tbody>
+  </table>
+  <p>模块支持LBT和噪声阈值配置，但当前固件没有自动配置或测试。厂商建议先查询现场噪声再设置阈值；开启LBT不能直接宣称“不会碰撞”。</p>
+
+  <h2>13. RSSI怎样使用，以及为什么不能直接开启</h2>
+  <p>模块开启<code>AT+DRSSI=1</code>后，会在接收数据包尾部追加1字节RSSI。厂商换算示例为：</p>
+  <pre>RSSI_dBm = -(0xFF - rssi_byte)
+例如AB：-(255 - 171) = -84 dBm</pre>
+  <p>当前PC网关按固定18B遥测帧寻找和解析；若直接开启DRSSI，接收侧将看到“18B应用帧＋1B RSSI”，现有解析器可能把RSSI当成下一段垃圾字节。正确做法是先确定模块串口输出的包边界，再由网关把最后1B作为链路元数据剥离，18B仍交给应用协议解析，并把RSSI单独写入CSV。</p>
+  <p>RSSI只反映接收功率，不等同于包质量，也不能单独预测丢包。测试时要同时保存距离、环境、天线高度、LEVEL、功率、RSSI和成功率。</p>
+
+  <h2>14. PC网关代码的工程价值</h2>
+  <div class="flow">串口任意大小chunk
+→ 追加到buffer
+→ 搜索A5 5A
+→ 不足18B继续等待
+→ 凑18B校验Version/Type/CRC
+→ 失败仅滑动1B重新找Magic
+→ 成功解析NodeID/Seq/Flags/数据
+→ 判断duplicate
+→ 先写11B ACK并flush
+→ 再写CSV和终端日志</div>
+  <p>“先ACK、后日志”用于缩短往返时延，避免CSV磁盘写入或终端输出拖慢ACK。去重集合限制为1024项，避免网关长期运行导致内存无限增长。重复帧仍产生ACK，但日志标记<code>duplicate=true</code>。</p>
+  <p>当前网关仍有明确边界：没有串口断线自动重连；没有业务范围校验；Flags尚未展开成人类可读字段；没有RSSI尾字节支持；CRC不提供身份认证和防篡改；CSV写入失败可能使进程退出。这些是后续改进方向，不是已经实现的能力。</p>
+
+  <h2>15. 当前节点代码的可靠性边界</h2>
+  <table>
+    <thead><tr><th>现状</th><th>影响</th><th>可选改进</th></tr></thead>
+    <tbody>
+      <tr><td><code>LoraNode_Init()</code>返回值在main中被忽略</td><td>初始化失败后只能在后续发送得到INVALID_ARGUMENT，缺少直接告警</td><td>保存初始化状态并显示/记录明确错误</td></tr>
+      <tr><td><code>SleepRadio()</code>结果最终被忽略</td><td>若休眠模式切换失败，模块可能保持高功耗</td><td>记录失败、有限补救，并在进入Stop前检查AUX/模式</td></tr>
+      <tr><td>ACK用固定11B阻塞接收</td><td>错位或残留字节会导致整帧无效，没有节点侧流式重同步</td><td>使用RX-to-IDLE/环形缓存或在有限窗口内搜索ACK Magic</td></tr>
+      <tr><td>300ms写死</td><td>低速LEVEL下必然不足，高速环境下也未量化裕量</td><td>按t0～t5实测分布确定</td></tr>
+      <tr><td>CRC无鉴权</td><td>只能检错，攻击者可修改内容后重算CRC</td><td>有安全需求时增加MAC/AEAD、随机数和重放保护</td></tr>
+      <tr><td>Sequence掉电归零</td><td>可能与网关近期去重缓存冲突</td><td>Boot ID、持久化序号或带时效的去重键</td></tr>
+    </tbody>
+  </table>
+
+  <h2>16. 六棵核心故障树</h2>
+  <h3>16.1 完全收不到上行</h3>
+  <ol>
+    <li>检查USART3 TX是否有9600 8N1波形，DMA是否完成。</li>
+    <li>检查M0/M1是否确实为00、<code>AT+SWITCH=1</code>是否已保存并重启。</li>
+    <li>检查AUX是否经历忙高和完成低，模块供电在发射瞬间是否跌落。</li>
+    <li>核对两端MODE、LEVEL、CHANNEL、OPENKEY/KEY。</li>
+    <li>检查天线、共地、TX/RX交叉、USB转TTL逻辑电平。</li>
+    <li>检查PC COM口、波特率、网关进程和流式解析统计。</li>
+  </ol>
+
+  <h3>16.2 AUX一直高</h3>
+  <ol>
+    <li>万用表/逻辑分析仪确认引脚真实电平，排除GPIO模式或引脚接错。</li>
+    <li>观察M0/M1切换前后时序，确认没有悬空。</li>
+    <li>检查模块是否持续发送/接收、是否进入异常模式或供电反复跌落。</li>
+    <li>达到100ms模式超时后记录<code>LORA_NODE_MODE_TIMEOUT</code>，不能无限等待。</li>
+  </ol>
+
+  <h3>16.3 UART完成但没有ACK</h3>
+  <p>UART完成只排除了MCU本地发送未结束，后续仍可能是模块未RF发射、RF上行丢失、网关CRC拒绝、网关ACK未发、下行丢失、ACK错位或300ms过短。沿AUX、网关原始串口、网关日志、ACK TX、节点RX逐段找断点。</p>
+
+  <h3>16.4 CRC持续失败</h3>
+  <p>检查波特率/数据位、应用版本和帧长度；确认没有把ASCII十六进制文本当原始二进制；确认DRSSI没有额外追加1B；检查Magic错位、串口丢字节和C/Python大小端一致性。CRC失败时滑动1B重同步，不能直接丢掉整段18B。</p>
+
+  <h3>16.5 距离明显不足或丢包高</h3>
+  <p>依次检查天线匹配和位置、发射瞬态供电、LEVEL/信道一致性、现场同频噪声、金属遮挡和测试高度；最后再调整速率与功率。保存每次改动前后的同条件数据，不能只凭一次“能不能收到”下结论。</p>
+
+  <h3>16.6 休眠电流明显过高</h3>
+  <p>检查M0/M1是否11、AUX是否完成、<code>AT+SWITCH=1</code>是否生效、SleepRadio是否失败；再检查MCU是否真正进入Stop、OLED/BH1750/雨滴板和稳压器静态电流、GPIO上拉及反向供电。模块手册6µA只代表模块默认条件下的休眠电流，不等于整板休眠电流。</p>
+
+  <h2>17. 到货后的实物测试顺序</h2>
+  <ol class="checklist">
+    <li><strong>单模块AT核对：</strong>保存两块模块的HELP、MODE、LEVEL、CHANNEL、SWITCH、DRSSI、POWE和KEY状态。</li>
+    <li><strong>模块对传：</strong>先用两台USB转TTL和串口工具验证透明传输，不接STM32，隔离RF/模块配置问题。</li>
+    <li><strong>PC网关联调：</strong>安装pyserial，确认COM口持续收流、动态ACK和CSV。</li>
+    <li><strong>节点闭环：</strong>接STM32，验证18B上行、11B ACK、NodeID/Sequence匹配。</li>
+    <li><strong>时序记录：</strong>逻辑分析仪同时看STM32 TX/RX、M0、M1、AUX；标记唤醒、UART结束、AUX结束、ACK首字节和休眠时刻。</li>
+    <li><strong>故障注入：</strong>关闭网关，确认总共尝试2次后仍进入休眠；发送坏CRC不ACK；重复Sequence仍ACK但业务只记录一次。</li>
+    <li><strong>距离/RSSI：</strong>固定天线高度、LEVEL、功率、信道、周期和包数，分距离保存CSV。</li>
+    <li><strong>功耗：</strong>分别测采集、UART/RF发射、等待ACK、模块休眠和MCU Stop阶段，计算周期平均电流。</li>
+  </ol>
+
+  <h2>18. 建议记录的原始数据</h2>
+  <table>
+    <thead><tr><th>类别</th><th>至少保存什么</th><th>可以得出什么</th></tr></thead>
+    <tbody>
+      <tr><td>配置</td><td>两端AT查询结果、固件提交、网关命令行</td><td>测试可复现</td></tr>
+      <tr><td>时序</td><td>TX/RX/M0/M1/AUX逻辑分析仪截图和t0～t6时间</td><td>ACK窗口与模式切换裕量</td></tr>
+      <tr><td>可靠性</td><td>总包数、首发成功、重试恢复、最终失败、CRC失败</td><td>首发成功率、最终PDR和重试成本</td></tr>
+      <tr><td>RF</td><td>距离、场景、天线高度、LEVEL、功率、RSSI</td><td>当前条件下的链路表现</td></tr>
+      <tr><td>功耗</td><td>各状态电流和持续时间、供电电压、测量方法</td><td><code>Iavg=Σ(I×t)/T</code>和续航估算</td></tr>
+    </tbody>
+  </table>
+  <p>丢包统计要区分：</p>
+  <pre>首发成功率 = 首次就收到匹配ACK的包数 / 总业务包数
+重试恢复率 = 首次失败但重试成功的包数 / 首次失败包数
+最终丢包率 = 两次均失败的业务包数 / 总业务包数</pre>
+
+  <h2>19. 功耗计算与测量限制</h2>
+  <p>周期平均电流不是把几个电流直接相加，而是按持续时间加权：</p>
+  <pre>Iavg = (I采集×t采集 + I发射×t发射 + I等待ACK×t等待 + I休眠×t休眠) / T周期</pre>
+  <p>万用表平均档可能漏掉173mA级短发射脉冲；更可靠的方法是电流分析仪，或在供电回路串小采样电阻并用示波器测压降。没有这些仪器时可以给出理论预算和测量方案，但不能宣称已经得到真实平均电流。</p>
+
+  <h2>20. 面试可直接使用的项目表达</h2>
+  <div class="card">
+    <strong>90秒版本：</strong>
+    <p>“我在STM32F103传感器终端上设计了一个LoRa低功耗通信变体，用于校园试验田这类低频、小数据量、分散部署的环境监测。节点采集AHT20温湿度、BH1750光照和雨滴模拟量，将数据封装成18字节大端二进制帧，里面包含NodeID、Sequence、数据有效位、报警位和CRC16。节点通过USART3 TX DMA把帧交给LLCC68串口LoRa模块，通过M0/M1在高时效和休眠模式之间切换，并用AUX判断本地模块忙闲。网关端使用Python流式解析串口数据，能够处理拆包、粘包和错位，校验成功后先返回匹配ACK，再写CSV；重复Sequence仍回复ACK，但标记重复，避免业务重复处理。节点等待ACK超时后最多重试一次，正常30秒、异常10秒进入RTC Stop，从而兼顾可靠性和功耗。当前节点、协议、在线网关代码和测试编译已经完成；两块模块已购买，真实RF距离、RSSI、丢包和功耗仍要到货后实测，我不会把这些写成已经验证。”</p>
+  </div>
+
+  <h2>21. 高频追问的标准结论</h2>
+  <ol>
+    <li><strong>为什么不用BLE？</strong>BLE适合近距离手机交互；当前场景节点分散、短包低频且网关集中，LoRa更适合远距离低速上传。代价是速率低、空中时间长，并需要自建网关和协议。</li>
+    <li><strong>为什么不是LoRaWAN？</strong>当前是两端串口模块透明传输加自定义ACK，没有LoRaWAN的Join、网络服务器和标准MAC，系统更简单但扩展、安全和网络管理需要自己实现。</li>
+    <li><strong>为什么有Flags？</strong>传感器失败时保留数值可能无法区分旧值和新值，valid位让网关知道每项数据是否可信；alert位快速表示本轮是否异常。</li>
+    <li><strong>为什么要Sequence？</strong>用于ACK匹配、识别重复、同帧重试和统计丢包；NodeID只说明来源。</li>
+    <li><strong>为什么重试同一个Sequence？</strong>这是同一个业务数据包，若只是ACK丢失，网关可识别第二次为重复而不重复入库。</li>
+    <li><strong>为什么最多一次重试？</strong>提高偶发丢包恢复率，同时限制发射功耗、阻塞时间和信道占用，避免故障时无限耗电。</li>
+    <li><strong>AUX低是否表示网关收到？</strong>不是，只表示本地模块忙状态结束；必须收到合法匹配ACK才能证明网关应用确认。</li>
+    <li><strong>为什么300ms不能直接相信？</strong>它取决于LEVEL、空中时间、模块切换和网关处理。LEVEL0仅29B净荷往返就约690ms，最终必须实测。</li>
+    <li><strong>为什么不能把功率和SF都开最大？</strong>虽然可能提高链路预算，但会增加发射能耗和空中时间，提高碰撞概率并拉长ACK等待。</li>
+    <li><strong>CRC通过说明什么？</strong>只说明字节和CRC自洽；还要检查版本、类型、Flags、范围、NodeID、Sequence和时效，CRC也不提供鉴权。</li>
+    <li><strong>多节点怎样避免碰撞？</strong>NodeID不能避免碰撞，应采用随机抖动/退避、时隙、LBT或分信道，并用统计数据选参数。</li>
+    <li><strong>低功耗怎样形成闭环？</strong>减少活跃时间、有限重试、模块M0/M1休眠、STM32 RTC Stop，并管理OLED/BH1750等外设；最后用分状态电流与持续时间计算平均电流。</li>
+  </ol>
+
+  <h2>22. 最终完成判定</h2>
+  <table>
+    <thead><tr><th>状态</th><th>现在能否宣称</th></tr></thead>
+    <tbody>
+      <tr><td>18B/11B协议、CRC、ACK、有限重试、节点状态机</td><td>可以说已写代码、测试/编译通过</td></tr>
+      <tr><td>Python在线流式网关、动态ACK、去重和CSV</td><td>可以说代码和主机测试完成；真实COM口尚未验证</td></tr>
+      <tr><td>双模块RF闭环</td><td>尚不能，模块在途</td></tr>
+      <tr><td>300ms合理、AUX时序</td><td>尚不能，需要逻辑分析仪/实物时序</td></tr>
+      <tr><td>距离、RSSI、丢包率</td><td>尚不能，需要固定条件和原始日志</td></tr>
+      <tr><td>模块休眠和整板平均功耗</td><td>只有方案和手册数据，尚无整板实测</td></tr>
+    </tbody>
+  </table>
+
+  <h2>23. 资料依据</h2>
+  <ul>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22-433T22D技术手册V2.0</a>：引脚、电源、功耗、AUX、M0/M1和RF边界。</li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf">DX-LR22-433T22D串口应用指导V2.0</a>：LEVEL、MODE、SWITCH、CHANNEL、DRSSI、POWE和LBT。</li>
+    <li><a href="https://lora-alliance.org/about-lorawan/">LoRa Alliance：LoRaWAN架构</a>：用于区分LoRa物理层、自定义点对点和LoRaWAN。</li>
+    <li><code>BSP/Src/lora_node.c</code>、<code>BSP/Src/lora_protocol.c</code>、<code>Core/Src/main.c</code>、<code>tools/lora_gateway.py</code>：当前项目真实实现。</li>
+  </ul>
+  <p>若某个知识点仍不清楚，可以直接向教师指出段落编号进行解释；当前不安排闭卷题和评分。</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BLE 指针队列与内存所有权</title>
+  <link rel="stylesheet" href="assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>BLE 指针队列与内存所有权</h1>
+  <p class="lead"><strong>本课只解决一个问题：</strong>队列写入失败后，谁释放 <code>pvPortMalloc</code> 得到的内存？答案是仍然持有指针的 SensorTask。</p>
+
+  <h2>先把三个对象分开</h2>
+  <div class="flow">
+    <section class="card"><strong>局部变量 msg</strong><br>SensorTask 栈上的一个指针变量，里面只是地址。</section>
+    <section class="card"><strong>100 字节消息块</strong><br><code>pvPortMalloc(100)</code> 从 FreeRTOS heap_4 取得的动态内存。</section>
+    <section class="card"><strong>BLEQueue 槽位</strong><br>元素大小为 <code>sizeof(char*)</code>，只复制指针值，不复制 100 字节消息正文。</section>
+  </div>
+
+  <p class="rule">局部指针变量离开函数会消失，但它指向的堆内存不会自动释放。只有显式调用 <code>vPortFree</code>，那块内存才回到 FreeRTOS 堆。</p>
+
+  <h2>两个容易说错的地方</h2>
+  <ul>
+    <li>不是“堆内数据立刻消失”，而是堆块仍占用、数据可能仍在，但程序失去了可达指针，无法正常访问或释放。</li>
+    <li>不是“旧指针下一轮自己改变”。当前函数返回后局部变量生命周期结束；下一次调用会创建新的局部变量，malloc可能返回另一块地址。</li>
+  </ul>
+
+  <h2>两条所有权路径</h2>
+  <table>
+    <thead><tr><th>结果</th><th>队列中是否有指针副本</th><th>所有权</th><th>谁释放</th></tr></thead>
+    <tbody>
+      <tr><td>入队成功</td><td>有</td><td>SensorTask → BLETask</td><td>BLETask 在 UART DMA 发送完成后释放</td></tr>
+      <tr><td>入队失败</td><td>没有</td><td>仍在 SensorTask</td><td>SensorTask 立即释放</td></tr>
+    </tbody>
+  </table>
+
+  <div class="flow">
+    <section class="card ok"><strong>成功路径</strong><br>malloc → 填消息 → Put=osOK → BLETask Get → DMA发送完成 → free</section>
+    <section class="card bad"><strong>当前失败路径</strong><br>malloc → 填消息 → Put失败 → 函数返回 → 指针变量消失 → 堆块无人能找到＝泄漏</section>
+    <section class="card ok"><strong>正确失败路径</strong><br>malloc → 填消息 → Put失败 → SensorTask free → 函数返回</section>
+  </div>
+
+  <h2>最小正确结构</h2>
+  <pre><code>char *msg = pvPortMalloc(100);
+if (msg == NULL) {
+    return;
+}
+
+/* 填充 msg */
+
+if (osMessageQueuePut(BLEQueueHandle, &amp;msg, 0, 0) != osOK) {
+    vPortFree(msg);       /* 入队失败，所有权没有转移 */
+}
+/* 入队成功后，发送者不再访问或释放 msg */</code></pre>
+
+  <h2>与工程源码对应</h2>
+  <ul>
+    <li><code>freertos.c</code>：队列长度 16，元素大小 <code>sizeof(char*)</code>。</li>
+    <li><code>SensorTask.c</code>：已检查 malloc 失败，但当前没有检查两处 <code>osMessageQueuePut(..., 0)</code> 返回值。</li>
+    <li><code>cmsis_os2.c</code>：零等待且队列满时返回 <code>osErrorResource</code>。</li>
+    <li><code>BleTask.c</code>：成功取到指针后，等待 UART DMA 完成再 <code>vPortFree(msg)</code>。</li>
+  </ul>
+
+  <p class="question"><strong>自测：</strong>如果 Put 失败后函数直接返回，消失的是“指针变量”还是“它指向的堆内存”？请向教师解释为什么。</p>
+</main>
+</body>
+</html>

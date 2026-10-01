@@ -1,0 +1,23 @@
+{
+  "questions": 52,
+  "levels": {
+    "A": 34,
+    "B": 15,
+    "C": 3
+  },
+  "ids_unique": true,
+  "answers_complete": true,
+  "mobile_cards": 52,
+  "default_open_answers": 0,
+  "extracted_code_ids": [
+    "C09",
+    "C43",
+    "C44",
+    "C45",
+    "C46",
+    "C47",
+    "C48",
+    "C49",
+    "C50"
+  ]
+}

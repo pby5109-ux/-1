@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>综合仪器：从ADC采样点到LCD波形像素</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>从ADC采样点到LCD波形像素</h1>
+  <p class="lead">核心不是“1024个点对应1024个像素”，而是先把采样数据按当前时基分配到225个横向像素列，再把每列覆盖的数据电压映射到157个纵向像素，最后写入LCD显存。</p>
+
+  <div class="note good"><strong>本课结论：</strong>当前正式构建链接的是<code>lcd.a</code>。真实<code>LCD_DrawWaveform()</code>按时间窗口做采样区间映射，并在每个横向像素列中找最大值和最小值，画一段竖线保留峰值。<code>lcd_edu.c</code>只是未参与当前构建的教学参考实现，不能代表真实库的精确算法。</div>
+
+  <h2>1. 先分清四种“点”</h2>
+  <table>
+    <thead><tr><th>名称</th><th>它是什么</th><th>本项目中的例子</th></tr></thead>
+    <tbody>
+      <tr><td>ADC原始采样点</td><td>某一采样时刻的12位码值</td><td><code>rawDataBuffer[1024]</code></td></tr>
+      <tr><td>电压数据点</td><td>原始码值经前端逆变换后的电压</td><td><code>waveform[i]</code>，单位V</td></tr>
+      <tr><td>屏幕坐标点</td><td>把时间和电压换成逻辑坐标<code>(x,y)</code></td><td><code>x=0..224</code>，<code>y=0..156</code></td></tr>
+      <tr><td>LCD像素</td><td>显存中的一个RGB565颜色单元</td><td>白底、蓝色波形、灰色网格</td></tr>
+    </tbody>
+  </table>
+  <p>采样点属于“时间—电压”世界，像素属于“横坐标—纵坐标—颜色”世界。绘图函数的工作，就是完成这两个世界之间的映射。</p>
+
+  <h2>2. 当前真实数据链</h2>
+  <div class="flow">比较器触发边沿 → EXTI3
+  → HAL_ADC_Start_DMA(..., rawDataBuffer, 1024)
+  → TIM3 TRGO按固定采样率触发ADC1
+  → DMA写满1024个uint16_t
+  → ADC完成回调把码值换成1024个float电压
+  → 置位WAVEFORM_PANEL_REPAINT_BIT
+  → LCD任务调用RepaintWaveformPanel()
+  → LCD_DrawWaveform()把时间/电压映射为225×157像素
+  → RGB565缓冲经SPI DMA写入LCD</div>
+
+  <h2>3. 横坐标不是简单的“数组下标等于像素”</h2>
+  <p>屏幕横向有8格、225个逻辑像素列。当前时基为<code>XScale</code>秒/格，因此一屏代表的时间为：</p>
+  <pre>T_screen = 8 × XScale</pre>
+  <p>采样率为<code>Fs</code>时，一屏理论上需要显示的采样数为：</p>
+  <pre>N_visible = Fs × T_screen = Fs × 8 × XScale</pre>
+  <p>所以一个横向像素列平均覆盖：</p>
+  <pre>samples_per_column = Fs × 8 × XScale / 225</pre>
+  <p>第<code>x</code>列大致负责的数组区间是：</p>
+  <pre>start = XOffset + floor(x       × samples_per_column)
+end   = XOffset + floor((x + 1) × samples_per_column)</pre>
+  <div class="note"><strong>因此：</strong>1024是采集缓冲区深度，225是屏幕横向显示能力，两者不是一一对应。当前配表大部分挡位让一屏约显示512个采样点；其余采样点仍在采集帧中，但<code>XOffset=0</code>时不一定都出现在当前这一屏。</div>
+
+  <h3>3.1 用当前默认挡位走一遍“时间→列”</h3>
+  <p><code>scale_panel.c</code>默认<code>XScale=500µs/格</code>，8格对应<code>4ms</code>；<code>tim.c</code>初始化TIM3为<code>PSC=0、ARR=561</code>，按72MHz计时得到<code>Fs≈128114次/秒</code>。因此相邻原始样本的时间间隔约<code>7.81µs</code>，而225列中每列代表<code>4ms/225≈17.78µs</code>；一列平均包含约<code>2.28</code>个采样点。</p>
+  <pre>样本 i 的相对时间：t_i ≈ i / Fs
+样本 i 的大致横坐标：x_i ≈ (t_i / 4ms) × 225
+例如 i=128：t_128≈0.999ms → x≈56.2，即约第56列
+该列覆盖的样本区间由整数边界决定，不要求每列恰好2.28个点。</pre>
+  <p>这里的<code>t=0</code>是显示窗口起点（当前<code>XOffset=0</code>，近似从原始数组首样本开始），不等于比较器翻转的绝对时刻：触发回调启动ADC后，还要等定时器下一次触发。时基改变时，改变的是“一屏显示多少时间”；采样率也会随当前挡位的TIM3参数改变，绘图库用两者共同决定每列取哪些数组样本。上面的像素编号是便于理解的近似，正式库的整数取整边界可能使单点落在相邻列。</p>
+
+  <h2>4. 一列有多个采样点时，真实库怎样画</h2>
+  <p>如果每列只随便取一个样本，窄脉冲或尖峰可能正好落在被丢掉的样本上。真实库采用更像示波器的“每列最小值/最大值”方法：</p>
+  <pre>for each screen column x:
+    找到这一列对应的采样区间 [start, end]
+    v_min = 区间中的最小电压
+    v_max = 区间中的最大电压
+    y_top    = voltage_to_y(v_max)
+    y_bottom = voltage_to_y(v_min)
+    把这一列从 y_top 到 y_bottom 的像素画成波形颜色</pre>
+  <p>例如某一列覆盖4个采样值<code>0.1V、0.3V、1.2V、0.2V</code>，这一列不会只显示其中一个值，而是从<code>0.1V</code>对应的Y位置一直画到<code>1.2V</code>对应的Y位置。这样峰值仍然可见。</p>
+
+  <h2>5. 电压怎样变成纵向像素</h2>
+  <p>逻辑波形区高157像素，中心附近<code>y=78</code>表示0V；LCD坐标向下增大，所以正电压必须让Y坐标减小：</p>
+  <pre>理想关系：y = center_y - voltage / YScale × pixels_per_div
+center_y ≈ 78
+pixels_per_div ≈ 157 / 6 ≈ 26.17</pre>
+  <p>换算后还要裁剪：小于0的压到顶部，大于156的压到底部。否则数组索引或LCD窗口会越界。</p>
+  <div class="note danger"><strong>当前库的细节：</strong>对<code>lcd.a</code>中<code>LCD_DrawWaveform()</code>的反汇编显示，它实际使用的电压比例常量约为<code>28.125 / YScale</code>，而6格/157px的几何平均是约<code>26.17 / YScale</code>。这说明真实库的纵向比例与实测网格存在约7.5%的不一致，需要通过已知直流电压或标准方波进一步实测确认；不能只看网格尺寸就断言电压刻度完全准确。</div>
+
+  <h2>6. “连线”到底发生在哪里</h2>
+  <p>入门模型常说“把相邻采样点<code>(x0,y0)</code>和<code>(x1,y1)</code>连成线”，这适合解释基本思想。但当前真实库不是对1024个点逐对执行Bresenham斜线算法，而是：</p>
+  <ol>
+    <li>按时基把采样区间分配到每个横向像素列；</li>
+    <li>在该列计算最大、最小电压；</li>
+    <li>画一段竖直像素线；</li>
+    <li>225列连续排在一起，人眼就看到连续波形。</li>
+  </ol>
+  <p>所以你之前说的“同一列且高度不同就竖着连起来”更接近真实实现；“相邻高度不同就一定画斜线”则不准确。</p>
+
+  <h2>7. 像素怎样真正送到屏幕</h2>
+  <p><code>LCD_DrawWaveform()</code>不是每画一个像素就单独发一次SPI。真实库使用约2KB的<code>xferBuffer</code>，按最多6个横向列分块：</p>
+  <pre>6列 × 157行 × 2字节/RGB565像素 = 1884字节</pre>
+  <p>库先在RAM中生成这一小块的白底、网格、波形、触发线和游标，再调用<code>send_data</code>。项目中的<code>SendData()</code>通过SPI DMA发送，DMA完成回调给二值信号量，LCD任务恢复后释放NSS。然后继续发送下一块，直到225列完成。</p>
+
+  <h2>8. 为什么不能拿lcd_edu.c当当前实现</h2>
+  <table>
+    <thead><tr><th>项目</th><th>当前正式lcd.a</th><th>未参与构建的lcd_edu.c</th></tr></thead>
+    <tbody>
+      <tr><td>横向几何</td><td>225px、8格</td><td>写成250px，常量还存在不一致</td></tr>
+      <tr><td>纵向几何</td><td>157px、6格</td><td>写成160px</td></tr>
+      <tr><td>X轴映射</td><td>使用<code>SampleRate/XScale/XOffset</code>按时间窗口取样</td><td>把全部<code>len</code>按比例压满宽度</td></tr>
+      <tr><td>降采样</td><td>每列求min/max，保留峰值</td><td>逐样本映射，同列画竖线、跨列画水平线</td></tr>
+      <tr><td>当前构建</td><td><code>CMakeLists.txt</code>第121行链接</td><td>没有加入当前可执行目标</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. 一句话复述</h2>
+  <div class="card">综合仪器每次由TIM3触发ADC并通过DMA采集1024点，完成回调把ADC码值还原成电压数组。显示时并不是让1024点逐个对应屏幕像素，而是根据采样率和时基，把当前时间窗口内的数据分配到225个横向像素列；每列计算所覆盖样本的最大值和最小值，再按YScale映射到157像素高的纵坐标并画竖线。所有列组合后形成波形，最后按RGB565分块通过SPI DMA写入LCD。</div>
+
+  <h2>10. 三个自测问题</h2>
+  <ol class="checklist">
+    <li>为什么1024个采样点不能简单理解成1024个屏幕像素？</li>
+    <li>一列覆盖多个采样点时，为什么取min/max比只取一个样本更可靠？</li>
+    <li><code>Fs=128kHz</code>、<code>XScale=500µs/格</code>时，一屏显示多长时间、约多少个样本、每列约多少个样本？</li>
+  </ol>
+
+  <section id="single-task-buffer">
+    <h2>11. 同一任务先转换再画图，还需要双缓冲吗？</h2>
+    <p><strong>不一定。</strong>如果只有LCD任务写入和读取waveform，先完成转换再完成绘制，它不会同时执行自己的两段代码，也无需给自己加互斥锁。任务被抢占不改变本任务的执行顺序。</p>
+    <pre>ADC → DMA → rawDataBuffer → LCD任务转换 → waveform → LCD任务绘图</pre>
+    <p>但rawDataBuffer仍由DMA异步写。把转换移到LCD任务，只消除了waveform的任务/ISR竞争；若下一帧DMA在转换期间重写raw，生成的waveform仍可能混帧。</p>
+    <div class="note"><strong>最简单的串行方案：</strong>采满一帧 → 中断通知LCD并保持禁止新采集 → LCD读取raw完成转换 → 绘制及相关传输消费完成 → 重新允许下一帧。可以只用一份raw和一份waveform，代价是绘制期间没有新采集。</div>
+    <p>进阶方案可在raw完全转换后就放行下一帧DMA，让采集与绘图重叠。前提是waveform在绘完前不更新，下一帧raw完成后不被继续覆盖，直到任务消费它。仍需要状态/所有权管理，只是不一定需要两份waveform。</p>
+    <p>当前代码的Hold-Off和强制触发也必须检查采集状态，不能只把转换循环移动位置。绘图若使用异步SPI DMA，实际发送缓冲须保持有效至完成；启动调用返回不等于DMA不再读内存。</p>
+    <p><a href="https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/02-Queues-mutexes-and-semaphores/04-Mutexes">FreeRTOS官方互斥锁说明</a>：互斥锁用于遵守同一锁协议的任务间互斥，不用于ISR。它不会自动停止DMA；两段锁之间也可能被其他写者更新。</p>
+    <details><summary>自测：LCD独占waveform，但DMA在转换一半时覆盖raw，加互斥锁能避免混帧吗？</summary><p>不能。DMA不获取这个锁；应控制raw的复用时机，或使用有明确所有权的多缓冲。</p></details>
+    <details><summary>自测：转换后才采下一帧，当前绘图只读waveform，下一帧DMA只写raw，能否重叠？</summary><p>可以，但下一帧raw完成后必须保持到消费；下一次waveform更新也必须等当前绘图结束。</p></details>
+    <p>本节是替代方案分析，不代表已修改或实测。可以继续提问缓冲区切换的具体时间线，并对照<a href="#">本页采样到像素流程</a>复习。</p>
+  </section>
+  <section id="nyquist-aliasing">
+    <h2>12. 奈奎斯特定理：为什么高频会被看成另一个低频</h2>
+    <div class="note good"><strong>核心结论：</strong>若模拟信号已经被限制在最高频率<code>fmax</code>以内，要从理想采样值唯一重建它，采样率必须满足<code>Fs &gt; 2×fmax</code>。<code>Fs/2</code>叫奈奎斯特频率；低于两倍只是数学防混叠下限，不是“波形显示得很好”的工程采样率。</div>
+
+    <h3>12.1 先分清两个术语</h3>
+    <table>
+      <thead><tr><th>术语</th><th>含义</th><th>例子</th></tr></thead>
+      <tbody>
+        <tr><td>奈奎斯特频率</td><td>给定采样率时可无混叠表示的最高频率，<code>fN=Fs/2</code></td><td><code>Fs=500kSa/s</code>时，<code>fN=250kHz</code></td></tr>
+        <tr><td>奈奎斯特采样率</td><td>给定最高信号频率时所需的理论最低采样率，<code>Fs&gt;2fmax</code></td><td>要采100kHz正弦，理论上必须高于200kSa/s</td></tr>
+      </tbody>
+    </table>
+    <p>工程上不要刚好取等号。若100kHz正弦只用200kSa/s采样，每周期只有两个采样点；采样相位不利时，两个点可能都接近过零点，无法可靠判断幅值和波形。</p>
+
+    <h3>12.2 混叠怎样计算</h3>
+    <p>超过<code>Fs/2</code>的输入频率会折叠到0～<code>Fs/2</code>区间。单频信号可用下面的方法找最低折叠频率：</p>
+    <pre>f_alias = |f_in - k × Fs|
+选择整数 k，使结果落在 0 ～ Fs/2 内</pre>
+    <table>
+      <thead><tr><th>采样率</th><th>真实输入</th><th>采样结果</th></tr></thead>
+      <tbody>
+        <tr><td>500kSa/s</td><td>100kHz</td><td>不混叠；每周期5点</td></tr>
+        <tr><td>500kSa/s</td><td>300kHz</td><td><code>|300-500|=200kHz</code>，会被误看成200kHz</td></tr>
+        <tr><td>500kSa/s</td><td>490kHz</td><td><code>|490-500|=10kHz</code>，会被误看成10kHz</td></tr>
+        <tr><td>128kSa/s</td><td>100kHz</td><td><code>|100-128|=28kHz</code>，会被误看成28kHz</td></tr>
+      </tbody>
+    </table>
+    <p>混叠不是“高频波形少几个点”，而是ADC采到的离散点同时符合另一个较低频率；数字处理之后通常无法知道原信号究竟是哪一个。</p>
+
+    <h3>12.3 为什么两倍仍不够画好波形</h3>
+    <p>奈奎斯特条件只讨论理想、带限信号能否唯一重建。项目中的LCD直接连接离散采样点，并没有做理想的无限长重建滤波，所以需要更多点：</p>
+    <ul>
+      <li>每周期2点：只是理论边界，幅值和相位极不可靠；</li>
+      <li>每周期5点：能看出周期，但波形仍较粗；</li>
+      <li>每周期10点以上：通常更适合观察时域形状；</li>
+      <li>要观察尖峰、上升沿或占空比，还需要覆盖这些细节对应的更高频成分。</li>
+    </ul>
+    <p>因此项目以500kSa/s采100kHz正弦时只有5点/周期：满足奈奎斯特并不代表显示细腻，只能说不会因该100kHz基频本身产生混叠。</p>
+
+    <h3>12.4 方波为什么要看谐波</h3>
+    <p>理想方波不是单一频率，而是基波加3、5、7……次奇次谐波。50kHz方波包含150kHz三次谐波和250kHz五次谐波。500kSa/s的奈奎斯特频率是250kHz，因此五次谐波已经在边界；本项目前端R17/C5约106kHz低通又会提前衰减这些谐波，所以50kHz方波可以测出50kHz周期，但边沿会明显变圆，不能恢复成理想直角。</p>
+
+    <h3>12.5 模拟低通为什么必须放在ADC前</h3>
+    <p>ADC完成采样后，超过奈奎斯特频率的成分已经折叠进低频区，软件低通无法区分“真实低频”和“高频混叠出的低频”。所以抗混叠滤波必须在ADC之前完成。当前R17/C5约106kHz的一阶低通会限制所需信号带宽并衰减高频，但一阶滤波器滚降只有约20dB/十倍频，不能保证强烈的250kHz以上信号完全消失；实际仍要控制输入带宽并扫频验证。</p>
+
+    <h3>12.6 结合本项目的一句话</h3>
+    <div class="card">综合仪器的TIM3决定采样率。若使用最高500kSa/s，奈奎斯特频率为250kHz；约106kHz模拟前端把主要测量带宽限制在奈奎斯特频率以内。对于100kHz正弦，每周期只有5点，理论上不混叠但显示仍偏粗；对于方波还要考虑高次谐波，不能只拿基频与250kHz比较。</div>
+
+    <h3>12.7 三个自测问题</h3>
+    <ol class="checklist">
+      <li><code>Fs=128kSa/s</code>时输入100kHz正弦，屏幕可能看到多少Hz？</li>
+      <li><code>Fs=500kSa/s</code>时，100kHz正弦每周期几个点？为什么满足奈奎斯特仍可能显示粗糙？</li>
+      <li>50kHz方波的基频低于250kHz，为什么边沿仍会变圆？</li>
+    </ol>
+    <p>主要参考：<a href="https://www.analog.com/media/en/training-seminars/tutorials/MT-002.pdf">Analog Devices MT-002：Nyquist准则与混叠</a>；<a href="https://www.ti.com/document-viewer/lit/html/SSZTC50/GUID-3E270272-EF38-4EF9-8899-F82415961556">TI：ADC混叠与抗混叠滤波</a>。不清楚任一折叠计算时，可以继续让Codex按具体采样率逐项演算。</p>
+  </section>
+  <h2>源码证据</h2>
+  <ul>
+    <li><code>APP/BSP/Src/waveform_capture.c</code>：1024点DMA采集、ADC码值到电压、事件位置位。</li>
+    <li><code>APP/GUI/waveform_panel.c</code>：向LCD库传入Waveform、WaveLength、SampleRate、XScale、YScale和XOffset。</li>
+    <li><code>CMakeLists.txt</code>：当前链接<code>APP/BSP/Inc/lcd.a</code>，没有编译<code>lcd_edu.c</code>。</li>
+    <li><code>lcd.a:lcd.o / LCD_DrawWaveform</code>反汇编：225×157窗口、8格时间映射、每列min/max、6列分块和1884字节传输。</li>
+  </ul>
+  <p>不清楚任意公式或代码区间时，可以继续让Codex结合具体数值逐列演算。</p>
+</main>
+</body>
+</html>

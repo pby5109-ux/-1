@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "task": "简历中间文件迁移（讨论记录与旧版归档）",
+  "owner": "zcode-migrate2-20260928",
+  "workspace": "D:\\APP\\project_practice\\codex-project",
+  "status": "完成：11 项全部迁移并逐项 SHA256 核对一致；原位留指引 stub；空目录已随迁移清空",
+  "scope": "仅移动 简历/简历修改版本/ 下的大体量记录与归档到 简历/中间文件/；原位留指引 stub",
+  "moves": [
+    {
+      "from": "简历\\简历修改版本\\简历内容讨论与定稿记录.md",
+      "to": "简历\\中间文件\\简历内容讨论与定稿记录.md",
+      "bytes": 175092,
+      "sha256": "0C2983DC0D6460883FBCF9F5583C2B48806E54E4BD618F332576826CE15C7F7F",
+      "note": "大体量内容决策记录（~190KB），主树留指引 stub"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-客户经理.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-客户经理.pdf",
+      "bytes": 345077,
+      "sha256": "A1D313B4C1B13E194E2E7F31DD3FCAF707E1237D0229A39DEFA371AA9F79F7BD",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-嵌入式软件工程师-00.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-嵌入式软件工程师-00.pdf",
+      "bytes": 429803,
+      "sha256": "545BFE8A8ED91CC6C270D42DE3AEDD982F17B5D3B95272F1308B1161A430804B",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-嵌入式软件工程师-01.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-嵌入式软件工程师-01.pdf",
+      "bytes": 431390,
+      "sha256": "580063D5D5A41F601DF59544AC020330264E2CC4F5AD94E051710206C430B39A",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-嵌入式软件工程师-10.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-嵌入式软件工程师-10.pdf",
+      "bytes": 448584,
+      "sha256": "8DEE26510C8D4CB71AE74D46F22D8F047ED49281D297F601EF859770BAFDE4D7",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-嵌入式软件工程师-含实习与校园.docx",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-嵌入式软件工程师-含实习与校园.docx",
+      "bytes": 265731,
+      "sha256": "E6E1227599E3A226CE0A1EA80887E72228D3DD18A7FCBC637F9AE404A6206236",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.26\\彭博裕-嵌入式软件工程师-含实习无校园.docx",
+      "to": "简历\\中间文件\\旧版简历归档\\9.26\\彭博裕-嵌入式软件工程师-含实习无校园.docx",
+      "bytes": 265520,
+      "sha256": "C42B86ED97E858E116FCD5524ACFDADA49CE5E7E97C41AEB7F2B3747178346F2",
+      "note": "旧版归档 9.26"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.27\\彭博裕-客户经理.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.27\\彭博裕-客户经理.pdf",
+      "bytes": 345077,
+      "sha256": "A1D313B4C1B13E194E2E7F31DD3FCAF707E1237D0229A39DEFA371AA9F79F7BD",
+      "note": "旧版归档 9.27"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.27\\彭博裕-嵌入式软件工程师-00.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.27\\彭博裕-嵌入式软件工程师-00.pdf",
+      "bytes": 429803,
+      "sha256": "545BFE8A8ED91CC6C270D42DE3AEDD982F17B5D3B95272F1308B1161A430804B",
+      "note": "旧版归档 9.27"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.27\\彭博裕-嵌入式软件工程师-01.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.27\\彭博裕-嵌入式软件工程师-01.pdf",
+      "bytes": 565122,
+      "sha256": "431E9C8C8231E91DEDF752875462E6DC228B30672FE897328EBE947542AC5AD1",
+      "note": "旧版归档 9.27"
+    },
+    {
+      "from": "简历\\简历修改版本\\模板简历（随时跟新）\\旧版简历\\9.27\\彭博裕-嵌入式软件工程师-10.pdf",
+      "to": "简历\\中间文件\\旧版简历归档\\9.27\\彭博裕-嵌入式软件工程师-10.pdf",
+      "bytes": 448584,
+      "sha256": "8DEE26510C8D4CB71AE74D46F22D8F047ED49281D297F601EF859770BAFDE4D7",
+      "note": "旧版归档 9.27"
+    }
+  ],
+  "rebuild": "均为移动操作，内容不变；指引 stub 指向新位置",
+  "previous": {
+    "schema": 1,
+    "date": "2026-09-17",
+    "task": "按用户要求清理被新版取代的旧简历产物",
+    "owner": "zcode-cleanup-20260917",
+    "workspace": "D:/APP/project_practice/codex-project",
+    "status": "部分完成：3 个目标中 2 个已删除；第 3 个（09-04 版 PDF）仍被 wpspdf 进程占用",
+    "scope": "仅 简历/ 目录下被 2026-09-17 新版完整取代的简历成品文件与随之清空的目录；未触碰简历原版素材、母版、项目介绍文档、学习资料与源码",
+    "deleted_candidates": [
+      {
+        "path": "简历/定制投递/手动简历/彭博裕-嵌入式软件工程师.pdf",
+        "bytes": 420610,
+        "modified": "2026-09-11T21:52:38",
+        "sha256": "362D407C6FD1E0D436E2136CBFF4CDDA5CB5B16BB769B8FEF492CD3E6F39890F",
+        "reason": "上一版人工投递稿，已被 2026-09-17 新版通用简历完整取代",
+        "regenerate": "无生成脚本，不能从脚本重建；其口径散见 2026-09-04/09-10 记录段落，逐字内容不可还原。用户于 2026-09-17 明确要求删除旧简历后删除"
+      },
+      {
+        "path": "简历/简历修改版本/之前的简历集合/9.17 实习加熟悉三项目/彭博裕-嵌入式软件工程师-简历-投递版.docx",
+        "bytes": 100282,
+        "modified": "2026-09-04T17:20:02",
+        "sha256": "3F5BBB27E3BBE29898F7A641DCB65F59E6C491F302711724029E303A6C0E1D95",
+        "reason": "2026-09-04 精简版母版的另存副本，已被新版结构取代",
+        "regenerate": "母版 jd-resume-tailor/assets/embedded-master-20260904.docx（SHA256 FD387ED6…433B）仍保留，可由母版与旧生成器重建同口径产物"
+      },
+      {
+        "path": "简历/简历修改版本/之前的简历集合/9.17 实习加熟悉三项目/彭博裕-嵌入式软件工程师-简历-投递版.pdf",
+        "bytes": 365331,
+        "modified": "2026-09-04T17:20:35",
+        "sha256": "2D9AC259A9482F6F441A41723E97BD8D1B56D553414F1167EBA6FC14A6F523B5",
+        "reason": "上述 docx 的 Word 导出件，已被新版取代",
+        "regenerate": "可由上述母版经 Word 重新导出"
+      }
+    ],
+    "planned_removed_bytes": 886223,
+    "kept_intentionally": [
+      "简历/简历原版/**（成绩单、CET-4、验收报告、旧版简历汇总等素材与历史版本，含不可再生材料）",
+      "简历/jd-resume-tailor/assets/*.docx（嵌入式母版、旧母版与综合岗母版，生成器依赖）",
+      "简历/简历修改版本/彭博裕-项目介绍*.pdf（项目介绍文档，非简历成品）",
+      "简历/简历修改版本/嵌入式岗位简历-空白填写框架.docx（用户手改的结构框架）"
+    ],
+    "recovery": "非Git仓库；上述三个文件删除后不可恢复。保留母版可重建 09-04 版口径，但 09-11 人工投递稿的逐字内容不可重建。",
+    "validation": {
+      "path_check": "删除前用 GetFullPath 校验每个目标位于 D:/APP/project_practice/codex-project/简历/ 之内，越界即拒绝",
+      "removed_dir_手动简历": "定制投递/手动简历/ 已随唯一文件删除而清空并移除",
+      "deleted_manual_delivery_pdf": "exists=False",
+      "deleted_0904_docx": "exists=False",
+      "pending_locked_file": "简历修改版本/之前的简历集合/9.17 实习加熟悉三项目/彭博裕-嵌入式软件工程师-简历-投递版.pdf 仍被 wpspdf（WPS PDF 阅读器，PID 16012）占用；用户关闭 WPS 主程序后该后台进程仍存在。共 5 次删除尝试失败，未强删、未结束任何用户进程",
+      "next_step": "用户结束 wpspdf 进程或重启后删除该 PDF，并清空 9.17 实习加熟悉三项目/ 与 之前的简历集合/ 两级空目录",
+      "new_product": "简历/定制投递/通用嵌入式-20260917/ 的 DOCX/PDF 未被清理，保留",
+      "content_revision_after_cleanup": "清理后于同日第三轮修订中恢复了校园经历原版结构，并覆盖更新 简历/定制投递/通用嵌入式-20260917/ 的 DOCX/PDF/预览PNG；见简历讨论记录第32.7节",
+      "final_product": "简历/定制投递/通用嵌入式-20260917/ 已为第四轮定稿：DOCX、PDF、预览PNG、简历正文留档、生成脚本"
+    },
+    "previous": {
+      "schema": 1,
+      "date": "2026-09-03",
+      "task": "工作区兼容性维护",
+      "owner": "01a00dba-6f26-7130-9e02-6429fbc78613",
+      "workspace": "D:/APP/project_practice/codex-project",
+      "status": "完成",
+      "baseline": {
+        "files": 138,
+        "bytes": 10024981
+      },
+      "scope": "仅管理文档、入口和可重建缓存；无源码、题库正文、课程内容、训练流水、简历材料或外部目录写入",
+      "deleted_candidates": [
+        {
+          "path": "tmp/c-training-pdf-check/1-1-p4.png",
+          "bytes": 242339,
+          "modified": "2026-09-03T08:34:38.4246265Z",
+          "sha256": "4F86A9B1D525762828191DB922DD6EF7370174047B210FB30D3B5FDED0C5F344",
+          "reason": "已完成PDF核对的页面PNG；原PDF及原文提取保留",
+          "regenerate": "从外部秋招资料库/嵌入式八股文/1、笔试面试资料/同名PDF渲染文件名所示物理页；4份原PDF哈希已与验证报告比对一致。重新渲染不保证PNG字节完全相同"
+        },
+        {
+          "path": "tmp/c-training-pdf-check/1-2-p2.png",
+          "bytes": 154591,
+          "modified": "2026-09-03T08:34:38.5573948Z",
+          "sha256": "B843223DE3914F909F556570140903D6361C7C1F947A80A93E624EF0E9F68C15",
+          "reason": "已完成PDF核对的页面PNG；原PDF及原文提取保留",
+          "regenerate": "从外部秋招资料库/嵌入式八股文/1、笔试面试资料/同名PDF渲染文件名所示物理页；4份原PDF哈希已与验证报告比对一致。重新渲染不保证PNG字节完全相同"
+        },
+        {
+          "path": "tmp/c-training-pdf-check/1-3-p9.png",
+          "bytes": 132782,
+          "modified": "2026-09-03T08:34:38.5776316Z",
+          "sha256": "5EC6178A5EE332FE6F4B7ACC63056E304188E3FD1E3A1A26F5C8D0128FC8B500",
+          "reason": "已完成PDF核对的页面PNG；原PDF及原文提取保留",
+          "regenerate": "从外部秋招资料库/嵌入式八股文/1、笔试面试资料/同名PDF渲染文件名所示物理页；4份原PDF哈希已与验证报告比对一致。重新渲染不保证PNG字节完全相同"
+        },
+        {
+          "path": "tmp/c-training-pdf-check/1-4-p3.png",
+          "bytes": 141899,
+          "modified": "2026-09-03T08:34:38.6076318Z",
+          "sha256": "66FECD50A5A7BD0DA8C86CF67D3F92FC5574E936321B7C1C42A1A612C381A107",
+          "reason": "已完成PDF核对的页面PNG；原PDF及原文提取保留",
+          "regenerate": "从外部秋招资料库/嵌入式八股文/1、笔试面试资料/同名PDF渲染文件名所示物理页；4份原PDF哈希已与验证报告比对一致。重新渲染不保证PNG字节完全相同"
+        },
+        {
+          "path": "tmp/c-training-pdf-check/1-4-p4.png",
+          "bytes": 203549,
+          "modified": "2026-09-03T08:34:38.6391409Z",
+          "sha256": "33C07B8A917E4B6A023E4C8271C4B0F08364CF055922D365DB1705DEEFD916BF",
+          "reason": "已完成PDF核对的页面PNG；原PDF及原文提取保留",
+          "regenerate": "从外部秋招资料库/嵌入式八股文/1、笔试面试资料/同名PDF渲染文件名所示物理页；4份原PDF哈希已与验证报告比对一致。重新渲染不保证PNG字节完全相同"
+        },
+        {
+          "path": "简历/jd-resume-tailor/scripts/__pycache__/validate_resume_content.cpython-312.pyc",
+          "bytes": 13188,
+          "modified": "2026-08-31T03:11:15.9593118Z",
+          "sha256": "0CEA1B4D67DEE75E90AC9915B5F234CC978A8FCD51B2948FDB3559D257F2E9C5",
+          "reason": "Python自动字节码缓存；源脚本保留",
+          "regenerate": "导入简历/jd-resume-tailor/scripts/validate_resume_content.py时可重新生成"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/参考实现.c.o",
+          "bytes": 1704,
+          "modified": "2026-09-03T08:59:24.4789864Z",
+          "sha256": "1E7632FD840752513F15A2BDA58B8B04870CF54E5E68E9791AB7C46CB02DB904",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/核对ARM模型.c.o",
+          "bytes": 784,
+          "modified": "2026-09-03T08:59:24.7616692Z",
+          "sha256": "19BF011B8737F2DC141CE6ECC1FC71466831F5E8E0D53362D3292E414ADA42A1",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/cast_array.c",
+          "bytes": 44,
+          "modified": "2026-09-03T08:59:25.7541926Z",
+          "sha256": "7FAB181C5D48C237A2A1022F7885E6CADACBD8F6AA2C6CC84D79FEC9F7294A90",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/constant_increment.c",
+          "bytes": 41,
+          "modified": "2026-09-03T08:59:24.8002952Z",
+          "sha256": "367842E593D3783C21CBC8E20715F8A5486DA6B13B2E33F87FC7D1BD2E6C4A0A",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/cpp_scope_in_c.c",
+          "bytes": 32,
+          "modified": "2026-09-03T08:59:25.3724058Z",
+          "sha256": "BBC80C940FF7FF4ACE8209DBE4499F82878B304B73E3515C0A668B5C2DF018ED",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/mobile-script.js",
+          "bytes": 1585,
+          "modified": "2026-09-03T08:59:22.4438361Z",
+          "sha256": "4F967CC7768087FD423C9E27B7B71994F6A971563A9678517B7E0F36F0E03007",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/pointer_bitwise.c",
+          "bytes": 26,
+          "modified": "2026-09-03T08:59:25.1822363Z",
+          "sha256": "A76C76EDEA7148D465D9E0C13AB0B7B34245344DACC59B101199E0006A5A0AA0",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/suffix_after_parens.c",
+          "bytes": 54,
+          "modified": "2026-09-03T08:59:24.9822712Z",
+          "sha256": "6DB1A701A2F7704BA03E36630A1CF278EB9A534A7EE870C8EF535B6480028B47",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/test-O0.exe",
+          "bytes": 98605,
+          "modified": "2026-09-03T08:59:23.0510525Z",
+          "sha256": "CA437BFC622F817C5A0C24AA41F8EDE6AE81FCDAE7D906CDD92CEF526AE21CFF",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/test-O2.exe",
+          "bytes": 91976,
+          "modified": "2026-09-03T08:59:23.8769985Z",
+          "sha256": "F6F20C40A00729F9C922B554563DAD06621533F9610D2B0C947B10458E39B8B3",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        },
+        {
+          "path": "记忆与产物/05-面试题库/C语言专项训练集/中间文件/构建缓存/write_const.c",
+          "bytes": 34,
+          "modified": "2026-09-03T08:59:25.5694939Z",
+          "sha256": "C38E9118E78B016E2E1C21BFE495135F5B97E6771614718C3122C40F31E99E98",
+          "reason": "C题库验证脚本产生的可重建缓存",
+          "regenerate": "使用保留的中间文件/提取与验证.py，按原验证报告的编译器路径传入--pdf-dir/--host-gcc/--arm-gcc/--node重新验证；无需重建即可阅读题库"
+        }
+      ],
+      "planned_removed_bytes": 1083233,
+      "recovery": "非Git仓库；只清理可再生缓存，不保留垃圾副本。源数据/生成器/旧验证证据保留，必要时重新生成。",
+      "validation": {
+        "lock_script_syntax": "passed",
+        "duplicate_acquire": "rejected",
+        "foreign_owner_release": "rejected",
+        "wrong_token_release": "rejected",
+        "original_lock_unchanged": true,
+        "source_pdf_hashes_match_original_report": 4,
+        "other_shared_threads": "4 idle at pre-delete read-only check; not interrupted or messaged",
+        "final": "passed;治理锁将在写入本核验后释放，其他分类锁已释放",
+        "successful_acquire_release": "passed",
+        "local_markdown_links_checked": 52,
+        "local_markdown_link_errors": [],
+        "unrelated_files_sha256_unchanged": 116,
+        "other_memory_paragraphs_preserved": true,
+        "final_file_count": 124,
+        "unplanned_changes": [],
+        "project_build_flash": "not run; no engineering source changed"
+      },
+      "deleted_count": 17,
+      "removed_bytes": 1083233,
+      "changed_documents": [
+        "AGENTS.md",
+        "RESOURCES.md",
+        "低功耗项目理解产物/README.md",
+        "记忆与产物/00-项目接续记忆.md",
+        "记忆与产物/README.md"
+      ],
+      "added_files": [
+        "README.md",
+        "维护工具/工作区锁.ps1",
+        "维护工具/最近维护核验.json"
+      ]
+    },
+    "deleted_count": 2,
+    "removed_bytes": 520892,
+    "added_files": [
+      "简历/定制投递/通用嵌入式-20260917/彭博裕-嵌入式软件工程师-简历-20260917.docx",
+      "简历/定制投递/通用嵌入式-20260917/彭博裕-嵌入式软件工程师-简历-20260917.pdf",
+      "简历/定制投递/通用嵌入式-20260917/预览-第1页.png",
+      "简历/定制投递/通用嵌入式-20260917/简历正文-20260917.md",
+      "简历/定制投递/通用嵌入式-20260917/build_resume_20260917.py",
+      "tmp/photo-float-test/（浮动图片方案可行性测试，可删）"
+    ],
+    "migration_20260925": {
+      "date": "2026-09-25",
+      "task": "按用户要求将销售简历任务线全部记录与中间文件迁移至新目录 实习销售-仙女竹业/",
+      "owner": "sales-resume-migrate-20260925",
+      "locks": "workspace-governance + resume（同时持有，按序领取），memory 锁随后更新接续记忆",
+      "method": "复制 → SHA256 逐文件核对一致 → 删除源文件与空目录 → 修复文内相对链接",
+      "moved": [
+        {
+          "from": "简历/简历修改版本/简历模版（销售岗位）/版式架构基准.md",
+          "to": "实习销售-仙女竹业/版式架构基准.md",
+          "bytes": 4977,
+          "sha256_before": "d3ed56a3b5d7ebf81439802f73c077119dd301d7f83e61d96065d0809c0d4149",
+          "sha256_after_copy": "d3ed56a3b5d7ebf81439802f73c077119dd301d7f83e61d96065d0809c0d4149",
+          "reason": "用户指定任务线文件统一存放于 实习销售-仙女竹业/",
+          "regenerate": "内容迁移非删除；迁移后已修复2处相对链接（基准PDF路径、测量产物路径）"
+        },
+        {
+          "from": "简历/简历修改版本/简历模版（销售岗位）/内容讨论与候选.md",
+          "to": "实习销售-仙女竹业/内容讨论与候选.md",
+          "bytes": 15206,
+          "sha256_before": "b634d06c1b8984c8f6859e74dcc7ee0f5da9dae63775a81229da51019d65830c",
+          "sha256_after_copy": "b634d06c1b8984c8f6859e74dcc7ee0f5da9dae63775a81229da51019d65830c",
+          "reason": "同上",
+          "regenerate": "内容迁移非删除；迁移后已修复1处相对链接（技术简历讨论记录路径）"
+        },
+        {
+          "from": "简历/中间文件/销售简历-20260925/analyze_layout.py",
+          "to": "实习销售-仙女竹业/中间文件/analyze_layout.py",
+          "bytes": 3153,
+          "sha256_before": "8dd22b5a508e6fb17384ddbab04c401d81b862fce0c9fd869a7e3da8124fd346",
+          "sha256_after_copy": "8dd22b5a508e6fb17384ddbab04c401d81b862fce0c9fd869a7e3da8124fd346",
+          "reason": "同上",
+          "regenerate": "可按版式架构基准.md重写；分析对象为 彭博裕-嵌入式软件工程师-10.pdf"
+        },
+        {
+          "from": "简历/中间文件/销售简历-20260925/layout-dump.json",
+          "to": "实习销售-仙女竹业/中间文件/layout-dump.json",
+          "bytes": 53292,
+          "sha256_before": "e670874319d9554fefdac37a4d932ef2f775ed0388c66649db6d067df03b2939",
+          "sha256_after_copy": "e670874319d9554fefdac37a4d932ef2f775ed0388c66649db6d067df03b2939",
+          "reason": "同上",
+          "regenerate": "由 analyze_layout.py 对同一基准PDF重新生成"
+        }
+      ],
+      "removed_empty_dirs": [
+        "简历/简历修改版本/简历模版（销售岗位）/",
+        "简历/中间文件/销售简历-20260925/"
+      ],
+      "not_touched": "简历/简历修改版本/~$式岗位简历-空白填写框架.docx（孤儿Word锁文件，原样保留）",
+      "verification": "4/4 文件迁移前后 SHA256 一致；源目录已清空；人类可读迁移证据见 实习销售-仙女竹业/迁移记录.md"
+    }
+  },
+  "validation": {
+    "hash_check": "11/11 迁移后 SHA256 与登记一致",
+    "stub": "简历/简历修改版本/简历内容讨论与定稿记录.md 已替换为 328 字节指引文件，指向 简历/中间文件/简历内容讨论与定稿记录.md",
+    "dirs_removed": [
+      "简历修改版本/模板简历（随时跟新）/旧版简历/9.26",
+      "9.27"
+    ],
+    "note": "嵌入式岗位简历-空白填写框架.docx 与孤儿锁文件 ~$式岗位简历-空白填写框架.docx 已不在 简历修改版本/（用户自行处理）"
+  }
+}

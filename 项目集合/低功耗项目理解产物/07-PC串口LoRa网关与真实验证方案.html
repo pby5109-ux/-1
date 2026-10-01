@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PC串口LoRa网关与真实验证方案</title>
+  <link rel="stylesheet" href="../../assets/lesson.css">
+</head>
+<body>
+<section class="note good"><h2>当前源码口径与学习记录（2026-09-26）</h2>
+<p>本页下方保留不同阶段的教学原文；出现旧命令、旧测试数或旧存储策略时，以此处和当前唯一源码为准。在线网关只支持串口入口及<code>--port/--baud/--timeout/--fault-dir</code>；<code>--hex</code>与<code>--csv</code>已删除。正常帧只打印，传感器有效位无效才追加按日期故障CSV。当前测试文件含15个测试方法；这是主机逻辑证据，不等于真实串口、RF或功耗实测。</p>
+<p>按模块理解即可：流式缓存找完整18字节帧→校验版本/类型/CRC→按节点号与序号标记重复并生成ACK→先发ACK→显示并按有效位记录故障。CRC坏帧不ACK；重复合法帧仍ACK；CRC正确但传感器失效仍ACK并记故障。<a href="11-低功耗节点学习问答与题目索引.md">本项目已做题、你的回答与纠错记录</a>在专题文件，不要求逐行背Python语法。</p></section>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+<section><h2>学习精简版：2026-09-17阶段入口</h2><p>保留收帧、CRC、ACK、重复标记、终端显示及异常CSV。已删除普通CSV导出和离线hex入口，原文--csv、--hex、process_frame及独立DuplicateTracker属于历史实现，不再使用。模拟报文/ACK解码仅在测试文件。</p><pre>python tools/lora_gateway.py --port COM5</pre><p>将COM5换成实际串口，可选--baud、--timeout、--fault-dir。正常数据只显示，故障按天保存到tools/异常记录；JSON使用带时区received_at，异常文件原字段保持。学习顺序：main→run_serial_gateway→GatewayProcessor.feed→TelemetryStreamDecoder.feed→decode_telemetry/build_ack→event_to_dict/record_sensor_fault。阶段性主机测试数量见当时记录；当前测试文件含15个测试方法，尚无本轮真实串口复测；不引入数据库/绘图。</p></section>
+<section><h2>2026-09-17：轻量故障日志已实现</h2><p>在线网关默认将传感有效位无效的报文写入tools/异常记录/faults-YYYY-MM-DD.csv，首次故障创建目录，可用--fault-dir指定。无需--csv。终端显示带时区的本机时间、节点和故障传感器；文件还保留序号、测量值、flags、duplicate和ACK。真实-1℃、仅环境超阈值不误判为传感故障。重复故障保留记录；磁盘写入失败明确提示而继续接收。仍先ACK后记录，ACK不保证持久化；当时13项主机测试通过，真实串口故障尚未复测。用户暂不接数据库，绘图留后续，下文产品化部分仅作参考。</p></section>
+<section id="gateway-product-20260917">
+<h2>接收完成以后：现有存储与产品化边界（2026-09-17）</h2>
+<p>历史版本ede4039曾支持<code>--csv 文件路径</code>导出普通数据，现行版本已删除此参数。当前链路是串口流式组帧→校验18字节帧→标记重复→先返回11字节ACK→打印JSON；仅传感有效位无效时自动追加故障CSV。网关记录的带时区本机<code>received_at</code>不是节点采集时间；异常值为−1必须结合flags，JSON另有sensor_errors。</p>
+<p>重复合法帧也回ACK、也打印，并标记duplicate=true；若它含传感故障，还会再次写入故障CSV，普通重复帧不写故障CSV。1024项RAM缓存不跨程序重启保存。现有程序没有数据库、历史图表、推送报警、掉线判断或自动串口重连。ACK发生在写CSV之前，进程或存储此时失败会导致节点以为已接收而网关未保存。串口flush不是CSV落盘保证。</p>
+<h3>最小可用产品路线（建议，尚未实施）</h3>
+<ol><li>本地SQLite事务存储：记录数据、有效性、网关时间；需要补传时增加采集时间、启动会话标识，并为业务记录设计唯一键。原始接收日志可留重复帧，业务表去重，避免重复报警。</li><li>明确ACK语义：若要求确认即已接管数据，先可靠本地持久化再确认，并实测调整ACK窗口；不要等待云端网络再ACK。存储满/失败不能谎报成功。</li><li>简单界面：最新有效值、更新时间、传感故障、节点在线状态和历史趋势；故障−1不能绘制为正常测量值。</li><li>报警分开：环境越界、传感器故障、节点失联，加入恢复通知和抑制重复。15分钟上报节点可考虑连续错过3次加容差为掉线示例，不是当前代码。</li><li>无人值守：串口掉线有限退避重连、读写超时、程序自启动/异常恢复、日志轮转、磁盘满保护、备份与可观察健康状态。</li><li>部署验收：拔串口、杀进程、网关断电、节点重启、ACK丢失、磁盘满、传感器断线与长期运行；硬件再验证防水/结露、电源、ESD、天线与安装。对外销售时核对目标地区无线和产品合规要求，不把模块合规等同整机合规。</li></ol>
+<p>CRC仅用于检错，不等于加密或身份认证；联网/远程控制需要身份鉴别、密钥管理与防重放。多节点和云端按需求增加，单节点现场监测不必先做复杂平台。</p>
+<p>一手参考：<a href="https://www.sqlite.org/atomiccommit.html">SQLite事务与原子提交</a>、<a href="https://pyserial.readthedocs.io/en/stable/pyserial_api.html">pySerial超时与异常接口</a>。数据库可靠性仍依赖配置与存储硬件。可继续追问“为什么收到ACK仍可能丢数据”。</p>
+</section>
+  <h1>PC串口LoRa网关与真实验证方案</h1>
+  <p class="lead">目标：能回答“电脑怎样返回ACK”和“没有模块时能证明什么”，并为以后实物测试留下可执行步骤。</p>
+
+  <h2>1. 电脑可以直接作为网关</h2>
+  <div class="flow">网关LoRa模块 TX/RX
+↕ 3.3V UART
+USB转TTL
+↕ USB虚拟COM口
+Python网关程序</div>
+  <p>不需要额外单片机。PC通过USB转TTL打开COM口，读取模块输出的18字节遥测帧，调用现有协议解析函数，然后把11字节ACK写回同一串口。</p>
+
+  <h2>2. 串口助手和Python的边界</h2>
+  <table>
+    <thead><tr><th>方案</th><th>适合</th><th>不足</th></tr></thead>
+    <tbody>
+      <tr><td>普通串口助手</td><td>观察十六进制、手工发送固定ACK、检查波特率</td><td>通常不能自动解析CRC和动态复制NodeID/Sequence</td></tr>
+      <tr><td>支持脚本的串口工具</td><td>快速原型和简单自动应答</td><td>脚本接口依赖具体软件，项目可移植性较差</td></tr>
+      <tr><td>Python＋pyserial</td><td>持续收帧、CRC、动态ACK、日志、丢包率和RSSI统计</td><td>需要编写流式缓存和异常恢复</td></tr>
+      <tr><td>网关MCU</td><td>脱离PC长期运行</td><td>需要额外硬件、固件和上行网络接口</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Python在线网关应怎样工作</h2>
+  <pre><code>打开COM口：9600、8N1
+while running:
+    读取当前可用字节，追加到接收缓存
+    在缓存中寻找 A5 5A 帧头
+    不足18字节则继续等待
+    取18字节并校验版本、类型和CRC
+    解析 NodeID、Sequence 和传感器数据
+    检查 (NodeID, Sequence) 是否重复
+    生成匹配的11字节ACK
+    serial.write(ack)
+    输出JSON；若传感器有效位无效，追加故障CSV</code></pre>
+  <p>不能假设一次<code>read()</code>正好得到18字节：串口可能拆成多段，也可能一次返回多帧，因此必须维护字节缓存、搜索帧头并处理错位。</p>
+
+  <h2>4. 实物连接容易踩的坑</h2>
+  <ul class="checklist">
+    <li>模块通信IO是3.3V电平，不要把5V TTL直接接入。</li>
+    <li>模块典型供电为5V且发射存在较大脉冲电流，不要默认USB转TTL板的弱电源脚足够；单独供电并共地。</li>
+    <li>节点和网关必须同信道、同速率等级、同透明模式和兼容密钥配置。</li>
+    <li>两端都要接匹配频段天线，避免无天线高功率发射。</li>
+    <li>网关长期供电，可保持高时效接收；节点才在发送后切到休眠。</li>
+  </ul>
+
+  <h2>5. 300ms ACK窗口怎样验证</h2>
+  <p>用逻辑分析仪同时观察节点UART TX/RX和AUX，并让PC日志记录高精度时间戳：</p>
+  <div class="flow">t0：节点开始UART发送
+t1：节点TX完成回调
+t2：节点AUX发送完成
+t3：网关PC收到完整18字节
+t4：PC写出11字节ACK
+t5：节点收到完整ACK</div>
+  <p>统计<code>t5-t0</code>的最大值、平均值和高分位，再加安全余量设置超时。默认2148bps时，18B和11B纯净荷载位时间已占约108ms，尚未计前导码、编码、模块缓存和收发切换，所以300ms只能称初始设计值。若使用336bps，29B净荷载本身已约690ms，300ms显然不够。</p>
+
+  <h2>6. AUX怎样验证</h2>
+  <ol>
+    <li>M0/M1由11切00，观察AUX是否先高后低。</li>
+    <li>节点向模块写入18字节，观察AUX发送期间的高电平脉宽。</li>
+    <li>网关发ACK，观察节点模块接收前后AUX变化。</li>
+    <li>把逻辑分析仪时间轴与PC日志和Sequence对应，不能只看LED。</li>
+  </ol>
+  <p>AUX低只表示模块当前发送、接收或模式切换完成，不表示远端应用必然收到；匹配ACK才是端到端证据。</p>
+
+  <h2>7. 距离、RSSI和丢包率</h2>
+  <table>
+    <thead><tr><th>指标</th><th>真实测试方法</th></tr></thead>
+    <tbody>
+      <tr><td>距离</td><td>固定天线、功率、信道、速率、高度和方向，按10/50/100/300m等点位逐步测试并记录环境</td></tr>
+      <tr><td>丢包率</td><td>每点发送N帧，用Sequence统计唯一收到数；区分首发成功、重试成功、最终失败</td></tr>
+      <tr><td>RSSI</td><td>开启模块数据包RSSI后，接收帧末会附加RSSI字节；按手册公式换算并与Sequence记录</td></tr>
+      <tr><td>延迟</td><td>记录t0～t5，分别统计UART、模块发送、网关处理和ACK回程</td></tr>
+    </tbody>
+  </table>
+  <p>测试时至少记录：日期、环境、遮挡、距离、天线高度、速率等级、发射功率、总帧数、首发成功、重试成功、失败数和RSSI分布。</p>
+
+  <h2>8. 功耗怎样验证</h2>
+  <p>没有电流分析仪时，万用表只能粗看稳定电流，难以捕捉短暂发射峰值。可靠方法是电流分析仪，或采样电阻＋示波器记录电压波形：</p>
+  <div class="flow">传感器采集电流 → OLED刷新 → LoRa唤醒 → 发射峰值 → 等ACK → 模块休眠 → MCU Stop</div>
+  <p>最终应报告每个状态的电流与持续时间，再用<code>Iavg=Σ(I×t)/T</code>计算平均电流，而不是只引用芯片或模块手册中的休眠电流。</p>
+
+  <h2>9. 当前可以诚实说什么</h2>
+  <div class="note good">历史阶段口述示例（非当前简历定稿）：节点协议、ACK/重试和在线PC网关已有源码；当前测试文件含15个主机测试方法。上线或面试时必须分别说明本人实现、AI协助、编译与主机测试、真实串口/RF/功耗实测的证据边界，不能沿用旧版“模块在途”或“7项测试”的快照。</div>
+  <div class="note danger">不能说“实测通信300米、丢包率1%、RSSI为某值、功耗多少”，除非真的有模块、环境记录和原始数据。</div>
+
+  <h2>复测</h2>
+  <ol>
+    <li>为什么普通串口助手不适合自动回复每一帧ACK？</li>
+    <li>为什么一次<code>serial.read()</code>不能假设得到完整18字节？</li>
+    <li>怎样用Sequence分别统计首发成功、重试成功和最终失败？</li>
+  </ol>
+  <p>对任何测试步骤有疑问，继续向教师追问，不需要虚构结果。</p>
+
+  <h2>依据</h2>
+  <ul>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22-433T22D技术手册</a>：供电、电平、AUX和模块功耗。</li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf">DX-LR22-433T22D串口应用指导</a>：透明传输、空中速率、DRSSI、功率与LBT。</li>
+    <li><code>tools/lora_gateway.py</code>：当前在线串口网关源码；旧版离线入口已删除，具体以唯一源码及其README为准。</li>
+  </ul>
+</main>
+</body>
+</html>

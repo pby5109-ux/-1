@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>从零实现STM32串口LoRa节点：配置、代码结构与函数职责</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>从零实现STM32串口LoRa节点</h1>
+  <p class="lead">目标不是背现有代码，而是知道如果工程目录是空的，应按什么顺序搭出一条可调试、可验证、可低功耗的LoRa链路，并真正理解当前每个函数为什么存在。</p>
+
+  <div class="note danger"><strong>当前边界：</strong>本文解释当前软件设计及从零实现步骤。节点协议、网关代码、主机测试和两种固件构建已经完成；真实双模块RF、AUX、ACK时序、距离、RSSI、丢包和功耗仍等待实物验证。</div>
+
+  <h2>1. 从零实现时不要一上来写完整状态机</h2>
+  <p>最稳妥的顺序是每次只增加一个变量，并保留上一阶段的验证结果：</p>
+  <ol class="checklist">
+    <li>两块LoRa模块＋两套USB转TTL，先证明模块之间能够透明传输。</li>
+    <li>STM32只用阻塞UART发送固定字符串，证明MCU→模块串口链。</li>
+    <li>加入M0/M1和AUX，证明工作/休眠模式切换。</li>
+    <li>先定义协议并在PC上验证固定测试向量，不接RF。</li>
+    <li>把传感器数据编码成18B帧，仍先使用阻塞UART发送。</li>
+    <li>把发送改成DMA＋完成回调＋超时。</li>
+    <li>增加11B ACK、NodeID/Sequence匹配和一次重试。</li>
+    <li>最后加入模块休眠和STM32 RTC Stop。</li>
+    <li>再做在线网关、去重、CSV、RSSI、距离和功耗测试。</li>
+  </ol>
+  <p>这样出现问题时，你知道它是在哪一层首次出现，而不是同时面对模块配置、串口、DMA、协议、ACK和低功耗六类变量。</p>
+
+  <h2>2. 第一阶段：模块硬件与AT配置</h2>
+  <h3>2.1 最小接线</h3>
+  <table>
+    <thead><tr><th>模块引脚</th><th>节点端连接</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>VCC</td><td>满足模块手册要求的稳定电源</td><td>发射电流约173～174mA，必须留瞬态裕量并就近去耦</td></tr>
+      <tr><td>GND</td><td>STM32公共地</td><td>不同电源也必须共地</td></tr>
+      <tr><td>RX</td><td>PB10 / USART3_TX</td><td>MCU TX接模块RX</td></tr>
+      <tr><td>TX</td><td>PB11 / USART3_RX</td><td>MCU RX接模块TX</td></tr>
+      <tr><td>M0</td><td>PA8输出</td><td>硬件模式选择</td></tr>
+      <tr><td>M1</td><td>PA9输出</td><td>硬件模式选择</td></tr>
+      <tr><td>AUX</td><td>PA1输入</td><td>高为忙，低为完成</td></tr>
+      <tr><td>ANT</td><td>匹配天线</td><td>先接天线再发射</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 先脱离STM32配置两块模块</h3>
+  <p>厂商V2手册给出的透明对传步骤是：两端进入AT模式、设置透明传输、相同LEVEL和相同信道，再重启生效。当前节点还需要打开M0/M1硬件控制：</p>
+  <pre>+++                 进入AT模式
+AT                  测试串口是否能收到OK
+AT+HELP             保存当前完整配置
+AT+MODE0            透明传输
+AT+LEVEL2           初次联调先用相同LEVEL2
+AT+CHANNEL01        两端使用相同信道
+AT+DRSSI0           初次联调关闭RSSI尾字节
+AT+SWITCH1          打开M0/M1硬件模式控制
+AT+RESET            重启并让配置生效</pre>
+  <p>命令以回车换行结束，所有AT字符使用大写。两块模块都配置完成后，先用串口助手互发ASCII和HEX数据。只有这一阶段通过，才接STM32。</p>
+  <div class="note"><code>AT+SWITCH1</code>生效后，M0/M1不能悬空。休眠模式下不能靠普通串口数据唤醒，必须改变M0/M1。</div>
+
+  <h2>3. 第二阶段：CubeMX和STM32外设配置</h2>
+  <h3>3.1 USART3</h3>
+  <ul>
+    <li>Asynchronous，9600 baud，8 data bits，No parity，1 stop bit。</li>
+    <li>TX/RX同时启用，无硬件流控。</li>
+    <li>PB10配置为USART3_TX复用推挽输出，PB11为USART3_RX输入。</li>
+  </ul>
+
+  <h3>3.2 DMA和中断</h3>
+  <ul>
+    <li>USART3_TX → DMA1 Channel2，Memory to Peripheral。</li>
+    <li>外设地址不自增，内存地址自增，Byte对Byte，Normal模式。</li>
+    <li>使能DMA1 Channel2中断和USART3全局中断。</li>
+    <li>当前工程还生成了RX DMA1 Channel3，但LoRa ACK实际使用阻塞式<code>HAL_UART_Receive()</code>，因此当前LoRa链并没有使用RX DMA。</li>
+  </ul>
+
+  <h3>3.3 M0/M1/AUX有两种配置方法</h3>
+  <p><strong>推荐从零工程：</strong>在CubeMX把PA8/PA9标成GPIO_Output，PA1标成GPIO_Input，并加用户标签LORA_M0、LORA_M1、LORA_AUX。</p>
+  <p><strong>当前工程：</strong><code>.ioc</code>没有配置PA1/PA8/PA9，而是在<code>main.h</code>手工定义宏，并由<code>LoraControlPins_Init()</code>运行时配置。这样LoRa专用引脚只在<code>LoRaDebug</code>构建中启用，不影响默认BLE构建。两种方式选一种即可，不需要重复初始化。</p>
+
+  <h3>3.4 RTC Stop属于最后阶段</h3>
+  <p>先把通信闭环跑通，再配置LSE、RTC Alarm、EXTI17和Stop。否则“收不到ACK”与“醒后时钟没恢复”会混在一起。当前工程使用LSE 32.768kHz和RTC Alarm，退出Stop后重新执行<code>SystemClock_Config()</code>并恢复SysTick。</p>
+
+  <h2>4. 代码为什么分成三层</h2>
+  <div class="flow">main.c：我这轮要发送什么、报警了吗、睡多久
+        ↓
+lora_node.c：如何唤醒模块、发送、等ACK、重试、休眠
+        ↓
+lora_protocol.c：结构体怎样变成固定字节，字节怎样校验和解析
+        ↓
+HAL UART / DMA / GPIO：真正操作STM32硬件</div>
+  <table>
+    <thead><tr><th>文件</th><th>应该知道什么</th><th>不应该知道什么</th></tr></thead>
+    <tbody>
+      <tr><td><code>lora_protocol.c</code></td><td>Magic、字段偏移、大小端、CRC、遥测与ACK格式</td><td>不应该知道UART、GPIO、AUX和休眠</td></tr>
+      <tr><td><code>lora_node.c</code></td><td>UART句柄、M0/M1/AUX、超时、重试、Sequence</td><td>不负责采集AHT20或绘制OLED</td></tr>
+      <tr><td><code>main.c</code></td><td>传感器、阈值、Flags、LED和RTC周期</td><td>不应该手工填写每个帧字节或重复实现CRC</td></tr>
+    </tbody>
+  </table>
+  <p>这条分层的价值是：协议层可以在PC上做纯单元测试；换UART或换MCU只主要影响节点层；以后增加第二种传感器不需要改CRC实现。</p>
+
+  <h2>5. lora_protocol.h：先定义“合同”</h2>
+  <p>头文件定义通信双方必须共同遵守的规则：</p>
+  <ul>
+    <li>Version=1，Telemetry类型0x10，ACK类型0x11。</li>
+    <li>Flags的bit0/1/2分别表示AHT、光照、雨滴有效，bit7表示报警。</li>
+    <li>遥测固定18B，ACK固定11B。</li>
+    <li><code>LoraTelemetry_t</code>保存业务字段，<code>LoraAck_t</code>保存确认字段。</li>
+  </ul>
+  <p>结构体只是程序内部的语义对象，不能直接<code>memcpy</code>到串口，因为编译器可能插入填充字节，而且CPU大小端和接收端平台可能不同。必须显式编码。</p>
+
+  <h2>6. lora_protocol.c逐函数解释</h2>
+  <h3>6.1 WriteU16Be()</h3>
+  <pre>destination[0] = value >> 8;  // 先写高8位
+destination[1] = value;       // 再写低8位</pre>
+  <p>作用是把16位整数明确写成大端序。例如<code>0x1234</code>在线上发送<code>12 34</code>。它是<code>static</code>，因为只供本文件内部编码函数使用。</p>
+
+  <h3>6.2 ReadU16Be()</h3>
+  <pre>value = (source[0] &lt;&lt; 8) | source[1];</pre>
+  <p>执行相反操作，把两个大端字节重新拼成16位整数。温度字段拼好后再转成<code>int16_t</code>，才能恢复负数补码。</p>
+
+  <h3>6.3 HasValidHeaderAndCrc()</h3>
+  <p>这是所有解码函数共用的入口检查：</p>
+  <ol>
+    <li>指针非空，长度至少能包含头和CRC。</li>
+    <li>Magic必须为A5 5A。</li>
+    <li>Version必须等于当前版本。</li>
+    <li>Type必须等于调用者期望的Telemetry或ACK。</li>
+    <li>读取末尾2B CRC，重新计算前面全部字节并比较。</li>
+  </ol>
+
+  <h3>6.4 LoraProtocol_Crc16Ccitt()</h3>
+  <p>使用初值0xFFFF、多项式0x1021，逐字节、逐位更新16位CRC。它只负责计算，不知道这段数据是遥测还是ACK。</p>
+
+  <h3>6.5 EncodeTelemetry()</h3>
+  <p>把<code>LoraTelemetry_t</code>按固定偏移写入18B数组，最后对前16B计算CRC并写入索引16～17。输入检查<code>capacity</code>是为了避免调用者数组过小导致越界。</p>
+
+  <h3>6.6 DecodeTelemetry()</h3>
+  <p>先要求长度严格等于18B，再校验头和CRC，然后把各字段读回结构体。节点当前主要发送遥测；这个函数主要供C端接收器、测试或未来网关使用。</p>
+
+  <h3>6.7 EncodeAck()与DecodeAck()</h3>
+  <p>ACK是另一种固定11B帧：Magic、Version、Type、NodeID、Sequence、status、CRC。网关编码ACK，节点解码ACK。节点必须继续比较NodeID、Sequence和status，不能只看CRC通过。</p>
+
+  <h2>7. lora_node.h：把硬件依赖和运行状态分开</h2>
+  <h3>7.1 LoraNodeStatus_t</h3>
+  <p>它不是单纯返回成功/失败，而是区分参数错误、模式超时、UART启动失败、UART发送超时、UART硬件错误、ACK超时和ACK非法。这样调试时能知道链路断在哪一层。</p>
+
+  <h3>7.2 LoraNodeConfig_t</h3>
+  <p>配置结构体把所有“因板子或部署而变化”的内容集中起来：</p>
+  <ul>
+    <li>UART句柄；</li>
+    <li>M0/M1/AUX端口和引脚；</li>
+    <li>NodeID和初始Sequence；</li>
+    <li>模式、UART、ACK超时；</li>
+    <li>最大业务重试次数。</li>
+  </ul>
+  <p>这是一种依赖注入：<code>lora_node.c</code>不把USART3和PA8写死，所以理论上可以换UART或换引脚。<code>LoraNode_Init()</code>会把整个配置复制进节点对象，因此<code>main.c</code>中的局部<code>lora_config</code>离开作用域后不会悬空。</p>
+
+  <h3>7.3 LoraNode_t</h3>
+  <p>节点对象保存三类运行状态：已经复制的配置、下一帧Sequence、是否初始化成功。它相当于一个小型设备实例。</p>
+
+  <h2>8. lora_node.c逐函数解释</h2>
+  <h3>8.1 三个静态变量</h3>
+  <pre>static volatile bool tx_complete;
+static volatile bool tx_error;
+static UART_HandleTypeDef *active_uart;</pre>
+  <p>DMA/UART完成发生在中断回调，主流程在等待标志，所以两个标志必须是<code>volatile</code>。<code>active_uart</code>用于确认回调确实属于当前LoRa发送，而不是同名HAL回调中的其他UART。</p>
+
+  <h3>8.2 WaitAuxIdle()</h3>
+  <p>循环读取AUX。该模块定义AUX高为忙、低为完成，因此看到低电平才返回成功。它同时使用<code>mode_timeout_ms</code>防止模块断线或异常时永久卡死。</p>
+  <p>当前是裸机忙轮询，等待期间CPU没有去执行其他工作；若以后追求更深低功耗，可用EXTI或定时状态机改造，但当前先保证逻辑简单可验证。</p>
+
+  <h3>8.3 SetHardwareMode()</h3>
+  <p>统一完成三步：写M0、写M1、等待1ms后检查AUX。这样调用者不会忘记模式切换后的稳定过程。</p>
+
+  <h3>8.4 WakeRadio()和SleepRadio()</h3>
+  <p>它们只是带语义名称的薄包装：</p>
+  <pre>WakeRadio  → M0=0, M1=0 → 高时效模式
+SleepRadio → M0=1, M1=1 → 休眠模式</pre>
+  <p>这两个函数成立的前提是模块已经执行并保存<code>AT+SWITCH1</code>。</p>
+
+  <h3>8.5 TransmitDmaAndWait()</h3>
+  <p>这是“可靠启动一次STM32 UART发送”的函数，不负责RF ACK：</p>
+  <ol>
+    <li>清空完成/错误标志，并登记当前UART。</li>
+    <li>调用<code>HAL_UART_Transmit_DMA()</code>。</li>
+    <li>若HAL返回BUSY，最多间隔2ms尝试3次。</li>
+    <li>若仍不是HAL_OK，返回UART_START_ERROR。</li>
+    <li>启动成功后等待中断回调改变<code>tx_complete</code>或<code>tx_error</code>。</li>
+    <li>超过<code>uart_timeout_ms</code>则Abort并返回UART_TIMEOUT。</li>
+  </ol>
+  <div class="note"><strong>两个重试层不要混：</strong>这里的3次只是在本地UART为BUSY时重新尝试“启动DMA”；<code>max_retries=1</code>则是完整数据帧没有收到ACK时的RF业务重发。它们不是同一个概念。</div>
+
+  <h3>8.6 LoraNode_Init()</h3>
+  <p>先检查所有必需指针和超时是否有效，然后复制配置、设置初始Sequence，并尝试让模块进入休眠。只有休眠模式切换成功才把<code>initialized</code>置真。</p>
+  <p>当前<code>main.c</code>把返回值强制忽略，这是一个已知薄弱点；从零写时应检查返回值并显示或记录初始化错误。</p>
+
+  <h3>8.7 LoraNode_SendTelemetry()</h3>
+  <p>这是节点层的总编排函数：</p>
+  <div class="flow">检查initialized
+→ 用参数建立LoraTelemetry_t
+→ EncodeTelemetry生成18B
+→ WakeRadio
+→ 循环：等AUX→DMA发送→阻塞收11B ACK→解码和匹配
+→ 成功则退出；失败则按max_retries重试
+→ Sequence加1
+→ SleepRadio
+→ 返回最具体的状态码</div>
+  <p><code>frame</code>和<code>ack_frame</code>是函数栈上的局部数组，但函数在DMA完成前不会返回，因此发送期间内存仍有效。整次调用的重试使用同一份<code>frame</code>，所以Sequence相同。</p>
+
+  <h3>8.8 LoraNode_SelectSleepSeconds()</h3>
+  <p>根据报警状态返回10秒或30秒。它其实是项目策略而非纯硬件驱动；当前放在节点模块中便于集中LoRa策略。若以后多个应用共用驱动，可以把该函数移动到应用层。</p>
+
+  <h3>8.9 两个OnUart回调</h3>
+  <p>HAL的全局回调在<code>main.c</code>中接收中断结果，然后转发到节点模块：</p>
+  <pre>DMA1_Channel2_IRQHandler
+→ HAL_DMA_IRQHandler
+→ HAL内部UART完成流程
+→ HAL_UART_TxCpltCallback
+→ LoraNode_OnUartTxComplete
+→ tx_complete=true
+→ TransmitDmaAndWait退出等待</pre>
+  <p>错误路径类似，只是设置<code>tx_error=true</code>。回调里只改标志，不做CRC、ACK或长时间阻塞。</p>
+
+  <h2>9. main.c怎样把所有模块串起来</h2>
+  <h3>9.1 双构建</h3>
+  <p>CMake选项<code>SENSOR_COMMUNICATION_LORA</code>默认关闭。普通Debug保持BLE路径，LoRaDebug把该宏设为1，编译LoRa分支。这样新增功能不会直接破坏原项目。</p>
+
+  <h3>9.2 初始化</h3>
+  <p><code>main.c</code>创建<code>LoraNodeConfig_t</code>，提供USART3、PA8/PA9/PA1、NodeID=1、初始Sequence=0、模式超时100ms、UART超时500ms、ACK超时300ms和一次业务重试。然后初始化控制引脚并调用<code>LoraNode_Init()</code>。</p>
+
+  <h3>9.3 每轮业务</h3>
+  <ol>
+    <li>采集AHT20、BH1750和雨滴。</li>
+    <li>根据读取返回值建立valid位，根据阈值建立alert位。</li>
+    <li>温湿度乘10转成定点数，避免在线上传输float。</li>
+    <li>调用<code>LoraNode_SendTelemetry()</code>。</li>
+    <li>根据传感器状态和通信状态控制LED。</li>
+    <li>正常30秒、异常10秒进入RTC Stop。</li>
+  </ol>
+
+  <h2>10. PC网关为什么也要写代码</h2>
+  <p>LoRa模块只把收到的RF字节从UART输出，它不会理解18B业务协议，也不会自动生成本项目ACK。PC程序负责：</p>
+  <ol>
+    <li>串口收到多少字节就先放入缓存，不能假设一次read就是一帧。</li>
+    <li>搜索A5 5A，凑足18B，再检查Version、Type和CRC。</li>
+    <li>解析NodeID、Sequence、Flags和传感数据。</li>
+    <li>生成匹配的11B ACK并优先写回串口。</li>
+    <li>用NodeID＋Sequence判断重复，最后写CSV和日志。</li>
+  </ol>
+  <p>当前<code>TelemetryStreamDecoder</code>处理拆包、粘包和错位；<code>DuplicateTracker</code>限制1024项；<code>GatewayProcessor</code>把解析、去重和ACK组合成事件；<code>run_serial_gateway()</code>负责真实COM循环。</p>
+
+  <h2>11. 如果完全自己重写，建议的最小提交顺序</h2>
+  <table>
+    <thead><tr><th>提交</th><th>只实现什么</th><th>验证方法</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>USART3阻塞发送“hello”</td><td>逻辑分析仪＋另一模块串口</td></tr>
+      <tr><td>2</td><td>M0/M1/AUX模式控制</td><td>观察AUX高低和模块电流/收发状态</td></tr>
+      <tr><td>3</td><td>协议编码、CRC和固定向量</td><td>C/Python对同一输入产生同一18B</td></tr>
+      <tr><td>4</td><td>DMA发送和回调超时</td><td>断点、DMA CNDTR、回调标志</td></tr>
+      <tr><td>5</td><td>ACK匹配和一次重试</td><td>关闭网关、坏CRC、错误Sequence故障注入</td></tr>
+      <tr><td>6</td><td>在线流式网关和去重</td><td>7B＋11B拆包、粘包和垃圾前缀测试</td></tr>
+      <tr><td>7</td><td>模块休眠＋RTC Stop</td><td>M0/M1/AUX时序和分状态电流</td></tr>
+    </tbody>
+  </table>
+
+  <h2>12. 当前源码的已知改进点</h2>
+  <ul>
+    <li><code>main.c</code>应处理<code>LoraNode_Init()</code>失败。</li>
+    <li>最终<code>SleepRadio()</code>失败不应完全忽略，否则可能带来高功耗。</li>
+    <li>ACK当前固定阻塞接收11B，没有节点侧流式重同步。</li>
+    <li>300ms要按真实LEVEL和往返时序重新确定。</li>
+    <li>RX DMA1 Channel3当前没有被LoRa ACK路径使用，不能说收发都采用DMA。</li>
+    <li>Sequence掉电归零，网关近期去重缓存可能与新会话冲突。</li>
+  </ul>
+
+  <h2>13. 一句话记住每个文件</h2>
+  <div class="card">
+    <p><strong>lora_protocol：</strong>我规定数据长什么样，并负责打包、拆包和CRC。</p>
+    <p><strong>lora_node：</strong>我负责控制这块模块，把一帧可靠地发出去并判断ACK。</p>
+    <p><strong>main：</strong>我决定本轮采什么、发什么、报警没有、多久再醒。</p>
+    <p><strong>lora_gateway.py：</strong>我代表网关接收连续字节流、恢复帧、回ACK、去重并记录。</p>
+  </div>
+
+  <h2>14. 资料依据</h2>
+  <ul>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf">DX-LR22-433T22D串口应用指导V2.0</a>：透明传输步骤、AT命令、SWITCH、M0/M1和AUX。</li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22-433T22D技术手册V2.0</a>：供电、电流、引脚和硬件要求。</li>
+    <li><code>sensor.design/BSP/Src/lora_protocol.c</code>、<code>lora_node.c</code>、<code>Core/Src/main.c</code>和<code>tools/lora_gateway.py</code>：当前真实实现。</li>
+  </ul>
+  <p>如果某个函数仍然抽象，可以直接告诉教师函数名，下一步只展开该函数的变量生命周期、调用时序和异常路径，不需要重新讲整章。</p>
+</main>
+</body>
+</html>

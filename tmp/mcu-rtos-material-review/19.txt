@@ -1,0 +1,9964 @@
+=== PDF PAGE 1 ===
+ 
+ 
+य़ਹঅ҅౯ฎbigsai์ବӤᕚpdfࣁpdfᬨ๶ԧᒫԫᇇ๜̶
+ܨ bigsai-algorithm-v2.0 ̶
+̶
+ԧӧ੝ӳᥜ(ੜጮ)ਫᜰᩇጱ෸ᳵᬮฎྲ᫾ग़ጱ҅ᬯེጱ
+ྍෆቘ౮ӞᇇpdfՁᕳय़ਹ̶
+ෆቘpdfᬮฎmdጱpdfᇆॡ
+ḵ…… 
+ᚆํᳯ᷌(ாgifധ)҅ํԶํgifਮ
+෈ᒍ̶
+ਪᩃጱ఺ᥠѺ୮ᆐᬯӻՙପԞฎ
+զᖌಷ̶
+፡፳pdf਍ᘏժ҅ᦏහ
+਻ฃቘᥴ̶
+ฮਧᬯӻpdfᇇ๜1-2کGithubጱ
+ړ(۸)݄(य़ഭଧ)̶
+ಕጱ᷌ᥴpdf๶̶
+ᎣӞ्Ѻ
+૶๕ᬯӻpdfࣁpdfᕪḵ(ړ
+ധ)̶
+ԭ౯ғ
+Իၞ਍ԟ̶
+ғbigsai ࿢Ӟူඪ೮
+Իၞғ
+github࣎ࣈ(࿢star)ғhttps://github.com/javasmall/bigsai-algorithm
+csdn࣎ࣈ(ᕚᥡ፡)ғhttps://bigsai.blog.csdn.net/
+ਮᗑᒊᬪ๗տ൫ୌӞӥѺස᧗๗இѺ
+ 
+ੜথথժඪ೮
+!
+Ѻ
+ੜথথժඪ೮
+"
+Ѻ
+ੜথথժඪ೮
+❤
+Ѻ
+ 
+ 
+ 
+
+=== PDF PAGE 2 ===
+id name sex
+001 bigsai man
+002 smallsai man
+003 ោᡦẞ woman
+usersጱpojo੒᨝   
+ 
+හഝᕮ຅  
+හഝᕮ຅Өᓒဩᖃᦞ  
+᥺  
+ӻොᶎ҅ӱኴๅํᑕଧ=හഝᕮ຅+ᓒဩᬯ
+ܛ
+੒᨝ጱ௏మ҅ඳ਍অഩൎහഝᕮ຅੒᭦ᬋ௏
+̶
+Ӹ᯿ጱ
+Ӟ
+Ѻ
+හഝᕮ຅  
+ 
+༷ஷ  
+̶᭗ଉ
+පሲ̶
+ᕮ຅ೲᆙӞਧڞݳӞਧಗᤈᓒဩ౯ժಅᆧ
+හഝᕮ຅ᜉঅጱᬩአ̶୮ᆐᬯԶଫአ
+ᕍጱᕮ຅ᳯ̶᷌ᬮᘍᡤਫᴬosᔰ̶
+ࣁਂӾᬩᤈጱು᨝ጱහഝᕮ຅ܔ
+҅ྲইᕚ௔ᕮ຅̵໅̵ࢶᒵᒵ.
+๞᧍  
+හഝᕮ຅ӨᓒဩӾ҅ᔰ̵හഝᶱݸ
+ՁӞӥ̶
+ 
+௳ᤒusers
+
+=== PDF PAGE 3 ===
+හഝ௛ᑍ̶ӤᬿᤒӾጱӣ๵አ
+௳ጱᦕ୯੪ฎහഝ(ํӞӻ)̶ᬯԶහഝӞᛱ᮷ฎف౲ᘏฎᛔਧԎ຅᭜ਠ౮̶୮
+̵्ᶪԞฎහഝ̶
+ᔰᔰฎ֖ܔᔰኧᝑଗහഝᶱᦊԅฎӞӻpojo੒᨝̵౲ᘏฎහഝପጱ
+Ӟ๵ᦕ୯̶ྲইោᡦẞᔰ̶
+හഝᶱғ ᘒ຅౮አಁਁྦྷ/ં௔ጱํid̵name̵sexᒵ҅ᬯԶ੪ฎහഝᶱ.ᔰጱਁ
+ྦྷӞӻpojo੒᨝౲ᘏӞୟᤒ(people)ጱӞӻં௔/ਁྦྷጱ꧊̶
+හഝ੒᨝̶ฎහഝጱӞӻৼᵞ̶ྲইӤᶎጱusersᤒ̵list̵woman᮷ฎහ
+զฎӞӻහഝ੒᨝̶
+ฎහഝጱৼᵞ҅
+ৼᤒcatᤒdogᤒcatฎӻහഝ
+੒᨝(ԅ᮷ൈᬿcatᬯᐿ੒᨝)ߐ1҅य़
+ॊ॰1҅ᡐሪ2̶
+ӥᶎᦖӞᦖ̶
+ࣳ
+̶ࣳྲইint҅char҅double҅floatᒵ̶
+ࣳᐿᕮ຅ᒵ̶
+ࣳADT)ҁADTֵ
+አList̵Map̵Setᵱᥝԧᥴਙጱapi
+ጱොໜ҅ྲইListᭌೠ̶
+ӣᥝᔰ  
+᭦ᬋᕮ຅ᔰԏᳵጱᔮԅᕚ௔ᕮ຅޾ᶋᕚ௔ᕮ຅̶ᕚ௔ᕮ຅੪ฎᶲଧᤒ̵᱾ᤒԏᔄ̶ᘒ
+ᬯԶᕮ຅̶
+ᕮ຅ᦇᓒ๢Ӿጱᤒᐏ(҅Ԟᑍᇔቘᕮ຅)ԅ̵̵ؙؙᔱ୚ਂ
+ؙ޾ڜ(૶)ؙԧᥴӞӥ(ՐՐԅቘᥴӧᘍᡤๅग़)ғ
+හഝጱᬩᓒೡᬩᓒጱਧԎ޾ਫሿ,ᕮ຅̶
+ᕮ຅ጱ༷ஷ̶੒ԭ᭦ᬋᕮ຅හ
+ᶋᕚ௔ᕮ຅҅ਙൈᬿጱฎӞᕟහഝӾᘶᔮ୵ୗ҅՜ᰒ
+੒ጱฎහഝአᕚ௔ᤒ̶
+ᘒᕮ຅໏ฎ
+ᕚ௔ᤒ,ᕮ຅ጱਫሿොୗ̶ྲইᶲଧᤒ޾᱾ᤒ(Arraylist,Linkedlist)҅Ӟӻฎᶲ
+ؙ(හᕟ)ؙ(᱾ᤒ)ᕮ຅ਫሿ
+ᗌᅩ(ᕚ௔ฃັᵙൊ̵᱾ୗฃൊᵙັᒵᒵ)̶
+class users
+{ 
+     //ኼ
+     int id;
+     String name;
+     String sex;
+}
+//list޾womanฎහഝ
+List<users>list;//හഝ੒᨝list
+List<users>woman;//හഝ੒᨝woman
+list.add(new users(001,"bigsai","man"));//ᔰ Ӟӻusersኧҁ001҅bigsai҅man҂ӣӻහഝ
+ᶱᕟ౮ 
+list.add(new users(002,"smallsai","man"));//ᔰ
+list.add(new users(003,"ោᡦẞ","woman"));//ᔰ
+woman.add(list.get(2));//003,"ោᡦẞ","woman"ᔰ
+
+=== PDF PAGE 4 ===
+ຉ  
+ຉጱӞԶ༷ஷᬰᤈൈᬿ̶
+ 
+ᓒဩጱԲӻ᯿ᥝᇙ஄ғڊӾํᑫ௔୩᧣ᓒဩᥝํ
+ᤈ௔ฎ೰ᓒဩྯӻྍṈᕪ
+ฎ0ف(ݢ0);ฎ1ڊ(ڊ)̶
+አ(ᑮᳵ॔๥ଶ)҅᭗ଉ॔๥ଶๅग़ൈᬿጱฎ
+Ӟӻᰁᕆහਁൈᬿ̶
+ᑮᳵ॔๥ଶ  
+༷ஷ؉S(n)=O(f(n))
+ጱ(ᓒဩ)ฎӧᚆ஺ᥤᑮᳵ
+ਂ᮷ฎӞӻຄय़᷐೰ຽ̶੒ԭJavaਂ੪य़҅
+̶
+෸ᳵ(පሲ)ᯈString.contains()ොဩ҅౯ժ᮷Ꭳ
+Ꮘᥴ҅෸ᳵ॔๥ଶԅO(n^2),ਂ̶ᘒKMPฎ
+KMP՜හᕟ(next[])ٮړ
+ਂ୏ᲀ̶
+୮ᆐ҅ᓒဩጱᑮᳵᜰᲀ๋य़ӧᚆ᩻ᬦjvmᦡᗝጱ๋य़꧊҅Ӟᛱԅ2G.(2147483645)ইຎ୏ԫᖌහᕟग़ᐿग़ᖌහഝӧᥝ
+ᚆտ੕ᛘheap OutOfMemoryError̶ 
+෸ᳵ॔๥ଶ  
+༷ஷғᦇᓒ๢ᑀ਍Ӿ҅ᓒဩጱ෸ᳵ॔๥ଶฎӞӻහف
+හ̶෸ᳵ॔๥ଶଉአय़Oᤒᬿ҅Ḓᶱᔮහአᬯᐿොୗ෸҅
+̶
+෸ᳵ॔๥ଶጱഭଧғO(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(n^3) < O(2^n) <O(n!) < O(n^n)
+ଉᥠ෸ᳵ॔๥ଶৼ᧔กӞԶ෸ᳵ॔๥ଶ̶
+O(1):  හ
+a=15
+O(logn): හ
+for(int i=1;i<n;i*=2)
+ᦡಗᤈt஑i=n;ํ2^t=n; t=log2~n,ԅlog෸ᳵ॔๥ଶԅO(logn)̶
+ԅO(logn)̶ંԭṛපሲᓒဩ̶
+O(n): හ
+for (int i=0;i<n;i++)
+ᳯ̶᷌
+O(nlogn): 
+for (int i=1;i<n;i++)
+for (int j=1;j<i;j*=2)
+᮷ฎnlognԞᬮӧᲙ̶
+O(n^2)
+for(int i=0;i<n;i++)
+for(int j=0;j<i;j++)
+ਫO(n^2)ጱපሲ੪ӧ඿௲ᖌԧ̶੒ԭय़ጱහഝO(n^2)ኜᛗๅṛེොጱಗᤈපຎտஉ૧̶
+໏ฎn=10000.̶
+ 
+
+=== PDF PAGE 5 ===
+ٍ֛ nಗᤈེහ
+O(1) 100001
+O(log2n) 1000014
+O( n^1/2) 10000100
+O(n) 1000010000
+O(nlog2 n) 10000140000
+O(n^2) 10000100000000
+O(n^3) 100001000000000000
+ாഭଧᒵᒵ҅ᬯԶහഝᕮ຅ᥴ
+ጱොဩ੪ฎ
+O(n2),ளഭ̵୭ଚᒵᘺกොဩ੪ᚆO(nlogn)ๅᔜૣጱᓒဩ̶
+෸ᳵ॔๥ଶᦇᓒ
+෸ᳵ॔๥ଶᦇᓒӞᛱྍṈғ1ݙ2ಗᤈጱහᰁᕆ ; 3̵አOᤒᐏᕮຎ̶ଚӬํӷӻ
+ғ
+ғ ๋य़ጱᮎӻ,eg:
+ғ஗ሾᕮ຅҅෸ᳵ॔๥ଶೲԙဩᬰᤈᦇᓒ,egғ
+ԅᬮտํ๋ս෸ᳵ॔๥ଶ(ᚆಗᤈེහ๋੝෸)෸ᳵ॔๥
+ଶ(ಗᤈེහ๋੝෸)አ෸ᳵ॔๥ଶ๶ᤍᰁӞӻ
+̶
+ 
+හഝᕮ຅Өᓒဩ਍ԟ  
+ࣁٟ
+ᘍғ
+හഝᕮ຅  
+᱾ᤒ(ଃ१ᕮᅩ̵ӧଃ१ᕮᅩ)ᦡᦇӨਫሿ(දັ)᱾ᤒᦡᦇӨਫሿ
+຾ᦡᦇӨਫሿ(᱾ᤒ)ᦡᦇӨਫሿ(᱾ᤒ)
+᭓୭̵ᶋ᭓୭ਫሿ ܲ
+ഭଧ໅ᦡᦇӨਫሿ(ᴻ)
+ञ(̵ञഭଧ)
+AVL(ଘᤍ)໅ᦡᦇӨਫሿ(ᐿᛔ෤ොୗቘᥴਫሿ)
+ቘ༷ஷቘᥴ
+B̵B+ቘ༷ஷቘᥴ
+ቘ༷ஷቘᥴ(ᨸஞᒽኼ)
+૶(ᤒ)ቘ༷ஷቘᥴ(ᑱොୗ)
+ଚັᵞ/ݳ(ᖽ)
+ᦞ೐ಏഭଧ
+ᦞdfs̵bfsܲ
+๋Ꭸ᪠ஆDijkstraᓒဩ̵Floydᓒဩ̵spfaᓒဩ
+๋ੜኞ౮໅primᓒဩ̵kruskalᓒဩ
+ᖗහᕟᒵᒵ
+ᓒဩ  
+᭓୭ᓒဩ(࿢ᴤԙ̵෋ူᮎॶ̵࿥᧚रᳯ᷌)
+ັತ
+လᓒဩ(ளഭ̵୭ଚഭଧ̵࿢๋ᬪᅩ੒ᒵᳯ᷌)
+ᨸஞᓒဩ(ᳵᥟፍᳯ᷌)
+ښLCS(ڜLIS(ڜ)ᳯ᷌ᒵᒵ)
+შᓒဩ(ᳯ᷌)
+ᬩᓒଉᥠᳯ᷌(೰offer޾LeetCodeᳯ᷌)
+ள᭛଍ᓒဩ(ள᭛࿢଍ԙ̵Ꭵᴣள᭛଍)
+kmpᯈᓒဩ
+՜හᦞᓒဩ(ਧቘᒵᒵ)
+ᘶ҅හഝᕮ຅ฎԅ
+ᬩ
+ಋਫ౴(᷌ፓ)ቘᥴฎӧᤈጱ҅
+ᘌ̶
+ 
+හഝᕮ຅᱾ᤒ
+T(n)=O(m)+O(n)=max(O(m),O(n)); 
+T(n)=O(n)+O(nlogn)=max(O(n),O(nlogn))=O(nlogn);
+T(n)=O(m)*O(n)=O(mn)
+T(n)=O(m)*O(m)=O(m^2)(ӷ੶for஗ሾ)
+
+=== PDF PAGE 6 ===
+හഝᕮ຅᱾ᤒ  
+᥺  
+ٖ
+Ձᕳय़ਹ̶
+ӧႴᕚ௔ᤒ҅ᶲଧᤒ޾᱾ᤒᘶᔮѺ
+ᕚ௔ᤒғ᭦ᬋᕮ຅҅ ᔄ੪ฎᕚ
+ᶋᕚ௔ᕮ຅ᘒᶲଧᤒ̵᱾ᤒ᮷ฎӞᐿᕚ௔ᤒ̶
+ᶲଧᤒ̵᱾ᤒғᇔቘᕮ຅Ӥጱᕮ຅̶ྲইᶲଧᤒ੪ฎአහᕟਫሿ̶ᘒ᱾ᤒአ೰
+ᰒ̶
+ࣁJavaӾ҅य़ਹ᮷Ꭳ᭲Listහഝ̶ᘒ
+Ӟӻget҅set҅addොဩ᮷ᥝ
+चԭහᕟ๶ਠ౮,ᘒ᱾ᤒฎचԭ೰ᰒ޾ݻvalue̶
+̶
+ᕚ௔ᤒच๜ຝ຅  
+ਫሿපຎଫᧆӞᛘ(̵ᬡ౮᭦
+ጱฎᬩᤈපሲ)̶ᕚ௔ᤒጱ༷ஷӨJavaݗ/ጱ੪ฎListጱ
+Arraylist޾LinkedList҅ListฎӞᐿ᭦ᬋӤጱᕮ຅҅ᤒᐏᬯᐿᕮ຅ԅᕚ௔ᤒ҅ᘒArrayList҅LinkedListๅग़ጱฎӞᐿᇔ
+ቘᕮ຅(᱾ᤒ)̶
+զਫሿᬯӻᕚ௔
+ਫሿጱᕚ௔ᤒ᮷ฎࣳint),
+ᵋ፳Ꭳᦩጱᬰྍ҅౯ժଫ୮᯻አࣳᦡᦇইӥғ
+ᶲଧᤒ  
+හഝጱහᕟdataํ
+አᳩଶlength.
+̶
+֢ӤጱՈ̶
+֢  
+add(int index,T t) 
+Ӿindexᗝ҅tጱၞᑕԅғ
+(1)ݸ(֖)کڹݻindexڊindexᗝጱᑮᳵ
+(2)کindex֢
+package LinerList;
+public interface ListInterface<T> { 
+  void Init(int initsize);//ᤒ
+  int length();
+  boolean isEmpty();//ԅᑮ
+  int ElemIndex(T t);//ݩ
+  T getElem(int index) throws Exception;//໑ഝindexහഝ
+  void add(int index,T t) throws Exception;//໑ഝindexහഝ
+  void delete(int index) throws Exception;
+  void add(T t) throws Exception;//ف
+  void set(int index,T t) throws Exception;
+  String toString();//᫨౮Stringڊ  
+}
+
+=== PDF PAGE 7 ===
+֗(෸ᳵ॔๥ଶԅO(n))ᮎԍ॔๥
+ଶꂁṛጱ̶
+֢  
+ᴻindex੪ฎ՗index+1ک
+ғ
+դᎱਫሿ  
+ᘍ਍ԟғ
+package LinerList;
+public class seqlist<T> implements ListInterface<T> {
+  private Object[] date;//හᕟਂනහഝ
+  private int lenth;
+  public seqlist() {//তय़ੜἕᦊԅ10
+    Init(10);
+  }
+  public void Init(int initsize) {//۸
+    this.date=new Object[initsize];
+    lenth=0;    
+  }
+  public int length() {   
+    return this.lenth;
+  }
+  public boolean isEmpty() {//ԅᑮ
+    if(this.lenth==0)
+      return true;
+    return false;
+  }
+  /*
+   * * @param t 
+   * ፘᒵᕮຎ҅ԅ-1ԅfalse
+   */
+  public int ElemIndex(T t) {
+
+=== PDF PAGE 8 ===
+ 
+    // TODO Auto-generated method stub
+    for(int i=0;i<date.length;i++)
+    {
+      if(date[i].equals(t))
+      {
+        return i;
+      }
+    }
+    return -1;
+  }
+  /*
+   *ᔰ
+   */
+  public T getElem(int index) throws Exception {
+    // TODO Auto-generated method stub
+    if(index<0||index>lenth-1)
+      throw new Exception("හ꧊᩼ኴ");
+    return (T) date[index];
+  }
+  
+  public void add(T t) throws Exception {//ف
+     add(lenth,t);
+  }
+  /*
+   *ف
+   /*
+  public void add(int index, T t) throws Exception {
+    if(index<0||index>lenth)
+      throw new Exception("හ꧊᩼ኴ");
+    if (lenth==date.length)//ಘ਻
+    {
+      Object newdate[]= new Object[lenth*2];
+      for(int i=0;i<lenth;i++)
+      {
+        newdate[i]=date[i];
+      }
+      date=newdate;
+    }
+    for(int i=lenth-1;i>=index;i--)//ۖ
+    {
+      date[i+1]=date[i];
+    }
+    date[index]=t;//ᔰ
+    lenth++;//ᶲଧᤒᳩଶ+1
+    
+  }
+  public void delete(int index) throws Exception {
+    if(index<0||index>lenth-1)
+      throw new Exception("හ꧊᩼ኴ");
+    for(int i=index;i<lenth;i++)//indexۖ
+    {
+      date[i]=date[i+1];
+    }
+    lenth--;//ᳩଶ-1  
+  }
+  @Override
+  public void set(int index, T t) throws Exception {
+    if(index<0||index>lenth-1)
+      throw new Exception("හ꧊᩼ኴ");
+    date[index]=t;
+  }
+  public String  toString() {
+    String vaString="";
+    for(int i=0;i<lenth;i++)
+    {
+      vaString+=date[i].toString()+" ";
+    }
+    return vaString;
+    
+  }
+}
+
+=== PDF PAGE 9 ===
+᱾ᤒ  
+਍ԟc/c++ԅ೰ᰒ҅Javaฎ౯
+ԭᶲଧᤒ(හᕟ)Ӟ๵᱾Ӟ໏᱾ള౮Ӟӻᕚ௔ᕮ຅҅ᘒ᱾ᤒӾྯӞ
+ᜓᅩ(ऒ)੒ଫᜓᅩ̶
+ฎӤӞӻᦕ
+୯ጱኞӞ
+Ѻ
+ࠈک
+ԅԲ೰ઊӥጱᕅਧ̶
+च๜ᕮ຅  
+ᵱᥝӞӻdata޾length௳̶ᘒ੒ԭ᱾ᤒ҅౯ժᵱᥝӞӻnode(head१ᜓ
+ᅩ)޾length᱾ᤒᳩଶ҅ᬯӻᜓᅩํහഝऒ޾೰ᰒऒ̶හഝऒ੪ฎਂන፥ਫጱහഝ҅ᘒ೰
+ᰒऒ੪ฎਂනӥӞӻnodeᕮ຅ԅғ
+ 
+ଃ१ᕮᅩ᱾ᤒVSӧଃ१ᕮᅩ᱾ᤒ  
+ӧଃ१ᕮᅩ҅౯ᕳय़ਹᴏᬿӞ
+ӥғ
+ଃ१ᕮᅩғheadአ(ፘ୮ԭቔԆձଃ਍ኞ)
+ӧଃ१ᕮᅩғheadਂํපහ꧊̶
+Ҙ
+ັತӤ҅ଃ१ᕮᅩᵱᥝग़ತӞ̶ེ
+Ӥғᶋᒫ0ᒫ0ݒhead̶
+class node<T>{
+    T data;//ᜓᅩጱᕮຎ
+    node next;//ӥӞӻᬳളጱᜓᅩ
+    public node(){}
+    public node(T data)
+    {
+        this.data=data;
+    }
+    public node(T data, node next) {
+        this.data = data;
+        this.next = next;
+    } 
+}
+
+=== PDF PAGE 10 ===
+ᴻӤғᶋᒫ0ᴻᒫ0ݒhead̶
+ᴻ(ଃ१ᜓᅩ)ᴻӞ໏̶ፗളhead.next=head.next.next҅ᬯ໏head.next੪ፗള
+ᴻԧ
+ᴻ(ӧଃ१ᜓᅩ)ғӧଃ१ᜓᅩጱᒫӞӻᜓᅩ(head)҅ፗളਖ਼head೰
+᱾ᤒӾᒫԫӻnodeғhead=head.next
+ൊ
+ᴻᒫ0ݒhead̶ӷᘏ֖(ف)୮ᆐ౯ฎୌ
+ײੱᰁአଃ१ᕮᅩጱ᱾ᤒӧ஠ᥝጱἋᅸ̶
+ଃ१೰ᰒVSଃੲ೰ᰒ  
+Ҙ
+१೰ᰒғ ਫ१೰ᰒ੪ฎ᱾ᤒӾheadᜓᅩ҅౮ԅ१೰ᰒ̶
+ੲ೰ᰒғ ੲ೰ᰒ੪ฎग़Ӟӻtailݸ
+̶
+کtailᴻ̶
+
+=== PDF PAGE 11 ===
+֢  
+add(int index,T t) 
+Ӿindexᗝ҅tᗝ᮷ฎᒵපጱ̶
+Ӟӻᜓᅩnode҅໑ഝindexݞpreၞᑕԅ
+Ӟӻ
+̶
+֢  
+ೲᆙindexᑏᴻ(Ԇᥝഩൎ)ғdelete(int index)
+๜ොဩԅଃ१ᕮᅩฦ᭗᱾ᤒጱ᭗አොဩ(ᴻੲԞӞ໏)ᧆindexӞӻᜓᅩpre҅pre.next=pre.next.next
+ 
+դᎱਫሿ  
+አғ
+1. `node.next=pre.next`ᘶᔮ᩸๶̶ྌ෸node.next޾pre.nextӞᛘ̶
+2. `pre.next=node` ਖ਼node᱾ᤒӾ̶
+package LinerList;
+class node<T>{
+    T data;//ᜓᅩጱᕮຎ
+    node next;//ӥӞӻᬳളጱᜓᅩ
+    public node(){}
+    public node(T data)
+    {
+        this.data=data;
+    }
+    public node(T data, node next) {
+        this.data = data;
+        this.next = next;
+    }
+   
+}
+public class Linkedlist<T> implements ListInterface<T>{
+  node head;
+  private int length;
+  public Linkedlist() {
+    head=new node();
+
+=== PDF PAGE 12 ===
+    length=0;
+  }
+  public void Init(int initsize) {
+    head.next=null;
+    
+  }
+  public int length() {
+        return this.length;
+  }
+  
+  public boolean isEmpty() {
+    if(length==0)return true;
+    else return false;
+  }
+  /*
+   * ݩ
+   /*
+  public int ElemIndex(T t) {
+    node team=head.next;
+    int index=0;
+    while(team.next!=null)
+    {
+      if(team.data.equals(t))
+      {
+        return index;
+      }
+      index++;
+      team=team.next;
+    }
+    return -1;//ک
+  }
+  @Override
+  public T getElem(int index) throws Exception {
+    node team=head.next;
+    if(index<0||index>length-1)
+    {
+      throw new Exception("හ꧊᩼ኴ");
+    }
+    for(int i=0;i<index;i++)
+    {
+      team=team.next;
+    }
+    return (T) team.data;
+  }
+  public void add(T t) throws Exception {
+    add(length,t);
+    
+  }
+  //֢
+  public void add(int index, T value) throws Exception {
+    if(index<0||index>length)
+    {
+      throw new Exception("හ꧊᩼ኴ");
+    }
+    node<T> team=head;//team ᗝnode
+    for(int i=0;i<index;i++)
+    {
+         team=team.next;
+    }
+    node<T>node =new node(value);//ෛୌӞӻnode
+    node.next=team.next;//ݻindexᗝጱӥӞӻ೰ᰒ
+    team.next=node;//౮indexᗝ  
+    length++;
+  }
+  
+  @Override
+  public void delete(int index) throws Exception {
+    if(index<0||index>length-1)
+    {
+      throw new Exception("හ꧊᩼ኴ");
+    }
+    node<T> team=head;//team ᗝnode
+    for(int i=0;i<index;i++)//ຽᦕteam Ӟӻᜓᅩ
+    {
+         team=team.next;
+
+=== PDF PAGE 13 ===
+ 
+௛ᕮ  
+҅ᮎ౯๶ၥᦶӞӥғ
+    }
+    //team.nextᴻጱᜓᅩ
+    team.next=team.next.next;
+    length--;
+  }
+  @Override
+  public void set(int index, T t) throws Exception {
+    // TODO Auto-generated method stub
+    if(index<0||index>length-1)
+    {
+      throw new Exception("හ꧊᩼ኴ");
+    }
+    node<T> team=head;//team ᗝnode
+    for(int i=0;i<index;i++)
+    {
+         team=team.next;
+    }
+    team.data=t;//ݒ
+    
+  }
+  public String toString() {
+    String va="";
+    node team=head.next;
+    while(team!=null)
+    {
+      va+=team.data+" ";
+      team=team.next;
+    }
+    return va;
+  }
+}
+
+=== PDF PAGE 14 ===
+ํᴴ҅ ጱ
+೰ྋ̶
+զᘍᡤᦡᦇଃੲ೰ᰒጱ᱾ᤒ̶ᘒᶲଧᤒັᧃ᭛ଶᡱ
+҅ਫᴬଫአ໑ഝᵱ࿢ᭌೠѺ
+JavaӾጱArraylist޾LinkedList੪ฎӷᐿොୗጱդᤒ҅ӧᬦLinkedList҅ଚӬJDK̶
+᱾ᤒᬮฎஉํ਍ԟհ꧊ጱ̶
+ 
+᱾ᤒ  
+᥺  
+ᶎํஉᧇᕡጱᦖᬦᕚ௔ᤒ(᱾ᤒ)᱾ᤒጱଫአग़Ӟ
+Զ੪ྲইLinkedList̶
+ 
+ 
+ڦ܄  
+ጱӞԶ૧୑̶
+᱾ᤒғ
+ਂහഝጱdataḝᜓᅩnext(೰ᰒ)᮷஑᭗
+ᬦᜓᅩ—>ᜓᅩ̶
+᱾ᤒғ
+හഝጱdata,ḝᜓᅩnext(೰ᰒ)ḝᜓᅩ
+pre(೰ᰒ)̶
+᱾ᤒᕮ຅ጱᦡᦇ  
+ժ੪ӧଃ
+१ᕮᅩᦡᦇਫሿฎဌํੲ೰ᰒtail᱾ᤒଃੲ೰ᰒ̶
+᱾ᤒฎғӧଃ१ᜓᅩ̵ଃੲ೰ᰒ(tail)᱾ᤒ̶ 
+੒ԭnodeᜓᅩғ
+
+=== PDF PAGE 15 ===
+੒ԭ᱾ᤒғ
+ຉ  
+ف
+ӾጱӞԶᕡᜓ॒ቘԞฎྲ᫾᯿ᥝጱ(Კ)ᲙԞஉᵙ
+ᬮฎ਻ฃஉग̶़
+۸  
+ 
+ԅnull᱾ᤒᘒ᥺̶ਙጱheadᒫӞӻ፥ਫ
+ํපጱᜓᅩ̶tailײhead=null҅ଚӬtail=head҅ྌ෸᱾ᤒԅᑮ҅ᒵ
+̶
+ف  
+ف
+ײhead޾tailԅnull֕head޾tail
+᱾ᤒӾጱ፥ਫහഝ(ଃ१೰ᰒ੪ӧᵱᥝᘍᡤ)੪ෛୌӞӻnodeᦏhead̵tailᒵ
+ԭਙ̶
+१ൊ
+ᵱᘍᡤhead̶
+1. ᜓᅩnode
+2. headݻnode
+3. nodeݻhead
+4. headݻnode̶(ײheadฎᤒᐏᒫԫӻᜓᅩ҅ᘒheadݻ)
+ 
+ 
+ੲൊғ
+class node<T> {
+  T data;
+  node<T> pre;
+  node<T> next;
+  public node() {
+  }
+  public node(T data) {
+    this.data = data;
+  }
+}
+public class doubleList<T> {
+  private node<T> head;// १ᜓᅩ
+  private node<T> tail;// ੲᜓᅩ
+  private int length;
+    //ᐿොဩ  
+}
+public doubleList() {
+  head = null;
+  tail = head;
+  length = 0;
+  }
+node<T> teamNode = new node(data);
+if (isEmpty()) {
+  head = teamNode;
+  tail = teamNode;  
+}
+
+=== PDF PAGE 16 ===
+ᵱᘍᡤੲᜓᅩtail̶
+1. ᜓᅩnode
+2. nodeݻtail
+3. tailݻnode
+4. tailݻnode̶(ײtailහᒫԫӻᜓᅩ҅ᘒtailݻnode)
+ 
+ 
+ف
+޾head޾tail̶
+1 ᜓᅩnode
+2 فnodeӞӻᜓᅩpreNodeӞӻᜓᅩnextNode
+3 nodeݻnextNode,nextNodeݻnode(ྌ෸nodeᐶᇫா)
+ 
+ 
+4 preNodeݻnode̶nodeݻpreNode(ਠླ)
+ 
+
+=== PDF PAGE 17 ===
+ԅғ
+ᴻ  
+ᴻ
+Ѻ
+ᴻ
+޾ݝheadى
+ԅғ
+1 headᜓᅩጱḝᜓᅩጱ೰ᰒpreදԅnull̶(headݻhead޾headෙ
+ᔮ)
+2 headݻhead.next(ᬯ໏head҅ইຎํc++ᒵ᧍᥺ᒫ
+֕Java᯽න)
+ 
+ᴻ
+ᴻ޾ݝtailىک
+ᶎ̶
+ྍṈ
+ԅғ
+1. tail.pre.next=nullӞӻᜓᅩ(pre)ḝᜓᅩᒵԭnull  
+2. tail=tail.preḝᜓᅩ҅ྌ෸ੲᜓᅩኧԭྍṈ1next૪ᕪԅnullᴻ 
+if (length == 1)// ᔰ
+{
+  head = null;
+  tail = head;
+  length--;
+}
+
+=== PDF PAGE 18 ===
+ᴻ
+ၞᑕইӥғ
+1ᴻᜓᅩnodeḝᜓᅩprenode(prenode.nextᴻጱᜓᅩ)
+2 : prenode.next.next.pre=prenode.ᴻnodeḝᜓᅩaftnodeጱpreݻprenode҅ᒵհԭ
+aftnode.pre=prenode҂
+ 
+ 
+3: prenode.next=prenode.next.next;ྌ෸nodeᴻ̶
+ 
+ԅғ
+ਫሿӨၥᦶ  
+҅Ԇᥝፓጱᬮฎଃ፳य़ਹቘ
+ᥴ̶
+դᎱғ
+/*
+ * ӧଃ१ᜓᅩጱ
+ */
+
+=== PDF PAGE 19 ===
+public class doubleList<T> {
+    class node<T> {
+        T data;
+        node<T> pre;
+        node<T> next;
+        public node() {
+        }
+        public node(T data) {
+            this.data = data;
+        }
+    }
+    private node<T> head;// १ᜓᅩ
+    private node<T> tail;// ੲᜓᅩ
+    private int length;
+    public doubleList() {
+        head = null;
+        tail = head;
+        length = 0;
+    }
+    boolean isEmpty() {
+        return length == 0 ? true : false;
+    }
+    void addFirst(T data) {
+        node<T> teamNode = new node(data);
+        if (isEmpty()) {
+            head = teamNode;
+            tail = teamNode;
+        } else {
+            teamNode.next = head;
+            head = teamNode;
+        }
+        length++;
+    }
+    void add(T data)// ف
+{
+        node<T> teamNode = new node(data);
+        if (isEmpty()) {
+            head = teamNode;
+            tail = teamNode;
+        } else {
+            tail.next = teamNode;
+            teamNode.pre=tail;
+            tail = teamNode;
+        }
+        length++;
+    }
+    int length()
+    {
+        return length;
+    }
+    T getElum(int index)//ᕹӞ՗१ತ
+    {
+        node<T> team=head;
+        for(int i=0;i<index;i++)//ӧଃ१ᜓᅩ  ེහ-1
+        {
+            team=team.next;
+        }
+        return team.data;
+    }
+    void add(int index, T data)// ف
+{
+        if (index == 0) {
+            addFirst(data);
+        } else if (index == length) {
+            add(data);
+        } else {// ᯿१౭
+            node teampre = head;// ḝ
+            // ෫१ᜓᅩ҅index-1ḝᜓᅩ
+            for (int i = 0; i < index -1; i++)
+            {
+                teampre = teampre.next;
+            }
+            node<T> team = new node(data);// a c فB ತ಑a
+
+=== PDF PAGE 20 ===
+ၥᦶғ
+            team.next = teampre.next;// B.next=c
+            teampre.next.pre = team;// c.pre=B
+            team.pre = teampre;// ᘶa B
+            teampre.next = team;
+            length++;
+        }
+    }
+    void deleteFirst()// ᴻ
+    {
+        if (length == 1)// ᔰ
+        {
+            head = null;
+            tail = head;
+            length--;
+        } else {
+            head = head.next;
+            length--;
+        }
+    }
+    void deleteLast() {
+        if(length==1)
+        {
+            head=null;
+            tail=head;
+            length--;
+        }
+        else {
+            tail.pre.next=null;
+            tail=tail.pre;
+            length--;
+        }
+    }
+    void delete(int index)
+    {
+        if(index==0)deleteFirst();
+        else if (index==length-1) {
+            deleteLast();
+        }
+        else {//ᴻ ԅԧቘᥴᕹӞ՗१ತᮎӻᜓᅩ
+            node<T>team=head;
+            for(int i=0;i<index-1;i++)
+            {
+                team=team.next;
+            }
+            //team ᜓᅩ  a  c   فB  aԅteam
+            team.next.next.pre=team;//c౮a
+            team.next=team.next.next;//a౮c
+            length--;
+        }
+    }
+    void set(int index,T data)
+    {
+        node<T>team=head;
+        for(int i=0;i<index-1;i++)
+        {
+            team=team.next;
+        }
+        team.data=data;
+    }
+    @Override
+    public String toString() {
+        node<T> team = head;
+        String vaString = "";
+        while (team != null) {
+            vaString += team.data + " ";
+            team = team.next;
+        }
+        return vaString;
+    }
+}
+
+=== PDF PAGE 21 ===
+ᕮ᧍  
+᮷
+ᇇ๜ํ૧᪗Ԟฎྋଉጱ̶
+ᚆ੒Ӟञnext.nextᒵ
+Ӟӻ.nextইnode.next.next.nextզ፡౮(node.next.next).next̶
+ض
+᱾ᤒᕮ຅̶
+೰ྋѺ
+ 
+හഝᕮ຅຾  
+Ջԍฎ຾  
+ࣁ አጱฎ຾ ޾ 
+StackOverflowExceptionጱහഝᕮ຅(ጱᇸ၏)̶
+ 
+຾ฎᬯԍਧԎጱғ
+
+=== PDF PAGE 22 ===
+຾ҁstackञ຾҅ਙฎӞᐿᴴጱᕚ௔ᤒ̶ᬯӞᒒᤩᑍԅ຾
+ᔰጱӤ
+ᔰ౮ԅෛ
+ᔰ̶
+᦯ғ
+ᴴᴻ̶ྲই຾੪޾ف
+ᴻ̶
+ᕚ௔ᤒᶎᧇᕡՕᕨᬦᕚ௔ᤒ҅ਙᤒᬡጱฎӞᐿᔮᔰฎፘ
+ฎ᭦ᬋᕮ຅(ਫሿጱፓጱ)̶
+຾ᶮ຾ବғ ԅय़ਹᎣ᭲ᴻๅ਻ฃ҅ᘒᴻ
+຾ᶮ̶
+຾ጱଫአғ ᯈᳯ
+ڊض
+զ಩ਙ፡౮Ӟӻ຾̶ӥᶎ౯ժՕᕨහᕟ޾᱾ᤒਫሿጱ຾̶
+හᕟਫሿ  
+ጱᳯ̶᷌
+ᕮ຅ᦡᦇ
+ᴻ̶ಅզ౯ժ
+ᔰฎ Ӟӻdata[]හᕟӞӻtop(int)ᗝ̶
+හդᎱԅғ
+pushف
+ԏӞpush()̶
+ইຎtop<හᕟᳩଶ-1຾,top++;a[top]=value;
+ইຎtop==හᕟᳩଶ-1Ҕ຾ჿ̶
+private T data[];
+private int top;
+public seqStack() {
+  data=(T[]) new Object[10];
+  top=-1;
+}
+public seqStack(int maxsize)
+{
+  data=(T[]) new Object[maxsize];
+  top=-1;
+}
+
+=== PDF PAGE 23 ===
+pop֖
+ইຎtop>=0,̶return data[top--];
+҅๜๶຾ԅ1,2,3,4,5,6ҁ຾ᶮ҂,ಗᤈpop֢topԅ3ࢧ4Ҕ
+֢
+ইpeekڊ.ײreturn data[top]̶
+හᕟਫሿғ
+package ᴚ຾;
+public class seqStack<T> {
+  
+  private T data[];
+  private int top;
+  public seqStack() {
+    data=(T[]) new Object[10];
+    top=-1;
+  }
+  public seqStack(int maxsize)
+  {
+    data=(T[]) new Object[maxsize];
+    top=-1;
+  }
+  boolean isEmpty()
+  {
+    return top==-1;
+  }
+  int length()
+  {
+    return top+1;
+  }
+  
+  boolean push(T value) throws Exception//຾
+  {
+    if(top+1>data.length-1)
+    {
+      throw new Exception("຾૪ჿ");
+    }
+    else {
+      data[++top]=value;
+      return true;
+    }
+  }
+  T peek() throws Exception//ᔰӧᑏᴻ
+  {
+    if(!isEmpty())
+    {
+      return data[top];
+    }
+    else {
+      throw new Exception("຾ԅᑮ");
+    }
+  }
+  T pop() throws Exception
+  {
+    if(isEmpty())
+    {
+      throw new Exception("຾ԅᑮ");
+    }
+    else {
+       return data[top--];
+    }
+  }
+  public String toString()
+  {
+
+=== PDF PAGE 24 ===
+ 
+᱾ᤒਫሿ  
+ԅӷᐿ௏᪠ғ
+ᴻ҅੪ᓒአԧੲ೰ᰒզᥴ
+පሲᆐᴻපሲ(ḝᜓᅩ)҅ᬮ᱾ᤒᶎᡱᆐᧇᕡՕᕨᬦ
+عॡ॔๥Ѻ
+ಅզ౯ժ᯻አ᱾ᴻ१
+զਠᗦጱჿ᪃຾ጱᵱ࿢̶
+ᕮ຅ᦡᦇ
+҅ᳩᦾᎨ᧔҅Ꭸᦾӧ᧔҅ፗളӤդᎱ੪౜̶
+᱾ᤒጱᜓᅩғ
+च๜ᕮ຅ғ
+pushف
+Ӟᛘᦖᥴᬦᑕ̶
+ګ(ګ)᩼ኴ҅ᘒහ
+ᵱᥝᘍᡤ਻ᰁᳯ̶᷌
+ইຎӞӻᜓᅩteam຾ғ
+຾head.next=team;
+຾team.next=head.next;head.next=team;
+    if(top==-1)
+    {
+      return "";
+    }
+    else {
+      String va="";
+      for(int i=top;i>=0;i--)
+      {
+        va+=data[i]+"  ";
+      }
+      return va;
+    }
+  }
+}
+static class node<T>
+{
+  T data;
+  node next;
+  public node() {    
+  }
+  public node(T value)
+  {
+    this.data=value;
+  }
+}
+public class lisStack <T>{
+  int length;
+    node<T> head;//१ᜓᅩ
+    public lisStack() {
+    head=new node<>();
+    length=0;
+  }
+  //՜ොဩ
+}
+
+=== PDF PAGE 25 ===
+popڊ
+ᴻӞᛘ፡ᒟᘏᴚᕚ௔ᤒՕᕨጱ̶
+ԅᑮ҅ইຎᜓᅩteam຾ғheadݻteamḝᜓᅩ̶
+֢
+ইpeekڊ.ײreturn head.next.data̶ᘒlengthզ
+ாᦡᗝ(ݐ)̶
+᱾ᤒਫሿғ
+package ᴚ຾;
+public class lisStack <T>{
+  static class node<T>
+  {
+    T data;
+    node next;
+    public node() {    
+    }
+    public node(T value)
+    {
+      this.data=value;
+    }
+  }
+  int length;
+    node<T> head;//१ᜓᅩ
+    public lisStack() {
+    head=new node<>();
+    length=0;
+  }
+    boolean isEmpty()
+  {
+    return head.next==null;
+  }
+  int length()
+  {
+    return length;
+  }
+    public void push(T value) {//ᬪ຾
+       node<T> team=new node<T>(value);
+       if(length==0)
+       {
+         head.next=team;
+       }
+       else {
+    team.next=head.next;
+    head.next=team;}
+
+=== PDF PAGE 26 ===
+ 
+຾ᚆᬯԍሻ  
+᷌(உ᯿ᥝ҅ฦ᭗ᳯ᷌੪ӧන
+ጱ)
+ 
+ಕ20ғ
+ೡ '('҅')'҅'{'҅'}'҅'['҅']' ํප̶
+ํපਁᒧԀᵱჿ᪃ғ
+̶
+̶
+ᤩᦊԅฎํපਁᒧԀ̶
+ֺ: 
+ف :[]{}"
+ڊtrue
+ֺ: 
+ف :[)]"
+ڊfalse
+ 
+ຉғ
+ෙӞӻਁᒧԀჿӧჿ᪃ӞӻํපጱਁᒧԀ҅੪ᥝ፡ਙฎӧฎ
+᮷ᚆᕟ౮੒̶
+੒๶᧔҅((,))ํ()̶
+੒๶᧔ {[(ձ఺෫ᴴ(҅[,{ളත)ݩ(ݒ
+౮{[)̶
+ ই(({[()()]}))զᬯ໏॒ቘғ
+(({[(ӥӞӻ)ၾധ౮(({[
+(({[(ӥӞӻ)ၾധ౮(({[
+(({[ӥӞӻ]ၾധ౮(({
+(({ӥӞӻ}ၾധ౮((
+((ӥӞӻ)ၾധ౮(
+(ӥӞӻ)ၾധ౮ ᬯ໏੪ჿ᪃᷌఺
+ጱፘၾᴻ҅຾ᬮ
+ฎၾᴻᶮ᮱ਫሿդᎱԅғ
+       length++;
+    }
+    public T peek() throws Exception {
+        if(length==0) {throw new Exception("᱾ᤒԅᑮ");}
+        else {//ᴻ
+      return (T) head.next.data;
+    }
+  }
+    public T pop() throws Exception {//຾
+      if(length==0) {throw new Exception("᱾ᤒԅᑮ");}
+      else {//ᴻ
+        T value=(T) head.next.data;
+        head.next=head.next.next;//va.next
+        length--;
+        return value;
+        }
+    }
+    public String toString(){
+      if(length==0) {return "";}
+      else {
+        String va="";
+        node team=head.next;
+        while(team!=null)
+        {
+          va+=team.data+" ";
+          team=team.next;
+        }
+        return va;
+     }    
+    }
+}
+public boolean isValid(String s) {
+   Stack<Character>stack=new Stack<Character>();
+   for(int i=0;i<s.length();i++)
+
+=== PDF PAGE 27 ===
+୮ᆐ҅JDKғ
+ 
+ಕ32ݩ(ᵙ)
+ތ۱ݝ '(' ޾ ')' ጱৼԀጱᳩଶ̶
+ֺ: 
+ف")((" :
+ڊ2
+ᥴ᯽: ৼԀԅ "()"
+ֺ: 
+  {  
+     char te=s.charAt(i);
+     if(te==']')
+     {
+       if(!stack.isEmpty()&&stack.pop()=='[')
+         continue;
+       else {
+        return false;
+      }
+     }
+     else if(te=='}')
+     {
+       if(!stack.isEmpty()&&stack.pop()=='{')
+         continue;
+       else {
+        return false;
+      }
+     }
+     else if(te==')')
+     {
+       if(!stack.isEmpty()&&stack.pop()=='(')
+         continue;
+       else {
+        return false;
+       }
+     }
+     else
+       stack.push(te);
+   }
+   return stack.isEmpty(); 
+ }
+public boolean isValid(String s) {
+  char a[]=new char[s.length()];
+  int index=-1;
+   for(int i=0;i<s.length();i++)
+   {  
+     char te=s.charAt(i);
+     if(te==']')
+     {
+       if(index>=0&&a[index]=='[')
+         index--;
+       else {
+        return false;
+      }
+     }
+     else if(te=='}')
+     {
+       if(index>=0&&a[index]=='{')
+         index--;
+       else {
+        return false;
+      }
+     }
+     else if(te==')')
+     {
+       if(index>=0&&a[index]=='(')
+         index--;
+       else {
+        return false;
+       }
+     }
+     else
+       a[++index]=te;
+   }
+   return index==-1; 
+ }
+
+=== PDF PAGE 28 ===
+ف"))()()" :
+ڊ4
+ᥴ᯽: ৼԀԅ "()()"
+ێ
+አ຾ཛྷ೙ํ(޾)զ஗ሾྯེತ
+զፗളᕣྊฎ)ᯈ̶
+ই())(ᶎፘᬳ̶ইຎ๶(ᶎᚆड़๶)҅Ӟӻ)Ӟӻ(ᕟ౮Ӟ੒҅ၾᴻ຾
+ӾጱӞӻ(̶
+ጱਫሿӤ҅౯ժአහᕟཛྷ೙຾҅ਫሿդᎱԅғ
+̶
+۸
+ਖ਼ᬯ᭲᷌՗ӞӻO(n2)ک۸O(n)Ҙஉ਻ฃ҅ ᚆጱ๋
+̶
+( )  )          ( ) ( (  ) ( ) ) ړ(୏)
+( ) ( )      ( ( ( ) ړ
+( ( ( ( (     ) ( ) ( ) ( ) ( ړ
+ғ
+(ሿᮎԍ՜੪๗இӞӻ)ᚆํ)੒̶
+):ғ
+ই( ) ) ( )ᚆ
+ᬳᖅ҅ૢᶎ҅ᶎ̶ ̶
+٭)ࣁ(ᯈ̶ଘᕆጱහᰁӤฎ
+๋य़꧊̶(ӥᶎտᥴ᯽)
+ࣁਫሿአӞӻint੶ᕆ(຾Ⴎ)හᰁ̶ ᭬҅
+ک)ॡग़(ࣁ(ᯈ)ک(੪Ӥ
+ᴤᴤک)ᴤଚӬ಩ᴤӤᇆཛྷ೙ጱᬦᑕғ
+( )  (  ( ) ( ) (  ( ) ) )
+public  int longestValidParentheses(String s) {
+  char str[]=s.toCharArray();//ਁᒧහᕟ
+  int max=0;
+  for(int i=0;i<str.length-1;i++)
+  {
+    int index=-1;
+    if(max>=str.length-i)
+      break;
+    for(int j=i;j<str.length;j++)
+    {
+      if(str[j]=='(')
+        index++;
+      else {
+        if(index<0)
+        {
+          i=j;
+          break;
+        }
+        else {
+          index--;
+        }
+      }
+      if(index==-1&&(j-i+1>max))
+      {
+        max=j-i+1;
+      }
+    }
+  } 
+  return max;
+}
+
+=== PDF PAGE 29 ===
+ਫሿդᎱԅғ
+ғ
+ 
+௛ᕮ  
+ጱᳯ᷌
+௛ᕮ̶
+ 
+ڜ  
+ 
+ public static int longestValidParentheses(String s) {
+    int max=0;  
+    int value[]=new int[s.length()+1];
+    int index=0;
+    for(int i=0;i<s.length();i++)
+    {
+      if(s.charAt(i)=='(')
+      {
+        index++;
+        value[index]=0;
+      }
+      else {//")"
+        if(index==0)
+        {
+          value[0]=0;
+        }
+        else {
+            value[index-1]+=value[index--]+2;//ےݖ
+            if(value[index]>max)//ๅෛ
+              max=value[index];
+        }
+      }
+    }
+    return max;
+ }
+public int longestValidParentheses(String s) {
+  int maxans = 0;
+  Stack<Integer> stack = new Stack<>();
+  stack.push(-1);
+  for (int i = 0; i < s.length(); i++) {
+    if (s.charAt(i) == '(') {//(ጱ 
+      stack.push(i);
+    } else {
+      stack.pop();
+      if (stack.empty()) {
+        stack.push(i);
+      } else {//i-stack.peek੪ฎiሿጱ௛ӻහ peekᯈጱӻහ
+        maxans = Math.max(maxans, i - stack.peek());
+      }
+    }
+  }
+  return maxans;
+}
+
+=== PDF PAGE 30 ===
+᥺  
+ᶎ౯ժՕᕨᬦӞᓤ຾ጱ෈ᒍ(ڊض)ᬰ
+ᚆڊض(ᵷ)ڜ
+ᶎᩳ݄҅ڊض(ڊضفض)ᬩ᫨୵ୗጱӞӻൈᬿѺ
+ᬯ(ᬯᐿՈ)ڜ
+஑҅ᦖᑪᶲଧᑕଧᦡᦇ̵Ӿᳵկᒵ᮷ᶋଉଠာጱ
+̵FIFO̵BFS൤ᔱᒵᒵ̶
+ጱ໐ஞቘஷ੪ฎғѺ
+ጱ༷ஷᒒҁfrontᒒ
+ҁrearጱ
+ᒒᑍԅᴚ१̶
+୓౜֢޾຾ጱහഝᕮ຅Ѻ
+Օᕨ  
+҅ᬯ᯾੪೭ಕ622ڜ̶
+ᴚ१frontғᴻහഝጱӞᒒ̶
+ᴚੲrearғ හഝጱӞᒒ̶
+੒ԭහᕟහᕟ
+ᶎҔᘒ੒ԭ᱾ᤒᬰᤈᮎԍ१᮱(ᶎ)ጱᭌೠ̶
+ਫሿොဩғ
+MyCircularQueue(k): ᳩଶԅ k ̶
+Front: ࢧ1 ̶
+Rear: ࢧ1 ̶
+enQueue(value): ፥̶
+deQueue(): ፥̶
+isEmpty(): ԅᑮ̶
+isFull(): ૪ჿ̶
+ 
+
+=== PDF PAGE 31 ===
+ڜ  
+҅ᳯ̶᷌
+ᵱᥝဳ఺ጱํғ
+۸ғහᕟጱfront޾rearݻ0. (front޾rearԅᑮ)
+ᴚੲӥຽ+1(ᴚੲrear٭)
+ᴚ१+1̶
+ሿᳯ᷌አӞེ҅᭜౮ᑮᳵຄଶၵᩇ҅ᶋଉ਻ฃ᩼ኴѺ
+ڜ(හᕟਫሿ)  
+ොဩѺ੪ฎ੒૪ᕪኩ᧗ጱ(හᕟ)̶
+ჿԧ҅౯ժ
+ෛጱ꧊̶
+ ࣁ᭦ᬋӤᵱᥝfront޾rearӷӻ೰ᰒ̶rearᶎ҅
+frontᵱᥝᕳrear݄ٺ
+front̶
+۸ғහᕟጱfront޾rearݻ0. ᬯ᯾ᵱᥝဳ఺ጱฎғfront޾rear᯾ᶎฎᑮጱ̶
+᭜౮front޾rearᗝ̶
+ᴚٚrear=(rear + 1) % maxsize;
+ᴚᔰ҅front=(front + 1)% maxsize;
+ᗝ҅ᬯ᯾ፗള+1ᗝ(ᓌ၄)ٌ
+Ӿmaxsizeฎහᕟਫᴬय़ੜ̶
+
+=== PDF PAGE 32 ===
+ԅᑮғreturn rear == front;
+य़ੜғreturn (rear+maxsize-front)%maxsize; ੪ᚆᥴ᯽Ⴔ༩҅෫ᦞฎfrontڹࣁ
+᮷ᚆჿ᪃ᥝ࿢̶
+զ
+ፗള+1Ӿmaxsizeฎහᕟਫᴬय़ੜ̶
+ਫሿғ
+ 
+public class MyCircularQueue {
+    private int data[];// ࢏
+    private int front;// १
+    private int rear;// ੲ
+    private int maxsize;// ๋य़ᳩଶ
+    public MyCircularQueue(int k) {
+        data = new int[k+1];
+        front = 0;
+        rear = 0;
+        maxsize = k+1;
+    }
+    public boolean enQueue(int value)  {
+        if (isFull())
+            return  false;
+        else {
+            data[rear] = value;
+            rear=(rear + 1) % maxsize;
+        }
+        return  true;
+    }
+    public boolean deQueue() {
+        if (isEmpty())
+            return false;
+        else {
+            front=(front+1)%maxsize;
+        }
+        return  true;
+    }
+    public int Front() {
+        if(isEmpty())
+            return -1;
+        return data[front];
+    }
+    public int Rear() {
+        if(isEmpty())
+            return -1;
+        return data[(rear-1+maxsize)%maxsize];
+    }
+    public boolean isEmpty() {
+        return rear == front;
+    }
+    public boolean isFull() {
+        return (rear + 1) % maxsize == front;
+    }
+}
+
+=== PDF PAGE 33 ===
+ڜ(᱾ᤒਫሿ)  
+ᗝ
+ᶶපሲ̶
+አ᱾ᤒय़༷ํӷӻਫሿොໜғ
+ොໜӞ ᱾ᤒ१̶ᮎԍفฎইຎ
+ᴻḝᜓᅩ᱾ᤒ҅
+᮷ꂁἋᅸጱ̶
+ොໜԫ᱾ᤒੲ҅ᮎԍفဌᳯ᷌(ݻ
+next)҅਻ฃਫሿ҅ইຎᴻᶎଉ᧔ጱᴻᜓᅩ̶
+ጱฎොໜ2᱾ᤒ!
+ԅғ
+۸ғᦡᒈӞӻ१ᕮᅩ҅ฎfront޾rearਙ̶
+ᴚғrear.next=va;rear=va;ҁvaᜓᅩ҂
+ᴚғᴚӧᑮ҅front.next=front.next.next;ے
+Ӟӻrear=front҅ӧᆐrear̶
+ԅᑮғreturn rear == front; ౲ᘏᛔਧԎᖌಷlenෙreturn len==0
+य़ੜғᜓᅩfrontکܲrearጱӻහ҅౲ᘏᛔਧԎᖌಷlenࢧ(ᬯ᯾ଚဌਫሿ)̶
+ਫሿդᎱғ
+public class MyCircularQueue{
+     class node {
+        int data;// ᜓᅩጱᕮຎ
+        node next;// ӥӞӻᬳളጱᜓᅩ
+        public node() {}
+        public node(int data) {
+            this.data = data;
+        }
+    }
+    node front;//ፘ୮ԭhead ଃ१ᜓᅩጱ
+    node rear;//ፘ୮ԭtail/end
+    int maxsize;//๋य़ᳩଶ
+    int len=0;
+    public MyCircularQueue(int k) {
+        front=new node(0);
+        rear=front;
+        maxsize=k;
+        len=0;
+    }
+    public boolean enQueue(int value)  {
+        if (isFull())
+            return  false;
+        else {
+            node va=new node(value);
+            rear.next=va;
+
+=== PDF PAGE 34 ===
+ 
+ڜ(ᷧ)  
+አጱArrayDequeचԭහᕟਫሿ҅පሲᶋଉṛ̶౯ժ
+ཛྷ຃चԭಕ641 ڜ  ̶
+ғ
+MyCircularDeque(k)හ,ጱय़ੜԅk̶
+insertFront()१᮱̶ ࢧtrue̶
+insertLast()ࢧtrue̶
+deleteFront()ᔰ̶ ࢧtrue̶
+deleteLast()ࢧtrue̶
+getFront()ࢧ1̶
+getRear()ᔰ̶ ࢧ1̶
+isEmpty()ԅᑮ̶
+isFull()ჿԧ̶
+ํग़ԧӞӻف
+޾ᴻຉӞӥғ
+ف݋frontᗝ๜᫝ฎํ꧊ጱ҅ಅզᥝਖ਼frontԅჿ౲ᘏහᕟ᩼
+̶
+ᴻᵱᥝrearٺ1̶
+ 
+ਫሿդᎱғ
+            rear=va;
+            len++;
+        }
+        return  true;
+    }
+    public boolean deQueue() {
+        if (isEmpty())
+            return false;
+        else {
+            front.next=front.next.next;
+            len--;
+            //ဳ఺ ਠ ᵱᥝਖ਼rearݻfront
+            if(len==0)
+                rear=front;
+        }
+        return  true;
+    }
+    public int Front() {
+        if(isEmpty())
+            return -1;
+        return front.next.data;
+    }
+    public int Rear() {
+        if(isEmpty())
+            return -1;
+        return rear.data;
+    }
+    public boolean isEmpty() {
+        return  len==0;
+        //return rear == front;
+    }
+    public boolean isFull() {
+        return len==maxsize;
+    }    
+}
+public class MyCircularDeque {
+    private int data[];// ࢏
+    private int front;// १
+    private int rear;// ੲ
+    private int maxsize;// ๋य़ᳩଶ
+    /*۸ ๋य़य़ੜԅk */
+    public MyCircularDeque(int k) {
+        data = new int[k+1];
+        front = 0;
+        rear = 0;
+        maxsize = k+1;
+    }
+
+=== PDF PAGE 35 ===
+ 
+௛ᕮ  
+̶
+੒ԭහᕟ҅ᴚੲtailᗝฎᑮጱ҅ᘒ᱾ᤒጱfrontҁheadපຎ
+ጱොဩᵱᥝဳ఺Ӟӥ̶
+ᚆ୮຾ጱӞᐿṛපහഝᕮ຅҅ഩൎᬮ
+ฎஉํ஠ᥝጱ̶
+ 
+໅  
+    /** ف/* 
+    public boolean insertFront(int value) {
+        if(isFull())
+            return false;
+        else {
+            front=(front+maxsize-1)%maxsize;
+            data[front]=value;
+        }
+        return  true;
+    }
+    /** ف/* 
+    public boolean insertLast(int value) {
+        if(isFull())
+            return  false;
+        else{
+            data[rear]=value;
+            rear=(rear+1)%maxsize;
+        }
+        return  true;
+    }
+    /** ᴻ */
+    public boolean deleteFront() {
+        if (isEmpty())
+            return false;
+        else {
+            front=(front+1)%maxsize;
+        }
+        return  true;
+    }
+    /** ᴻ */
+    public boolean deleteLast() {
+        if(isEmpty())
+            return false;
+        else {
+            rear=(rear+maxsize-1)%maxsize;
+        }
+        return true;
+    }
+    /** Get the front item  */
+    public int getFront() {
+        if(isEmpty())
+            return -1;
+        return data[front];
+    }
+    /** Get the last item from the deque. */
+    public int getRear() {
+        if(isEmpty())
+            return -1;
+        return  data[(rear-1+maxsize)%maxsize];
+    }
+    /** Checks whether the circular deque is empty or not. */
+    public boolean isEmpty() {
+        return front==rear;
+    }
+    /** Checks whether the circular deque is full or not. */
+    public boolean isFull() {
+        return (rear+1)%maxsize==front;
+    }
+}
+
+=== PDF PAGE 36 ===
+ 
+᥺  
+ᶎտᦖ
+ත̶
+໅(ইB+໅
+ᒵ)൤ᔱ໅(ഭଧ໅)ᬯचᏐӤ಍ᚆᖀᖅ೐઀਍ԟAVL(ଘᤍ
+໅)̵ᕁἓ໅ᒵᎣᦩ̶
+ܲ
+ᇿᧇᕡᦖᥴ̶                                                                              
+Ջԍฎ໅  
+໅ฎӞᐿහഝᕮ຅҅ਙฎኧn(n>=1)؉ݞ“໅”ׯ
+๖ӥጱ̶
+ ਠ
+౮̶
+ ໑ᜓᅩғ ๋Ӥᶎጱᮎӻᜓᅩ(root)ํৼᜓᅩҁ0զ҂
+ ੶හғ Ӟᛱᦊԅ໑ᜓᅩฎᒫ1੶(ํጱԞ᧔ᒫ0੶)҅ᘒ໅ጱṛଶ੪ฎ੶හ๋ṛ(੶හ୏তԅ1)ᜓᅩጱ੶හ
+ ᔮ:
+ᆿᜓᅩғᬳളᧆᜓᅩጱӤӞ੶ᜓᅩ,
+਎ৼᜓᅩ: ᜓᅩฎᆿᜓᅩጱᆿᜓᅩ(҂ᜓᅩ̶
+ӞӻᆿᜓᅩጱᜓᅩժѺ
+ᜓᅩጱଶ: ੪ฎᜓᅩ೜ํ਎ৼᜓᅩጱӻහ(ฎፗളᬳളጱ਎ৼӧฎৼਃ).
+໅ጱଶ: ੪ฎಅํᜓᅩӾ๋य़ (ᜓᅩጱଶ)෸҅ইຎଶय़ԭ0ඪᜓᅩ,ଶᒵԭ0ৼᜓᅩҁဌํৼ
+ਃ҂̶
+௔ᨶғ
+ 
+໅  
+਍ԟ҅ํӷӻৼᜓᅩ(ӧӞਧᶋ஑ᥝํ
+ӷӻᜓᅩ)̶
+໅Өଶԅ2ጱ໅ጱғ
+ 1̵ଶԅ2ጱጱ໅஠ᶳํӣӻᜓᅩզӤ(ࣁ)զԅᑮ̶
+ 2໅ጱଶӧӞਧԅ2,ྲইෑ໅̶
+ 3҅ᘒଶԅ2̶
+໅ғ
+
+=== PDF PAGE 37 ===
+໅ғṛଶԅn໅ํ(2^n) -1ӻᜓᅩ
+໅ڜ
+ഭଧ(๜෈ᧇᥴ)̶
+ৼ໅Ⴎଶ૧᪗ӧ᩻ᬦ1(෈ᧇᥴ).
+໅௔ᨶғ
+1໅ํአ໅ጱ௔ᨶ
+2ৼᜓᅩහ=ଶԅ2ጱᜓᅩහ+1.๜๶Ӟӻᜓᅩইຎଶԅ1.ሿӞӻଶ
+ԅ2ৼ̶
+3̵ᶋᑮᒫi੶๋ग़ํ2^(i-1)ӻᜓᅩ̶
+4̵ṛԅhጱ໅๋ग़ํ(2^h)-1ӻᜓᅩ(޾)̶
+ ጱ(ک)ݢ
+ғ
+ഭଧ(൤ᔱ)໅  
+༷ஷ  
+෸ํӞԶᛔ૩
+ғ
+ғ꧊ᥝੜ̶ 
+ف15҅6҅23҅7҅4҅71҅5҅50ᶲଧ
+຅᭜  
+ഭଧ໅ฎኧᝑଗᜓᅩ(node)຅౮ጱ҅੒ԭnodeᵱᥝᬯԶં௔ғleft҅right޾valueӾleft޾right೰ᰒ
+਎ৼৼ໅҅ᘒvalueਂጱහഝ҅ᬯ᯾አint ̶
+nodeᔄ຅᭜ԅғ
+
+=== PDF PAGE 38 ===
+௳຅᭜౮໅҅ํԧ᱾ᤒ຅᭜ᕪḵ҅உ਻ฃ஑ᎣӞ༒໅๋Ԇᥝጱᬮ
+ฎroot໑ᜓᅩ̶
+ಅզ໅ጱ຅᭜ԅғ
+ 
+Ԇᥝොဩ  
+෬ᆐ૪ᕪ຅᭜অӞ༒໅҅ᮎԍ੪ᵱᥝਫሿԆᥝጱොဩ,ഭଧ໅ӾӞ༒໅ୌොဩ
+හ(ӞԶ᭓୭᧣አ)
+findmax(),findmin()  
+findmin()๋ੜᜓᅩғ
+ᶋ᭓୭while஗
+ሾ̶
+findmax()๋य़ᜓᅩғ
+҅ਫሿොဩӨfindmin()ොဩӞᛘ̶
+හ
+class node {//ᕮᅩ
+  public int value;
+  public node left;
+  public node right;
+  public node()
+  {
+  }
+  public node(int value)
+  {
+    this.value=value;
+    this.left=null;
+    this.right=null;
+  }
+  public node(int value,node l,node r)
+  {
+    this.value=value;
+    this.left=l;
+    this.right=r;
+  }     
+}
+public class BinarySortTree {
+  node root;//໑
+  public BinarySortTree()
+  {root=null;}
+  public void makeEmpty()//ᑮ
+  {root=null;}
+  public boolean isEmpty()//ԅᑮ
+  {return root==null;}
+  //ᐿොဩ
+}
+
+=== PDF PAGE 39 ===
+isContains(int x)  
+꧊ԅxጱᜓᅩ̶
+꧊ԅxࢧtrue҅ইຎ
+ࢧfalseአᶋ᭓୭ጱොୗ̶
+insert(int x)  
+ᶎisContains(int x)ᗝ(ᗝ)̶
+ො҅ᗝӤӞ੶ᜓᅩӞӻᑮ҅
+ਖ਼current݄current=new node(x)۸currentӞӻnew node(x)๶໅
+ᔮ(֢)ᗝ᭗ᬦᆿᜓᅩጱ
+left౲ᘏright̶
+public node findmin(node t)//꧊ฎnode҅᧣አັ፡ᕮຎ෸ᵱᥝ.value
+{
+  if(t==null) {return null;}
+  else if(t.left==null) {return t;}
+  else return(findmin(t.left)); 
+}
+public node findmax(node t)//ັತ๋य़
+{
+  if(t==null) {return null;}
+  else if(t.right==null) {return t;}
+  else return(findmax(t.right));  
+}
+public boolean isContains(int x)//ࣁ
+{
+  node current=root;
+  if(root==null) {return false;}
+  while(current.value!=x&&current!=null) 
+  {
+    if(x<current.value) {current=current.left;}
+    if(x>current.value) {current=current.right;}
+    if(current==null) {return false;}//ࢧ
+  }
+  //ԅᑮտ੕ᛘcurrent.valueಸᲙ
+   if(current.value==x) {return true;}    
+  return false;   
+}
+public node insert(int x)// فtฎrootጱ୚አ
+{
+  node current = root;
+  if (root == null) {
+    root = new node(x);
+    return root;
+  }
+  while (current != null) {
+    if (x < current.value) {
+      if (current.left == null) {
+        return current.left = new node(x);}
+      else current = current.left;}
+      else if (x > current.value) {
+      if (current.right == null) {
+        return current.right = new node(x);}
+      else current = current.right;
+    }
+  }
+  return current;//ک
+}
+
+=== PDF PAGE 40 ===
+꧊ԅ51ጱᜓᅩ̶
+delete(int x)  
+ৼ
+ᴻᜓᅩ๋ᬪጱᅩ(ૢৼ໅
+ৼ໅๋ੜᅩ)զ፡ӥᶎғ
+ᴻጱᜓᅩဌํৼਃ:
+ݢܨ(ᜓᅩ=nullݢܨ()ჿ᪃ᬯᐿොୗ)̶
+Ӟӻৼᜓᅩԅᑮғ
+̶
+ӧᑮ
+ᜓᅩ(නӧӥ҅ইຎ਎
+ই೭ӥᶎ71ᜓᅩ๊դ)
+ইຎ೭19౲ᘏ71ᝑአ71๊դ23ᜓ
+ᵱᥝᘍᡤӣӻᜓᅩ(19,50,75)ํৼঀ҅ᬯฎӻ॔๥ጱᬦᑕ҅
+ᘍᡤ̶
+ಅզ҅ຉ౯ժᥝጱᬯӻᅩጱં௔ғᚆड़൤ᔱ໅ጱ௔ᨶ(꧊๋ᬪጱ)҅ᮎԍ
+Ҙ
+ᜓᅩ౲ᘏᜓᅩᴻᜓᅩ꧊๊ഘധ(ᬯ᯾๊ഘ౮ૢৼ໅
+ᜓᅩ)̶
+໅አ᭓୭௏᪠ᴻ๊ഘጱᜓᅩ
+̶
+
+=== PDF PAGE 41 ===
+ૢৼ໅๋य़ᜓᅩ(׆ݦ)ቘӞ
+ᴻᓒဩၞᑕԅғ
+ 
+ጱդᎱԅғ
+ਠෆդᎱ  
+ᘍ҅ইํ዇ᄋᲙ᧏ᬮ᧗೰ྋ̶
+ഭଧ໅ਠෆդᎱԅғ
+public node remove(int x, node t)// ᴻᜓᅩ
+{
+  if (t == null) {
+    return null;
+  }
+  if (x < t.value) {
+    t.left = remove(x, t.left);
+  } else if (x > t.value) {
+    t.right = remove(x, t.right);
+  } else if (t.left != null && t.right != null)// ӧᑮ
+  {
+    t.value = findmin(t.right).value;// ๋ੜ꧊๊դ
+    t.right = remove(t.value, t.right);
+  } else // ᮷ᑮ
+  {
+    if (t.left == null && t.right == null) {
+      t = null;
+    } else if (t.right != null) {
+      t = t.right;
+    } else if (t.left != null) {
+      t = t.left;
+    }
+    return t;
+  }
+  return t;
+}
+package ໅;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
+public class BinarySortTree {
+  class node {// ᕮᅩ
+    public int value;
+    public node left;
+    public node right;
+
+=== PDF PAGE 42 ===
+    public node() {
+    }
+    public node(int value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+    public node(int value, node l, node r) {
+      this.value = value;
+      this.left = l;
+      this.right = r;
+    }
+  }
+  node root;// ໑
+  public BinarySortTree() {
+    root = null;
+  }
+  public void makeEmpty()// ᑮ
+  {
+    root = null;
+  }
+  public boolean isEmpty()// ԅᑮ
+  {
+    return root == null;
+  }
+  public node findmin(node t)// ꧊ฎnode҅᧣አັ፡ᕮຎ෸ᵱᥝ.value
+  {
+    if (t == null) {
+      return null;
+    } else if (t.left == null) {
+      return t;
+    } else
+      return (findmin(t.left));
+  }
+  public node findmax(node t)// ັತ๋य़
+  {
+    if (t == null) {
+      return null;
+    } else if (t.right == null) {
+      return t;
+    } else
+      return (findmax(t.right));
+  }
+  public boolean isContains(int x)// ࣁ
+  {
+    node current = root;
+    if (root == null) {
+      return false;
+    }
+    while (current.value != x && current != null) {
+      if (x < current.value) {
+        current = current.left;
+      }
+      if (x > current.value) {
+        current = current.right;
+      }
+      if (current == null) {
+        return false;
+      } // ࢧ
+    }
+    // ԅᑮտ੕ᛘcurrent.valueಸᲙ
+    if (current.value == x) {
+      return true;
+    }
+    return false;
+  }
+  public node insert(int x)// فtฎrootጱ୚አ
+  {
+    node current = root;
+    if (root == null) {
+      root = new node(x);
+
+=== PDF PAGE 43 ===
+ᕮ᧍  
+ᥝဳ఺
+හጱ୚አᒵᒵ̶
+҅᭓୭Ӟਧᑕ
+۸(ੜ)ᵱᥝ௏ᘍ̶
+ܲ(ᶋ᭓୭)ԧᥴ̶
+ܲ  
+᥺  
+य़ਹঅ҅౯ฎbigsai݉
+̶
+ฎᵱᥝဳ᯿Ӟӥᕡᜓ̶
+ᶎՕᕨԧच๜ොဩԞฎbfsጱ๋ᓌ
+ՁӞӥ̶
+ᶎ᮷ํᦖᬦ҅ํᬯ
+ᘉӞᘉ፡Ӟ፡Ѻ
+ܲ  
+      return root;
+    }
+    while (current != null) {
+      if (x < current.value) {
+        if (current.left == null) {
+          return current.left = new node(x);}
+        else current = current.left;}
+        else if (x > current.value) {
+        if (current.right == null) {
+          return current.right = new node(x);}
+        else current = current.right;
+      }
+    }
+    return current;//ک
+  }
+  public node remove(int x, node t)// ᴻᜓᅩ
+  {
+    if (t == null) {
+      return null;
+    }
+    if (x < t.value) {
+      t.left = remove(x, t.left);
+    } else if (x > t.value) {
+      t.right = remove(x, t.right);
+    } else if (t.left != null && t.right != null)// ӧᑮ
+    {
+      t.value = findmin(t.right).value;// ๋ੜ꧊๊դ
+      t.right = remove(t.value, t.right);
+    } else // ᮷ᑮ
+    {
+      if (t.left == null && t.right == null) {
+        t = null;
+      } else if (t.right != null) {
+        t = t.right;
+      } else if (t.left != null) {
+        t = t.left;
+      }
+      return t;
+    }
+    return t;
+  }
+}
+
+=== PDF PAGE 44 ===
+ᕆᥝय़ԭৼᜓᅩ॒
+̶
+̶՗rootᜓᅩpushݦ(ᦡ᮷ํ)҅ᒫԫ੶ྯӻᜓ
+ᶎ……Ӟӻ੶ଧ
+ጱᶲଧ̶
+ਫሿጱդᎱԞஉ਻ฃቘᥴғ
+ؙ  
+ಕጱ102ӞӻList<List<Integer>>
+̶
+ڜ(࢏)Ӟ੶Ӟ੶
+ڜ(࢏)ਫ
+ሿҘ
+public int[] levelOrder(TreeNode root) {
+        int arr[]=new int[10000];
+        int index=0;
+        Queue<TreeNode>queue=new ArrayDeque<>();
+        if(root!=null)
+            queue.add(root);
+        while (!queue.isEmpty()){
+            TreeNode node=queue.poll();
+            arr[index++]= node.val;
+            if(node.left!=null)
+                queue.add(node.left);
+            if(node.right!=null)
+                queue.add(node.right);
+            
+        }
+        return Arrays.copyOf(arr,index);
+    }
+
+=== PDF PAGE 45 ===
+य़ੜsize(੶ᜓᅩහᰁ)ಗᤈsize҅
+դᎱԅғ
+ܦ  
+೰offer32ಕ103 ໅ጱᲬἸ୵੶ଧ᭭
+҅ਙጱ᷌ፓᥝ࿢ԅғ
+ૢጱᶲଧ
+՜ᤈզྌᔄവ̶
+ጱ
+ԧѺ
+؍
+ݢ
+զአᕮຎListጱsize()̶
+ӻՈਫሿጱӞӻ๠ᔰդᎱԅғ
+public List<List<Integer>> levelOrder(TreeNode root) {
+  List<List<Integer>>list=new ArrayList<List<Integer>>();
+  if(root==null)return list;
+  Queue<TreeNode>q1=new ArrayDeque<TreeNode>();
+  q1.add(root);
+  while (!q1.isEmpty()) {
+    int size=q1.size();
+    List<Integer>value=new ArrayList<Integer>();
+    for(int i=0;i<size;i++)
+    {
+      TreeNode pNode=q1.poll();
+      if(pNode.left!=null)
+        q1.add(pNode.left);
+      if(pNode.right!=null)
+        q1.add(pNode.right);
+      value.add(pNode.val);
+    }
+    list.add(value);
+  }
+  return list;
+}
+public List<List<Integer>> levelOrder(TreeNode root) {
+  List<List<Integer>> value=new ArrayList<>();//ጱ๋ᕣᕮຎ
+  if(root==null)
+    return value;
+  int index=0;//ෙ
+  Queue<TreeNode>queue=new ArrayDeque<>();
+  queue.add(root);
+  while (!queue.isEmpty()){
+    List<Integer>va=new ArrayList<>();//ԁ෸ کؙvalueӾ
+    int len=queue.size();//੶ጱහᰁ
+    for(int i=0;i<len;i++){
+      TreeNode node=queue.poll();
+      if(index%2==0)
+        va.add(node.val);
+
+=== PDF PAGE 46 ===
+೵യ̶
+ᕮ᧍  
+ܲ(ܲ)ሿጱ᷇ሲ፥ጱॡ
+ṛԧ҅ଚӬ๋অฎഩൎྲ᫾অጱොဩӧᥝด஑ॡᛎᙠ̶
+҅ᚆACḾ࿈ጱդᎱ̶
+ܲ(᭓୭ᶋ᭓୭)ᘍ੊
+ள༂ቘ௛ᕮ҅ස᧗๗இѺ
+ 
+ܲ  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsaiѺ
+ӞԶ҅පሲӞᛱտṛ
+ᶋ᭓୭Ӿଧ҅
+ଧ(୞)̶
+຾ᶮጱහഝᬰᤈ॒ቘ(Ԟ੪ฎ᭓୭̵dfsݻ
+ຍԈᇙ஄ᶋଉกด)҅ᔮ̶
+ๅጱᕡᜓ҅ ጱ
+ጱᇫா҅ಅզ᭦ᬋӤᵙଶᬮฎྲ
+᫾य़ጱ̶
+ܲ  
+ጱdfsᳪdfs੪਻
+ฃஉग̶़
+ԅғ໑ᕮᅩ ---> ૢৼ໅ ---> ৼ໅ຍԈ
+ૢৼ໅(ጱᶲଧᬰᤈ)ৼ໅(ጱᶲଧᬰᤈ)ጱӞӻຍԈ
+ڜ(ଧ)̶
+ࢶ(՗ᆿᜓᅩຍԈӥ๶ᒫӞེ੪ᥝᤩᦢ
+ᳯ)̶
+ᶋ᭓୭ොୗਫሿ̶
+      else
+        va.add(0,node.val);
+      if(node.left!=null)
+        queue.add(node.left);
+      if(node.right!=null)
+        queue.add(node.right);
+    }
+    value.add(va);
+    index++;
+  }
+  return value;
+}
+
+=== PDF PAGE 47 ===
+᭓୭  
+̵ᕮ๳ᬟኴ̵Ӿᳵྋଉᅩ᭦ᬋ̶
+٭ғ՗rootفrootහ̶
+ᕮ๳ᬟኴғᜓᅩጱૢ(ݦ)ৼᜓᅩԅnullྊ੒ଫᜓᅩጱ᭓୭ಗᤈ̶
+ྋଉᅩ᭦ᬋᅩ(ڊ)҅᭓୭᧣አຍԈૢৼ໅(ইຎӧԅnull),ৼ໅(ইຎӧԅnull)̶
+ಕ144զ੤ᦶacғ
+ᶋ᭓୭  
+ฎғᜓᅩ݈
+Ҙ
+ᜓᅩ̶
+य़ᛘԅғ
+1. ૢ਎ৼԅnull̶
+2. ᜓᅩ᯿॔ྍṈ1ᜓᅩ҅ᖀᖅ᯿॔ྍṈ2̶
+ᜓᅩ(ৼ໅)ଧ᭭
+̶
+ਫሿጱդᎱԅғ
+ 
+ܲ  
+ܲ
+ഭଧ໅ጱtopkᳯ᷌҅ᶋ᭓୭Ӿଧᮎපሲฎᶋଉṛጱ̶
+ࢶ(ইຎৼ໅ԅnull҅ᮎᙗਧᥝᦢᳯ҅
+੪ฎײ಍ᦢᳯᬯӻᜓᅩ)̶
+class Solution {
+    List<Integer>value=new ArrayList();
+    public List<Integer> preorderTraversal(TreeNode root) {
+        qianxu(root);
+        return value;
+    }
+    private void qianxu(TreeNode node) {
+        if(node==null)
+            return;
+        value.add(node.val);
+        qianxu(node.left);
+        qianxu(node.right);
+    }
+}
+class Solution {
+  public List<Integer> preorderTraversal(TreeNode root) {
+    List<Integer>value=new ArrayList();
+    Stack<TreeNode> q1 = new Stack(); 
+    while(!q1.isEmpty()||root!=null)
+    {
+      while (root!=null) {
+        value.add(root.val);
+        q1.push(root);        
+        root=root.left;
+      }
+            root=q1.pop();//ڊ
+            root=root.right;//ᜓᅩ
+      
+    }
+        return value;
+    }
+}
+
+=== PDF PAGE 48 ===
+᭓୭ොୗ  
+ಕ94ܲ,ᬯ᯾౯ፗളනդᎱғ
+ᶋ᭓୭ොୗ  
+ฎғᜓᅩጱᶲଧฎૢᜓᅩ҅໑ᜓ
+ᜓᅩ ᔮ(ᬯӻૢ੪ฎӥӞӻ᪙)ᜓ
+ฎᆿᜓᅩӧᦢᳯᜓᅩ҅ইຎᆿᜓᅩᦢᳯᬯӻᆿᜓᅩਫਙ੪ฎӞӻӾᳵᶲ
+ଧጱᜓᅩ̶
+य़ᛘԅғ
+1. ᜓᅩ(ڊ)ૢ਎ৼԅnull̶
+2. ᜓᅩ᯿॔ྍṈ1ᜓᅩ҅ᖀᖅ᯿॔ྍṈ2̶
+᮷ԅnullᆐჿ᪃Ӿଧ̶
+ਫሿդᎱԅғ
+ 
+class Solution {
+   public List<Integer> inorderTraversal(TreeNode root) {
+    List<Integer>value=new ArrayList<Integer>();
+    zhongxu(root,value);
+    return value;
+  }
+   private void zhongxu(TreeNode root, List<Integer> value) {
+     if(root==null)
+       return;
+     zhongxu(root.left, value);
+     value.add(root.val);
+     zhongxu(root.right, value);
+    
+  }
+}
+class Solution {
+   public List<Integer> inorderTraversal(TreeNode root) {
+  List<Integer>value=new ArrayList<Integer>();
+    Stack<TreeNode> q1 = new Stack(); 
+    while(!q1.isEmpty()||root!=null)
+    {
+        while (root!=null) {
+            q1.push(root);        
+            root=root.left;
+        }
+        root=q1.pop();//ڊ
+        value.add(root.val);
+        root=root.right;//ᜓᅩ
+        
+    }
+    return value;
+  }
+}
+
+=== PDF PAGE 49 ===
+ܲ  
+ଧ҅ӞਧᚆՄᎌᶎᦶਥጱ፲Ѻ
+ࢶ(ইຎৼ໅ԅnull҅ᮎᙗਧᥝᦢᳯ҅
+੪ฎײ಍ᦢᳯᬯӻᜓᅩ)̶
+᭓୭  
+ಕ145ଧጱcodeզᛔ૩੤ᦶӞӥ̶
+ଧ᭓୭ොୗғ
+ᶋ᭓୭  
+զತ
+ጱᶲଧฎ ૢৼ໅ ---> ৼ໅ --->໑ᜓᅩ҅Ԟ੪ฎᜓᅩ҅ᬮᥝ
+໑ᜓᅩ̶
+ԅғ
+ଧ: ຾——>຾——>ڊف>——຾——>຾——>຾——>ڊف>——຾ 
+ܲڜ
+Ӿଧ: ຾——>຾——>ڊف>——຾——>຾——>຾ ——>ڊف>——຾ 
+ܲڜ
+Ҙ
+ᮎԍᬯӻᜓᅩ
+ܲ(ᒫӣེ)ଧ̶
+ቘᥴғ
+class Solution {
+    List<Integer>value=new ArrayList<>();
+    public List<Integer> postorderTraversal(TreeNode root) {
+        houxu(root);
+        return value;
+    }
+    private void houxu(TreeNode root) {
+        if(root==null)
+            return;
+        houxu(root.left);
+        houxu(root.right);//๶
+        value.add(root.val);
+    }
+}
+
+=== PDF PAGE 50 ===
+ 
+አӞӻhashmapᜓᅩᦢᳯེහ̶
+ᴫӞӥӻՈਫሿጱդᎱғ
+ইຎํhashฎᬮ
+ฎᥝአྋᕹොဩ๶ਫሿ̶
+Ҙ
+Ԟஉ਻ฃ҅አӞӻpreᦢᳯጱᅩ҅ইຎ਎ৼฎpreԅnull҅ᮎ
+੪ਖ਼ਙ"ᅖ᯿᭜"ӞེѺ
+ਫሿդᎱԅғ
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> value=new ArrayList();
+        Stack<TreeNode> q1 = new Stack(); 
+        Map<TreeNode,Integer >map=new HashMap<>();
+        while(!q1.isEmpty()||root!=null)
+        {
+            if (root!=null) {
+                q1.push(root);
+                map.put(root, 1); //t.valueሿጱེහ
+                root=root.left;
+            }
+            else {
+                root=q1.peek();
+                if(map.get(root)==2) {//ڊ
+                    q1.pop();
+                    value.add(root.val);
+                    root=null;//ᵱᥝஃӤᩳ
+                }
+                else {
+                    map.put(root, 2);
+                    root=root.right;
+                }     
+            }
+          }
+          return value;
+    }
+}
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        TreeNode temp=root;//ຍԈጱԁ෸ᜓᅩ
+        List<Integer>value=new ArrayList<>();
+        TreeNode pre=null;//ᗝᜓᅩ
+        Stack<TreeNode>stack=new Stack<>();
+        while (!stack.isEmpty()||temp!=null){
+        
+            while(temp!=null){
+                stack.push(temp);
+                temp=temp.left;
+            }
+            temp=stack.pop();
+            if(temp.right==pre||temp.right==null)//ڊ
+{
+                value.add(temp.val);
+                pre=temp;
+                temp=null;//ڊ
+}else{
+                stack.push(temp);
+                temp=temp.right;
+            }
+            
+        }
+
+=== PDF PAGE 51 ===
+ 
+፡ Ӿᬦ๶੪ฎૢܲ
+෸ᘉ᫨ԞฎӞ໏ጱ᭲
+ቘѺ
+ਫሿդᎱԅғ
+ 
+໅  
+ӾԏӞڜݸ޾
+ቘӞᛘ̶
+໅  
+໅̶୮ᆐԞฎಕ105̶᷌
+ဳ఺:ᦡᔰ̶
+ຉғ
+ڜ
+ጱᇙ஄ғ
+ܲԅ(໑҅[ऒ]҅[ऒ])̶
+ܲԅ([ऒ]҅໑҅[ऒ])̶
+ғ
+1. զᏟਧ໑̶
+2. ऒᜓᅩӻහग़੝̶
+3. ऒᏟਧ̶
+ᬰᤈቘᥴғ
+አӞӻHashMap᯿॔ᦇᓒ̶ਫሿጱդᎱԅғ
+        return value;
+    }
+}
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+      List<Integer>value=new ArrayList();
+      Stack<TreeNode> q1 = new Stack(); 
+      while(!q1.isEmpty()||root!=null)
+      {
+        while (root!=null) {
+          value.add(root.val);
+          q1.push(root);        
+          root=root.right;
+        }
+        root=q1.pop();//ڊ
+        root=root.left;//ᜓᅩ
+      }
+      Collections.reverse(value);//ਖ਼ᕮຎᘉ᫨
+      return value;
+     
+    }
+}
+/**
+
+=== PDF PAGE 52 ===
+໅  
+໅҅ಕ106᷌
+ဳ఺:ᔰ̶
+ڊ
+ܲinorder = [9,3,15,20,7]
+ܲpostorder = [9,15,7,20,3]
+໅ғ
+ຉғ
+ᶎጱԞฎӞ໏ጱ̶
+ܲԅ([ऒ]҅[ऒ]҅໑)̶
+ܲԅ([ऒ]҅໑҅[ऒ])̶
+ 
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+   public TreeNode buildTree(int[] preorder, int[] inorder) {
+    if(preorder.length==0)
+      return null;
+    TreeNode root=new TreeNode(preorder[0]);
+    Map<Integer, Integer>map=new HashMap<Integer, Integer>();
+    for(int i=0;i<inorder.length;i++)
+    {
+      map.put(inorder[i], i);
+    }
+    return buildTree(preorder,0,preorder.length-1, map,0,inorder.length-1);
+    }
+  private TreeNode buildTree(int[] preorder, int preStart, int preEnd, Map<Integer, 
+Integer> map, int inStart, int inEnd) {
+    // TODO Auto-generated method stub
+    if(preEnd<preStart||inEnd<inStart)
+      return null;
+    TreeNode node=new TreeNode(preorder[preStart]);
+    int i=map.get(preorder[preStart]);//ᜓᅩጱ꧊
+    
+    int leftlen=i-inStart;//ૢᶎጱᳩଶ
+    node.left=buildTree(preorder, preStart+1, preStart+1+leftlen, map, inStart, i-1);
+    node.right=buildTree(preorder, preStart+leftlen+1,preEnd, map, i+1, inEnd);
+    return node;    
+  }
+}
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+=== PDF PAGE 53 ===
+ਫሿጱդᎱԅғ
+ᕮ᧍  
+਻ᬱӧྊԭྌ҅ᬮํᶋଉᇍಢጱMorris֢
+Ձᕳय़ਹ̶
+ଘᤍ໅(AVL)  
+ՋԍฎALV໅  
+ᶶӞӥ̶
+൤ᔱ(ഭଧ̵ັತ)઀
+؟B໅̶
+᮷உᵋ఺ಅզஉ੝ํᎸᑪհ꧊̶
+ጱ01ෙጱ੒Კ҅ྲ᫾ጱय़ੜ ҅
+൤ᔱ(ഭଧ)൤ᔱ
+(ഭଧ)Ӟӻᜓᅩፗളᬰ
+ᗝ̶
+൤ᔱ(ഭଧ໅)ᚆ౮ԅӞ༒ෑ໅౲ᘏႮଶஉṛ҅ᮎԍᬯ໏ጱӞӻັ
+ತපሲᬮฎ᩽ᬪԭᕚ௔O(n)൤ᔱ(ഭଧ)ጱ̶
+ሿᮎԍෑ
+Ҙ
+൤ᔱ(AVL)໅੪ฎᬯԍଗጱ҅AVLྯེ᮷տ෤᫨ᛔଘᤍ҅ᦏෆӻ໅Ӟፗ॒ԭଘᤍᇫா҅ᦏ
+ᑞਧ(logN)๶፡ӞӥՋԍฎALV໅ғ
+AVL໅ฎ൤ᔱ໅ᦤਙጱႮଶฎO(logN)̶
+AVLৼ҂ӧय़ԭ1໅̶
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+   public TreeNode buildTree(int[] inorder,int[] postorder) {
+    if(postorder.length==0)
+      return null;
+    Map<Integer, Integer>map=new HashMap<Integer, Integer>();
+    for(int i=0;i<inorder.length;i++)
+    {
+      map.put(inorder[i], i);
+    }
+    return buildTree(postorder,0,postorder.length-1, map,0,inorder.length-1);
+    }
+  private TreeNode buildTree(int[] postorder, int postStart, int postEnd, Map<Integer, 
+Integer> map, int inStart, int inEnd) {
+    // TODO Auto-generated method stub
+    if(postEnd<postStart||inEnd<inStart)
+      return null;
+    TreeNode node=new TreeNode(postorder[postEnd]);
+    int i=map.get(postorder[postEnd])Ҕ
+    int leftlen=i-inStart;
+    node.left=buildTree(postorder, postStart,postStart+leftlen-1, map, inStart, i-1);
+    node.right=buildTree(postorder, postStart+leftlen,postEnd-1, map, i+1, inEnd);       
+   
+    return node;    
+  }
+}
+
+=== PDF PAGE 54 ===
+໅ጱ๋ੜӻහ҅n0=0;n1=1;nk=n(k-1)+n(k-2)+1;(զᔄྲ෋ူᮎॶ)
+ᵙᅩғAVLࣁ॔๥ଶӧॡṛӥாଘᤍҘ
+٭  
+ฎRR,LL,RL,LR̶
+ 
+ଘᤍጱᕮຎԞஉ਻ฃ(፡ᕮຎ)ғ
+ 
+
+=== PDF PAGE 55 ===
+҅
+کᒫӞӻӧଘᤍ(՗ବஃӤ)ৼғ
+҅຤ӻӾᳵᜓᅩ੕ᛘӧଘᤍ҅ ᵱ
+Ḓེӧଘᤍᅩ҅ᖀᖅଘᤍᳯ̶᷌
+ 
+ 
+॒ቘ  
+ᬰᤈᧇᕡጱᦖᥴ̶
+RRଘᤍ෤᫨(෤᫨)  
+ᬯ᯾ጱRR෤᫨(ᵱᥝဳ఺ӞӥRR෤᫨)Ѻ
+ 
+ฎᜓᅩጱ᫾Ⴎᕡ፡ᬦᑕ̶
+ૢ෤ጱᬦᑕӾ҅root(oldroot)ᜓᅩӥဃ҅Ӿᳵᜓᅩ(newroot)Ӥၶ.ӾӾᳵᜓᅩ(newroot)ׁ׆ݦ
+̶
+ݻ໑ᜓᅩ(oldroot)(ླᒌӞ༒໅)ฎᬯ໏newrootᜓᅩHᑮᗌ̶ᘒ౯ժᵱ
+ᥝՖᆐᦏڞ̶
+অ๜๶oldrootݻnewrootݒoldrootᗝჿ᪃ࣁoldroot҅
+ࣁnewroot҅ಅզ౯ժਖ਼Hᗝ̶
+ӾHᚆԅNULLѺ
+ 
+ๅᧇᕡၞᑕԅғ
+զᤒᐏԅғ
+private node getRRbanlance(node oldroot) {//Ⴎ҅ᵱᥝૢ෤
+  // TODO Auto-generated method stub
+  node newroot=oldroot.right;
+  oldroot.right=newroot.left;
+  newroot.left=oldroot;
+  oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+  newroot.height=Math.max(getHeight(newroot.left),getHeight(newroot.right))+1;//๶ጱroot
+ጱṛଶᵱᥝ՗ෛᦇᓒ
+  return newroot;   
+}
+
+=== PDF PAGE 56 ===
+LLଘᤍ෤᫨(෤᫨)  
+Ѻ
+դᎱғ
+RLଘᤍ෤᫨(෤᫨)  
+ᬯӻRLࠨRRૢ෤҅LL෤҅ᬯӻRLૢ෤᫨ԧҘ
+զӥ
+ᶎౌౌ፡̶
+ฎғROOTጱ૧य़ԭ1ᶎ፡
+ଘᤍѺ
+ૢᕮ຅҅Ӿᳵ(R)׆ROOT,R.L)ጱ๋ੜฎӥᶎ(R.L)ጱྲӤᶎ(ROOT)य़(R.LࣁROOT׆ݦ)ಅզ
+ইຎଘᤍጱᦾ҅ᮎԍR.LӾᳵ҅ᘒR׆ݦࣁ,๶ጱROOT̶
+ྲ᫾य़҅ᵱᥝۖჿ᪃ഭଧ໅ጱ௔ᨶѺ
+ӷᐿᥴᒼොဩ̶
+௏᪠(ᒼໜ)1ғӷེ෤᫨RR,LL
+٬RR(ૢ෤),LL(෤)ض
+੒RᜓᅩᬰᤈӞེLLݸR౮RRզROOT୏ত
+ӞེRR̶
+௏᪠(ӻՈොဩ)2ຉ
+ᶲଧ=ᥝᚆჿ᪃
+ᕮ຅ӞᛘѺ
+໑ഝROOT,R,R.L҅R.LݻROOT޾RӾ
+R.left҅ROOT.right۸ݒ(ฎR.L޾R)অ໑ഝᔮզᤑӤR.L๶ጱ਎ৼ
+ᜓᅩA҅B̶
+դᎱԅғ(ԅොໜ1)
+private node getLLbanlance(node oldroot) {//LL෤᫨
+  // TODO Auto-generated method stub
+  node newroot=oldroot.left;
+  oldroot.left=newroot.right;
+  newroot.right=oldroot;
+  oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+  newroot.height=Math.max(getHeight(newroot.left),getHeight(newroot.right))+1;//๶ጱroot
+ጱṛଶᵱᥝ՗ෛᰂᯢ  
+  return newroot; 
+}
+private node getRLbanlance(node oldroot) {//ૢႮ 
+//    node newroot=oldroot.right.left;
+
+=== PDF PAGE 57 ===
+LRଘᤍ෤᫨(෤᫨)  
+޾٭RL̶
+໑ഝӤᬿRLݢܨ
+դᎱਫሿ  
+੒ԭᜓᅩग़ӻheightં௔̶አԭᦇᓒṛଶ(ৼ)
+ฎف҅ଘᤍ̶വគӧᥝ
+ӧտํ዇ᄋѺ
+Ѻ
+//    oldroot.right.left=newroot.right;
+//    newroot.right=oldroot.right;
+//    oldroot.right=newroot.left; 
+//    newroot.left=oldroot;
+//    oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+//    
+newroot.right.height=Math.max(getHeight(newroot.right.left),getHeight(newroot.right.right
+))+1;
+//    newroot.height=Math.max(getHeight(oldroot.left),getHeight(newroot.right))+1;//๶ጱ
+rootጱṛଶᵱᥝ՗ෛᰂᯢ  
+  oldroot.right =getLLbanlance(oldroot.right);
+  oldroot.height=Math.max(getHeight(oldroot.left), getHeight(oldroot.right))+1;
+  return getRRbanlance(oldroot);
+    
+  }
+private node getLRbanlance(node oldroot) {
+  oldroot.left =getRRbanlance(oldroot.left);
+  oldroot.height=Math.max(getHeight(oldroot.left), getHeight(oldroot.right))+1;
+  return getLLbanlance(oldroot);
+    
+  }
+import java.util.ArrayDeque;
+import java.util.Queue;
+public class AVLTree {
+    class node
+    {
+        int value;
+        node left;
+        node right;
+        int height;
+        public node() {
+        }
+        public node(int value)
+        {
+            this.value=value;
+            this.height=0;
+        }
+        public node(int value,node left,node right)
+        {
+            this.value=value;
+            this.left=left;this.right=right;
+            this.height=0;
+        }
+    }
+    node root;// ໑
+    public AVLTree() {
+        this.root = null;
+    }
+    public boolean isContains(int x)// ࣁ
+{
+
+=== PDF PAGE 58 ===
+        node current = root;
+        if (root == null) {
+            return false;
+        }
+        while (current.value != x && current != null) {
+            if (x < current.value) {
+                current = current.left;
+            }
+            if (x > current.value) {
+                current = current.right;
+            }
+            if (current == null) {
+                return false;
+            } // ࢧ
+}
+        // ԅᑮտ੕ᛘcurrent.valueಸᲙ
+        if (current.value == x) {
+            return true;
+        }
+        return false;
+    }
+    public int getHeight(node t)
+    {
+        if(t==null) {return -1;}//
+        return t.height;
+        //return 1+Math.max(getHeight(t.left), getHeight(t.right));֗
+}
+    public void cengxu(node t) {//ܲ
+        Queue<node> q1 = new ArrayDeque<node>();
+        if (t == null)
+            return;
+        if (t != null) {
+            q1.add(t);
+        }
+        while (!q1.isEmpty()) {
+            node t1 = q1.poll();
+            if (t1.left != null)
+                q1.add(t1.left);
+            if (t1.right != null)
+                q1.add(t1.right);
+            System.out.print(t1.value + " ");
+        }
+        System.out.println();
+    }
+    public void zhongxu(node t)//ܲ ғૢৼ໅---> ໑ᕮᅩ ---> ৼ໅
+    {//᮷ᤈ
+        if(t!=null)
+        {
+            zhongxu(t.left);
+            System.out.print(t.value+" ");//ᜓᅩ
+            zhongxu(t.right);
+            //System.out.print(t.value+" ");//ᜓᅩ
+        }
+    }
+    public void qianxu(node t)//ଧ᭓୭ ғ໑ᕮᅩ ---> ૢৼ໅ ---> ৼ໅
+    {
+        if(t!=null) {
+            System.out.print(t.value+" ");//ᜓᅩ
+            qianxu(t.left );
+            qianxu(t.right);}
+    }
+    public void insert(int value) {
+        root=insert(value, root);
+    }
+    public node insert(int x,node t)//فtฎrootጱ୚አ
+    {
+        node a1=new node(x);
+        //if(root==null) {root=a1;return root;}   
+        if(t==null)    {return a1;}
+        //̶᭓୭ਫሿ
+        else if(t!=null)
+        {
+            if(x<t.value)
+            { t.left=insert(x,t.left);}
+            else
+            { t.right= insert(x,t.right);}
+        }
+        /*
+         * ҅
+         * ፗള᧣አ
+         */
+
+=== PDF PAGE 59 ===
+        t.height=Math.max(getHeight(t.left),getHeight(t.right))+1;//౮᭓୭҅ ֗
+        return banlance(t);//ԅjavaፗളt=xx ഘ    
+    }
+    private node banlance(node t) {
+        // TODO Auto-generated method stub
+        //if(t==null)return null;
+        int lefthigh=getHeight(t.left);
+        int righthigh=getHeight(t.right);
+        if(Math.abs(lefthigh-righthigh)<=1)//ӧᵱᥝଘᤍᄆ
+        { return t;}
+        else if(lefthigh<righthigh)//य़
+        {
+            if(getHeight(t.right.left)<getHeight(t.right.right))//RRᵱᥝૢ෤
+            {
+                return  getRRbanlance(t);
+            }
+            else {
+                return getRLbanlance(t);
+            }
+        }
+        else {
+            if(getHeight(t.left.left)>getHeight(t.left.right))//ll ૢૢ
+            {
+                return getLLbanlance(t);
+            }
+            else {
+                return getLRbanlance(t);
+            }
+        }
+    }
+    /*
+     *        oldroot(ৼԅ2,ӧଘᤍ)    ==>   newroot
+     *       /    \                              /    \
+     *      B     newroot(ৼԅ1)        oldroot   D
+     *             /    \                      / \      \
+     *            C      D                    B   C      E
+     *                    \
+     *                     E
+     */
+    private node getRRbanlance(node oldroot) {//Ⴎ҅ᵱᥝૢ෤
+        // TODO Auto-generated method stub
+        node newroot=oldroot.right;
+        oldroot.right=newroot.left;
+        newroot.left=oldroot;
+        oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+        newroot.height=Math.max(getHeight(newroot.left),getHeight(newroot.right))+1;//๶
+ጱrootጱṛଶᵱᥝ՗ෛᦇᓒ
+        return newroot;
+    }
+    /*
+     * ቘ
+     */
+    private node getLLbanlance(node oldroot) {//LL෤᫨
+        // TODO Auto-generated method stub
+        node newroot=oldroot.left;
+        oldroot.left=newroot.right;
+        newroot.right=oldroot;
+        oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+        newroot.height=Math.max(getHeight(newroot.left),getHeight(newroot.right))+1;//๶
+ጱrootጱṛଶᵱᥝ՗ෛᰂᯢ  
+        return newroot;
+    }
+    private node getLRbanlance(node oldroot) {
+        oldroot.left =getRRbanlance(oldroot.left);
+        oldroot.height=Math.max(getHeight(oldroot.left), getHeight(oldroot.right))+1;
+        return getLLbanlance(oldroot);
+    }
+    /*          (ૢᜓᅩ)
+     *         oldroot       ==>          newroot
+     *        /        \                 /       \
+     *       A          B             oldroot     B
+     *                /   \           /    \     /  \
+     *           newroot   D         A      E    F   D
+     *            /   \
+     *           E     F
+     */
+
+=== PDF PAGE 60 ===
+ 
+ғ
+AVLጱቘᥴᵱᥝ෸ᳵ҅୮ᆐᒟᘏጱAVLӞ᩸റᦎѺ
+҅AVL҅(ଘᤍ)զӞ᩸Ꮈᑪ̶
+ 
+ॢ่໅  
+ॢ่໅Օᕨ  
+hello҅य़ਹঅ҅౯ฎbigsai̶
+ॢ่໅̶
+ॢ่໅ฎՋԍҘ
+ॢ่໅ጱਧԎғᕳਧNԅN໅๋҅ੜ҅ᑍᬯ໏ጱԫ
+໅ԅ໅ॢ่໅(Huffman Tree)ॢ่໅ฎଃ๦᪠ஆᳩଶ๋Ꭸጱ໅̶๦꧊᫾य़ጱᕮᅩᐶ໑᫾
+ᬪ̶
+ই୏ত2҅3҅6҅8҅9ॢ่໅ฎᬯ໏ጱғ
+    private node getRLbanlance(node oldroot) {//ૢႮ 
+//    node newroot=oldroot.right.left;
+//    oldroot.right.left=newroot.right;
+//    newroot.right=oldroot.right;
+//    oldroot.right=newroot.left; 
+//    newroot.left=oldroot;
+//    oldroot.height=Math.max(getHeight(oldroot.left),getHeight(oldroot.right))+1;
+//    
+newroot.right.height=Math.max(getHeight(newroot.right.left),getHeight(newroot.right.right
+))+1;
+//    newroot.height=Math.max(getHeight(oldroot.left),getHeight(newroot.right))+1;//๶ጱ
+rootጱṛଶᵱᥝ՗ෛᰂᯢ  
+        oldroot.right =getLLbanlance(oldroot.right);
+        oldroot.height=Math.max(getHeight(oldroot.left), getHeight(oldroot.right))+1;
+        return getRRbanlance(oldroot);
+    }
+}
+
+=== PDF PAGE 61 ===
+ሿӥᶎጱᥢ஌ғ
+ৼᜓᅩӤ
+๦꧊य़ጱᜓᅩᐶ໑ๅᬪ
+ৼᜓᅩ᮷ํӷӻ਎ৼ(Ӥ຅᭜҅ӷӻ਎ৼ຅౮Ӟӻෛ໅ጱ໑ᜓᅩ)
+ਫਙฎೲᆙӞӻᨸஞ௏మ๶ጱᬯӻ໅ጱ๦꧊
+ᦖᥴ̶
+ॢ่໅ᶋଉ᯿ᥝጱӞᅩғWPL(໅ጱಅํᕮᅩ޾)ጱ๦
+᯿๋ੜ,ᬯ᯾ӧᬰᤈᦤก,՗ੴ᮱๶፡(ӣӻᜓᅩ)ӤӞ੶WPL̶
+WPLᦇᓒොဩ: WPL=޾Wi * Li)ӾWiฎᒫiӻᜓᅩጱ๦꧊(value)̶Liฎᒫiӻᜓᅩጱᳩ(Ⴎ)ଶ.
+ইӤᶎ 2҅3҅6҅8҅9ॢ่໅ጱWPLᦇᓒԅ(ᦡ໑ԅᒫ0੶)ғ
+ॢ่໅ጱWPLԅғ2*3+3*3+6*2+8*2+9*2=(2+3)*3+(6+8+9)*2=61.
+޾WPLѺ
+ॢ่໅຅᭜  
+তᕳӞӻ༏຋ํnአᨸஞጱ௏మॢ่໅ጱ຅᭜ғ
+1. ࣁnӷӻ๋ੜ๦꧊ᜓᅩ(໑)ৼᕮ຅຅ୌӞ༒ෛ໅(޾)
+2. ധӷӻ๋ੜᜓᅩ(n-2)຅ୌጱෛᜓᅩ(n-1)ӻ
+3. ಅํᜓᅩ᮷ᤩ॒ቘ
+ 
+҅౯ժ๶፡፡2҅6҅8҅9҅3ॢ่໅ጱᬦᑕ̶
+ഭଧ(ڜ)ᭌӷӻ๋ੜᜓᅩ(ڊ)فےٌ
+Ӿํ5҅6҅8҅9ᜓᅩ
+ 
+
+=== PDF PAGE 62 ===
+҅ᬯེᕮ๳ Ӿํ11҅8҅9ᜓᅩ(ݸ8҅9҅11)
+ॢ่໅໑ᜓᅩroot̶
+҅ԅᑮ̶
+ 
+ 
+ 
+ᦇᓒଃ๦᪠ஆᳩଶWPL҅ᵱᥝ᯿ෛᦇᓒṛଶ(՗ӥஃӤ)ॢ่໅ฎ՗ӥஃӤ຅᭜ጱ҅ଚဌํզଉᰁᖌ
+ᦇᓒṛଶ̶
+դᎱਫሿ
+
+=== PDF PAGE 63 ===
+ᕮຎ:
+61
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+public class HuffmanTree {  
+  public static class node
+  {
+    int value;
+    node left;
+    node right;
+    int deep;//ᦕ୯Ⴎଶ
+    public node(int value) {
+      this.value=value;
+      this.deep=0;
+    }
+    public node(node n1, node n2, int value) {
+      this.left=n1;
+      this.right=n2;
+      this.value=value;
+    }
+  }
+  private node root;//ኞ౮ጱ໑ᜓᅩ
+  List<node>nodes;
+  public HuffmanTree() {
+    this.nodes=null;
+  }
+  public HuffmanTree(List<node>nodes)
+  {
+    this.nodes=nodes;
+  }
+  public void createTree() {
+     Queue<node>q1=new PriorityQueue<node>(new Comparator<node>() {
+      public int compare(node o1, node o2) {
+        return o1.value-o2.value;
+      }});
+     q1.addAll(nodes);
+     while(!q1.isEmpty()){
+       node n1=q1.poll();
+       node n2=q1.poll();
+      node parent=new node(n1,n2,n1.value+n2.value);
+      if(q1.isEmpty()){
+        root=parent;return;
+      }
+      q1.add(parent);
+     }
+  }
+  public int getweight() {
+    Queue<node>q1=new ArrayDeque<node>();
+    q1.add(root);
+    int weight=0;
+    while (!q1.isEmpty()) {
+      node va=q1.poll();
+      if(va.left!=null){
+        va.left.deep=va.deep+1;va.right.deep=va.deep+1;
+        q1.add(va.left);q1.add(va.right);
+      }
+      else {
+        weight+=va.deep*va.value;
+      }
+    }
+    return weight;
+  }
+  public static void main(String[] args) {
+    List<node>list=new ArrayList<node>();
+    list.add(new node(2));
+    list.add(new node(3));
+    list.add(new node(6));
+    list.add(new node(8));list.add(new node(9));
+    HuffmanTree tree=new HuffmanTree();
+    tree.nodes=list;
+    tree.createTree();
+    System.out.println(tree.getweight());
+  }
+}
+
+=== PDF PAGE 64 ===
+ 
+ॢ่ᖫᎱ  
+ॢ่໅
+ቘଚӧᧇᕡਫሿԧ̶
+ॢ่ᖫᎱਧԎғॢ่ᖫᎱ(Huffman Coding)ਁᳩᖫᎱ
+(VLC)ጱӞᐿ̶Huffmanԭ1952ഝሿ༷ሲᳩଶ๋Ꭸጱ
+؉ݞHuffmanᖫᎱҁํ෸Ԟᑍԅᵸॢ่ᖫᎱ҂̶
+҅੪೭
+aaaaaaaaaabbbbbcccdde
+ؙ(ᦡᳩԅ4ؙ)Ꭳ᭲0޾1؃
+ᦡ
+a:0001
+b:0010
+c:0011
+d:0100
+e:0101
+ฎᬯ໏ጱ
+000100010001000100010001……0101
+ইຎྯӻਁᒧᖫᎱᒵᳩӻਁᒧᳩଶ * ฎইຎྯӻਁᒧᖫᎱӧᒵᳩ҅
+ᮎԍᦡᦇጱ୏න௔੪உ୩ԧ̶
+ྲইӞӻਁᒧԀaaaaabb
+ইຎᦡᦇaԅ01҅bᦡᦇԅ1੪ԅғ010101010111
+ইຎᦡᦇaԅ1҅bᦡᦇԅ01੪ԅғ111110101
+ইຎᦡᦇaԅ1҅bᦡᦇԅ0੪ԅғ1111100
+ᦇᓒ๢ጱ01̶ಅզ҅ڊ
+ᔮ̶
+୏ত0҅1҅01҅10҅11ᬯӻᶲଧ ҅ইຎ๶ԧ001ବฎ0҅0҅1ᬮฎ0҅
+01ᬯӻᖫᎱᥝํሿྏԎҘ
+Ꭳ᭲01զ
+ৼᜓᅩӤ̶
+ਖ਼ᬯӻེහ୮౮๦꧊ೲᆙӤᶎՕᕨጱොဩ຅᭜
+໅ጱ໑ӧਂ҅ஃૢԅ0ԅ1හਁ੪ฎਙጱᖫᎱ҅ᬯ໏᷇ሲṛጱਁᒧ
+ӾԞๅᜓ፜ᑮᳵ̶
+ᕮ᧍  
+Ԟํಅත឴҅ํ
+ॢ่ᖫᎱጱդᎱ(ᖫᎱ̵ᥴᎱ)೰ྋѺ
+ڜ  
+ғbigsai ᦢѺ
+
+=== PDF PAGE 65 ===
+᥺  
+Ԫఘᬮᥝ՗ӞӻඳԪᦖ᩸ғ
+
+
+=== PDF PAGE 66 ===
+አጱහഝᕮ
+຅ԅڜጱ෸ᳵ॔๥ଶԅO(logn),ᘒෆӻᬦᑕጱ෸ᳵ॔๥ଶԅO(nlogn).
+හഝᕮ຅҅ӥᶎᧇᕡՕᕨጱ
+ᦡᦇӨਫሿ̶
+ञ  
+ᘒञ੪ฎӞᔄᇙྛጱහഝᕮ຅Ӟ༒໅(ق)ғ
+ञ௛ฎӞ༒໅ 
+ྯӻᜓᅩ௛ฎय़ԭ(౲ੜԭ)ਙጱ਎ৼᜓᅩ̶
+
+=== PDF PAGE 67 ===
+໅๶̶
+ੜ໑ञԅੜ໑ञ҅զӥ੪ฎӞ
+ӻय़໑ञғ
+໅ᘒฎአᬯӻ໅ᚆๅग़Ӟ
+ᗝᬰᤈ
+Իഘ̶
+ 
+ڜ  
+՗Ӟྦྷ੒ᦾ᧔᩸ғ
+̶ᘒڞᛔਧԎഭ
+ଧ๋य़(ੜ)ຉ̶
+
+=== PDF PAGE 68 ===
+ײapiጱapiӞᛘ̶
+౯ժԆᥝਫሿadd̵poll޾peekොဩ҅ଚӬտ፳᯿ԭᓒဩጱਫሿᘒӧॡ፳᯿ӞԶᕡᜓጱਫሿ̶
+ጱғ
+ञഭଧ ғ
+ဩጱञ̶
+ᴻnᴻਠ᮷ᥝ᯿ෛ᧣ෆᬯӻञ̶̶֢
+ڜғ
+ᴻྯ
+ᔰ̶
+ຉᴻጱၞᑕ̶
+فaddၞᑕ(ֺ)ғ
+ञӾ̶
+՜ᕮ຅̶
+ᆿᜓᅩྲ᫾य़ੜ(ԏӞ)ӧᚆԻഘԅ
+ԅᆿᜓᅩๅੜጱᦾๅჿ᪃ྲ਎ৼᜓᅩๅੜ̶
+ᴻpopၞᑕ(ֺ)ғ
+popᬮฎჿ
+ฎᗌ੝ञᶮ̶
+ञᶮ҅ྌ෸ञᵱᥝჿ᪃ञጱ௔ᨶ๵կ̶
+ک
+໑ᜓᅩ҅ᬯӻ॔๥ଶྯེԅO(logn).
+
+=== PDF PAGE 69 ===
+դᎱਫሿ  
+ف
+̶
+ਫሿොᶎ๋҅Ԇᥝጱ੪ฎpop()޾add()ࣁpop()ک
+҅አwhileײӧ᩼ኴ̶౯ժአጱฎහᕟ
+හഝ҅ጱᳩଶӧӞਧᒵԭᬯӻහᕟጱᳩଶ̶
+ਫሿadd()ጱᘍᡤԧӞӥಘ਻̶
+ਫሿጱդᎱԅғ
+import java.util.Arrays;
+public class priQueue {
+    private  int size;//ጱय़ੜ
+    private  int capacity;//හᕟጱ਻ᰁ
+    private  int value[];//ਂጱ꧊
+    public priQueue() {
+        this.capacity = 10;
+        this.value = new int[capacity];
+        this.size=0;
+    }
+    public priQueue(int capacity) {
+        this.capacity = capacity;
+        this.value = new int[capacity];
+        this.size=0;
+    }
+    /**
+     * ᔰ
+     * @param number
+     */
+    public void add(int number) {
+        if(size==capacity)//ಘ਻
+        {
+            capacity*=1.5;
+            value= Arrays.copyOf(value,capacity);
+        }
+        value[size++]=number;//๛ੲ
+        int index=size-1;
+        while (index>=1) {//ᬰᤈԻഘ
+            if(value[index]<value[index/2]) {
+                swap(index,index/2,value);
+                index=index/2;
+            }
+            else//ྊ
+                break;
+        }
+    }
+    public int peek() {
+        return  value[0];
+    }
+    /**
+
+=== PDF PAGE 70 ===
+ӻᔄၥᦶӞӥ፡፡ғ
+     * ᴚ१
+     * @return
+     */
+    public int pop() {
+        int val=value[0];//හഝ᷐
+        value[0]=value[--size];//ञ१
+        int index=0,leftChild=0,rightChild=0;
+        while (true)
+        {
+            leftChild=index*2+1;
+            rightChild=index*2+2;
+            if(leftChild>=size)//ٖ
+                break;
+            else if(rightChild<size&&value[rightChild]<value[index]&&value[rightChild]
+<value[leftChild])
+            {//਎ৼๅੜ
+                swap(index,rightChild,value);
+                index=rightChild;
+            }
+            else if(value[leftChild]<value[index])
+            {//ૢ਎ৼๅੜ
+                swap(index,leftChild,value);
+                index=leftChild;
+            }
+            else //ӧᵱᥝ ਙᛔ૩๋ੜ
+                break;
+        }
+        return  val;
+    }
+    //ᔰ
+    public  void swap(int i,int j,int arr[]) {
+        int team=arr[i];
+        arr[i]=arr[j];
+        arr[j]=team;
+    }
+    public int size() {
+        return  size;
+    }
+}
+
+=== PDF PAGE 71 ===
+ᕮ᧍  
+ 
+ 
+໅  
+ 
+໅  
+ 
+໅҅ฎӞᐿᑮᳵഘ෸ᳵᑍTrieᖗ໅҅ฎӞᐿ໅୵ᕮ຅(໅ฎӞᐿහഝᕮ຅)አԭ
+ᖗ
+૶໅ṛ̶
+ 
+ᯈ
+አਁ
+ٖ
+໅ጱӞӻ௏మ̶
+ 
+໅҅ํӣӻ᯿ᥝ௔ᨶғ
+1Ӟӻਁᒧ̶rootೡಅ
+ํਁᒧԀ̶
+2຤Ӟӻᜓᅩ҅᪠ᬦਁᒧԀ᩸๶੪ฎᧆᜓᅩ੒ଫጱਁᒧԀ̶
+3Ӟጱ̶
+
+=== PDF PAGE 72 ===
+ 
+໅  
+Ѻ
+ 
+̵ັᧃ(೰ਧਁᒧ
+Ԁ)̵ັᧃ(ᖗ)̶
+᮱ฎ26অಕ208ਫሿTrie໅ԅӞӻਫሿጱ
+ཛྷ຃̶
+ਫሿ Trie ᔄғ
+Trie() ᖗ໅੒᨝̶
+void insert(String word) ਁᒧԀ word ̶
+boolean search(String word) ইຎਁᒧԀ word ࢧtrue҅
+ࢧfalse ̶
+boolean startsWith(String prefix) ጱਁᒧԀ word ᖗԏӞԅ prefix ࢧtrue ҅
+ࢧfalse ̶
+ 
+Ҙ
+໅Trieᔄ҅ᙗਧฎᥝํӞӻ໑ᜓᅩrootࣳTrieNodeᬯ᯾౯ժԅ
+නӞӻ26ӻय़ੜጱTrieNode੒ଫ'a'-'z'෸አӞӻbooleanᰁisEndԅ
+ਁᒧԀ๛ੲᕮ๳(ইຎԅtrue᧔ก)̶
+ 
+ฎᬯ᯾26໅ӾႲ
+ےbig,bit,bz ਫฎᬯ໏ጱғ
+class TrieNode {
+    TrieNode son[];
+    boolean isEnd;//ᕮ๳ຽப
+    public TrieNode()//۸
+{
+        son=new TrieNode[26];
+    }
+}
+
+=== PDF PAGE 73 ===
+ 
+ғ
+֢໅rootԅᑮ҅ইຎԅᑮᵱ
+ୌӞӻෛጱTrieفbigጱຍԈᒫӞӻbୌTrieNode,ྊጱᮎӻ
+TrieNodeਖ਼isEndᦡԅtrueᤒกᬯӻᜓᅩฎ຅౮ਁᒧԀጱ๛ੲᜓᅩ̶
+ᲫդᎱԅғ
+ 
+֢ғ ୌTrieNode҅ইຎຍԈጱ
+ሿᧆTrieNode۸(ԅᑮ)ࢧfalse፡፡ᧆᜓᅩጱisEndԅtrue(૪ൊ
+૪දਁᒧᕮੲጱਁᒧԀ)҅ইຎԅtrueࢧtrue̶
+فbigԀ҅ইຎັತbaԅᒫԫེa੒ଫTrieNodeԅnullԅԅᑮ̶ইຎັತbi
+ጱbigࣁݝgਁᒧ੒ଫTrieNodeຽᦩisEnd=true֕iਁᒧӥᶎጱisEndԅfalseӧ
+ࣁbiਁᒧԀ̶
+੒ଫጱ໐ஞդᎱԅғ
+TrieNode root;
+/** ۸/* 
+public Trie() {
+    root=new TrieNode();
+}
+/** Inserts a word into the trie. */
+public void insert(String word) {
+    TrieNode node=root;//ԁ෸ᜓᅩአ๶ຍԈ
+    for(int i=0;i<word.length();i++)//ຍԈਁᒧԀ
+    {
+        int index=word.charAt(i)-'a';//ک26ᗝ
+        if(node.son[index]==null)//ୌ
+        {
+            node.son[index]=new TrieNode();
+        }
+        node=node.son[index];
+    }
+    node.isEnd=true;//Ӟӻᜓᅩ
+}
+
+=== PDF PAGE 74 ===
+ 
+ᖗັತࢧfalseࢧtrueֺ
+فbigັತbiࢧtrueᖗጱਁᒧԀ̶
+ᧆ੒ଫ੒ଫጱ໐ஞդᎱԅғ
+ 
+໅ԧ๋҅चᏐጱᇇ๜̶ਠෆᇇԅғ
+public boolean search(String word) {
+    TrieNode node=root;
+    for(int i=0;i<word.length();i++)
+    {
+        int index=word.charAt(i)-'a';
+        if(node.son[index]==null)//ԅnullࢧfalse
+        {
+            return false;
+        }
+        node=node.son[index];
+    }
+    return node.isEnd==true;
+}
+public boolean startsWith(String prefix) {
+    TrieNode node=root;
+    for(int i=0;i<prefix.length();i++)
+    {
+        int index=prefix.charAt(i)-'a';
+        if(node.son[index]==null)
+        {
+            return false;
+        }
+        node=node.son[index];
+    }
+  //ࢧtrue
+    return  true;
+}
+
+=== PDF PAGE 75 ===
+ 
+໅ੜ௏ᘍ  
+̶
+੒ԭӤᶎฎ26ӻਁᒧጱ҅౯ժஉ਻ฃአASCIIᚆၵᩇጱᑮᳵྲ᫾
+զአHashMap౲ᘏList҅አListጱᦾ੪ᵱᥝᶲଧຍԈ҅አHashMapզፗളັᧃ҅ᬯ
+አHashMap()໅̶
+
+=== PDF PAGE 76 ===
+አHashMap๊դහᕟ(ᚆԧ)አHashMapෙ
+੒ଫጱkey҅HashMapԅғ
+Map<Character,TrieNode> sonMap;
+አHashMap໅ਠෆդᎱԅғ
+ 
+ԅਁᒧጱ
+ASCIIԧ̶
+ᚆํᅩၵᩇ෸ᳵ҅
+զTrieNode҅ইຎਁᒧԀ
+ຉԧ̶
+ࣁACM࿢୑౲๋꧊ጱᳯ᷌҅౯ժᑍԏԅғ01໅զᛔᤈԧᥴ
+(ᚆտՕᕨ)̶
+ 
+import java.util.HashMap;
+import java.util.Map;
+public  class Trie{
+    class TrieNode{
+        Map<Character,TrieNode> sonMap;
+        boolean idEnd;
+        public TrieNode()
+        {
+            sonMap=new HashMap<>();
+        }
+    }
+    TrieNode root;
+    public Trie()
+    {
+        root=new TrieNode();
+    }
+   
+    public void insert(String word) {
+        TrieNode node=root;
+        for(int i=0;i<word.length();i++)
+        {
+            char ch=word.charAt(i);
+            if(!node.sonMap.containsKey(ch))//ف
+{
+                node.sonMap.put(ch,new TrieNode());
+            }
+            node=node.sonMap.get(ch);
+        }
+        node.idEnd=true;
+    }
+    
+    public boolean search(String word) {
+        TrieNode node=root;
+        for(int i=0;i<word.length();i++)
+        {
+            char ch=word.charAt(i);
+            if(!node.sonMap.containsKey(ch))
+            {
+                return false;
+            }
+            node=node.sonMap.get(ch);
+        }
+        return node.idEnd==true;//஠ᶳຽᦕԅtrueᦤกํᧆਁᒧԀ
+    }
+    public boolean startsWith(String prefix) {
+        TrieNode node=root;
+        for(int i=0;i<prefix.length();i++)
+        {
+            char ch=prefix.charAt(i);
+            if(!node.sonMap.containsKey(ch))
+            {
+                return false;
+            }
+            node=node.sonMap.get(ch);
+        }
+        return true;//ݢܨ
+}
+}
+
+=== PDF PAGE 77 ===
+௛ᕮ  
+ٌ
+ྍጱᦊᦩ̶
+ڜ
+ጱ(ԅᥝӞӻӞӻᦢᳯᜓᅩ)̶
+ਠ౮҅see also༄ັ̵᦯᷇ᕹᦇ̵ഭଧ̵ਁᒧԀ
+̶
+ 
+හഝᕮ຅ଚັᵞ  
+Ջԍฎଚັᵞ  
+ 
+ቘᥴ਍ԟ᩸๶ᶋଉ਻ฃ҅᭗ᬦ๜෈҅
+Ӟਧᚆड़᫷᫷ຂຂ൥ਧଚັᵞѺ
+Ҙ
+ଚັᵞฎӞᐿࣳጱහഝᕮ຅҅አԭ॒ቘӞԶҁdisjoint setsັᧃᳯ᷌,አӾզ༏຋๶
+ӞԶํNࣁݳೲӞਧᶲ
+ଧଚᳵᥝ॔ັತහഝᰁ
+୩᭗ᬦ҅ᬩᤈጱ෸ᳵ
+ྲᩦᥢਧጱᬩᤈ෸ᳵҁ1ӗ3ᚆአଚັᵞ๶ൈᬿ̶
+̶
+ᳯ᷌1ғ
+ԧྯ๵᭲᪠ፗളᬳ᭗ጱउ꧒̶፜඲଱“኱᭗ૡᑕ”
+ܨ
+҂̶ᳯ๋੝ᬮᵱᥝୌᦡग़੝๵᭲᪠Ҙ
+ଚग़੝ེ੪Ꭳ๋᭲੝ጱୌᦡ᭲᪠හᰁ̶
+ᳯ᷌ԫғ
+ଆ
+ํӷᐿො
+ဩ՗5ᬡ8̶
+̶
+ଚັᵞᥴຉ  
+ᥴຉᬯӻᓒဩ̶
+۸  
+አහᕟ๶ᤒᐏᬯӻ༏຋(හᕟӥຽ੒ଫ
+ᔰ)ӻ꧊ԅ-1ݳ(ᛔԅሴ)ฎ-1ᘒӧ
+ᔰጱӻහ̶
+ଚ union(int a,int b)  
+҅ᬯ᯾ଚa޾ݳbݳ੶ᶎa,bᚆ
+ෙӞӥ̶
+
+=== PDF PAGE 78 ===
+҅ᮎԍፗളaݻb(౲ᘏbݻ
+a)ܨarr[a]=b,๜-1ጱbེ-1.ܨarr[b]=-2.ᤒᐏզbᜓᅩํ|-2|ӻ̶
+ইᬰᤈunion(1,4)҅union(5,7)ಅᐏғ
+ 
+ጱunion(int a,int b)ᦡ౯ժ੪ฎaکbӤ҅಩b๶፡̶a̵bᚆฎ
+໑ᜓᅩ̶
+զکa,bጱᆿᜓᅩfa,fb(ᚆฎਙᛔ૩),ଚfa޾fbӷӻᜓᅩইӤᶎইຎ
+union(1,5)ਫ੪ฎᒵհunion(4,7)̶
+֢a,b֢?
+ࢩܻ1ԅa,bक़ᵞ
+Ӿጱහᰁ(ᨮහ)̶
+
+=== PDF PAGE 79 ===
+ࢩܻ2ଚইຎa,bݳaӾጱັᧃප
+ሲ̶
+ັ search(int a)  
+ࠨ(ز)ৼᜓᅩ꧊ইຎԅྋ҅
+̶
+෸ᳵ॔๥ଶ̶
+۸  
+ሿӞԶᳯ̶᷌
+ᚆտํወᳯғ
+ັ፡a҅bҘ  
+ํ໑ጱහ꧊ฎᨮ՜᮷ฎྋහᤒᐏ
+Ѻ
+a,bଚ҅ᑪᒌฎaࣁbӤ҅ᬮฎbࣁaӤҘ  
+ᥝ୓กጮӞᅩғ໅ጱṛଶ+1ᔰັᧃጱපሲ᮷տᴳ
+Ѻ
+
+=== PDF PAGE 80 ===
+ಅզ౯ժ᭗ଉฎғय़໅(ṛ໅)Ѻ
+ࣁහᰁᘍᡤ̶
+ᖽ  
+Ӥ̶୮౯ժ᧣አ᭓୭ᖽ᪠ஆ(ጱ໑ᜓᅩጱ꧊)҅౯
+҅ಅզᬪᖽ᪠ஆጱդհଚӧय़Ѻ
+դᎱਫሿ  
+̶
+import java.util.Scanner;
+public class DisjointSet {
+  static int tree[]=new int[100000];//ᦡํ500ӻ꧊
+  public DisjointSet()  {set(this.tree);}
+  public DisjointSet(int tree[]) 
+  {
+    this.tree=tree;
+    set(this.tree);
+  }
+  //ಅํ᮷ฎ-1 ݻ1᧔กฎᛔ૩҅
+  //ᒫԫ҅-1༏຋ํ-ҁ-1҂ӻ
+  public void set(int a[])
+  {
+    int l=a.length;
+    for(int i=0;i<l;i++)
+    {
+      a[i]=-1;
+    }
+  }
+  public int search(int a)//१ᜓᅩጱහ꧊
+  {
+    if(tree[a]>0)//᧔กฎৼᜓᅩ
+    {
+      return tree[a]=search(tree[a]);//ᖽ
+    }
+    else
+      return a;
+  }
+  public int value(int a)//ࢧa໅ጱय़ੜҁӻහ҂
+  {
+    if(tree[a]>0)
+    {
+      return value(tree[a]);
+    }
+    else
+      return -tree[a];
+  }
+  public void union(int a,int b)//ᤒᐏ a҅bଚ
+
+=== PDF PAGE 81 ===
+ᕮ᧍  
+ࣁک҅ᘒӧᤩ᯻
+ᕑ̶
+ զՕᕨአଚັᵞਫሿӞӻᩳᭁ਴ੜ჋౭ဳѺ
+ӻᩳᭁ਴჋౭  
+ࢩ  
+ࢶ(ࢶ()࣎ࣈhttp://81.68.83.253:8081/maze.html)ғ
+ᶱፓgithubғhttps://github.com/javasmall/mazegameғ
+ 
+ᔺ஬҅ᕪଉ஬ԭcodingབԅჂካ̶
+  {
+    int a1=search(a);//a໑
+    int b1=search(b);//b໑
+    if(a1==b1) {System.out.println(a+"޾"+b+"Ӟ༒໅Ӥ");}
+    else {
+    if(tree[a1]<tree[b1])//᧣አvalueහ
+    {
+      tree[a1]+=tree[b1];//ے  ے
+      tree[b1]=a1;       //b໅౮ԅaݻaҔ
+    }
+    else
+    {
+      tree[b1]+=tree[a1];//ے  ے
+      tree[a1]=b1;       //b໅౮ԅaݻaҔ
+    }
+    }
+  }
+  public static void main(String[] args)
+  {   
+    DisjointSet d=new DisjointSet();
+    d.union(1,2);
+    d.union(3,4);
+    d.union(5,6);
+    d.union(1,6);
+    
+    d.union(22,24);
+    d.union(3,26);
+    d.union(36,24);
+    System.out.println(d.search(6));  //१
+    System.out.println(d.value(6));     //य़ੜ
+    System.out.println(d.search(22)); //१
+    System.out.println(d.value(22));     //य़ੜ
+  }
+}
+
+=== PDF PAGE 82 ===
+ 
+ሿ520བ҅520ҘѺ
+ྂḼՈਹঀ਎ৼ
+(ᡱᆐ૪ᕪḼԧ
+$)҅
+ 
+ᭇጱ҅ӞమՔॠ૪ᕪ19ԧᵙ᭲Ҙ
+ 
+ԧ̶
+ 
+̶
+ᒵᒵ҅ᬮํӞภӤᘨѺ
+᭜ંԭ՜ጱၵᄓѺ
+ਮ൤ᔰӞኾғާ520࢏ դᎱ ߢߢߢctrl+c,ctrl+v౯
+ॡտԧ҅ၵᄓᥝ๶ԧѺ
+ᘏጱ
+܏(ԏ௮)̶
+
+=== PDF PAGE 83 ===
+ 
+ᦾғ"Ӟᅩ᮷ӧӤஞ"ᑀԧ҅ӧᤈ҅౯ᥝ
+զ౯ᛔ૩ጱොୗ๶Ѻ౯ᥝํᅩ౯ᛔ૩ጱᇙᜋ̶
+౯቟ᐃ፳ெԍአᆧఀጱහഝᕮ຅Өᓒဩ൥ӻํ᪁ጱӳᥜ̶
+̵dfs̵bfs̵ଚັᵞ̵Dijkstra̵Prime……
+ᦕ஑ํՈአJava Swing౯൤ԧӞ
+ሿํHTML̵JavaScript֕Swingวच๜ဌՈአ౯ᥝෆӞӻӧӞ໏ጱ҅ᡱᆐ
+JavaScript޾HTMLရ
+%Ѻ
+ 
+ 
+ຉ  
+౯ᵱᥝ՗0ک1ڋ
+ଚ̶
+ᚆᵱᥝഩൎզӥጱᎣᦩғ
+ᬡ᪠ஆጱᭁ਴ኞ౮ᓒဩ
+አJavaScriptࣁcanvasӤኮ༇ፏ(তᇫா)
+አᭁ਴ኞ౮ᓒဩኞ౮Ӟӻᭁ਴(ජᴻᵱᥝජധጱᕚ)
+አJavaScript޾ލcanvasۖ(ኴ̵ӧᑯा)
+቟ᐃጱᬦᑕय़༷ฎғ
+๵ᕚ—>ኮग़ӻᕚ—>ජᕚ(୵౮ᭁ਴)—>ᕅ๳(ኴӧᑯा)—>ਠ౮჋౭̶
+ኮᕚ(༇ፏ)  
+੒ԭhtml+js(canvas)਍ᬦJava Swing҅
+ࣁhtmlӾํӻcanvas ލ(ލ)̶
+੒ԭᬯᐿcanvas̵Java Swing̵QT֦ጱӳᥜਫ੪ฎӞ๵๵ᕚ҅
+ኮ૲҅ᦏcanvasጱහഝ
+ᕮ຅౲ᓒဩฎӞӻྋᏟቘጱ઀ሿ̶
+ಅզ੒ԭᭁ਴๶᧔҅Ӟӻӻᕚ๵ᕚ๵ฎဌํં௔ᗝx,y౯ժԟబጱᶎፘ੒
+ො໒
+ࣁᥤᥧපຎӤฎਠෆᕹӞጱ̶
+ೲᆙ᩸ত
+(ૢӤ)ጱᕚ(ᗝӤํᥢ஌ጱ)զਫሿӞӻᥤᥧӤጱᭁ਴̶
+<!DOCTYPE html>
+<html>
+
+=== PDF PAGE 84 ===
+ਫሿපຎ
+ኮᭁ਴  
+Ӟ᚜౤᭧̶
+ํᬳ᭗᪠ஆ҅ӧᎸᑪጱᦾஉᵙᎣ᭲አՋԍᓒဩኞ౮ᬯӻᭁ਴̶ᬯ
+෸ᘦ᥯փ๶ᆧఀጱ्ᶪғአଚັᵞ(ݳ)̶
+Ҙ(ڞ)
+Ӿ้ᕪՕᕨᬦଚັᵞ(ݳ)ଚ̵ັತғӧᘶ᭗
+Ӟӻ༏຋(ݳ)ӾѺ
+ӥ҅ฎӞӻ༇ፏො໒҅ྯӻᭁ਴໒ৼፘ੒ᇿᒈ҅ᬯ
+ᚆᵱᥝᝑଗፘᮝᜓᅩᬰᤈᘶ᭗(ݳ)ᚆፘᬳ҅Ԟ
+զ᭗ᬦଚັᵞବ੶හഝᕮ຅ጱඪඅ̶
+ፗളᘶ᭗҅౯ժ੪ฎᥝ᭗ᬦ
+ො໒(ा)ਫሿෆӻᵋ๢ᭁ਴̶
+௏᪠ԅғ(Ԇᥝቘᥴଚັᵞ)
+1ොဩҁsearch,unionᒵ҂
+2҅꧊ԅ-1
+3҂҅
+ဩጱ໒ৼ̶
+ኞ౮Ӟӻᵋ๢හm(ੜԭᭁ਴௛໒ৼහ)
+ਖ਼Ӟᖌᵋ๢හmᗝpԅғ[m/ᳩ,m%ᳩ] ᬯ᯾ጱᳩහ̶
+ᗝpᗝq[m/ᳩ+1,m%ᳩ]౲[m/ᳩ-1,m%ᳩ]౲[m/ᳩ,m%ᳩ+1]౲[m/ᳩ,m%ᳩ-1]
+ᬰᤈӥӞྍ̶
+4ෙӷӻ໒ৼp޾q(ݩ)ݳ(ଚັᵞັತ)ᒫӣ
+̶
+5ғ݄(ଚ)ํᅩᔺቜෙਙᮎᐿा(ᵍᐶ)ٚݸ
+ජധ(ᵱᥝᘍᡤፘ୮ग़ጱᕡᜓ)̶
+6ᒫӞӻ(1,1)޾n,n)ฎᬯӻහ
+ᕮຎ᮷ᬮฎꂁӧᲙጱ̶
+֖
+Ѻ
+<head>
+    <title>MyHtml.html</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="600px" height="600px"></canvas>
+</body>
+<script type="text/javascript">
+    var chessboradsize=14;//༇ፏय़ੜ
+    var chess = document.getElementById("mycanvas");
+    var context = chess.getContext('2d');
+    function drawChessBoard(){//ᕲኮ
+        for(var i=0;i<chessboradsize+1;i++){
+            context.strokeStyle='gray';//ऒ
+            context.moveTo(15+i*30,15);//ኮ15໑ᕚ҅ፘ᪗30px;
+            context.lineTo(15+i*30,15+30*chessboradsize);
+            context.stroke();
+            context.moveTo(15,15+i*30);//ኮ15໑ᕚ҅ፘ᪗30px;༇ፏԅ14*14Ҕ
+            context.lineTo(15+30*chessboradsize,15+i*30);
+            context.stroke();
+        }
+    }
+    drawChessBoard();//༇ፏ
+</script>
+</html>
+
+=== PDF PAGE 85 ===
+ဳ఺ᗝ̶හᕟ՗0൥ႰႝѺ
+ 
+ԅ౯ժጱᕣྊ੪ฎզਙԅ๵կ҅ӧᬳ᭗ጱᦾ੪տ
+ᚆ௔ฎஉํᴴጱ,ฎ
+ᑍӞԶ̶
+Ԇᥝ᭦ᬋԅғ
+ᶎጱդᎱԅ
+while(search(0)!=search(aa*aa-1))//Ԇᥝ௏᪠
+{
+  var num = parseInt(Math.random() * aa*aa );//ԾኞӞӻੜԭ196ጱᵋ๢හ
+  var neihbour=getnei(num);
+  if(search(num)==search(neihbour)){continue;}
+  else//ӞӻӤ
+  {
+    isling[num][neihbour]=1;isling[neihbour][num]=1;
+    drawline(num,neihbour);//ᕚ
+    union(num,neihbour);
+  }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyHtml.html</title>
+</head>
+<body>
+<canvas id="mycanvas" width="600px" height="600px"></canvas>
+</body>
+<script type="text/javascript">
+    var chessboradSize=14;
+    var chess = document.getElementById("mycanvas");
+    var context = chess.getContext('2d');
+    var tree = [];//ᘶ᭗
+    var isling=[];//ፘᬳ
+    for(var i=0;i<chessboradSize;i++){
+        tree[i]=[];
+        for(var j=0;j<chessboradSize;j++){
+            tree[i][j]=-1;//ত꧊ԅ0
+        }
+    }  for(var i=0;i<chessboradSize*chessboradSize;i++){
+        isling[i]=[];
+        for(var j=0;j<chessboradSize*chessboradSize;j++){
+            isling[i][j]=-1;//ত꧊ԅ0
+        }
+    }
+    function drawChessBoard(){//ᕲኮ
+        for(var i=0;i<chessboradSize+1;i++){
+            context.strokeStyle='gray';//ऒ
+            context.moveTo(15+i*30,15);//ኮ15໑ᕚ҅ፘ᪗30px;
+            context.lineTo(15+i*30,15+30*chessboradSize);
+            context.stroke();
+            context.moveTo(15,15+i*30);//ኮ15໑ᕚ҅ፘ᪗30px;༇ፏԅ14*14Ҕ
+            context.lineTo(15+30*chessboradSize,15+i*30);
+            context.stroke();
+        }
+    }
+
+=== PDF PAGE 86 ===
+    drawChessBoard();//༇ፏ
+ 
+    function getnei(a)//ݩrandom
+    {
+        var x=parseInt(a/chessboradSize);//ᥝᔜᏟ౮ෆහ
+        var y=a%chessboradSize;
+        var mynei=new Array();//ਂᮝ੷
+        if(x-1>=0){mynei.push((x-1)*chessboradSize+y);}//Ӥᜓᅩ
+        if(x+1<14){mynei.push((x+1)*chessboradSize+y);}//ӥᜓᅩ
+        if(y+1<14){mynei.push(x*chessboradSize+y+1);}//ํᜓᅩ
+        if(y-1>=0){mynei.push(x*chessboradSize+y-1);}//ӥᜓᅩ
+        var ran=parseInt(Math.random() * mynei.length );
+        return mynei[ran];
+    }
+    function search(a)//໑ᜓᅩ
+    {
+        if(tree[parseInt(a/chessboradSize)][a%chessboradSize]>0)//᧔กฎৼᜓᅩ
+        {
+            return search(tree[parseInt(a/chessboradSize)][a%chessboradSize]);//ᖽ᪠
+ᖽ
+        }
+        else
+            return a;
+    }
+    function value(a)//໅ጱय़ੜ
+    {
+        if(tree[parseInt(a/chessboradSize)][a%chessboradSize]>0)//᧔กฎৼᜓᅩ
+        {
+            return tree[parseInt(a/chessboradSize)]
+[a%chessboradSize]=value(tree[parseInt(a/chessboradSize)][a%chessboradSize]);//ᖽ
+        }
+        else
+            return -tree[parseInt(a/chessboradSize)][a%chessboradSize];
+    }
+    function union(a,b)//ଚ
+    {
+        var a1=search(a);//a໑
+        var b1=search(b);//b໑
+        if(a1==b1){}
+        else
+        {
+            if(tree[parseInt(a1/chessboradSize)][a1%chessboradSize]
+<tree[parseInt(b1/chessboradSize)][b1%chessboradSize])//ᬯӻฎᨮහ()᧣
+አvalueහ
+            {
+                tree[parseInt(a1/chessboradSize)]
+[a1%chessboradSize]+=tree[parseInt(b1/chessboradSize)][b1%chessboradSize];//ے  ဳ఺
+ے
+                tree[parseInt(b1/chessboradSize)][b1%chessboradSize]=a1;       //b໅౮ԅa
+໅ጱৼ໅҅bጱ໑b1ݻaҔ
+            }
+            else
+            {
+                tree[parseInt(b1/chessboradSize)]
+[b1%chessboradSize]+=tree[parseInt(a1/chessboradSize)][a1%chessboradSize];
+                tree[parseInt(a1/chessboradSize)][a1%chessboradSize]=b1;//a໅౮ԅb໅
+ጱৼ໅
+            }
+        }
+    }
+    function drawline(a,b)//ݦ
+{
+        var x1=parseInt(a/chessboradSize);
+        var y1=a%chessboradSize;
+        var x2=parseInt(b/chessboradSize);
+        var y2=b%chessboradSize;
+        var x3=(x1+x2)/2;
+        var y3=(y1+y2)/2;
+        if(x1-x2==1||x1-x2==-1)//ጱᅩ  ᕚ
+        {
+            context.strokeStyle = 'white';
+            context.clearRect(29+x3*30, y3*30+16,2,28);
+        }
+        else
+        {
+            context.strokeStyle = 'white';
+            context.clearRect(x3*30+16, 29+y3*30,28,2);
+        }
+    }
+
+=== PDF PAGE 87 ===
+ᬰԧӞྍ҅ਫሿපຎғ
+ۖ  
+౯᯻አጱොဩӧฎۖ(ߢߢ)໒
+ᔰय़ੜᔜ
+ජᴻ̶୮ᆐᆧఀJavaScriptሻሻ̶
+Ӿᥝဳ఺ӧᚆᵍᑮᑯा̵᩼ኴፓຽො໒҅౯ժፗളᘶ
+᭗҅ဳ఺ฎፗളᘶ᭗ᘒӧฎᘶ᭗(҅ಅզᬯ᯾ᖽ᪠ஆ߶)҅ইຎፗള
+̶
+҅ਠ౮ෆӻ჋౭ᬯԶӧฎ๋Ԇᥝ
+ጱ̶
+ܜى(ᭁ਴य़ੜ)ԧ̶
+ 
+ᕮ᧍  
+࣎ࣈhttp://81.68.83.253:8081/maze.htmlک
+githubhttps://github.com/javasmall/mazegameکbigsai॔ғᭁ਴ ឴஑Ѻ ݸ
+զᕳঀᐟ፡ԧ̶
+    while(search(0)!=search(chessboradSize*chessboradSize-1))//Ԇᥝ௏᪠
+    {
+        var num = parseInt(Math.random() * chessboradSize*chessboradSize );//ԾኞӞӻੜԭ
+196ጱᵋ๢හ
+        var neihbour=getnei(num);
+        if(search(num)==search(neihbour)){continue;}
+        else//ӞӻӤ
+        {
+            isling[num][neihbour]=1;isling[neihbour][num]=1;
+            drawline(num,neihbour);//ᕚ
+            union(num,neihbour);
+        }
+    }
+</script>
+</html>
+
+=== PDF PAGE 88 ===
+ᇆഘԧӞӥ(ԧ)ғ
+ᬰྍ̵਍
+ғbigsaiဳ̵ᅩᩩѺ᣸᣸Ѻ
+හഝᕮ຅᪡ᤒ  
+ 
+᥺  
+ଫአ҅౯ժᆧᎣጱ੪ํRedisᶎᦶጱஉ
+ᦶӞᦶ(ᚆጱ)࣋
+วғ
+ᬯᓤ෈ᒍԧ(஑఺
+&)ᆢሞᮎ໏ᑼᬼ̶
+ٟ ԅஉग़
+๶҅ᮎ
+ᚆᥝັᴅय़ᰁጱᩒා̶
+ਫሿ҅൥౜᪡ᤒ҅ᬯӞᓤ፥ጱ੪ड़ԧ̶
+
+=== PDF PAGE 89 ===
+ள᭛ԧᥴ᪡ᤒ  
+᪡᪋ᤒ(ᓌᑍ᪡ᤒ)ᦇᓒ๢ᑀ਍ਹWilliam Pughกԭ1989ଙᦞ෈̽Skip lists: a probabilistic alternative 
+to balanced trees̶
+᪡ᤒ(SkipListᑍ᪡᪋ᤒ)ጱහഝᕮ
+ԧग़ᕆᔱ୚҅᭗ᬦᔱ୚๶ਫ
+ᕁἓ໅҅AVL
+உग̶़
+Ძ᦯ғ᱾ᤒ(ํଧ᱾ᤒ)᨝҅ӧᬦ
+ᚆᬮฎӧႴ༩ᬯӻ"տ᪡ጱ᱾ᤒ"ํग़diaoӥ෈Ӿஉள
+ᒼໜѺ
+ᶲଧᤒ(හᕟ)੪ฎๅṛපጱൊ
+ᴻ̶ዳᅩ੪ฎັᧃஉౌஉౌѺྯེັᧃ᮷ฎӞᐿO(n)ԧ
+'̶
+ 
+ᬯฎӞӻଃ१ᕮᅩጱ᱾ᤒ(ํ఺Ԏጱ꧊)҅ྯེັತ᮷ᵱᥝӞӻӻຍԈ҅ፘ୮ጱ
+හഝᕮ຅զᑮᳵഘ෸ᳵ҅౯
+҅᱾ᤒᛔ૩ᡱᆐဌํ୏
+ጱ᚜̶
+ັತդհ
+ӥጱᔱ୚(೰ᰒ)ԅO(log(n))̶
+҅ᥝฎํଧ᱾
+ᤒԞᚆᬯԍ᪡᩸๶ᮎ੪ॡਠᗦԧ̶ဌᲙັತጱපሲጱӞᐿහഝᕮ຅ᆐ
+ັತ᭛ଶ̶
+ 
+Ӥᶎᖌಷᮎԍग़੶
+๋
+ᗝԧ(ጱᦾ)ز
+ளԧ̶
+ӤӞ੶ᔱ୚ᜓᅩහᰁ᮷ฎӥӞ੶ጱ1/2.ᮎԍইຎnጱᜓᅩහᰁ(1/2+1/4+…)<n̶ଚӬ
+Ҙय़༷ሲӧਂ
+ෆӻᕮ຅҅ಅզӤᶎጱᬯԶ᮷ฎቘ
+Ӥ੶ᔱ୚ฎӻ༷ሲᳯ᷌(1/2ጱ༷ሲ)ᦖᥴ̶
+
+=== PDF PAGE 90 ===
+දັ  
+҅౯
+ժਖ਼᪡ᤒጱ१ᕮᅩ(head)ጱkeyᦡԅintጱ๋ੜ꧊(ྲ᫾)̶
+੒ԭྯӻᜓᅩጱᦡᗝ҅ᦡᗝ౮SkipNode਍ᘏਖ਼next൥Ⴐ҅ፗളᦡᗝright҅downӷӻ೰
+ᰒ̶
+ොဩԅғ
+ 
+֢  
+ᔰ౲ᘏkeyӞԶvalueץ
+Ძහਁ(key)҅ᦡᗝӞӻԁ෸ᜓᅩteam=head̶୮
+teamӧԅnullၞᑕय़ᛘইӥғ
+ (1) ՗team҅ᜓᅩጱkeyӨັᧃጱkeyፘᒵᜓᅩ(ӥᬰᤈ
+ݢܨ)̶
+ (2) ইຎkeyӧፘᒵ҅Ӭԅnullӥ(ݻ)҅ྌ෸team=team.down
+ (3) ইຎkeyӧԅnull҅Ӭᜓᅩkeyੜԭஇັᧃጱkey҅ྌ෸
+team=team.right
+ (4)҂ইຎkeyӧԅnull҅Ӭᜓᅩkeyय़ԭஇັᧃጱkey ̶ᮎԍ᧔กইຎํᕮຎጱᦾ
+ӥӻᔱ୚ԏᳵ҅ྌ෸team=team.down̶
+ྋᏟጱᜓᅩ౲ᘏnull(ک)̶
+ັᧃ12ᒫӞྍ՗headӧԅᑮ҅Ӭ7<12,ԅnullӥҔᒫӣྍᜓᅩ
+7׆ݦ10<12ྍ10ԅnull׆ݦ12ᜓᅩᕮ
+๳̶
+ጱդᎱԞᶋଉ਻ฃғ
+class SkipNode<T>
+{
+    int key;
+    T value;
+    SkipNode right,down;//ጱ೰ᰒ
+    public SkipNode (int key,T value) {
+        this.key=key;
+        this.value=value;
+    }
+}
+public class SkipList <T> {
+    
+    SkipNode headNode;//ݗف
+    int highLevel;//᪡ᤒᔱ୚੶හ
+    Random random;// አԭಭാᏝ૰
+    final int MAX_LEVEL = 32;//๋य़ጱ੶
+    SkipList(){
+        random=new Random();
+        headNode=new SkipNode(Integer.MIN_VALUE,null);
+        highLevel=0;
+    }
+    //՜ොဩ
+}
+public SkipNode search(int key) {
+    SkipNode team=headNode;
+    while (team!=null) {
+        if(team.key==key)
+        {
+            return  team;
+
+=== PDF PAGE 91 ===
+ 
+֢  
+᱾ᤒᕮ຅ಅզᵱᥝ॒ቘঅᜓᅩԏᳵጱᘶᔮ̶੒ԭ
+ᅩғ
+(1)ᔮ
+(2)҅ӥӞ੶ᧆkey๋ବ੶
+ᜓᅩԧ҅ޫࢥ
+ጱ೰ᰒ(ݦ)զᇙྛ॒ቘӞӥ ತ
+کᜓᅩᜓᅩ̶ᦡᗝ
+Ӟӻԁ෸ᜓᅩteam=head҅୮teamӧԅnull஗ሾၞᑕԅғ
+(1)ইຎteamԅnull҅ᮎԍteam=team.down(҅ӧአ೅ஞᇙྛ
+٭)
+2)ইຎteamӧ ԅnull҅ଚӬጱkeyᴻጱkeyٚteamӥteam=team.downԅ
+ᴻӥ੶ᜓᅩ̶
+(3)ইຎteamӧ ԅnull҅ଚӬ׆ݦkeyᴻጱkey҅ᮎԍteamݦݻteam=team.right̶
+(4)ইຎteamӧ ԅnull҅ଚӬ׆ݦkeyᴻጱkey҅ᮎԍteamӥteam=team.downڢ
+ᴻᜓᅩ̶
+ 
+ᴻ10ضteam=head՗team҅7<10ݦݻteam=team.rightᶎ፜ኼ)ԅnullᚆ
+ԅ10ᴻ10ӥᖀᖅັತӥӞ੶10ྍ8<10ԅ10ڢ
+ᴻᧆᜓᅩଚӬteamӥ̶teamԅnull஗ሾ̶
+ਫሿጱդᎱইӥғ
+        }
+        else if(team.right==null)//ᚆӥᴳ
+        {
+            team=team.down;
+        }
+        else if(team.right.key>key)//੔ತ
+        {
+            team=team.down;
+        }
+        else //ݦݻ
+{
+            team=team.right;
+        }
+    }
+    return null;
+}
+public void delete(int key)//ᴻӧᵱᥝᘍᡤ੶හ
+{
+    SkipNode team=headNode;
+    while (team!=null) {
+        if (team.right == null) {//ᚆӥᴳ
+            team=team.down;
+
+=== PDF PAGE 92 ===
+ 
+֢  
+ڢ
+ӧӞ໏ԧ҅੶ᴻಅզ౯ժᙗਧ෫ဩ
+አ۸Ծ
+ኞӞӻ[0-1]ጱᵋ๢හইຎੜԭ0.5ᔱ୚̶ᬩ࿈অᬯӻ
+๋ବ੶(ᬯฎ100%ጱ)ṛଶ҅౯ժӞᛱտᦡᗝᔱ୚๋
+ᔱ୚ԧ̶
+ၞᑕԅ
+(1)کጱૢᜓᅩᜓᅩ(ᵱ
+ԅ๛ੲᜓᅩ)
+(2)ྊ(๋ṛ
+ᔱ୚੶ԧ)ᦡᗝӞӻᵋ๢හ1/2Ӟ੶ᔱ୚(ԅቘమᇫாӥጱ੪ฎྯ2ӤୌӞӻᔱ୚ᜓᅩ)̶
+(3)ᖀᖅ(2)౲ᘏᔱ୚੶හय़ԭ๋य़ᔱ୚੶̶
+ࣁفضᜓᅩ Ҙ
+ݦ
+զັᧃᬦᑕӾᦕ୯ӥᴳጱᜓᅩጱᜓᅩ҅
+क़(ᯈ꧊տӥᴳԅnullᕮ๳஗ሾ)አ຾አListݢ
+̶
+ 
+ጱ๋ṛ੶ᔱ୚҅ᵱᥝӤୌᒈᔱ୚Ҙ
+๋ṛ
+Ҙ
+ײᵱᥝဳ఺ԧ҅᪡ᤒጱheadԧ҅ෛୌӞӻListNodeԅෛጱhead҅ਖ਼ਙጱdownᘌhead҅ਖ਼
+ᬯӻhead຾Ӿ(ጱᜓᅩ)҅੪ྲইӤᶎጱ9ஃӤୌᒈ
+Ӟ੶ᜓᅩ҅տฎᬯ໏ጱ̶
+        }
+        else if(team.right.key==key)//ᴻᜓᅩ
+        {
+            team.right=team.right.right;//ᜓᅩ
+            team=team.down;//ᴻ
+        }
+        else if(team.right.key>key)//ӥ
+        {
+            team=team.down;
+        }
+        else { //׆ݦࣁ
+            team=team.right;
+        }
+    }
+}
+
+=== PDF PAGE 93 ===
+ 
+ဳ఺ಅํᜓᅩᥝෛୌ(೩ᨬ)҅ᴻԧrightݻdownԞӧᚆ஫ᦕ҅downզአ
+๋ṛ੶҅१headᜓᅩ(ݗف)̶
+դᎱӾဳ᯽ᥴ᯽ԧ҅ᧇᕡդᎱԅғ
+public void add(SkipNode node)
+{
+    int key=node.key;
+    SkipNode findNode=search(key);
+    if(findNode!=null)//ᬯӻkeyጱᜓᅩ
+    {
+        findNode.value=node.value;
+        return;
+    }
+    Stack<SkipNode>stack=new Stack<SkipNode>();//ᜓᅩ
+    SkipNode team=headNode;//ጱᜓᅩ   ӻᜓᅩ̶
+    while (team!=null) {//֢ 
+        if(team.right==null)//ᚆӥᴳ
+        {
+            stack.add(team);//ӥጱᜓᅩᦕ୯Ӟӥ
+            team=team.down;
+        }
+        else if(team.right.key>key)//੔ತ
+        {
+            stack.add(team);//ӥጱᜓᅩᦕ୯Ӟӥ
+            team=team.down;
+        }
+        else //ݦݻ
+{
+            team=team.right;
+        }
+    }
+    int level=1;//ے(ෙ)
+    SkipNode downNode=null;//ḝᜓᅩ(ܨdownতԅnull)
+    while (!stack.isEmpty()) {
+        //فnode
+        team=stack.pop();//ᜓᅩ
+        SkipNode nodeTeam=new SkipNode(node.key, node.value);//ୌ
+        nodeTeam.down=downNode;//ݻ
+        downNode=nodeTeam;//አ
+        if(team.right==null) {//ԅnull ๛ੲ
+            team.right=nodeTeam;
+        }
+        //॒ቘ
+        else {//ӷᘏԏᳵ
+            nodeTeam.right=team.right;
+            team.right=nodeTeam;
+        }
+        //Ӥ
+        if(level>MAX_LEVEL)//ࠩ
+            break;
+
+=== PDF PAGE 94 ===
+ 
+௛ᕮ  
+ᔮᬯ
+ਧԎright޾downጱᦖᥴ᪡ᤒ̶
+ࠨRedisݳzset) ޾
+̶ᘒJDKӾ᪡
+᪋ᤒConcurrentSkipListSet޾ConcurrentSkipListMap̶ զັᴅӞӥრᎱ̶
+̶
+        double num=random.nextDouble();//[0-1]ᵋ๢හ
+        if(num>0.5)//ᬩ࿈ӧঅᕮ๳
+            break;
+        level++;
+        if(level>highLevel)//ٖࢱ ݒheadᜓᅩ
+        {
+            highLevel=level;
+            //ୌӞӻෛጱᜓᅩ
+            SkipNode highHeadNode=new SkipNode(Integer.MIN_VALUE, null);
+            highHeadNode.down=headNode;
+            headNode=highHeadNode;//ݒhead
+            stack.add(headNode);//ڊhead
+        }
+    }
+}
+import java.util.Random;
+import java.util.Stack;
+class SkipNode<T>
+{
+    int key;
+    T value;
+    SkipNode right,down;//ጱ೰ᰒ
+    public SkipNode (int key,T value) {
+        this.key=key;
+        this.value=value;
+    }
+}
+public class SkipList <T> {
+    SkipNode headNode;//ݗف
+    int highLevel;//੶හ
+    Random random;// አԭಭാᏝ૰
+    final int MAX_LEVEL = 32;//๋य़ጱ੶
+    SkipList(){
+        random=new Random();
+        headNode=new SkipNode(Integer.MIN_VALUE,null);
+        highLevel=0;
+    }
+    public SkipNode search(int key) {
+        SkipNode team=headNode;
+        while (team!=null) {
+            if(team.key==key)
+            {
+                return  team;
+            }
+            else if(team.right==null)//ᚆӥᴳ
+            {
+                team=team.down;
+            }
+            else if(team.right.key>key)//੔ತ
+            {
+                team=team.down;
+            }
+            else //ݦݻ
+{
+                team=team.right;
+            }
+        }
+        return null;
+    }
+    public void delete(int key)//ᴻӧᵱᥝᘍᡤ੶හ
+    {
+        SkipNode team=headNode;
+        while (team!=null) {
+            if (team.right == null) {//ᚆӥᴳ
+                team=team.down;
+
+=== PDF PAGE 95 ===
+            }
+            else if(team.right.key==key)//ᴻᜓᅩ
+            {
+                team.right=team.right.right;//ᜓᅩ
+                team=team.down;//ᴻ
+            }
+            else if(team.right.key>key)//ӥ
+            {
+                team=team.down;
+            }
+            else { //׆ݦࣁ
+                team=team.right;
+            }
+        }
+        // ᯿ෛᦇᓒ੶ṛ
+        while (headNode.right == null) {
+            headNode= headNode.down;
+           highLevel--;
+        }
+    }
+    public void add(SkipNode node)
+    {
+    
+        int key=node.key;
+        SkipNode findNode=search(key);
+        if(findNode!=null)//ᬯӻkeyጱᜓᅩ
+        {
+            findNode.value=node.value;
+            return;
+        }
+        Stack<SkipNode>stack=new Stack<SkipNode>();//ᜓᅩ
+        SkipNode team=headNode;//ጱᜓᅩ   ӻᜓᅩ̶
+        while (team!=null) {//֢
+            if(team.right==null)//ᚆӥᴳ
+            {
+                stack.add(team);//ӥጱᜓᅩᦕ୯Ӟӥ
+                team=team.down;
+            }
+            else if(team.right.key>key)//੔ತ
+            {
+                stack.add(team);//ӥጱᜓᅩᦕ୯Ӟӥ
+                team=team.down;
+            }
+            else //ݦݻ
+{
+                team=team.right;
+            }
+        }
+        int level=1;//ے(ෙ)
+        SkipNode downNode=null;//ḝᜓᅩ(ܨdownতԅnull)
+        while (!stack.isEmpty()) {
+            //فnode
+            team=stack.pop();//ᜓᅩ
+            SkipNode nodeTeam=new SkipNode(node.key, node.value);//ୌ
+            nodeTeam.down=downNode;//ݻ
+            downNode=nodeTeam;//አ
+            if(team.right==null) {//ԅnull ๛ੲ
+                team.right=nodeTeam;
+            }
+            //॒ቘ
+            else {//ӷᘏԏᳵ
+                nodeTeam.right=team.right;
+                team.right=nodeTeam;
+            }
+            //Ӥ
+            if(level>MAX_LEVEL)//ࠩ
+                break;
+            double num=random.nextDouble();//[0-1]ᵋ๢හ
+            if(num>0.5)//ᬩ࿈ӧঅᕮ๳
+                break;
+            level++;
+            if(level>highLevel)//ٖࢱ ݒheadᜓᅩ
+            {
+                highLevel=level;
+                //ୌӞӻෛጱᜓᅩ
+                SkipNode highHeadNode=new SkipNode(Integer.MIN_VALUE, null);
+                highHeadNode.down=headNode;
+                headNode=highHeadNode;//ݒhead
+                stack.add(headNode);//ڊhead
+            }
+
+=== PDF PAGE 96 ===
+ 
+ 
+ሿ᪡ᤒᬮฎꂁਠᗦጱ(ᛔ३Ӟӥ)̶
+ 
+ଉᥠᓒဩ  
+        }
+    }
+    public void printList() {
+        SkipNode teamNode=headNode;
+        int index=1;
+        SkipNode last=teamNode;
+        while (last.down!=null){
+            last=last.down;
+        }
+        while (teamNode!=null) {
+            SkipNode enumNode=teamNode.right;
+            SkipNode enumLast=last.right;
+            System.out.printf("%-8s","head->");
+            while (enumLast!=null&&enumNode!=null) {
+                if(enumLast.key==enumNode.key)
+                {
+                    System.out.printf("%-5s",enumLast.key+"->");
+                    enumLast=enumLast.right;
+                    enumNode=enumNode.right;
+                }
+                else{
+                    enumLast=enumLast.right;
+                    System.out.printf("%-5s","");
+                }
+            }
+            teamNode=teamNode.down;
+            index++;
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        SkipList<Integer>list=new SkipList<Integer>();
+        for(int i=1;i<20;i++)
+        {
+            list.add(new SkipNode(i,666));
+        }
+        list.printList();
+        list.delete(4);
+        list.delete(8);
+        list.printList();
+    }
+}
+//ᘏғbigsai
+
+=== PDF PAGE 97 ===
+ 
+᭓୭ᧇᥴ  
+ෛಋஉग़ᳯ᷌ጱՈ҅ᬯᜓଃय़ਹᦊᦩԧᥴӞӥ̶
+Ջԍฎ᭓୭Ҙ  
+හᛔ૩᧣አᛔ૩̶ ̶
+ොୗ̶
+Ⴔզӥ༷ஷғ
+᭓୭ฎᛔ૩᧣አᛔ૩
+ஞত๵կ̵ᕮ๳๵կ޾ᔮ̶
+හᵱᥝํྊᅩ(ᕮ๳๵կ)̶᭗ଉᬯӻᅩԅ஠ᶳᕪᬦጱӞӻහ̶
+੝᭓୭ጱེහ
+හ๶᧔̶
+Ҙӧฎྋଉ᭓୭҅ဌํᕮ๳๵կ҅ᛔ૩Ӟᛘ᧣አᛔ૩੕ᛘ෫ᴴ஗ሾ̶
+ᮎྋᏟጱ᭓୭ଫᧆᬯ໏
+੒ԭᬯ໏Ӟᐿ᭓୭҅ਙጱၞᑕय़ᛘฎᬯ໏ጱ
+ 
+ಅզ҅᧣አdigui(5)ฎᬯ໏ጱ
+static void digui()
+{
+  System.out.println("bigsaiڹ";)
+  digui();
+  System.out.println("bigsaiݸ";)
+}
+static void digui(int time)
+{
+  if(time==0) {}//time==0ӧಗᤈ
+  else {
+    System.out.println("bigsaiڹtime: "+time);
+    digui(time-1);
+    System.out.println("bigsaiݸtime: "+time); 
+  } 
+}
+හ
+- ྊ᭓୭ᓒဩ๵կ
+- (ࣁ)՜᭦ᬋ
+- ᭓୭᧣አ(ݒ)
+( -ࣁ)՜᭦ᬋ
+
+=== PDF PAGE 98 ===
+̶
+᭓୭࿢ᴤԙ  
+ޫ ?፡ӥᴤԙ҅nጱᴤԙᤒᐏԅғ
+n!=n*(n-1)*……*1
+nጱᴤԙ੪ฎ՗1کn҅ᮎԍn-1ጱᴤԙԅғ
+(n-1)!=(n-1)*(n-2)*……*1
+᭗ᬦᥡ੊੪ᚆᎣ᭲n޾n-1ᔮғ
+n!=n!=n*(n-1)!
+ಅզ҅౯ժᥝ࿢nጱᴤԙ҅౯ժᎣ᭲n-1ጱᴤԙԙզnᔮ̶
+0ጱᴤԙԅ1හjiecheng(n)ԅ࿢nහԅғ
+ᬩᤈၞᑕԅᬯ໏ғ
+static int jiecheng(int n)
+{
+  if(n==0)//0ጱᴤԙԅ1
+  {
+    return 1;
+  }
+  else {
+    return n*jiecheng(n-1);//return n*(n-1)*jiecheng(n-2)=-------
+  }
+}
+
+=== PDF PAGE 99 ===
+᭓୭࿢෋ူᮎॶ  
+෋ူᮎॶᳯ᷌૧ӧग̶़
+ୗԅғ
+F[n]=F[n-1]+F[n-2](n>=3,F[1]=1,F[2]=1)
+Ԟ੪ฎᴻԧn=1޾2ᦡ࿢෋ူᮎॶᦡ౮F(n)Ҕ
+ᮎԍ᭓വਫሿጱդᎱԅғ
+ਫਙጱ᧣አၞᑕԅғ
+̶
+࿥᧚र  
+᭓୭ᳯ᷌ғ
+ଯӾ҅ํӞᐿᤩᑍԅ࿥᧚र(Hanoi)ᱞ຃ᤰᗝӤ҅ํӣ໑๧(ݩA̵
+B̵C)ࣁAੜೲᶲଧනᗝ64ӻᰂፏ(ࢶ)̶჋౭ጱፓຽғ಩AکC๧
+೮य़ፏ
+զᗝԭA̵B̵CձӞ๧Ӥ̶
+1. ইຎAํӞӻҁA->C҂
+2. ইຎAํӷӻҁA->B҂,(A->C),(B->C)
+3. ইຎAํӣӻҁA->C҂,(A->B),(C->B),(A->C),(B->A),(B->C),(A->C).
+4. ইຎๅग़҅ᮎԍਖ਼տᆷᅨୗीᳩ̶
+static long F(int n)
+{
+  if(n==1||n==2) {return 1;}
+  else {
+    return F(n-1)+F(n-2);
+  }
+}
+
+=== PDF PAGE 100 ===
+ੴጱమဩ፡ᳯ̶᷌
+ 
+୮ํ1ӻᥝ՗A->Cහmove(A,C)ᤒᐏ(՜moveቘ)̶
+አhannuo(n)وnӻፏৼᥝ՗A->C̶
+ᔮ҅nӻፏৼ՗AکC޾n-1ӻፏৼ՗AکCᘶᔮ(hannuo(n)—>hannuo(n-1)ํ
+ᔮ)ຉ̶
+ᦡํnӻፏৼ
+hannuo(n-1)ݸn-1ӻፏৼ՗A—>C.
+
+
+=== PDF PAGE 101 ===
+کۖB҅move(A,B)
+ሿՋԍ፠ፓԧ҅ጱhuannuo(n-1)՗C—>BکB҅ಅզᬯӻᵱᥝහᤒ
+௔౮hannuo(n-1,A,C),کB(ک)҅ಅզ಩Bփ
+ᬰ๶hannuo(n-1,A,B,C)ᤒᐏԅ՗n-1ӻ՗A(ۗ׵B֢)کC̶
+஑ਖ਼nӻፏৼ՗A—>Bฎ౯ժᥝጱฎA—>C಍ฎᵱᥝጱhannuo(n,A,B,C)ᵱᥝ
+ᒫӞྍਖ਼n-1کB̶
+ԅғ
+package ᭓୭;
+public class hannuota {
+  static void move(char a,char b)
+  {
+    System.out.println("๋Ӥ੶ጱ"+ a+ "ک"+ b+ "\t");
+  }
+  static void hannuota(int n,char a,char b,char c)//ຉྯӞय़ྍ੒ԭӥӞྍᵱᥝᩳጱ̶
+  {
+    if(n==1) {move(a,c);}//՗aکc
+    else
+    {
+      hannuota(n-1,a,c,b);//ਖ਼n-1ӻ՗aۗ׵cکb
+      move(a,c); //ਖ਼ᒫnӞӻ҂՗aکc̶
+      hannuota(n-1,b,a,c);//ਖ਼n-1ӻ՗bۗ׵aکc
+    }
+
+=== PDF PAGE 102 ===
+ᬯ໏҅࿥᧚रᳯ᷌ฎӧฎ൥౜ԧҘ
+ 
+᭓୭ VS ۸  
+ጱ(զӤৼᳯ᷌පሲ੪ӧॡᤈԧ)౲ᘏ۸
+౮ৼᳯ᷌҅᭜౮உग़ጱ᯿॔ᦇᓒѺ
+፡፡F(5)ฎᬯ໏ᩳጱғ
+ 
+ 
+᭓୭࿢F(4)҅F(4)᭓୭տ࿢ᥴF(3)ಗᤈӞ̶᭭ইຎฎහᰁᶋଉय़ጱහ҅ᮎԍਖ਼ᘙᩇஉय़ጱ෸
+Ӟӥ҅ইຎฎᕚ௔ํᥢ஌(ړ)੪
+አHashMap̶
+ਫሿጱդᎱԅ:
+ 
+ฎn٭(ڦ)ইӞӻF(6)࿢ᥴᬦᑕғ
+  }
+  public static void main(String[] args)
+  {
+    
+    hannuota(5,'a','b','c');
+  }
+}
+static long F(int n,long record[])
+{
+  if(n==1||n==2) {return 1;}
+  if(record[n]>0)
+    return record[n];
+  else
+    record[n]=F(n-1,record)+F(n-2,record);
+  return record[n];
+}
+public static void main(String[] args) {
+  int n=6;
+  long[] record = new long[n+1];
+  System.out.println(F(n,record));
+}
+
+=== PDF PAGE 103 ===
+ 
+ᬮᵱᥝᛔᤈ਍ԟ̶
+ 
+᭓୭ VS හഝᕮ຅  
+Ӿ(൤ᔱᓒဩ)ֺ
+ৼ̶
+ಕ206(᱾ᤒጱ१ᜓᅩ 
+head ጱ᱾ᤒ)զᬯ໏ૣওጱਫሿғ
+ጱ᭓୭ਫሿොୗғ
+ғ
+ғ
+ғ
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if(head==null||head.next==null)
+            return  head;
+        ListNode node =reverseList(head.next);//ጱ᱾ᤒᜓᅩ
+        head.next.next=head;//ᛔ૩
+        head.next=null;//ᛔ૩nextݻnull 
+        return node;
+    }
+}
+public void qianxu(node t)// ଧ᭓୭ ғ໑ᕮᅩ ---> ૢৼ໅ ---> ৼ໅
+{
+  if (t != null) {
+    System.out.print(t.value + " ");// ᜓᅩ
+    qianxu(t.left);
+    qianxu(t.right);
+  }
+}
+public void zhongxu(node t)// ܲ ғૢৼ໅---> ໑ᕮᅩ ---> ৼ໅
+{
+  if (t != null) {
+    zhongxu(t.left);
+    System.out.print(t.value + " ");// ᜓᅩ
+    zhongxu(t.right);
+  }
+}
+
+=== PDF PAGE 104 ===
+᭓୭ VS ଉᥠᓒဩ  
+ᔮ̶ྲইdfsՕᕨӞ
+ӥ̶
+զᤩӞԶᓒဩஉૣওጱᬩአ̶
+လᓒဩአ᭓୭ਫሿ(አ᭓
+୭)᤯ጱৼᳯ᷌Ӟᛱဌํ᯿॔ጱ(ਠԅྊ
+ᘒӧտ᯿॔ᦇᓒ)ၞᑕғ
+ᓒဩਫሿԅғ
+public void houxu(node t)// ܲ ғૢৼ໅ ---> ৼ໅ ---> ໑ᕮᅩ
+{
+  if (t != null) {
+    houxu(t.left);
+    houxu(t.right);
+    System.out.print(t.value + " "); // ᜓᅩ
+  }
+}
+private static void mergesort(int[] array, int left, int right) {
+  int mid=(left+right)/2;
+  if(left<right)
+  {
+    mergesort(array, left, mid);
+    mergesort(array, mid+1, right);
+    merge(array, left,mid, right);
+  }
+}
+private static void merge(int[] array, int l, int mid, int r) {
+  int lindex=l;int rindex=mid+1;
+  int team[]=new int[r-l+1];
+  int teamindex=0;
+  while (lindex<=mid&&rindex<=r) {//ଚ
+    if(array[lindex]<=array[rindex])
+    {
+      team[teamindex++]=array[lindex++];
+    }
+    else {        
+      team[teamindex++]=array[rindex++];
+    }
+  }
+  while(lindex<=mid)//ݢܨے
+{
+    team[teamindex++]=array[lindex++];
+  }
+  while(rindex<=r)
+  {
+    team[teamindex++]=array[rindex++];
+  } 
+  for(int i=0;i<teamindex;i++)
+  {
+    array[l+i]=team[i];
+
+=== PDF PAGE 105 ===
+ 
+dfsშဩ ٭,౯ժଚӧᚆஉঅᎣ᭲ᬩᤈኴᴴᚆտํ
+໅ጱ
+᮷ᠻ႗dfsᓒဩ௏మ,ᳯ᷌դᤒ̶
+ၞᑕ᭗ଉԅғ
+Ѻ
+ 
+ᕮ᧍  
+ݢ
+உग़ḾդᎱѺ
+̶
+ 
+ 
+ 
+შᓒဩ  
+ғbigsai  ဳѺ
+᥺  
+ᳯ᷌҅Ԟᚆᬦጱ๋ᵙ
+ጱӞ᭲᷌……
+᮷ꂁᵙጱ҅
+ᦾஉႴ
+ศғ"ޫ"̶
+ᬦ҅ᬳJava੒౯๶᧔Ꮯਫ੪
+ฎ෫՗ӥಋ̶
+  }
+}
+හ
+- (๵կ)ڊ
+( -ݳ)ғ
+- - ᤒ&&֢&&զᖀᖅᦶറ
+- - - ֢
+ - - -᭓୭᧣አ(ݒ)
+ - - -֢
+
+=== PDF PAGE 106 ===
+̶
+ၠ᧨᭓୭  
+੒ԭ᭓୭ᓒဩ҅౯ᥧ஑Ძই᱾ᤒጱӞԶ
+ጱdfs̵ளഭ̵୭ଚഭଧᒵᒵ̶
+ګ
+ྊ҅පሲๅṛ(ڣ)̶
+ሿஉग़ᳯ᷌ጱ॒ቘӤ᭓୭ጱ௏ᘍොୗๅ
+Ոጱ௏ᘍොୗ҅ᘒ຾ጱᦾ੪ฎᘌᘌਫਫአᦇᓒ๢(හഝᕮ຅ᇙ௔)໅ጱ᭭
+ᶋ᭓୭ᇇ๜҅॔๥௔Ӟፓԧᆐ̶
+՗᭓୭ᓒဩጱᇙ஄Ӥ๶፡҅᭓୭ᓒဩጱᳯ᷌᮷ฎԅৼᳯ᷌വ੕ጱᬦᑕ҅Ӟ
+ጱ੶ᕆ̶
+ᘒ᭓୭ጱԆᥝᇙᅩইӥғ
+ᛔ૩᧣አᛔ૩
+ᔮ̶
+̶᭗ଉᬯӻᅩԅ஠ᶳᕪᬦጱӞӻහ̶
+੝᭓୭ጱེහ̶
+ᘒ᭗ଉ᭓୭ᓒဩጱӞӻၞᑕय़ᛘԅғ
+ইຎᬮฎӧቘᥴጱᦾ੪ᥝ፡Ӟᓤ෈ᒍԧғහഝᕮ຅Өᓒဩ—᭓୭ᓒဩ(ࢶ
+ᥴ)ጱฎ፥ጱঅѺ
+හ
+- ྊ᭓୭ᓒဩ๵կ
+- (ࣁ)՜᭦ᬋ
+- ᭓୭᧣አ(ݒ)
+( -ࣁ)՜᭦ᬋ
+
+=== PDF PAGE 107 ===
+შᓒဩ  
+ᔮ҅ฎጱဌᲙ҅
+შᓒဩԧ̶
+ॠ(ॠ)შᓒဩ҅՜᧔ࢧshuo(๒)ᓒဩ҅౯ժ૧୑
+ጱᔿྋԧӞӥฎࢧsu(ᔰ)ଙ……ժํဌํ᧛Კጱ̶
+ᓒဩ̵შᓒဩժ
+᮷
+ӞӻӧᲙጱᕮຎ̶
+შဩጱਧԎ҅ጯଶጯᑀฎᬯԍਧԎጱғ
+შᓒဩਫᴬӤӞӻຍԈጱ൤ᔱ੤ᦶᬦᑕሿ૪ӧჿ᪃࿢ᥴ
+๵կ෸҅੪“შ”୮
+ᩳጱದ๞ԅ
+შ๵կጱ຤ӻᇫாጱᅩᑍԅ“შᅩ”შဩ҅ํ
+“᭗አᥴ᷌ොဩ”ጱᗦᑍ̶
+შဩ҅ਙጱ໐ஞ੪ฎܻද੤ᦶ҅ჿ
+̶౯ժಅᵱᥝጱӞӻ౲ᘏಅํᥴ̶ᬯӻ
+̶
+൤ᔱ(dfs)Ҙშᓒဩ੪ฎӞᐿᇙྛጱdfsࢧݞ
+੪ፘ୮ԭᦶറӞ໏̶ᘒᬯᔄᓒဩӞᛱଉଉᯈ੒
+Ӟӻ౲ग़ӻbooleanጱහᕟአ๶ຽᦕᦶറ᭔Ӿአᬦጱᅩ̶
+ڜ6 8 9ጱᦾ҅
+ᶲଧ̶
+ᚆஉ਻ฃਫሿғ
+import java.util.Arrays;
+public class test {
+    public static void main(String[] args) {
+        int arr[]={6,8,9};//ጱහᕟ
+        int val[]={0,0,0};//ਂጱහᕟ
+        boolean jud[] = new boolean[arr.length];// ᤩአ
+        dfs(arr,val, jud,  0,"");//አӞӻਁᒧԀᳩଶๅፗᥡ፡ᕮຎ
+    }
+
+=== PDF PAGE 108 ===
+ᘒಗᤈጱᕮຎԅғ
+ቘᥴғ
+შᓒဩጱӞӻၞᑕय़ᛘԅғ
+ᵱᥝᥴ੗
+አList౲ᘏStringBuilderۖ
+შᓒဩԞଫᧆᵙӧ
+̶
+ 
+    private static void dfs(int[] arr, int val[],boolean[] jud, int index,String s) {
+        System.out.println(s+Arrays.toString(val));
+        if (index == arr.length){ }//ྊ᭓୭๵կ
+        else{
+            for (int i = 0; i < arr.length; i++) {
+                if (!jud[i]) {//ӧᚆአጱ
+                    int team=val[index];
+                    val[index] = arr[i];
+                    jud[i] = true;// አ
+                    dfs(arr, val, jud, index + 1,s+"  _  ");
+                    jud[i] = false;// ܻ
+                    val[index]=team;
+                }
+            }
+        }
+    }
+}
+හ
+- (๵կ)ڊ
+( -ݳ)ғ
+- - ᤒ&&֢&&զᖀᖅᦶറ
+- - - ֢
+ - - -᭓୭᧣አ(ݒ)
+ - - -֢
+
+=== PDF PAGE 109 ===
+ᳯ᷌  
+҅
+ᳯ᷌ൈᬿ̶
+ᳯ᷌ҁ᝕෈ғEight queensේ·ᨬቴਫ਼ԭ1848َࣳ
+̶
+ࣁ8×8ᴬ᨝༇Ӥ൳න8ݶ
+ӞෑᕚӤ҅ᳯํग़੝ᐿ൳ဩ̶ṛේᦊԅํ76ᐿොໜ̶1854ᤒԧ40
+ጱᥴ҅ڊ92ᐿᕮຎ̶ইຎᕪᬦ±90ଶ̵±180ഘጱ൳ဩ
+ํ42ྌᳯ̶᷌
+ޫ?Ҙ
+ಋ
+๵կғ
+8 x 8ጱො໒
+ྯᤈӞӻ҅ᤈ(0-7)
+Ӟӻ҅ڜكو0-7)
+ྯૢෑ๴Ӟӻ҅Բૢෑ๴(0-14)
+ෑ๴Ӟӻ҅ෑ๴(0-14)
+๵կෙෙጱᦾ୮ᆐ੪ฎۗ׵boolean̶ࠩᬮฎӞᖌጱ8ӻ
+አ4ӻbooleanᤩჿ᪃̶
+አӞӻintහᕟᤒᐏ҅0ᤒᐏဌํ҅1̶
+Ҙᬯӻଚӧฎྯӻ໒ৼ᮷ํහਁݻ
+ӥ᭓୭(ᤈ԰෕)ᬰᤈᦶറ(ྯӻ᮷ᦶറ)҅ইຎӧჿ᪃๵կጱ
+ᵱӥӞᤈ̶
+ຽெժᎣ᭲੒ଫጱbooleanᗝ(ᗝ՗0୏তᦇᓒ)ᗝp(x,y)Ӿ੒ଫጱ
+ᗝԅғ
+hang[] : x  ྯӞᤈ੪ฎ੒ଫጱi̶
+lie[] : y ੪ฎ੒ଫጱj̶
+zuoxie[] : x+y ӥ
+youxie[] : x+(7-y) ૢӥ(ӻՈԟబ)
+
+=== PDF PAGE 110 ===
+҅ᧆᓒဩጱਫሿդᎱԅғ
+import java.util.Arrays;
+public class EightQueens {
+    static  int allnum=0;
+    public static void main(String[] args) {
+        boolean hang[]=new boolean[8];//ᤈ
+        boolean lie[]=new boolean[8];//ڜ
+        boolean zuoxie[]=new boolean[15];//ૢෑ๴
+        boolean youxie[]=new boolean[15];//ෑ๴
+        int map[][]=new int[8][8];//ࢶࣈ
+        dfs(0,hang,lie,zuoxie,youxie,map);//݄
+}
+    private static void dfs(int hindex, boolean[] hang, boolean[] lie, boolean[] zuoxie, 
+boolean[] youxie, int[][] map) {
+        if(hindex==8){
+            allnum++;
+            printmap(map);//ڊmap
+        }
+        else{
+            //hindexԅᤈ  iڜ
+            for(int i=0;i<8;i++)
+            {
+                if(!hang[hindex]&&!lie[i]&&!zuoxie[hindex+i]&&!youxie[hindex+(7-i)])
+                {
+                    hang[hindex]=true;//ᦶറ
+                    lie[i]=true;
+                    zuoxie[hindex+i]=true;
+                    youxie[hindex+(7-i)]=true;
+                    map[hindex][i]=1;
+                    dfs(hindex+1,hang,lie,zuoxie,youxie,map);//dfs
+                    hang[hindex]=false;//ܻ
+                    lie[i]=false;
+                    zuoxie[hindex+i]=false;
+                    youxie[hindex+(7-i)]=false;
+                    map[hindex][i]=0;
+                }
+            }
+        }
+    }
+    //ࢶࣈڊ
+    private static void printmap(int[][] map) {
+        System.out.println("ᒫ"+allnum+"ԅ");
+        for(int a[]:map)
+        {
+            System.out.println(Arrays.toString(a));
+        }
+    }
+}
+
+=== PDF PAGE 111 ===
+๋҅ᕣฎ92̶
+ 
+ᐿ  
+ᳯ᷌
+ইn҅හᇿᒵᳯ̶᷌
+ᐿ̶
+ಕ36 ํපጱහᇿ
+҅ද౮9*9॒ቘᵱᥝᘍᡤཞ̵ᒉ޾3x3ੜො໒̶
+҅ᬮํӞ᷌੪ྲ᫾Ἃᅸԧ ಕ37ᥴහᇿ̶
+
+=== PDF PAGE 112 ===
+ᦶറ̶
+შᵱᥝᘍᡤӞԶᳯ᷌҅౯ժ੒ԭྯӞᤈྯӞᤈᘍᡤ̶ ՗୏তᦶറ
+හᕟ꧊̶
+ᬯ᯾൉Ӟӥғ
+හindexຽᬰᤈ
+੝ԫᖌ᭓୭ጱӞԶἋᅸ̶
+ݢ݄ࢧ
+ද(ᬯ᯾౯አԧӞӻisfinishጱbooleanෙ)̶
+
+=== PDF PAGE 113 ===
+ᘍԅғ
+ᕮ᧍  
+ጳ
+ᔮҘ
+௛ጱ๶᧔
+᭓୭ๅဳ᯿Ӟᐿොୗ҅ᛔ૩᧣አᛔ૩̶
+
+=== PDF PAGE 114 ===
+᭓୭̶
+dfsშฎႮ൤ጱӞ
+ᐿ̶
+ጱൈᬿᓒဩᇙ஄̶
+ 
+လᓒဩ  
+᥺  
+လᓒဩҁdivide and conquer҂ฎԲय़ଉአᓒဩ(လኴᴴဩ)ԏ
+ᦊ
+လᓒဩ̶
+҅ᆿྮՅՈইຎᕳ᰸᮷տஃᛔ૩ጱਪᡐӾਂ
+ԅහഝፘ੒ԭय़ᚏํᅩଲय़
+ᚆտਖ਼ਙړضݸےݖٚ੪឴஑ᬯञ᰸ጱ௛හԧ
+ԅғ
+ጱ(ᰁӤ)
+လጱ௏మ̶
+๶ጱ……
+ 
+လᓒဩՕᕨ  
+လҘ
+လ҅ਁᶎӤጱᥴ᯽ฎ“ᘒလԏ”౮
+ๅੜጱৼᳯ᷌……လဩ
+ᒈ
+ഘ҂ᒵᒵ̶
+လᓒဩ᭗ଉզ᭓୭ጱොୗਫሿ(୮ᆐԞํᶋ᭓
+୭ጱਫሿොୗ)ଚጱᬦᑕғ
+ړDivide)᫾ੜጱᳯ᷌(ӥ)
+လ(Conquer)ғ᭓୭࿢ᥴ҅ইຎᳯ᷌ड़ੜፗള࿢ᥴ̶
+ଚ(Combine)ғਖ਼ৼᳯ᷌ጱᥴ຅ୌᆿᔄᳯ᷌
+զӤጱ᭓୭᧣አ҅ଚӬৼᔄᳯ᷌ӞᛱฎӧమԻጱ(ߥ)̶୮࿢ᥴӞӻᳯ᷌ᥢ
+လᓒဩጱᭇአ๵կ҅ᮎԍ੪
+လᓒဩ̶
+
+=== PDF PAGE 115 ===
+ጱᳯ᷌ᵱᥝ ჿ᪃ᮎԶ๵կ(ᇙ஄) ޫ?
+1 . ̶
+2 . ݶ(֒)̶
+3 . ᳯ᷌ጱᥴ̶
+ଚጱᬦᑕ̶ᘒ᭓୭
+ฎӞᐿොୗ(ٍ)ᬦ
+ᑕ̶
+ᳯ᷌  
+᮷ฎஉᓌ
+ᦖᬿ௏మ̶
+ᇿᒈ̶
+1 . ̶
+2 . ᳵ,ᰄ
+ӥ̶
+൤ᔱ  
+൤ᔱํ፳ᛔ૩ጱᇙྛ௔
+ํଧ
+ᕮຎԅӞӻ꧊
+զፗളᏟਧ
+ᶋ᭓
+ฎᶋ᭓୭አጱๅग़ӞԶғ
+ 
+public int searchInsert(int[] nums, int target) {
+  if(nums[0]>=target)return 0;//ຏ
+  if(nums[nums.length-1]==target)return nums.length-1;//ຏ
+  if(nums[nums.length-1]<target)return nums.length;
+  int left=0,right=nums.length-1;
+  while (left<right) {
+    int mid=(left+right)/2;
+    if(nums[mid]==target)
+      return mid;
+    else if (nums[mid]>target) {
+      right=mid;
+    }
+    else {
+      left=mid+1;
+    }
+  }
+  return left;
+}
+
+=== PDF PAGE 116 ===
+ள᭛ഭଧ  
+လ
+ጱ꧊੪ฎഭଧਠጱ
+ሿ̶
+ 
+୭ଚഭଧ(ᭋଧහ)  
+૪ᕪฎӷӷํଧጱᬰ
+ڜO(n)လ
+௏మ࿢ᥴ̶
+ 
+public void quicksort(int [] a,int left,int right)
+{
+  int low=left;
+  int high=right;
+  //տԾኞහᕟ᩼ኴѺѺѺvery importantѺѺѺ
+  if(low>high)//౼ྊ๵կ
+    return;
+  int k=a[low];//᷐क़ᑮᳵk᮷ྲਙय̶़
+  while(low<high)//ੜԭa[low],य़ԭa[low]̶
+  {
+    while(low<high&&a[high]>=k)//ᒫӞӻੜԭkྊ
+    {
+      high--;
+    }
+    //ᒫӞӻྲਙੜጱԧ
+    a[low]=a[high];//کlowᗝ
+    while(low<high&&a[low]<=k)//ࣁlowᒫӞӻय़ԭk׆ݦکa[high]ᗝ
+    {
+      low++;
+    }
+    a[high]=a[low];     
+  }
+  a[low]=k;//လ࿢ԏ
+  quicksort(a, left, low-1);
+  quicksort(a, low+1, right);   
+}
+
+=== PDF PAGE 117 ===
+ 
+޾ڜ  
+ଚ
+ݢ
+ऒԅғ
+׆
+׆ݦ
+ڜ
+զᤒᐏԅғ
+private static void mergesort(int[] array, int left, int right) {
+  int mid=(left+right)/2;
+  if(left<right)
+  {
+    mergesort(array, left, mid);
+    mergesort(array, mid+1, right);
+    merge(array, left,mid, right);
+  }
+}
+private static void merge(int[] array, int l, int mid, int r) {
+  int lindex=l;int rindex=mid+1;
+  int team[]=new int[r-l+1];
+  int teamindex=0;
+  while (lindex<=mid&&rindex<=r) {//ଚ
+    if(array[lindex]<=array[rindex])
+    {
+      team[teamindex++]=array[lindex++];
+    }
+    else {        
+      team[teamindex++]=array[rindex++];
+    }
+  }
+  while(lindex<=mid)//ݢܨے
+{
+    team[teamindex++]=array[lindex++];
+  }
+  while(rindex<=r)
+  {
+    team[teamindex++]=array[rindex++];
+  } 
+  for(int i=0;i<teamindex;i++)
+  {
+    array[l+i]=team[i];
+  }
+}
+
+=== PDF PAGE 118 ===
+꧊஑ྲ᫾̶
+ಕ53. ޾ਫሿጱդᎱԅғ
+ 
+๋ᬪᅩ੒  
+๋ᬪጱӷӻᅩጱ᪗ᐶ҅ইຎᦏ
+ฎӻᶋଉᶋଉय़ጱᦇᓒᰁ,ᬯᐿᳯ̶᷌
+ሿইຎ๋Ꭸጱইຎሿᳯ᷌Ӟӥ̶
+public int maxSubArray(int[] nums) {
+    int max=maxsub(nums,0,nums.length-1);
+    return max;
+}
+int maxsub(int nums[],int left,int right)
+{
+    if(left==right)
+        return  nums[left];
+    int mid=(left+right)/2;
+    int leftmax=maxsub(nums,left,mid);//๋य़
+    int rightmax=maxsub(nums,mid+1,right);//๋य़
+    int midleft=nums[mid];//Ӿᳵஃૢ
+    int midright=nums[mid+1];//ݦ
+    int team=0;
+    for(int i=mid;i>=left;i--)
+    {
+        team+=nums[i];
+        if(team>midleft)
+            midleft=team;
+    }
+    team=0;
+    for(int i=mid+1;i<=right;i++)
+    {
+        team+=nums[i];
+        if(team>midright)
+            midright=team;
+    }
+    int max=midleft+midright;//Ӿᳵጱ๋य़꧊
+    if(max<leftmax)
+        max=leftmax;
+    if(max<rightmax)
+        max=rightmax;
+    return  max;
+}
+
+=== PDF PAGE 119 ===
+ොໜӤ҅ೲᆙx౲ᘏyᦇᓒ(ොဩ)๋Ꭸ
+๋ੜᮎӻ᪗ᐶӨ୮
+̶
+֢(٭)ᕁᅩᬰᤈ᪗ᐶᦇᓒ(O(n2)ጱ෸ᳵ
+॔๥ଶ)ಅᐏғ
+զᜓ፜உग़ེጱᦇᓒᰁ̶
+ᚆපຎଚӧกด(ࣁx=2ᴫᬪ੒x
+አ੪ӧय़)҅ᵱᥝဳ఺Ӟӥ̶
+๺ኪ1007വគᕳय़ਹ҅acጱդᎱԅғ
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StreamTokenizer;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+public class Main {
+    static int n;
+    public static void main(String[] args) throws IOException {
+        StreamTokenizer in=new StreamTokenizer(new BufferedReader(new 
+InputStreamReader(System.in)));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+        //List<node>list=new ArrayList();
+         while(in.nextToken()!=StreamTokenizer.TT_EOF)
+         {
+             n=(int)in.nval;if(n==0) {break;}
+            node no[]=new node[n];
+            
+             for(int i=0;i<n;i++)
+             {
+                 in.nextToken();double x=in.nval;
+                 in.nextToken();double y=in.nval;
+                // list.add(new node(x,y));
+                 no[i]=new node(x,y);
+             }
+             Arrays.sort(no, com);
+            double min= search(no,0,n-1);
+            out.println(String.format("%.2f", Math.sqrt(min)/2));out.flush();
+         }         
+    }
+
+=== PDF PAGE 120 ===
+ 
+ᕮ᧍  
+ইय़
+ෆහԙဩ̵Strassenလጱ௏
+ቘ̶
+ښ  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsai҅অԋӧᥠ҅ኜฎమஷ(ॠॠమஷ)Ѻ
+ԧԧ҅ኜᛗํጱ᷌፡ԧ᷌ᥴቘᥴ᩸๶᮷ᩇ
+ॠ̶
+ቘᥴ਻ฃ҅਍ԟ
+ሿ᷇ሲᶋଉṛ̶
+    private static double search(node[] no, int left,int right) {
+        int mid=(right+left)/2;
+        double minleng=0;
+        if(left==right) {return Double.MAX_VALUE;}
+        else if(left+1==right) {minleng= (no[left].x-no[right].x)*(no[left].x-
+no[right].x)+(no[left].y-no[right].y)*(no[left].y-no[right].y);}
+        else minleng= min(search(no,left,mid),search(no,mid,right));
+        int ll=mid;int rr=mid+1;
+        while(no[mid].y-no[ll].y<=Math.sqrt(minleng)/2&&ll-1>=left) {ll--;}
+        while(no[rr].y-no[mid].y<=Math.sqrt(minleng)/2&&rr+1<=right) {rr++;}
+        for(int i=ll;i<rr;i++)
+        {
+            for(int j=i+1;j<rr+1;j++)
+            {
+                double team=0;
+                if(Math.abs((no[i].x-no[j].x)*(no[i].x-no[j].x))>minleng) {continue;}
+                else
+                { 
+                    team=(no[i].x-no[j].x)*(no[i].x-no[j].x)+(no[i].y-no[j].y)*(no[i].y-
+no[j].y);
+                    if(team<minleng)minleng=team;
+                }
+            }
+        }
+        return minleng;
+    
+    }
+    private static double min(double a, double b) {
+        // TODO ኞ౮ጱොဩਂ໑
+        return a<b?a:b;
+    }
+    static Comparator<node>com=new Comparator<node>() {
+        @Override
+        public int compare(node a1, node a2) {
+            // TODO ኞ౮ጱොဩਂ໑
+            return a1.y-a2.y>0?1:-1;
+        }};
+    static class node
+    {
+        double x;
+        double y;
+        public node(double x,double y)
+        {
+            this.x=x;
+            this.y=y;
+        }
+    }
+}
+
+=== PDF PAGE 121 ===
+ڜLIS)ڜLCS)๋҅
+̶
+ 
+ښ  
+ҘښҁDynamic Programming҅DPᒽᬦᑕ๋
+੪ฎ՗ӥஃӤ(ݸݻڹ)࿢ᥴහ꧊̶
+ᘶᔮҘ
+පሲṛԭ᭓୭̶
+ײ
+൤ᔱ̶
+ӧॡกጮ?
+҅ᮎԍ॔๥ଶॡग़տᬰᤈஉग़᯿॔ጱᦇᓒ̶
+զԧ̶
+ 
+
+=== PDF PAGE 122 ===
+൤ᔱ࿢෋ူᮎॶդᎱԅғ
+᭦ᬋ॒ቘ҅՗ᒫӣӻ୏তྯӻdpӷӻdp̶
+զአӞᖌ
+ӫ᷌உय़҅ํஉग़ྲই໅୵dpܴdpํᴴ
+Ѻ
+޾  
+ᕳਧӞӻෆහහᕟ nums ̶
+ֺ:
+ف[-2,1,-3,4,-1,2,1,-5,4]
+ڊ6
+ᥴ᯽: ᬳᖅৼහᕟ [4,-1,2,1] ๋य़҅ԅ 6̶
+ 
+dpጱොဩ੪ฎO(n)ጱොဩ̶ইຎdp[i]ᤒᐏզᒫi޾ڜ҅ᘒᬯӻdpጱᇫாොᑕԅғ
+य़ԭ0ᔰ੪ᛔᒈᳪಁ̶
+static long F(int n,long record[])
+{
+  if(n==1||n==2) {return 1;}
+  if(record[n]>0)
+    return record[n];
+  else
+    record[n]=F(n-1,record)+F(n-2,record);
+  return record[n];
+}
+public static void main(String[] args) {
+  int n=6;
+  long[] record = new long[n+1];
+  System.out.println(F(n,record));
+}
+ public int fib(int n) {
+        int dp[]=new int[n+1];
+        dp[0]=0;
+        dp[1]=1;
+        for(int i=2;i<n+1;i++){
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+        return dp[n];
+    }
+dp[0]=a[0]
+dp[i]=max(dp[i-1]+a[i],a[i])
+
+=== PDF PAGE 123 ===
+ਫሿդᎱԅғ
+ 
+ps:Ӿ҅ᮎӻᳯ᷌ဌ఺Ԏጱ̶
+ 
+ᬳᖅৼහᕟ๋य़ԙᑌ  
+Ӟӻෆහහᕟ nums ᧆৼහ
+ᕟಅ੒ଫጱԙᑌ̶
+ֺ: 
+ف[2,3,-2,4]
+ڊ6
+ᥴ᯽: ৼහᕟ [2,3] ํ๋य़ԙᑌ 6̶
+̶
+ইຎහഝӾ᮷ฎᶋᨮහ҅ᥝԍ
+ԙ҅ᥝԍᛔᒈᳪಁ̶
+ሿᨮහ౮๋य़ԧ̶
+Ҙ
+਻ฃ҅౯ժ୏ӷӻdp҅Ӟӻdpmax[]ᦕ୯ԙᑌጱ๋य़꧊҅Ӟӻdpmin[]ྯེ᮷ๅෛdpmax
+޾dpmin꧊ฎྋහᬮฎᨮහ.զᦕ୯ԙᑌጱᕷ੒꧊๋य̶़
+ாොᑕԞஉ਻ฃ
+፡Ӟӻᬦᑕ੪ᚆቘᥴกጮ҅dpminᚆጱᨮຄ꧊զᴠ॓አ̶ᕮຎᬮฎdpmaxӾጱ
+꧊̶
+public int maxSubArray(int[] nums) {
+    int dp[]=new int[nums.length];
+    int max=nums[0];
+    dp[0]=nums[0];
+    for(int i=1;i<nums.length;i++)
+    {
+      dp[i]=Math.max(dp[i-1]+nums[i],nums[i]);
+      if(dp[i]>max)
+        max=dp[i];
+    }
+    return max;
+}
+dp[0]=nums[0]
+dp[i]=max(dp[i-1]*a[i],a[i])
+dpmax[i]=max(dpmax[i-1]*nums[i],dpmin[i-1]*nums[i],nums[i])
+dpmin[i]=min(dpmax[i-1]*nums[i],dpmin[i-1]*nums[i],nums[i])
+
+=== PDF PAGE 124 ===
+ 
+ 
+ڜ  
+҅ԞᑍԅLIS,ಕ300
+Ӟӻෆහහᕟ nums ጱᳩଶ̶
+ই҅[3,6,2,7] ฎහᕟ 
+[0,3,1,6,2,2,7] ̶
+ғnums = [0,1,0,3,2,3]
+ғ4
+ฎ [0,1,2,3]ྌᳩଶԅ 4 ̶
+ 
+ز
+ᥝ᭓ी̶
+ྲই 1 10  3  11 4 5ݐ1 10 11ᘒ1 3 4 5ጱ෸ᳵ॔๥ଶᬮฎᶋଉ
+ṛጱ̶
+ୌጱdp[]හᕟ҅dp[i]ᤒᐏզnums[i]҅ᘒdp[i]ጱ࿢ᥴොୗ
+੪ฎຍԈiᔰ꧊ੜԭnums[i]๋ᳩ҅ᬯ໏ጱ෸ᳵ॔
+๥ଶԅO(n2)̶
+ᇫா᫨ᑏොᑕԅғ
+ 
+ၞᑕԅғ
+ਫሿդᎱԅғ
+dp[i]=max(dp[j])+1, Ӿ0≤j<iӬnum[j]<num[i]
+
+=== PDF PAGE 125 ===
+౮O(nlogn)ጱ෸ᳵ॔๥ଶ̶
+౯ժአdpᦕ୯զ nums[i] ᳩଶ,ӥ๛ੲጱ꧊ᚆड़ੱᰁጱ
+ੜѺ
+ই 2,3,9,5 …… ᶎ๋ᳩጱᳩଶԅ3 ౯ժౄ఺ಲ୒2,3,9 አ2,3,5 ̶Ԟ੪ฎ੒ԭӞӻ꧊҅౯ժ૶๕ᬯӻ꧊ᚆ
+ጱ๛ੲ꧊̶
+ই 2,3,9,5,4,5 ڜ2,3,5ๅෛ2,3,9;
+ݸ2,3,4ๅෛ2,3,5 ԅ๋ᳩጱ2,3,4,5ᱻऀ̶
+ᘒᬯӻ௏᪠ጱ໐ஞ੪ฎᖌಷӞӻlenth[]හᕟ҅length[i]ᤒᐏᳩଶԅiԅ౯ժྯེے
+ᶎጱ᮷य़(ྲ᫾)҅ಅզᬯӻහᕟԞฎӻ᭓ीᗝๅෛ๋य़ᳩ
+አဩ̶
+ਫሿդᎱԅғ
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int dp[]=new int[nums.length];
+        int maxLen=1;
+        dp[0]=1;
+        for(int i=1;i<nums.length;i++){
+            int max=0;//ᶎ ๛ੲහਁྲᛔ૩ੜ ๋ᳩ᭓ीৼԀ
+            for(int j=0;j<i;j++){//ຍԈ
+                //හਁ ଚӬᳩଶय़ԭᦕ୯ጱ๋ᳩ
+                if(nums[j]<nums[i]&&dp[j]>max){
+                    max=dp[j];
+                }
+            }
+            dp[i]=max+1;//ᶎ๋ᳩ Ӥᛔ૩
+            if(maxLen<dp[i])
+                maxLen=dp[i];
+        }
+        return maxLen;
+    }
+}
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int length[]=new int[nums.length];
+        int len=1;
+        length[0]=nums[0];
+        for(int i=1;i<nums.length;i++){
+            int left=0,right=len;
+            while (left<right){
+                int mid=left+(right-left)/2;
+                if(length[mid]<nums[i]){
+                    left=mid+1;
+                }else {
+                    right=mid;
+                }
+            }
+            length[left]=nums[i];
+            if(right==len)
+                len++;        
+        }
+        return len;
+    }
+
+=== PDF PAGE 126 ===
+ 
+ڜ  
+Ԟ౮ԅLCS.ሿ᷇ሲᶋଉṛѺ
+ᕳਧӷӻਁᒧԀ text1 ޾text2ᬯӷӻਁᒧԀጱ๋ᳩ ڜ ࣁ ڜ ࢧ0 ̶
+ӞӻਁᒧԀጱ ڜ ਁᒧጱፘ੒ᶲଧᴻ຤Զਁᒧ
+ᕟ౮ጱෛਁᒧԀ̶
+ই҅"ace" ฎ "abcde" ֕aec" ӧฎ "abcde" ̶
+ӷӻਁᒧԀጱ ڜ ̶
+ 
+ ೭b c d d e޾a c e e d eৼԀԅc d eாᥢ
+ᯈ҅౯ժᦡᒈԫᖌdp[][]හᕟ҅dp[i][j]ᤒᐏtext1Ԁᒫiӻᕮੲ҅text2Ԁᒫjӻᕮੲጱول
+ৼԀጱᳩଶ̶
+ຉdp[i][j]ᬡi,jғ
+ইຎtext1[i]==text2[j],ᗝ҅ۑᗝጱᮝ੷
+dp੪ฎdp[i][j]=dp[i-1][j-1] +1;
+ইຎtext1[i]!=text2[j]ᚆ௔҅౯ժᎣ᭲ጱᮝ੷ํdp[i-1][j],dp[i][j-1]҅உग़Ոᬮտమ
+کdp[i-1][j-1]ᶎࢱᯈӧ౮҅੪ᥝ
+҅ྌ෸dp[i][j]=max(dp[i][j-1],dp[i-1][j])̶
+ಅզෆӻᇫா᫨ᑏොᑕԅғ
+ਫሿդᎱԅғ
+}
+dp[i][j] = dp[i-1][j-1] + 1            //text1[i]==text2[j]෸
+dp[i][j] = max(dp[i][j-1],dp[i-1][j])  //text1[i]!=text2[j]෸
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        char ch1[]=text1.toCharArray();
+        char ch2[]=text2.toCharArray();
+        int dp[][]=new int[ch1.length+1][ch2.length+1];
+        for(int i=0;i<ch1.length;i++)
+        {
+
+=== PDF PAGE 127 ===
+ 
+ৼԀ  
+ᕳਧӷӻਁᒧԀstr1޾str2,ৼԀ̶
+ই abceef ޾a2b2cee3fৼԀ੪ฎcee̶
+ޫ ?ڹi,jӧ
+ᯈᮎԍdp꧊੪ԅ0౮dp[i-1][j-1] + 1 
+໐ஞጱᇫா᫨ᑏොᑕԅғ
+꧊̶
+ 
+ڜ  
+ӻpatᬯӻᳯ̶᷌
+ӻpat 
+ᬯฎpatጱӞ᭲᷌҅ᇍਮ᷌᱾ള̶
+ຉ
+࿢ӞӻਁᒧԀӾํग़੝ӻpat̶ӧᥝమ፳ӣ᯿forԧ҅ᮎӧฎঅጱොဩ̶ᬯᬯᐿ᷌ইຎํᅎఽ
+ጱᳯ̶᷌
+ԀӾํग़੝ӻpڜppp੪ฎӣӻp̶
+ইຎଃӤa҅࿢ԀpaҘpaฎኧp޾aᕟ౮̶࿢pa޾aᔮ҅ྯӻaᚆտᕟ౮ᝑଗ
+ӻpaԭᬯӻaᶎpጱහᰁ̶ਖ਼ಅํaᗝᕟ౮ጱpaইpppapa ݳ3+4=7ӻpa.
+ӻpat҅patྯӻtᶎํग़੝ӻpa࿢ᥴ឴
+ၞᑕ፡ๅঅ̶
+            for(int j=0;j<ch2.length;j++)
+            {
+                if(ch1[i]==ch2[j])
+                {
+                    dp[i+1][j+1]=dp[i][j]+1;
+                }
+                else
+                    dp[i+1][j+1]=Math.max(dp[i][j+1],dp[i+1][j]);
+            }
+        }
+        return dp[ch1.length][ch2.length];
+    }
+}
+dp[i][j] = dp[i-1][j-1] + 1            //text1[i]==text2[j]෸
+dp[i][j] = 0  //text1[i]!=text2[j]෸
+
+=== PDF PAGE 128 ===
+ᳯ᷌ൈᬿԅғᕳਧӞӻਁᒧԀ s ӞӻਁᒧԀ t ࣁs Ӿ t ሿጱӻහ̶
+ਁᒧԀጱӞӻ ڜ ᗝಅᕟ౮ጱෛਁᒧԀ̶
+ই҅"ACE" ฎ "ABCDE" ҅ᘒ "AEC" ӧฎ҂
+ֺ ғ
+ຉғ
+ӻpatӻpatਧ̵Ӭஉ
+ᬯ᯾ᶎtአහᕟ๶॒ቘᘒӧᚆፗളif else̶
+ښdpԧ҅dp[j]ጱ఺௏੪ฎtԀӾ[0,j-1]ࣁsᯈጱහᰁ(ݸ
+ጱ)҅හᕟय़ੜԅdp[t.length+1]ܲs޾tፘ
+ᒵ҅ইຎs޾tԀӾጱᒫjӻፘᒵ̶ᮎԍdp[j+1]+=dp[j]̶ ฎdp[j+1],ԅᒫӞӻ
+ᵱᥝਖ਼හᰁ+1ෙ౯ժਖ਼dp[0]=1,ᬯ໏t̶
+ܲsԀӾᒫi҅ܲtૢܲs
+ԀጱᒫiຍԈdpےݖ(ߥ)ፘ
+ৼғ
+ਫሿጱդᎱԅғ
+ғs = "rabbbit", t = "rabbit"
+ғ3
+ᥴ᯽ғ
+ಅᐏ, ํ 3 զ՗ s کrabbit" ጱොໜ̶
+(ݩ^ ጱਁྮ)
+rabbbit
+^^^^ ^^
+rabbbit
+^^ ^^^^
+rabbbit
+^^^ ^^^
+
+=== PDF PAGE 129 ===
+ᕮ᧍  
+Ձਠԧ̶
+ጱॺ᪠᪙
+ᘍᡤᳯ᷌ӧᚆӞྍమጱॡग़(ԧ)҅ᘒ
+ᔮ̶
+੒ԭ॔๥dpฎഩൎӤᶎጱଉᥠdpۖړ
+ࠩ(౲ᘏӾᒵᵙଶጱ)̶
+dfs൤ᔱbfs൤ᔱ  
+᥺  
+൤ᔱ(dfs)൤ᔱ(bfs)Ӿ҅உग़ੜᘌ୞਍տdfs޾bfs੪ᥧ
+౜ᓒဩԧ҅෫ಅӧᚆ҅Ꮯਫইྌ҅਍տdfs޾bfs᮷ᚆ࿢ጱӞղ
+ᥴ҅਍տdfs޾bfsฎӞӻᶋଉӧᲙጱᭌೠѺ
+ਫԞฎdfsᳯ̶᷌चᏐጱdfs޾bfs਍ԟ๶௏మஉ
+᭗੪ํӧੜᵙଶԧ̶
+ӧᬦdfs ޾bfsฎమᥝᔜ᭗ dfs޾bfs୵
+ጱ҅ྲইdfsຏᳯ᷌҅bfsݻ݌
+bfs̵bfs+dfs਍ԟ಍ᤈ̶
+ᮝളᤒ  
+dfs޾bfsᳯ᷌҅ྋଉӞᛱአᮝളᎥᴣ౲ᘏᮝളᤒਂ
+ࢶؙ(ᬯ᯾ӧᬰᤈᦎᦞ)̶
+ᮝളᎥᴣғ
+ᮝളᎥᴣ੪ฎአහᕟ(ԫᖌ)౲ᘏ
+᪠ஆᳩଶ̶
+ғᮎԍӞᛱአbooleanහᕟጱ01ᮎԍහᕟጱ꧊੪አ๶ᤒᐏӷᘏ᪠ஆᳩଶ҅ই
+ຎԅ0ᮎԍय़༷ሲӧฎ੒ᑍጱ̶
+҅୮ᆐ҅உ਻ฃ᭜౮ᑮᳵၵᩇ҅ಅզํՈᬰᤈ
+̶
+class Solution {
+    public int numDistinct(String s, String t) {
+      char s1[]=s.toCharArray();
+      char t1[]=t.toCharArray();
+      int dp[]=new int[t1.length+1];
+      dp[0]=1;//ےݖ
+      for(int i=0;i<s1.length;i++)
+      {
+        for(int j=t1.length-1;j>=0;j--)
+        {
+          if(t1[j]==s1[i])
+          {
+            dp[j+1]+=dp[j];
+          }
+        }
+      }
+      return dp[t1.length];
+    }
+}
+
+=== PDF PAGE 130 ===
+ᮝളᤒғ
+ᥡ੊ӤᶎጱᶾളᎥᴣ҅ইຎฎᘶ᭗᪠ஆஉ੝ᮝളᤒ̶
+ᮝളᤒӞᛱฎහᕟॺ᱾ᤒ҅ྲ᩸ᮝളᎥᴣᜓ፜ӧ੝ᑮᳵ(௳౲ᘏ᪠ஆ)զ໑ഝහഝ໒
+࢏(፜ԪӞԶ)̶
+ࢶݻᑮᳵ۸(ฎ፥ጱᇍಢ)҅
+ݢࢶ
+ғ
+൤ᔱ(dfs)  
+༷ஷғ
+ԅDFSܨDepth First Search.ඪ
+ᚆᦢᳯӞེ.
+ጱ᧔҅dfsᬰᤈ൤ᔱ҅Ӟᛱचԭ᭓୭ਫሿ҅੒ԭ౯ժ๶᧔dfsӞӻἓṹဩӞ໏҅
+൤ᔱ҅ಅզ౯ժᥝဳ఺ጱฎ̵ᕮ๳๵կ੪ฎӞӻ๋ᓌ
+ጱdfs̶
+አᮝളᎥᴣਠ౮Ѻ
+੒ԭdfsզᦊԅฎᬯ໏ғ
+(1)ੱ१҅෸ຽᦕ૪ᕪᩳᬦጱᅩ̶
+(2)ӤӞӻᅩ҅ᅩጱຽᦕᖀᖅ᯿॔ྍṈ(1).
+(3)᩸ᅩ̶
+ጱᬦᑕӾᦕ஑ᵱᥝຽᦕ ຽᦕ੪᧔ก
+አԧ̶
+ৼڜs a i ୮s੪ᥝຽᦕᬯӻsአ(ᚆssssމ݄)کܲs 
+aײaکs a i ᭅ s a ᭅs ྌ෸ a޾iԅa(for 
+ᗝ)ݻi ᕟ౮s i,ࣁݸs i aکs i,کs᮷ᤩ
+҅ᥴනԧs a iݻs૪ᕪᩳᬦ҅୏ত՗a ԧ̶
+ᬯฎӞᖌᑮᳵጱdfsզᭌೠbooleanᗝtrueຽᦕአᬦ҅falseᤒᐏဌአᬦ̶
+ாහᕟListԞᤈ(ӧฎ
+֗)̶ 
+ጱdfsӾӞӻdfsڜ(ᚆํग़ӻ)զአդᎱ๶ᤒᐏӞӥғ
+public class dfs {
+  static boolean isVisit[];
+  public static void main(String[] args) {
+
+=== PDF PAGE 131 ===
+य़ᛘᶲଧᦢᳯԅ
+ 
+ 
+൤ᔰ(bfs)  
+༷ஷғ
+BFSᑍฎBreadth First Search̶ BFSԅ઀୏ᜓᅩᘒ
+ࣁ
+Ӟӻᤩᑍԅ open ᤩᑍԅ closed Ӿ̶
+ҁopen-closedᤒ҂
+๶᧔҅bfs੪ฎ՗຤ӻᜓᅩ୏তܲՈᒫӞེള᥶bfs਍ԟහഝᕮ຅ጱ໅ጱ੶ଧ
+̶ܲᒫԫེӞӻbfsጱᶲ
+෫bfs...
+ইຎ՗᪠ஆӤᩳ๶፡҅dfs੪ฎӞ๵᪒ጱஉளጱዙᇸොᖀᖅ҅ᘒbfsࢫ
+ྰ࿈Ѻ
+    int map[][]=new int[7][7];
+    isVisit=new boolean[7];
+    map[0][1]=map[1][0]=1;
+    map[0][2]=map[2][0]=1;
+    map[0][3]=map[3][0]=1;
+    
+    map[1][4]=map[4][1]=1;
+    map[1][5]=map[5][1]=1;
+    map[2][6]=map[6][2]=1;
+    map[3][6]=map[6][3]=1;
+  
+    isVisit[0]=true;
+    dfs(0,map);//՗0ܲ
+  }
+  private static void dfs(int index,int map[][]) {
+    // TODO Auto-generated method stub
+    System.out.println("ᦢᳯ"+(index+1)+"  ");
+    for(int i=0;i<map[index].length;i++)//ັತᘶ᭗ᜓᅩ
+    {
+      if(map[index][i]>0&&isVisit[i]==false)
+      {
+        isVisit[i]=true;
+        dfs(i,map);
+      }
+    }
+    System.out.println((index+1)+"ᦢᳯᕮ๳ ");
+  }
+}
+
+=== PDF PAGE 132 ===
+ਫሿӤ๠ᔰጱbfsᚆ੪ᵱᥝ
+̶
+አᮝളᤒ๶ਫሿӞӻbfs̶
+ 
+֐  
+਍ᘏᦊႴdfs޾bfsฎԪਫӾdfs޾bfsਫ౴̶
+੒ԭdfs޾bfsᭁ਴உग़ᳯ᷌dfs٬bfs̶
+੒ԭdfsᳯ᷌ํғ
+ܲ(ᶋ੶ଧ)
+̵ৼᵞᳯ᷌
+ᳯ᷌
+ᭁ਴൤ᔱᳯ᷌(ک)
+൤ᔱ
+ᘒbfsጱᳯ᷌ํғ
+ܲ(۸)
+ጱ๋Ꭸ᪠ஆ
+՜ᭁ਴൤ᔱᳯ᷌(ᜓᅩଃ຤Զ๦꧊ጱ)
+՜ᳯ᷌
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+public class bfs {
+  public static void main(String[] args) {
+    List<Integer> map[]=new ArrayList[7];
+    boolean isVisit[]=new boolean[7];
+    for(int i=0;i<map.length;i++)//۸
+    {
+      map[i]=new ArrayList<Integer>();
+    }
+    map[0].add(1);map[0].add(2);map[0].add(3);
+    map[1].add(0);map[1].add(4);map[1].add(5);
+    map[2].add(0);map[2].add(6);
+    map[3].add(0);map[3].add(6);
+    map[4].add(1);
+    map[5].add(1);
+    map[6].add(2);map[6].add(3);
+    
+    Queue<Integer>q1=new ArrayDeque<Integer>();
+    q1.add(0);isVisit[0]=true;
+    while (!q1.isEmpty()) {
+      int va=q1.poll();
+      System.out.println("ᦢᳯ"+(va+1));
+      for(int i=0;i<map[va].size();i++)
+      {
+        int index=map[va].get(i);
+        if(!isVisit[index])
+        {
+          q1.add(index);
+          isVisit[index]=true;
+        }
+      }
+    }
+  }
+}
+
+=== PDF PAGE 133 ===
+҅dfsᚆฎຏᳯ᷌౲ᘏ۸੪ฎᴠྊॡ
+̶ᘒbfsᚆฎᨸஞᒽኼᭌೠ(ጱ๵կ)๶ᥴ
+̶
+ጱොဩᙗਧտᆷᅨጱ҅ᚆᵱᥝӞԶᇙྛጱૣওොဩ॒ቘ҅ྲইమӧ
+̵A*̵dfsॺbfsਸ਼ጱහ਍ොဩྲই଼ಓ઀୏(ᭋ઀୏)ᒵᒵ̶ᘒՔॠ
+ᬯ᯾҅౯ժ᧨᧨ݻ݌bfsḵӞӥᓒဩጱॿওѺ
+አݻ݌bfsޫ۸?ݻ݌bfs҅ݦ
+ӥ̶
+҅ইຎᭁ਴ᬟᳩԅn҅ᮎԍᬯӻ॔๥ଶय़༷ฎ2^nڦ.
+Ӟӥ҅ྲই໑ഝ੒᥯ᕚ(ྲ᫾ग़)ԅԫ̶ጱᕮຎᙗਧ஠ᆐᕪᬦ੒᥯
+މզԧѺ
+ெԍᓒҘ ੪ฎ՗(0,0)Ӿᳵᬯӻᅩmidጱ௛ེහԅn1ᬯӻmidکn,n)ᅩጱ௛ེහԅn2ݳ
+௛ེහ੪ฎn1*n2(n1޾n2ྋଉ૧ӧग़य़)Ѻ
+ጱ᧔҅՗හഝེහ๶፡ইຎࢶقጱᮎӻᅩጱེහԅn1*n2ፘԙᮎ੪
+ฎn1+n2̶ེӷᘏ૧᪗ইຎn1,n2=1000҅ᮎԍᬯԍӞེ૧᪗ฎଘො(ݩ)ਫᬯԍӞེ
+൤ᔱฎ๜๶Ӟӻn*nय़ੜ౮nེ(ྯེय़༷ฎ(n/2)*(n/2)य़ੜጱᭁ਴൤ᔱӷེ)̶Ԟ੪ฎইຎ18*18ጱᭁ
+አፗള൤ᔱ҅ᮎԍय़༷2^18ݻ݌bfs҅ᮎԍ੪ฎ2^9ᬯӻᰁᕆ̶
+᷌ਫ౴ݻ݌َbfsѺ 
+᷌ፓ᱾ളғhttp://oj.hzjingma.com/contest/problem?id=20&pid=8#problem-anchor
+
+=== PDF PAGE 134 ===
+ຉಅํጱ᪠ஆᐿᔄӾฎ੒ᑍ᪠ஆѺ
+ฎᬰᤈdfsჿ
+ఠஉ᭳౛ᬯ໏ฎ᩻෸ጱ҅Րᚆ᭗ᬦ40%̶
+ള፳አฦ᭗bfsᬰᤈ੤ᦶ҅ᖌಷӞӻnodeਫᬯӻපሲ᪙dfsᚆ
+᭗ᬦ40%හഝ̶
+ݻ݌bfsຉѺ
+(1) ᗝጱᙗਧฎӾᳵጱᮎӻਁᒧԀጱѺ੒ᑍጱ(n*nጱᭁ਴᪠
+ஆᳩଶԅn-1 + nԅ॰හ).
+(2) ෙ՗(1,1)੒᥯ᜓᅩk(ᦡԅkᜓᅩ)ጱ᪠ஆ޾՗(n,n)کkጱ̶ইຎ
+ጱᮎԍ੪᧔กᬯӞ੒຅౮੒ᑍ᪠ஆ
+(3) ਫሿӤ҅౯ժ੒ྯӻ੒᥯ᕚᜓᅩզᬰᤈӷེbfs(ک1,1),کn,n)).ӷӻ
+hashset(set1,set2)ӾӞӻhashsetӞӻset੪᧔
+ک ௛ጱhashset(set) Ӿ௛ጱhashset(set)ݳ
+Ѻ
+acդᎱইӥғ
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Set;
+
+=== PDF PAGE 135 ===
+ 
+public class test2 {  
+  static class node{
+     int x;
+     int y;
+    String path="";
+    public node() {}
+    public node(int x,int y,String team)
+    {
+      this.x=x;
+      this.y=y;
+      this.path=team;
+    }
+  }
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    Set<String>set=new HashSet<String>();//ਂ๋ᕣᕮຎ
+    int n=Integer.parseInt(sc.nextLine());
+    char map[][]=new char[n][n];
+    for(int i=0;i<n;i++)
+    {
+      String string=sc.nextLine();
+      map[i]=string.toCharArray();
+    }
+    Queue<node>q1=new ArrayDeque<node>();//ڜ
+    Queue<node>q2=new ArrayDeque<node>();//ڜ
+    for(int i=0;i<n;i++)
+    {
+      q1.clear();q2.clear();
+      Set<String>set1=new HashSet<String>();//ਂzuoshang
+      Set<String>set2=new HashSet<String>();//ӥ
+      q1.add(new node(i,n-1-i,""+map[i][n-1-i]));
+      q2.add(new node(i,n-1-i,""+map[i][n-1-i]));
+      while(!q1.isEmpty()&&!q2.isEmpty())
+      {
+        node team=q1.poll();
+        node team2=q2.poll();
+        if(team.x==n-1&&team.y==n-1)//ਂ
+        {
+          //System.out.println(team2.path); 
+          set1.add(team.path);
+          set2.add(team2.path);
+        }
+        else {
+          if(team.x<n-1)//ӥ
+          {
+            q1.add(new node(team.x+1, team.y, team.path+map[team.x+1][team.y]));
+          }
+          if(team.y<n-1)//ݦݻ
+          {
+            q1.add(new node(team.x, team.y+1, team.path+map[team.x][team.y+1]));
+          }
+          if(team2.x>0)//Ӥ
+          {
+            q2.add(new node(team2.x-1, team2.y, team2.path+map[team2.x-1][team2.y]));
+          }
+          if(team2.y>0)//ૢ
+          {
+            q2.add(new node(team2.x, team2.y-1, team2.path+map[team2.x][team2.y-1]));
+          }
+        }
+        
+      }
+      for(String va:set1)
+      {
+        if(set2.contains(va))
+        {
+          set.add(va);
+        }
+      }
+      
+    }
+    System.out.println(set.size());   
+  }
+}
+
+=== PDF PAGE 136 ===
+ݩ ᑀፓ ᵱഩൎ
+A1 JavaSE  
+A2 HTML  
+A3 JSP A1҅A2
+A4 Servlet A1
+A5 SSM A3,A4
+A6 SpringBoot A5
+௛ᕮ  
+dfs޾bfsݎ
+ᘏ҅ᚆड़አdfs޾bfsጱ੪ड़ԧ(֦)̶
+Ӟ᷌ᓒဩ᪒ጱय़༷ၞᑕฎํӻහጱ̶
+ 
+ 
+೐ಏഭଧ  
+᥺  
+य़ਹঅ҅౯ฎbigsai̶
+೐ಏഭଧᚆฎӧԧᥴᬯ໏ጱወᳯғ
+ԞᚆഭଧҘ
+փᕹ఺ԎӤᏟਫӧॡঅഭଧ҅ᘒ೐ಏഭଧਙฎ੒ጱᶮᅩӞ̶
+Ջԍฎ೐ಏഭଧҘ
+ࢶDirected Acyclic GraphᓌᑍDAG)Gᬰᤈ೐ಏഭଧ҅ฎਖ਼Gֵ
+Ӿձ఺Ӟ੒ᶮᅩu޾v҅ᝑᬟ<u,v>∈E(G)ڞuࣁvᑍԅჿ᪃
+೐ಏེଧ(Topological Order)ӤጱӞ
+ଧ҅ᬯӻᑍԏԅ೐ಏഭଧ̶
+አҘ
+ૡᶲଧ̵ᬮํԶ჋౭᯾
+ᔮᵞ……
+च๜ᥝ਍ԟC౲ᘏ
+C++տአC++ࢩ
+ᓒဩҔ਍ԟJava Webᥝ਍ԟJavaSE޾HTMLᴺ໊᧞ᑕਞഭ౼ᆐӧ
+ᚆஉঅጱᬳളԅਞഭጱ᧞ᑕჿ᪃Ӟӻ೐ಏഭଧ̶
+ৼ҅਍ԟJavaᚆํӥᶎᬯӻᶲଧғ
+੪ྲই਍ԟJavaᔮᔄ(ړ)՗JavaکJSP/ServletکSSMکSpringBoot҅SpringCloudᒵฎӻ஗ଧႹᬰ̵Ӭํ
+ࣁJSPഩൎJava޾HTMLचᏐ̶਍ԟ໛ຝᥝഩൎJSP/Servlet޾JDBCԏᔄ಍ᤈ̶ᮎԍ҅
+̶୮ᆐӞ҅ᘶጱ਍ᑀᵋ఺ᭌೠᶲଧ(ྲইHtml޾Java
+Ӟӻ)̶
+ᤒᐏԅғ
+
+=== PDF PAGE 137 ===
+ࢶDAG)ฎ
+ݶ(਍Java਍HTMLฎᥝჿ᪃ෆӻᶲଧᥝ࿢)ᶲଧѺ
+᦯ᵱᥝᱮᦕғ
+DAGࢶ
+AOV੒᨝̶
+AOEᬦᑕ̶
+உग़ՈӧᎣ᭲AOEૡᑕਠ౮ᵱᥝጱ๋Ꭸ
+෸ᳵ̶ᘒAOE࿢Ძ᪠ஆӾ(ᓒဩԧ),ᇆ๶რhttps://www.cnblogs.com/
+svod5306/p/14723338.html)̶
+ 
+ 
+ 
+ 
+ࣁAOVӾғᝑAࣁBᶎ҅
+ࣁBࣁAᶎጱ᪠ஆ(ӧᚆ౮ሾ)ᔮᘒӧӞਧᵱᥝፘᮝ(ݝ
+ᔮӞ)̶
+ຉ  
+ጱՕᕨԧ೐ಏഭଧ҅ӥᶎᧇᕡᦖᦖ೐ಏഭଧጱ࿢ဩ̶
+ྋଉྍṈԅ(Ӟ)ғ
+1.՗DAGӞӻḝଶԅ0ᖌಷ̶
+2.ٺ1ḝᜓᅩጱᶮᅩ̶
+3.᯿॔Ӥᬿ̶᧔กํሾѺ
+ൈᬿྍṈԅғ
+
+=== PDF PAGE 138 ===
+step1ᴻᜓᅩ1(౲ᘏ2)ڊ
+step2ᴻᜓᅩ2(౲ᘏ3)ڊ
+step2(ᬯ᯾ᬰᤈӷྍ)ᴻᜓᅩ3(౲ᘏ4)ᴻᜓᅩ3(౲ᘏ6)ጱᬟ҅ਖ਼ᜓᅩ
+̶
+step3ᴻ̶
+ӞӻڜڜӞํஉग़ᭌೠො
+ᥝჿ᪃DAGᔮ̶
+क़ᥡ੊ 1 2 4 3 6 5 7 8 ᔮᮎ
+ݸڹ(ই1,2)
+դᎱਫሿ  
+Ҙ
+ၞᑕ҅Ԟஉฃ౜ࣁ֜෸ᳵӤ
+஑᫾অጱපሲҘ
+᮷ฎྲ᫾ᑑ዇ጱ҅ྲ
+ᜓᅩ̶
+Ӿᜓᅩฎ1҅2҅3҅4҅5҅6ک1҅2҅88҅
+9999զᘍᡤአMapᗝ̶
+ᮎԍ౯ժጱդᎱ௏మԅғ
+ɠෛୌnodeᔄݳ(ᬯ᯾ፗളአListݳ)
+ӞӻՈnodeف/ᔮ҅ଶ+1Ѻ(ইA—>C)ᮎԍCଶ+1Ҕ
+ɢಚൈಅํnode(ᬯ᯾ಚൈහᕟ)ଶԅ0຾(ڜ)Ӿ̶
+ɣ୮຾(ڜ)҅Ӿձ఺Ӟӻnode(ᭌೠᶲଧ)̶ਖ਼node҅ଚӬnodeݻ
+ٺ1̶ԅ0຾(ڜ)̶
+຾(ڜ)ԅᑮ̶
+አԅ0ଶԅ0຾(ڜ)Ӿ̶
+ԅ௔ጱଶԅ0ᘶᓞ१ਖ਼ᛔ
+ٺ1Ӿ௛տํय़ԭᒵԭ1ଶԅ0ጱᜓᅩ̶
+̶
+ਫሿդᎱԅғ
+
+=== PDF PAGE 139 ===
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+public class tuopu {
+  static class node
+  {
+    int value;
+    List<Integer> next;
+    public node(int value) {
+      this.value=value;
+      next=new ArrayList<Integer>();
+    }
+    public void setnext(List<Integer>list) {
+      this.next=list;
+    }
+  }
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    node []nodes=new node[9];//ਂᜓᅩ
+    int a[]=new int[9];//ଶ
+    List<Integer>list[]=new ArrayList[10];//ݳ
+    for(int i=1;i<9;i++)
+    {
+      nodes[i]=new node(i);
+      list[i]=new ArrayList<Integer>();
+    }
+    initmap(nodes,list,a);
+    
+    //Ԇᥝၞᑕ
+    //Queue<node>q1=new ArrayDeque<node>();
+    Stack<node>s1=new Stack<node>();
+    for(int i=1;i<9;i++)
+    {
+      //System.out.print(nodes[i].next.size()+" 55 ");
+      //System.out.println(a[i]);
+      if(a[i]==0) {s1.add(nodes[i]);}
+      
+    }
+    while(!s1.isEmpty())
+    {
+      node n1=s1.pop();//ڊ
+      System.out.print(n1.value+" ");
+      List<Integer>next=n1.next;
+      for(int i=0;i<next.size();i++)
+      {
+        a[next.get(i)]--;//Ӟ
+        if(a[next.get(i)]==0)//ଶԅ0
+        {
+          s1.add(nodes[next.get(i)]);
+        }
+      }
+    }
+  }
+  private static void initmap(node[] nodes, List<Integer>[] list, int[] a) {
+    list[1].add(3);
+    nodes[1].setnext(list[1]);
+    a[3]++;
+    list[2].add(4);list[2].add(6);
+    nodes[2].setnext(list[2]);
+    a[4]++;a[6]++;
+    list[3].add(5);
+    nodes[3].setnext(list[3]);
+    a[5]++;
+    list[4].add(5);list[4].add(6);
+    nodes[4].setnext(list[4]);
+    a[5]++;a[6]++;
+    list[5].add(7);
+    nodes[5].setnext(list[5]);
+    a[7]++;
+    list[6].add(8);
+    nodes[6].setnext(list[6]);
+    a[8]++;
+    list[7].add(8);
+    nodes[7].setnext(list[7]);
+    a[8]++;
+    
+  }
+
+=== PDF PAGE 140 ===
+ᕮຎ
+2 4 6 1 3 5 7 8 
+ک1 2 3 4 5 6 7 8 ڜ
+೰ྋѺ
+೐ಏഭଧತሾ  
+զ୵
+Ҙ
+ଶԅ0ᴻᜓᅩӻ
+̶
+ಕ207ᚆड़ac҅ᳯ᷌ൈᬿғ
+ץnumCourses ᳪ᧞ᑕ҅ᦕԅ 0 کnumCourses - 1 ̶
+᧞ᑕ̶ ᧞ᑕೲහᕟ prerequisites Ӿ prerequisites[i] = [ai, bi] 
+҅ᤒᐏইຎᥝ਍ԟ᧞ᑕ ai ڞ ஠ᶳ ਍ԟ᧞ᑕ  bi ̶
+᧞ᑕ੒ [0, 1] ᤒᐏғమᥝ਍ԟ᧞ᑕ 0 ਠ౮᧞ᑕ 1 ̶
+ࢧtrue ࢧfalse ̶
+ୌnode̶
+ਫሿդᎱғ
+ 
+Ѻ
+რ๋Ꭸ᪠ஆDijkstra
+}
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        int indegree[]=new int[numCourses];
+        List<Integer> next[]=new ArrayList[numCourses];
+        
+        for(int i=0;i<numCourses;i++){
+            next[i]=new ArrayList();
+        }
+        for(int i=0;i<prerequisites.length;i++) {
+            int preid=prerequisites[i][1];
+            int courseid=prerequisites[i][0];
+            indegree[courseid]++;//Ӟ
+            next[preid].add(courseid);//nextݻ
+}
+        Queue<Integer>queue=new ArrayDeque<>();
+        for(int i=0;i<numCourses;i++) {//ଶԅ0ጱᜓᅩ
+            if(indegree[i]==0){
+                queue.add(i);
+            }
+        }
+        int nodeNum=0;//ᴻᜓᅩහᰁ ଶԅ0ᴻ ࢧtrue
+        while (!queue.isEmpty())
+        {
+            nodeNum++;
+            int nodeId=queue.poll();
+            for(int i=0;i<next[nodeId].size();i++)
+            {
+                int nodeIndex=next[nodeId].get(i);
+                indegree[nodeIndex]--;
+                if(indegree[nodeIndex]==0) {
+                    queue.add(nodeIndex);
+                }
+            }
+        }
+        if(nodeNum==numCourses)
+            return true;
+        return false;
+    }
+}
+
+=== PDF PAGE 141 ===
+რ๋Ꭸ᪠ஆDijkstra  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsai҅Քॠᕳय़ਹᦖᦖDijkstraᓒဩ̶
+੒ԭDijkstraՈྲ᫾ԧᥴbfs޾dfs҅ᘒ੒dijkstra޾floydᚆᎣ
+ྋᭇ
+᯿ෛᦊᦩਙ̶
+DijkstraҘ
+ਫDijkstra(ᬻᑀේ஁)ฎӞӻՈ҅ᤩᑍԅᕮ຅ᑕଧᦡᦇԏᆿڊgotoᱷᤈਹ
+਍ਹᬰᷧᳯ̵᷌Dijkstraࣁ1972ᅎॹ(ᦇᓒ๢ኴ᧚ᨬਫ਼ॹ)ժ੪਍ԟDijkstraᓒ
+ဩ̶
+DijkstraጱҘ
+Dijkstraฎአ๶რ๋Ꭸ᪠ஆ୵᨝Ӟᅩ҅੪ฎྲ
+Ӟ๵๋Ꭸጱ᪠ஆғ
+ѺᬮᥝՋԍᓒဩҘenumҘ
+
+=== PDF PAGE 142 ===
+አdijkstraӾಅํᜓᅩጱ๋Ꭸ᪗ᐶ(మᥝጱ
+ঀᐟጱ᪗ᐶ๋ᬪ)ᚆԾኞӞԶወజғ
+რՋԍ఺௏Ҙ
+҅Dijkstra՜ᅩጱ๋Ꭸ᪗ᐶᘒӧᚆձ఺ӷᅩ̶
+޾bfsҘ
+bfs᧔ฎ᪠ஆ҅ӧই᧔ฎེහԅbfsፘᮝጱᅩ҅ᘒӷᅩԏᳵဌํ๦꧊౲ᘏ
+๦꧊ፘᒵ(ݶ)̶bfs࿢๋Ꭸ᪠ஆӞᛱ෫๦꧊᪠ஆ(դᤒᘶ᭗ෛ)౲ᘏ๦꧊ፘᒵ҅ՐՐአེහ੪ᚆᤒᐏ᪠ஆᳩᎨጱ
+٭,ጱ੪ฎᭁ਴ᳯ᷌bfsӞེ᪠ஆԅ1Ӟ̶ེ
+Dijkstraݢ
+Һ꧒ጱ๋Ꭸ᪠ஆ҅ᮎԍDijkstra̶
+ຉ  
+ᥝቘᥴਙጱᬩᤈၞᑕ҅੒ԭDijkstraሾहғ
+҅ᝑଗᜓᅩ(ᚆํහ꧊)ฎ᪠ஆӞਧํ๦꧊ଚӬӧᚆԅᨮ(ڞވDijkstra੪ӧᭇአ)̶
+Dijkstraጱ໐ஞ௏మฎᨸஞᓒဩጱ௏మ҅ᮎޫҘ
+֛
+຤ᐿ఺ԎӤጱੴ᮱๋սᥴ̶
+ප௔҅
+̶ 
+҅ӥᶎԈ2ৼѺ
+1 .ᚆଃ5੪ᭌጱ๋᯿ጱᮎ
+ӻ̶
+2 .ἶ
+௛ᰂ̶᷐
+3 .ܨ
+̶
+ӤᶎጱᒽኼഝӞᐿԪਫᥢ஌ᕪḵ॒ቘӤ
+᮷ᵱᥝഭଧ,ᔺ๥ጱᔄഭଧ̶
+ᮎԍ౯ժጱDijkstraӾಅํᅩጱ๋Ꭸ᪠ஆ҅ইຎဌํྋᏟጱොဩᙲԤమᏟਫஉᵙ
+Ҙ
+҅Dijkstra൉ғ
+Dijkstra҅ᮎԍ੪ᵱᥝӞӻԫᖌහᕟҁইຎᑮᳵय़አListᅩԏᳵ
+ᬟጱ๦꧊य़ੜ(ؙ) ̶
+ᵱᥝӞӻbooleanහᕟԶᅩ૪ᕪᏟਧ๋Ꭸᳩଶ᪠ஆ҅ᮎԶᅩဌํᏟਧ̶አӞӻ intහᕟᦕ୯᪗ᐶ(ᓒဩಗ
+ᚆᤩग़ེๅෛ)̶
+ᵱᥝڜفےᅩ՗᩸ᅩ๋Ꭸ᪠ஆጱᮎӻᅩ()ಅํᅩ᪠ஆᏟਧ๋Ꭸԅྊ̶
+ 
+ጱ༷ೡၞᑕԅғ
+̶ҁ᪠ஆӞᛱԅ0҂҅booleanහᕟຽᦕ0ᗝ(๋Ꭸԅ0) , ݸ0ᬳ᭗ጱᅩ
+ᚆฎnodeٖ(ত
+ᒫӞེฎ෫ᑫᙗਧտๅෛ)҅ᒫӞེ੪ᕮ๳ԧ
+ڊ᪗ᐶ๋ᬪጱᮎӻᅩBҁᒫӞེ੪ฎ0ᮝ੷҂̶ᬯӻᅩ᪗ᐶӞਧฎ๋ᬪጱҁಅํ๦꧊᮷ฎྋጱ҅
+ᚆ᩼๶᩼ᳩ̶҂ຽᦕᬯӻᅩԅtrue҅ڜ(ᶎ๚Ꮯ
+ᬯӻᅩᮝ੷ӾԾኞ),ଚๅෛ᭗ᬦBๅෛѺ
+
+=== PDF PAGE 143 ===
+ಅํᅩ᮷Ꮯਧ̶
+ᓒဩਫሿ  
+package ᦞ;
+import java.util.ArrayDeque;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Scanner;
+public class dijkstra {
+  static class node
+  {
+    int x; //ݩ
+    int lenth;//ᳩଶ
+    public node(int x,int lenth) {
+      this.x=x;
+      this.lenth=lenth;
+    }
+  }
+  public static void main(String[] args) {
+     
+    int[][] map = new int[6][6];//ᮝളᤒ
+    initmap(map);//۸
+    boolean bool[]=new boolean[6];//૪ᕪᏟਧ
+    int len[]=new int[6];//ᳩଶ
+    for(int i=0;i<6;i++)
+    {
+      len[i]=Integer.MAX_VALUE;
+    }
+    Queue<node>q1=new PriorityQueue<node>(com);
+    len[0]=0;//՗0ᬯӻᅩ୏ত
+    q1.add(new node(0, 0));
+    int count=0;//ེdijkstra
+    while (!q1.isEmpty()) {
+      node t1=q1.poll();
+      int index=t1.x;//ݩ
+      int length=t1.lenth;//ᅩ᪗ᐶ
+      bool[index]=true;//ጱᅩᏟਧ
+      count++;//ਫಗᤈԧ6զᏟਧ੪ӧᵱᥝᖀᖅಗᤈԧ  ੝ᦇᓒེහ
+      for(int i=0;i<map[index].length;i++)
+      {
+        if(map[index][i]>0&&!bool[i])
+        {
+
+=== PDF PAGE 144 ===
+୮ᆐ҅dijkstraጱғӞӻᨸஞ௏᪠̶dijkstraಗᤈӞེ੪ᚆ
+ਠ౮ෆӻᓒဩ̶
+ 
+ग़რ๋Ꭸ᪠ஆFloydᓒဩ  
+ 
+᥺  
+ࣁᦞ੔᪠๋Ꭸ᪠ஆӾᴻԧDijkstraᓒဩզक़҅ᬮํFloydڦ܄
+ጱ҅FloydԆᥝᦇᓒग़რ๋Ꭸ᪠ஆ̶
+რྋ๦꧊๋Ꭸ᪠ஆ҅౯ժտአDijkstraܔ—ᨸஞᓒဩ:ྯེᏟਧ๋Ꭸ᪠
+ᖌಷ(ๅෛ)҅ਫሿ᩸๶
+ฎᶋଉ॔๥ጱ҅౯ժᵱᥝᮝളᎥᴣ(ᤒ)ڜ(౲ᘏྯེ᮷ྲ᫾)̶ᬮᥝአӞӻ
+boolean૪ᕪᏟਧ̵ᬮᥝ……
+௛ԏ҅DijkstraᓒဩጱݑฎਫฎᶋଉἋᅸრ๋Ꭸ᪠ஆᥴᓒฮ෸ᬮဌํ
+ဩ҅॔๥ଶԞԅO(n2)̶
+ࣁnӾమ࿢ग़რ๋Ꭸ᪠ஆ,ইຎ՗Dijkstraᓒဩጱ᥯ଶӤ҅ᵱᥝਖ਼Dijkstraಗᤈnེ಍ᚆ឴஑ಅํᅩԏᳵጱ๋
+Ꭸ᪠ஆ҅ӧᬦಗᤈnེDijkstraݢܨ,॔๥ଶԅO(n3)ਂ̶
+Ҙ
+ᒼໜฎํጱ҅Քॠ੪ଃय़ਹӞ᩸ԧᥴӞӥᇍ᭧᫬᫬ጱFloyedᓒဩ̶
+ᓒဩՕᕨ  
+ՋԍฎFloyedᓒဩҘ
+FloydӾग़რᅩԏᳵ๋Ꭸ᪠ஆጱᓒဩ҅Ө
+DijkstraতՈԏӞ̵1978ᐰय़਍ᦇᓒ๢ᑀ਍ᔮරദᗔ֋ᇙ·୛
+̶
+ጱ๶᧔҅ᓒဩጱԆᥝ௏మฎښdp)҅ᘒ࿢๋Ꭸ᪠ஆᵱᥝӧෙຂଢ଼(ᆧఀspfaᚆᆧఀຂଢ଼)̶
+௏మԅғ
+1 .ᮝളᎥᴣ(ԫᖌහᕟ)distতፗള᪠ஆ๋҅ᕣฎᅩᅩԏᳵጱ๋ੜ᪠ஆ҅
+ํӷᅩᵱᥝဳ఺ጱ҅ᒫӞฎইຎဌํፗളፘᬳጱӷᅩᮎԍἕᦊԅӞӻஉय़ጱ꧊(౮ᨮහ)҅ᒫԫฎᛔ
+ᛔ૩ጱ᪗ᐶᥝԅ0̶
+2 .՗ᒫ1ᒫnᬰᤈᦶറํ᪠ஆᳩଶᤩๅද(ๅෛ᪠ஆ)̶ᶲଧ
+فےkຍԈ)҅ᵱᥝӾྯӞӻᅩ੒(i,j᯿஗ሾ)ෙྯӞӻᅩ੒᪗ᐶኞ๋
+۸ݒݒ(ੜ)҅ᮎԍӷᅩ(i,j)᪗ᐶ੪ๅද̶ 
+2 .᯿॔Ӥᬿൊᅩᦶറਠ౮̶
+Ӿᒫ2ྍጱᇫா᫨ᑏොᑕԅ:
+          node node=new node(i, length+map[index][i]);
+          if(len[i]>node.lenth)//ڜ
+          {
+            len[i]=node.lenth;
+            q1.add(node);
+          }
+        }
+      }
+    }   
+    for(int i=0;i<6;i++)
+    {
+      System.out.println(len[i]);
+    }
+  }
+  static Comparator<node>com=new Comparator<node>() {
+    public int compare(node o1, node o2) {
+      return o1.lenth-o2.lenth;
+    }
+  };
+  private static void initmap(int[][] map) {
+    map[0][1]=2;map[0][2]=3;map[0][3]=6;
+    map[1][0]=2;map[1][4]=4;map[1][5]=6;
+    map[2][0]=3;map[2][3]=2;
+    map[3][0]=6;map[3][2]=2;map[3][4]=1;map[3][5]=3;
+    map[4][1]=4;map[4][3]=1;
+    map[5][1]=6;map[5][3]=3;  
+  }
+}
+dp[i][j]=min(dp[i][j],dp[i][k]+dp[k][j])
+
+=== PDF PAGE 145 ===
+Ӿdp[a][b]զቘᥴԅᅩaᅩbጱ๋Ꭸ᪠ஆ,ಅզdp[i][k]զቘᥴԅiکkጱ๋Ꭸ᪠ஆdp[k][j]
+ጱ఺௏ԅkکjጱ๋Ꭸ᪠ஆ.
+՜ᳵളፘᬳጱᅩᬮӧᎣ᭲᪗ᐶ҅ྲইA-
+B=2,A-C=3ฎB-CฎӧᎣ᭲ᳩଶጱ̶
+ᒫӞӻᜓᅩAᬰᤈๅෛᦇᓒ,ሿ҅ኧԭA஑๜๶ӧᬳ᭗ጱB҅C޾B҅D஑ᘶ᭗҅
+فےAݸ๋ੜ,فےA஑C-Dग़Ӟ๵ᘶ᭗᪠ஆҁ6+3ฎC-Dᘶ᭗ጱᦾ᪗
+ᐶԅ9ᬱᬱय़ԭ๜๶ጱ(C,D)ᘶ᭗᪠ஆ2҅ಅզᬯ๵ӧᬰᤈๅෛ̶
+ 
+ᒫԫӻᜓᅩBᶎA޾Bݢ
+Ӟӻ᧔ก,ᬯ᯾ෛ᪠ஆ౯ᕹӞአ1๶ᳩଶአ0ᤒᐏ̶
+AF1=AB+BF=6+2=8 < AF0(∞)  ᬰᤈๅෛ
+AE1=AB+BE=2+4=6 < AE0(∞) ᬰᤈๅෛ
+CE1=CB+BE=5+4=9 < CE0(∞) ᬰᤈๅෛ
+CF1=CB+BF=5+6=11<CF0(∞) ᬰᤈๅෛ
+EF1=EB+BF=4+6=10<EF0(∞) ᬰᤈๅෛ
+ইғ
+AC1=AB+BC=2+5=7>AC0(3) ӧๅෛ 
+AD1=AB+BD=2+8=10>AD0(6) ӧๅෛ
+……
+Ԉԧ̶
+ 
+
+=== PDF PAGE 146 ===
+ 
+فےC̵D̵E̵F֢,Ӿጱᬳᕚ
+੪ྲ᫾ग़ԧ̶ᬯԶᬳᕚ᮷ฎդᤒጱ๋Ꭸ᪠ஆ̶ ҅౯ժ๋ᕣᥝጱฎಅํᜓᅩጱ๋Ꭸ᪠ஆ̶ྯ
+ӻᜓᅩ๋ᕣ᮷ଫᧆํ5ᜓᅩጱᬟѺ Ꭵᴣ੒ଫᬟ꧊੪ฎᅩᅩԏᳵ๋Ꭸ᪠ஆ̶
+ӥጱ̶
+ 
+ᑕଧਫሿ  
+̶ᤈѺ ۸
+ᶎտ᧔̶
+դᎱইӥ
+public class floyd {
+  static int max = 66666;// ڦIntege.max ᩼ኴԅᨮ
+  public static void main(String[] args) {
+    int dist[][] = {
+        { 0, 2, 3, 6, max, max }, 
+        { 2, 0, max, max,4, 6 }, 
+        { 3, max, 0, 2, max, max },
+        { 6, max, 2, 0, 1, 3 }, 
+        { max, 4, max, 1, 0, max }, 
+        { max, 6, max, 3, max, 0 } };// ࢶࣈ
+    6ӻ
+    for (int k = 0; k < 6; k++)// ᒫkӻᜓᅩᬰᤈᦇᓒ
+    {
+      for (int i = 0; i < 6; i++)// զᤩๅෛጱ
+      {
+        for (int j = 0; j < 6; j++)
+        {
+          dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
+        }
+      }
+    }
+    // ڊ
+    for (int i = 0; i < 6; i++) {
+      System.out.print("ᜓᅩ"+(i+1)+" ጱ๋Ꭸ᪠ஆ");
+      for (int j = 0; j < 6; j++) {
+        System.out.print(dist[i][j]+" ");
+      }
+      System.out.println();
+    }
+  }
+}
+
+=== PDF PAGE 147 ===
+ಗᤈᕮຎԅғ
+զᛔᤈᦇᓒ҅ӤᓤጱDijkstraฎӞᛘጱጱ̶
+҅ᮝളᎥᴣጱᕮຎݶ
+(ԭቘᥴ)᧔กྋᏟѺ
+ᬰӞྍቘᥴFloydᓒဩ҅፡
+ӾABቘᥴғ
+ 
+ڏ  
+ಕ1334ฎӞ᭲Floydጱᳯ̶᷌
+᷌ፓൈᬿԅғ
+ํ n ӻउ૱҅ೲ՗ 0 کn-1 Ӟӻᬟහᕟ edgesӾ edges[i] = [fromi, toi, weighti] դᤒ fromi ޾toi ӷ
+๦ᬟ҅᪗ᐶᴇ꧊ฎӞӻෆහ distanceThreshold̶
+՜उ૱හፓ๋੝̵Ӭ᪠ஆ᪗ᐶ ๋य़ ԅ distanceThreshold ጱउ૱̶ইຎํग़ӻᬯ໏ጱउ
+๋य़ጱउ૱̶
+ဳ఺҅ᬳളउ૱ i ޾j ̶
+ֺ1ғ
+
+=== PDF PAGE 148 ===
+ғn = 4, edges = [[0,1,3],[1,2,1],[1,3,4],[2,3,1]], distanceThreshold = 4
+ғ3
+ইӤ̶
+ྯӻउ૱ᴇ꧊᪗ᐶ distanceThreshold = 4 ฎғ
+उ૱ 0 -> [उ૱ 1, उ૱ 2] 
+उ૱ 1 -> [उ૱ 0, उ૱ 2, उ૱ 3] 
+उ૱ 2 -> [उ૱ 0, उ૱ 1, उ૱ 3] 
+उ૱ 3 -> [उ૱ 1, उ૱ 2] 
+उ૱ 0 ޾3 ᴇ꧊᪗ᐶ 4 ᮷ํ 2 उ૱ 3๋य̶़
+ֺ2ғ
+ 
+ғn = 5, edges = [[0,1,2],[0,4,8],[1,2,3],[1,4,2],[2,3,1],[3,4,1]], distanceThreshold = 2
+ғ0
+ইӤ̶ 
+ྯӻउ૱ᴇ꧊᪗ᐶ distanceThreshold = 2 ฎғ
+उ૱ 0 -> [उ૱ 1] 
+उ૱ 1 -> [उ૱ 0, उ૱ 4] 
+उ૱ 2 -> [उ૱ 3, उ૱ 4] 
+उ૱ 3 -> [उ૱ 2, उ૱ 4]
+उ૱ 4 -> [उ૱ 1, उ૱ 2, उ૱ 3] 
+उ૱ 0 ᴇ꧊᪗ᐶ 2 ํ 1 ӻᮝ੷उ૱̶
+൉ᐏғ
+
+=== PDF PAGE 149 ===
+2 <= n <= 100
+1 <= edges.length <= n * (n - 1) / 2
+edges[i].length == 3
+0 <= fromi < toi < n
+1 <= weighti, distanceThreshold <= 10^4
+ಅํ (fromi, toi) ጱ̶
+ 
+ຉғ
+ࣁ
+distanceThresholdᬡ๋ग़ఘวྲ᫾ग़ᬯ᯾࿢
+ฎ௏᪠᮷ฎӞ໏ጱ̶
+አग़რ๋Ꭸ᪠ஆFloyd௏᪠ԅ;
+1 .አFloydᅩᅩԏᳵጱ๋Ꭸ᪗ᐶ҅෸ᳵ॔๥ଶO(n3)
+2 . ࣁdistanceThreshold෸፡፡ฎӧฎੜԭᒵԭ૪Ꭳ๋੝ӻහጱ҅
+ਂๅෛ̶
+3 .๋ᕣጱᕮຎ̶
+ਫሿդᎱғ
+ᑮᳵғFloydҘ
+ํጱ҅ᬯӻฎӻࢶݻᬦᑕ(ইຍԈAC޾CAฎපຎӞᛘጱ)҅ಅ
+ࣁFloydդᎱԅғ
+class Solution {
+    public int findTheCity(int n, int[][] edges, int distanceThreshold) {
+        int dist[][]=new int[n][n];
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++){
+              //य़(ӧᚆྲਙय़)҅ӧᥝInt๋य़ Კ
+                dist[i][j]=1000000;
+            }
+            dist[i][i]=0;
+        }
+        for(int arr[]:edges){
+            dist[arr[0]][arr[1]]=arr[2];
+            dist[arr[1]][arr[0]]=arr[2];
+        }
+        for(int k=0;k<n;k++){
+            for(int i=0;i<n;i++) {
+                for(int j=0;j<n;j++){
+                    dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
+                }
+            }
+        }
+        int min=Integer.MAX_VALUE;
+        int minIndex=0;
+        int pathNum[]=new int[n];//᪗ᐶ
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                if(dist[i][j]<=distanceThreshold){
+                    pathNum[i]++;
+                }
+            }
+            if(pathNum[i]<=min) {
+                min = pathNum[i];
+                minIndex=i;
+            }
+        }
+        return  minIndex;
+    }
+}
+class Solution {
+    public int findTheCity(int n, int[][] edges, int distanceThreshold) {
+        int dist[][]=new int[n][n];//᪗ᐶ
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++){
+                dist[i][j]=1000000;
+            }
+            dist[i][i]=0;
+        }
+        for(int arr[]:edges){
+            dist[arr[0]][arr[1]]=arr[2];
+            dist[arr[1]][arr[0]]=arr[2];
+        }
+
+=== PDF PAGE 150 ===
+ੲ्  
+੒ԭFloydེള᥶ӧӞਧᚆड़ቘᥴᬯӻຂଢ଼ጱᬦᑕ̶
+Floyd޾MySQL؟
+አ҅FloydӾ᭗ᬦ
+๶ᅩᅩԏᳵጱ๋Ꭸ᪠ஆ̶
+Floyd޾Dijkstra॔๥ଶӤ҅Dijkstraᓒဩ෸ᳵ॔๥ଶ
+ฎO(n2),Floydᓒဩ෸ᳵ॔๥ଶฎO(n3)ᚆӤ҅Dijkstraრ๋Ꭸ᪠ஆ҅ଚӬ᪠ஆ๦꧊ӧᚆԅᨮ҅
+ᘒFloydզํᨮ๦꧊ҔᓒဩਫሿӤ҅Dijkstra ฎӞᐿᨸஞᓒဩਫሿ᩸๶᫾॔๥҅Floydۖ
+ᘏDijkstra޾Floyd᮷ฎᇍ᭧᫬᫬ጱय़Ոᇔ҅᮷ฎᅎॹጱ឴஑ᘏ̶
+ᴻԧFloydᓒဩ҅ञഭଧᓒဩheapSortԞฎFloyd๐Ѻ
+FloydѺ
+҅FloydѺ᣸᣸̶
+๋ੜኞ౮໅(Prim/Kruskal)  
+᥺  
+හഝᕮ຅ӨᓒဩጱᦞӾ҅(ኞ౮)ᚆஉग़Ո
+੒༷ஷӧฎஉႴ༩҅Ջԍฎ๋ੜኞ౮໅?
+Ӟӻํ n Ӿጱಅํ n ᬳ᭗
+ጱ๋੝ጱᬟ̶   զአkruskalਫ਼҂ᓒဩ౲prim̶
+ฃ౜ጱᦖ੪ฎ๋ੜኞ౮໅ጱಅํᜓᅩݝአ๋੝ጱᬟ޾๋ੜጱ๦꧊᪗ᐶԅnӻᜓᅩ๋੝ᵱᥝn-1ӻ
+຤ᐿᒽኼᭌೠ௴୮ጱᬟ̶
+ 
+ቘᥴ̶
+ӞӻඳԪ
+Ӿ҅ฎӞᳪஉᵱᥝᑀ਍ጱᎸᑪ(ᦡ਍ԟӧ஠୮፥)ࣁ᪠෸դउ૱ᘶ᭗ጱԆᥝ᎟፛ฎ෸ᳵౌ҅
+஑उ૱ᚆड़ፗളᘶ᭗҅ᖽᎨउ૱ᘶᔮ෸ᳵ҅ᘒᑖஙᘍᡤ
+ୌ᪠౮๜Ѻ઀ԅ
+ဳᘶ᭗ಅํᅩጱ᪠ᑕ(๋Ꭸ)๋ੜኞ౮໅ᓒဩ̶
+ӻᴤྦྷ̶
+᪠(᱈᪠)̶
+᪠(᱈᪠)ྯӻउ૱᮷ํᬯᐿమ
+᭜հॡ෼ᩃ̶ଚӬ᭜౮૤य़ၵᩇ̶
+ਹᘍᡤෛୌ
+᪠(᱈᪠)҅ᭇ୮൉ṛපሲ̶
+         for(int k=0;k<n;k++){
+            for(int i=0;i<n;i++) {
+                for(int j=i+1;j<n;j++){//ധ᯿॔ጱᦇᓒ
+                    dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
+                    dist[j][i]=dist[i][j];
+                }
+            }
+        }
+        int min=Integer.MAX_VALUE;
+        int minIndex=0;
+        int pathNum[]=new int[n];//
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                if(dist[i][j]<=distanceThreshold){
+                    pathNum[i]++;
+                }
+            }
+            if(pathNum[i]<=min) {
+                min = pathNum[i];
+                minIndex=i;
+            }
+        }
+        return  minIndex;
+    }
+}
+
+=== PDF PAGE 151 ===
+ᚆӧᚆड़ჿ᪃Ө"ํ᱈᪠"᭄
+࿢Ӿ……
+ᦡ౮Ἆᰂ᳨᱂ኪᖝ ݱ
+ᥝ࿢ӧᕳᛔ૩៧ӥ҅ᚆ᭗Ӥ੪ᤈ(މ)̶
+๋ੜጱ᪠ᕚӞොᶎդհ๋ੜ(௛᪗ᐶ๋ੜ๋፜Ἆᰂ)Ӟොᶎᘶ᭗ಅํउ૱̶
+զӥ๋ੜኞ౮໅,ฎ๋ԍኞ౮ᬯӻ๋ੜኞ౮໅҅੪ฎӥᶎᥝᦖጱԧ̶
+ 
+ጱᬮํੴ᮱໫҅ၹବ᭗᭲ᬯԶṛ౮๜ጱ᮷ग़ग़੝੝տᬩአ̶
+Kruskalᓒဩ  
+ኞ౮Ӟӻ๋ੜኞ
+ਫሿ๋ੜኞ౮໅ොᶎํprim޾kruskalᓒဩ҅ᬯӷᐿᓒဩጱڦ܄ฎ෸ᳵ॔๥ଶӞᛘ̶
+Kruskalᔮஉय़҅ਙጱԆᥝ௏మԅғ
+ތݝn ҅՗ᗑጱᬟᵞ 
+E ౮Ӟ༒໅҅
+ེᔄവ҅
+ํ n-1 ๵ᬟԅྊ̶
+ᓌᘒ᥺ԏ҅Kruskalฎᬟ,իԅ:ੜෙӷᅩ
+̶
+ྍṈԅғ
+1. Ӿಅํᬟ੒᨝(ᬟᳩ̵ӷᒒᅩ)ݳ(ڜ)q1Ӿ̶তಅํᅩፘ԰ᇿᒈ̶
+2. ݳ(ڜ)q1ᘶ᭗̶
+3. ইຎᘶ᭗ਙᬟਖ਼ӷᅩᘶ᭗ԧ҅᪡ᬦ҅ইຎӧᬳ᭗አunionଚ҂ਖ਼ӷӻᶮ
+ଚ҅አ(ਂ౲ᘏᦇᓒහ꧊)̶
+4. ᯿॔2҅3҂q1ԅᑮ̶ྌ෸ᤩᭌೠጱᬟ຅౮๋ੜኞ౮໅̶
+
+=== PDF PAGE 152 ===
+ 
+ 
+Primᓒဩ  
+ᴻԧKruskalᓒဩզक़҅ฦ᯾ঢᓒဩҁPrimฎᨸஞጱ
+޾Kruskal̶
+primիฎғ՗૪Ꭳಘව੔ತ๋ੜ޾Dijkstra҅Dijkstraฎ࿢
+რ๋Ꭸ᪠ஆ҅ᘒྯᦇᓒӞӻᅩᵱᥝ੒ᬯӻᅩ᯿ෛๅෛ᪗ᐶ҅ᘒprimӧአๅෛ᪗ᐶ̶فےܨ
+Ѻprim޾kruskalಋ॒ቘ̶
+ྍṈ҅य़ᛘԅғ
+1. Ӿձ఺ᅩ҅զਙԅ᩸ᅩ҅ਙጱಅํᬟVݳ(ڜ)q1,ᦡᗝӞӻbooleanහᕟbool[]ᗝ
+(ဌํᤩຽᦕᮎӻᅩጱಅํᬟ)̶
+2. ݳq1ک᪗ᐶ๋ੜጱᮎӻᬟv1ଚ ๚ᤩຽᦕጱӞᅩp ҅ইຎp᧔ก૪ᕪᏟਧᬦᮎԍ
+ᬟ॒ቘ҅ইຎ๚ᤩຽ(ᦢᳯ)ᦕᮎԍຽᦕᧆᅩp,ଚӬӨpፘᬳጱ๚Ꭳᅩ(๚ᤩຽᦕ)຅౮ጱᬟݳq1҅  
+ᬟv1(զᬰᤈᦇᓒ᪗ᐶԏᔄ҅ᧆᬟ຅౮๋ੜኞ౮໅) .
+3. ᯿॔1҅2کq1ԅᑮ҅຅౮๋ੜኞ౮໅ Ѻ
+ᥴԅғ
+ 
+
+=== PDF PAGE 153 ===
+ԅprimԧӞ
+ᅩ̶
+ጱฎ෫ᦞኞ౮
+ெ໏ጱ๋ੜኞ౮໅ғ
+ᦤಅํᜓᅩᬳ᭗(๵կ)
+๋ੜ(ݶ)
+ᚆग़໏ጱ
+դᎱਫሿ  
+ਫሿӤᬿጱᓒဩ̶
+ prim
+package ᦞ;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+public class prim {
+  public static void main(String[] args) {
+    int minlength=0;//๋ੜኞ౮໅ጱ๋Ꭸ᪠ஆᳩଶ
+    int max=66666;
+    String cityname[]= {"Ղ","ྎ࿥","Ղ","Ӥၹ","๺૞","ଠ૞","ࣉ"};
+    int city[][]= {
+        { max, 8, 7, max, max, max, max }, //Ղᘶ᭗
+        { 8, max,6, max,9, 8,max }, //ྎ࿥——Ղ̵๺૞̵ଠ૞
+        { 7, 6, max, 3,4, max,max }, //Ղ——Ղ̵ྎ࿥̵Ӥၹ̵๺૞
+        { max, max,3, max,2, max,max }, //Ӥၹ——Ղ̵๺૞
+        { max, 9,4, 2,max, max,10 }, //๺૞——ࣉ
+        { max, 8,max, max,max, max,2 }, //ଠ૞——ࣉ
+        { max, max,max, max,10,2,max }//ࣉ——๺૞̵ଠ૞
+    };// ࢶࣈ
+    boolean istrue[]=new boolean[7];
+    //Ղ
+    Queue<side>q1=new PriorityQueue<side>(new Comparator<side>() {
+      public int compare(side o1, side o2) {
+        // TODO Auto-generated method stub
+        return o1.lenth-o2.lenth;
+      }
+    });
+    for(int i=0;i<7;i++)
+    {
+      if(city[2][i]!=max)
+      {
+        istrue[2]=true;
+        q1.add(new side(city[2][i], 2, i));
+      }
+    }   
+    while(!q1.isEmpty())
+    {
+      side newside=q1.poll();//ڊ
+      if(istrue[newside.point1]&&istrue[newside.point2])
+      {
+        continue;
+      }
+      else {
+        if(!istrue[newside.point1])
+        {
+          istrue[newside.point1]=true;
+          minlength+=city[newside.point1][newside.point2];
+          System.out.println(cityname[newside.point1]+" "+cityname[newside.point2]+" ᘶ
+᭗");
+          for(int i=0;i<7;i++)
+
+=== PDF PAGE 154 ===
+ᕮຎғ
+Ӥၹ Ղ ᘶ᭗
+๺૞ Ӥၹ ᘶ᭗
+ྎ࿥ Ղ ᘶ᭗
+Ղ Ղ ᘶ᭗
+ଠ૞ ྎ࿥ ᘶ᭗
+ࣉ ଠ૞ ᘶ᭗
+28
+** Kruskal**
+          {
+            if(!istrue[i])
+            {
+              q1.add(new side(city[newside.point1][i],newside.point1,i));
+            }
+          }
+        }
+        else {
+          istrue[newside.point2]=true;
+          minlength+=city[newside.point1][newside.point2];
+          System.out.println(cityname[newside.point2]+" "+cityname[newside.point1]+" ᘶ
+᭗");
+          for(int i=0;i<7;i++)
+          {
+            if(!istrue[i])
+            {
+              q1.add(new side(city[newside.point2][i],newside.point2,i));
+            }
+          }
+        }
+      }
+      
+    }
+    System.out.println(minlength);    
+  }
+  
+  static class side//ᬟ
+  {
+    int lenth;
+    int point1;
+    int point2;
+    public side(int lenth,int p1,int p2) {
+      this.lenth=lenth;
+      this.point1=p1;
+      this.point2=p2;
+    }
+  }
+}
+package ᦞ;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import ᦞ.prim.side;
+/*
+ * ᘏғbigsai(ݩ)
+ /*
+public class kruskal {
+  static int tree[]=new int[10];//bingັᵞ
+  public static void init() {
+    for(int i=0;i<10;i++)//ত
+    {
+      tree[i]=-1;
+    }
+  }
+  public static int search(int a)//१ᜓᅩጱහ꧊
+  {
+    if(tree[a]>0)//᧔กฎৼᜓᅩ
+    {
+      return tree[a]=search(tree[a]);//ᖽ
+    }
+    else
+      return a;
+  }
+  public static void union(int a,int b)//ᤒᐏ a҅bଚय़໅(ӧ᯿ᥝ)
+
+=== PDF PAGE 155 ===
+  {
+    int a1=search(a);//a໑
+    int b1=search(b);//b໑
+    if(a1==b1) {//System.out.println(a+"޾b+"Ӟ༒໅Ӥ");
+    }
+    else {
+    if(tree[a1]<tree[b1])//᧣አvalueහ
+    {
+      tree[a1]+=tree[b1];//ے  ے
+      tree[b1]=a1;       //b໅౮ԅaݻaҔ
+    }
+    else
+    {
+      tree[b1]+=tree[a1];//ے  ے
+      tree[a1]=b1;       //b໅౮ԅaݻaҔ
+    }
+    }
+  }
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    init();
+    int minlength=0;//๋ੜኞ౮໅ጱ๋Ꭸ᪠ஆᳩଶ
+    int max=66666;
+    String cityname[]= {"Ղ","ྎ࿥","Ղ","Ӥၹ","๺૞","ଠ૞","ࣉ"};
+    boolean jud[][]=new boolean[7][7];//ᬟᵱᥝᴠྊ᯿॔ ྲই ba޾abᒵհጱ
+    int city[][]= {
+        { max, 8, 7, max, max, max, max }, 
+        { 8, max,6, max,9, 8,max }, 
+        { 7, 6, max, 3,4, max,max }, 
+        { max, max,3, max,2, max,max }, 
+        { max, 9,4, 2,max, max,10 }, 
+        { max, 8,max, max,max, max,2 }, 
+        { max, max,max, max,10,2,max }
+    };// ࢶࣈ
+    boolean istrue[]=new boolean[7];
+    //Ղ
+    Queue<side>q1=new PriorityQueue<side>(new Comparator<side>() {//ਂᬟ+
+      public int compare(side o1, side o2) {
+        // TODO Auto-generated method stub
+        return o1.lenth-o2.lenth;
+      }
+    });
+    for(int i=0;i<7;i++)
+    {
+      for(int j=0;j<7;j++)
+      {
+        if(!jud[i][j]&&city[i][j]!=max)//ڜ
+        {
+          jud[i][j]=true;jud[j][i]=true;
+          q1.add(new side(city[i][j], i, j));
+        }
+      }
+    }
+    while(!q1.isEmpty())//ಗᤈᓒဩ
+    {
+      side newside=q1.poll();
+      int p1=newside.point1;
+      int p2=newside.point2;
+      if(search(p1)!=search(p2))
+      {
+        union(p1, p2);
+        System.out.println(cityname[p1]+" "+cityname[p2]+" ᘶ᭗");
+        minlength+=newside.lenth;
+      }
+    }
+    System.out.println(minlength);
+    
+  }
+  static class side//ᬟ
+  {
+    int lenth;
+    int point1;
+    int point2;
+    public side(int lenth,int p1,int p2) {
+      this.lenth=lenth;
+      this.point1=p1;
+      this.point2=p2;
+    }
+  }
+}
+
+=== PDF PAGE 156 ===
+ᕮຎ
+Ӥၹ ๺૞ ᘶ᭗
+ଠ૞ ࣉ ᘶ᭗
+Ղ Ӥၹ ᘶ᭗
+ྎ࿥ Ղ ᘶ᭗
+Ղ Ղ ᘶ᭗
+ྎ࿥ ଠ૞ ᘶ᭗
+28
+௛ᕮ  
+҅ਫሿ᩸๶Ԟӧฎஉᵙ̶Kruskal޾PrimԆᥝฎᨸஞᓒဩጱӷᐿ᥯ଶ̶Ӟӻ՗
+਍ԟ
+๋অ਍ԟӞӥdijkstraਫሿ᩸๶ᚆड़ளӞᅩ҅ႴศӞᅩ̶
+ಕ1584̶ᬯ᯾
+ԻၞѺ
+ӥጱय़ಢ҅ᝌ
+ፘ஫̶̶
+ 
+ 
+ 
+ள᭛଍  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsai೰offerள᭛଍ጱ᷌҅ᬯ᯾༂ቘӞӥᦖӞӥள᭛଍Ѻ
+ள᭛଍ฎՋԍҘ
+௏Ԏ҅ள᭛଍੪ฎள᭛ᓒବහጱnᚆወᳯ҅࿢nེ଍ᓒnԙӧ੪ᤈԧҘ୮n҅ইຎᵱ
+̶ 
+ํग़ளҘ
+ள᭛଍෸ᳵ॔๥ଶԅ O(log₂n)҅ Ө๠ᔰጱO(n)ፘྲපሲํԧຄय़ጱ൉ṛ(int ࢱ10ᳩଶහਁ32੪ᚆ൥ਧ҅
+long ࢱ20ᳩଶහਁ64፡ํग़ள)̶
+አጱग़ԍҘ
+ள᭛଍ંԭහᦞጱ᝜ዀ҅๜ฎACMग़ଚ
+໒ጱૡᑕ૵஠॓ᥝ࿢Ѻ
+Ѻ
+ள᭛଍Օᕨ  
+᧔ғ
+റ  
+࿢ (2^10)%1000ғ
+ᆧఀጱ1024ဌᳯ᷌҅ᦇᓒԧ10ེᓒ (2^50)%10000Ҙ
+౯Ҙ౯Ꭳ᭲intํ32҅50զአ
+long҅longํ64Ѻ
+ᦇᓒ50ᓒ (2^1e10)%10000 አJavaय़හ
+ԅྌᝒ௻ӧᎣಅഷ̶ᬯ෸bigsaiୗғ
+int va=1;
+for(int i=0;i<10;i++)
+{
+  va*=2;
+}
+System.out.println(va%10000);
+long va=1;
+for(int i=0;i<50;i++)
+{
+  va*=2;
+}
+System.out.println(va);
+System.out.println(va%10000);
+
+=== PDF PAGE 157 ===
+Ӿጱᥢ஌ғ
+֦pia pia๶Ҙ
+ 
+҅ጱᑕଧ஗ሾ
+ᬡ1e6౲1e7੪ᵱᥝᶋଉᶋଉੜஞԧᚆᶋଉᶋଉౌ̶
+(a + b) % p = (a % p + b % p) % p  ҁ1҂
+(a - b) % p = (a % p - b % p ) % p ҁ2҂
+(a * b) % p = (a % p * b % p) % p  ҁ3҂
+a ^ b % p = ((a % p)^b) % p        ҁ4҂
+(a * b) % p = (a % p * b % p) % p   (3)
+(2*2*2···*2) %1e10=[2*(2*2···*2)]%1e5=(2%1e5)*(2*2···*2%le5)%1e5
+
+=== PDF PAGE 158 ===
+ 
+ள᭛଍റᔱ  
+፡ғ
+Ӿጱॿᑃ҅n֟ۃn/2ጱེ଍ԧғ
+
+=== PDF PAGE 159 ===
+ 
+ 
+਻ғ
+ 
+ள᭛଍ਫሿ  
+Ҙ
+ 
+ྊ๵կ
+හᳯ᷌ғ
+ 
+ᬯ᯾҅᭓୭ጱᥴဩইӥғ
+ғ
+2*2*2*2*2=2 * (2*2*2*2) හᳯ̶᷌
+long c=10000007;
+public  long divide(long a, long b) {
+    if (b == 0)
+      return 1;
+    else if (b % 2 == 0) //٭
+      return divide((a % c) * (a % c), b / 2) % c;
+    else//٭
+      return a % c * divide((a % c) * (a % c), (b - 1) / 2) % c;
+  }
+
+=== PDF PAGE 160 ===
+ᚆํᅩཛྷᔡӧᕳresᩙ꧊̶ᬯ᯾ํӷᅩғ
+٭resጱa
+๋ᕣbک1҅a޾resፘԙ҅ӧአ೅ஞտᄋധ
+ፗള឴஑a̶
+ 
+๶ᥴ᯽Ӟӥғ
+Ꭵᴣள᭛଍  
+ሿஉํ᪁ጱᥢ஌—Ꭵᴣள᭛଍̶ই
+ᬦጱᦾୌᦓ՚ᕡ፡፡ԧᥴӞӥ̶
+ғ ғ
+ 
+ԅғ0, 1, 1, 2, 3, 5, 8, 13, 21, 34, …
+ڊጱीᳩݸ
+֕nইຎᶋଉᶋଉय़ெԍள᭛ᦇᓒ੪౮ԧӞӻෛጱᳯ̶᷌
+ୗғ
+ইຎᮎf(n)޾f(n-1)ӞӻᎥᴣӾ(ڜ)ғ[f(n+1),f(n)] ޾ک[f(n),f(n-1)]Ҙ
+ୗᎣ᭲
+ 
+کf(2),f(1)অ᮷ԅ1҅ಅզᬯӻ෋ူᮎॶጱᦇᓒԅғ
+//࿢ a^b%1000000007
+long c = 1000000007;
+public  long divide(long a, long b) {
+  a %= c;
+  long res = 1;
+  for (; b != 0; b /= 2) {
+    if (b % 2 == 1)
+      res = (res * a) % c;
+    a = (a * a) % c;
+  }
+  return res;
+}
+f(n+1) = f(n)   + f(n-1)
+f(n)   = f(n)
+[f(n+1),f(n)]
+=[f(n)+f(n-1),f(n)]
+                 [1  1]
+=[f(n),f(n-1)]  *      
+                 [1  0]
+                 
+                 [1  1] [1   1]
+=[f(n-1),f(n-2)]*      *
+                 [1  0] [1   1]  
+=·······    
+
+=== PDF PAGE 161 ===
+ࠩ,ӞӻᎥᴣள᭛
+଍࿢෋ူᮎॶᒫnᦶӞᦶpoj3070̶
+ڏ  
+ಕ(೰offer16හ꧊ጱෆහེො)Ӟӥғ
+ਫሿ pow(x n) ᦇᓒ x ጱ n ҅x^n෸ӧᵱᥝᘍᡤय़හᳯ̶᷌
+ғ
+nྋᨮ௔
+ᬟኴ(int๋ੜ)
+ෙnྋᨮ҅ਖ਼ᨮེ଍᫨౮ྋེ଍̶ইຎӾ᫨Ӟ੶longሿᬯԶᳯ̶᷌
+ 
+ᕮ᧍  
+୵҅ӧᬦ᪙හ਍ํ
+՜OJ̶
+ګ-Ꮁ̵ᤑᎱ  
+᥺  
+Ꮁฎԫᘏጱ໫໴Ꮯਫஉग़Ոஉᳩ෸ᳵဌ
+Ꮁ̵ᤑ
+Ꮁ҅ىզ፡ᬯᓤ̶
+public int Fibonacci(int n)
+{
+  n--;//Ꭵᴣԅӷᶱ
+  int a[][]= {{1,1},{1,0}};//ᬰᤈள᭛଍ጱᎥᴣ
+  int b[][]={{1,0},{0,1}};//Ꭵᴣ
+  int time=0;
+  while(n>0)
+  {
+    if(n%2==1)
+    {
+      b=matrixMultiplication(a, b);
+    }
+    a=matrixMultiplication(a, a);
+    n/=2;
+  }
+  return b[0][0];
+}
+ public  int [][]matrixMultiplication(int a[][],int b[][]){//
+   int x=a.length;//a[0].length=b.length ԅჿ᪃๵կ
+   int y=b[0].length;//ӻ
+   int c[][]=new int [x][y];
+   for(int i=0;i<x;i++)
+     for(int j=0;j<y;j++)
+     {
+       //ᔰ
+       //c[i][j];
+       for(int t=0;t<b.length;t++)
+       {
+         c[i][j]+=(a[i][t]%10000)*(b[t][j]%10000);
+         c[i][j]%=10000;
+       }
+     }
+   return c;
+ }
+ class Solution {
+    public double myPow(double x, int n) {
+        if(n==0)
+            return 1;
+        if(n==1)
+            return x;
+        if(n<0){
+            return (1/x)*myPow((1/x),-(n+1));//ӧᥝ-n-1ڊ
+}
+        if(n%2==0)
+            return myPow(x*x,n/2);
+        else
+            return x*myPow(x*x,(n-1)/2);
+    }
+}
+
+=== PDF PAGE 162 ===
+Ꮁ̵ᤑᎱӧ౜੪ᓒԧ҅ᦖԧӞ᭭ᬮӧ౜̶
+ԅᦤғ
+๶౯੪ᕳ՜᧔ԧᥝ
+Ӟӻᳯ᷌ғ
+૬೉૬೉ᕳ঄ᦖԧӞ᭗̶
+
+=== PDF PAGE 163 ===
+ล1.30ײ……
+ᓒԧ҅ᓒԧ҅ᬯ਎ৼဌ஑මԧ҅ӧᓕԧ҅஑ᦏ঄ᶉᶉ……ࢯ
+జ̶
+਍c++ሻ఺դᎱӧᥝ࿢҅ӧ਍
+ғemumm҅᪡ᬦ᪡ᬦ̶
+̶
+ᅹᚏ̶
+ᎱᤑᎱጱੜ਍୞
+ᅩՋԍ,ᤈѺ
+හਁ  
+Ҙ
+ҁbinaryහਁኪ᪠Ӿ೰զ2ԅचහጱᦕහᔮᕹ҅զ2ጱ̶ᬯӞᔮᕹ
+ݩ0޾1ҁդᤒӞ҂๶ᤒᐏ [1]  ̶හਁኪৼኪ᪠Ӿ҅᭦ᬋᳪጱਫሿፗളଫአ
+̶ྯӻහਁᑍԅӞӻྲᇙҁBit҅Binary digit
+҂
+ጱ01ᵱᥝᎸᑪහ
+̶
+զ൥஑౜̶
+ྲই2ғ10҅3ғ11҅4ғ100҅5ғ101.
+ெԍ൥Ҙ
+-2ګ10Ҙ-3ګ11?҅ெԍ᪙፳ᬯԍӞӻᨮහҘ
+ک  Ҙ
+
+=== PDF PAGE 164 ===
+च๜ᔄ
+ࣳ
+ᳩଶ
+(byte)ࣳ ࢱ
+byte 1 Byte -128~127
+short 2 Short -32768 ӗ 32767
+int 4 Integer -2147483648ӗ2147483647
+long 8 Long -9223372036854774808ӗ9223372036854774807
+float 4 Float 3.402823e+38ӗ1.401298e-45ҁe+38 ᤒᐏԙզ10ጱ38ེො҅ᘒe-45
+ᤒᐏԙզ10ጱᨮ45ེො҂
+double8 Double 1.797693e+308ӗ4.9000000e-324
+char 2 Character 
+booleanਥො๚
+Ꮯਧ Booleantrue false
+઀ᐏӞӥғ
+੪กᏟᤒᐏғᕟ౮:
+֖ݩ(֖)֖(֖)ጱ0౲ᘏ1੪ฎᤒᐏහഝጱय़ੜ̶
+හഝইຎஉੜ(ᶎ᮷ฎ0)֖
+፥ᵙ̶
+ࣁJavaӾํᬯ8ᐿच๜හഝ
+ࣳ1byte=8bit)ғ
+֦byte a=1,ਂӾ੪ฎᬯ໏ጱғ
+0000 0001
+֦int b=1;ԅintฎ32ਂӾฎᬯ໏ਂጱғ
+00000000 00000000 00000000 00000001
+क़ᵱᥝဳ఺ጱฎ҅ဩইຎფ
+ړ̶
+Ꮁ  
+Ҙ
+ԅ0ԅ1ҁ0ํӷᐿᤒᐏғ+0޾0ٌ
+ᤒᐏහ꧊ጱय़ੜ̶
+ฎӧฎஉፗളกԧጱ઀ᐏӞӻ꧊Ҙහᤒᐏฎग़
+ፗᥡ̶
+Ҙ
+ဩғ
+
+=== PDF PAGE 165 ===
+ے
+ဩ੪౮ԧӞӻᵙ᷌҅ᩳӧ᭗̶
+Ꮁ  
+ىဩဩᥢ
+՗ਙᦇ̶
+ᎱጱਧԎฎᬯ໏ጱғᎱฎ੒
+೮ԅ1. ጱ(֢)ᎱӾ
+ጱහਁ01ᮎԍᬯӻහਁ੪տํྲ᫾ํ᪁ጱԪఘ̶
+ᎱӾ๜๶ྲ᫾य़ጱහਁ(-1,-2ᒵ)፡᩸๶உय̶़(Ԟ
+ᬯӻහਁฎग़੝)
+ဩ(ྋහ)ᬰᤈ01զဩጱ᭦ᬋ̶
+፡᩸๶Ԟဌᳯ̶᷌
+զ኱᭗෫ᴥԧҘno no noᎱӾํ+0҅-0.֢
+ᎱӾ+0҅-0ғ
+
+
+=== PDF PAGE 166 ===
+҅what should I doຉ̶
+ᤑᎱ  
+ҘԆᥝฎྋᨮ0ғ
+ฎ՗ᨮ
+տᕪᬦӷӻ0(-0҅+0)ӷӻᵭ᯿॔ᤒᐏԧ̶
+Ꮁጱᥢ஌ғ
+-3Ꮁғ 1111  1100
+-2Ꮁғ 1111  1101
+-1Ꮁғ 1111  1110
+-0Ꮁғ 1111  1111
++0Ꮁғ0000 0000
+ӻ1҅ᮎԍᬯ໏ྋᨮ0ҘѺѺᬯ੪ฎಅ᧲ጱᤑᎱғ҅ྋ
+ے1.
+ԞฎአᤑᎱᤒᐏಅํහ꧊̶
+Ҙ
+ᳵғ
+զ಩ړጱғ෫ᦞᨮහᬮ
+҅᮷ฎ՗ 000 0000~111 1111(byteֺ)ԅ1ک
+๋य़(-128 ~ -1)و128ӻ҅ইຎฎ0๋य़(0 ~ 127)و128Ѻ
+ၥᦶ  
+҅አզӥդᎱḵᦤӤᬿᕮຎ
+//ғbigsai
+public class Main {
+  public static void main(String[] args) {
+    int a =-1;//11111111 11111111 11111111 11111111
+    int b=1;  //00000000 00000000 00000000 00000001
+
+=== PDF PAGE 167 ===
+ᕮຎғ
+զӥ੪অԧ̶
+௛ᕮ  
+Ҙ
+௛ᕮӞӥғ
+Ꮁ֖ݩ+֖ݩ0դᤒྋ҅1դᤒᨮ̶
+ᎱᎱ
+֖0౮1҅1౮0.
+ᤑᎱզӨᬩᓒ̶ଚ
+̶
+ 
+ګ-ᬩᓒ௛ᕮ  
+᥺  
+ጱஞӾ஦஧҅ᬮํԶՈๅฎ
+౯ժጱ୧ᅩ൥౯ժ҅ԅԧᴠఋԭ๚
+ᆐ҅ᇙᦕྌᓤѺ
+    System.out.println(Integer.toBinaryString(a));//ڊ1ګ
+    System.out.println(Integer.toBinaryString(b));//ᶎጱ0տ፜ኼ
+    
+    /*
+     * 127 + 1:
+     *  0111 1111
+     * +0000 0001
+     * =1000 0000 = -128
+     */
+    byte c=127;
+    byte d=(byte)(c+1);
+    System.out.println(d);
+    
+    /*
+     *  -1+1
+     *   1111 1111
+     * + 0000 0001
+     * =10000 0000(ቘᦞӤ) = 0000 0000(ํ8֖0
+     */
+    byte e=-1;
+    byte f=(byte)(e+1);
+    System.out.println(f);
+  }
+}
+
+=== PDF PAGE 168 ===
+ᶎᙗਧᬮฎᥝ୭ᕑ
+௛ᕮጱ̶
+ᬩᓒ  
+ᬩᓒҘ
+ᬰᤈ
+̶
+Ҙ
+ଉᥠጱᬩᓒᒧํӨ(&)̵౲(|)̵୑౲(^)ݍݐ~)̵ૢᑏ(<<)ᑏ(>>ᑏ >>>ۖ)̶ӥᶎ๶ᕡ፡፡
+̶
+ᬩᓒ & (Ө)
+ӷӷᬰᤈ᭦ᬋANDᬩᓒ(ጱ꧊᮷ฎ 1 ෸ᕮຎ಍ԅ 1, ԅ 0)ܨ 
+0&0=0,0&1=0,1&1=1
+ইғ2 & -2
+ 
+ᬩᓒ | (౲)
+ӷӷᬰᤈ᭦ᬋ౲ᬩᓒ(ӾํӞ ӻԅ1ԅ1) ܨ0|0=0,0|1=1,1|1=1
+ইғ2 | -2
+ 
+ᬩᓒ ^ (୑౲)
+ӷӷᬰᤈ᭦ᬋXOR (୑౲) ጱᬩᓒ(෸ԅ 1, ԅ 0)ܨ0^0=0, 0^1=1, 1^1=0
+ইғ2 ^ -2
+ 
+ݍݐ֖~
+
+=== PDF PAGE 169 ===
+ጱ0౮1҅1౮0̶
+ᬩᓒᒧ
+ૢᑏᬩᓒ<<ᤑ 0
+ᑏᬩᓒ>>ᤑ꧊(ᚆฎ0ᚆฎ1)
+ᑏᬩᓒ>>>ᤑ 0
+੒ԭૢᑏᬩᓒᒧ<<ऴӻᵭ෫ᦞྋᨮහፘ୮ԭෆӻහԙզ2̶
+ᤑ0>>>֖>>᮷ฎᤑ0ᴻզ
+2ᤑ0>>>౮Ӟӻፘ੒᫾य़ጱྋහ̶
+֖(ᨮහᤑ1)>>ᮎԍෆӻහᬮฎᨮහ҅Ԟ੪ฎፘ୮ԭᴻզ2ጱපຎ̶
+ᬩᓒᒧғ
+ 
+ᚆտቘᥴጱ
+ๅႴศғ
+
+
+=== PDF PAGE 170 ===
+ 
+ᬩᓒੜದૣ  
+ᬩᓒੜದૣ̶
+හ  
+ғ
+ғ
+ጱԅ1҅ইຎԅ1Ӥ2^0=1හ̶
+Իഘӷӻහ  
+ᚆտฎᬯ໏ғ
+᷐क़ᑮᳵਠ౮හ꧊Իഘғ
+ဳ᯽᯾ᶎԧ҅ฎӧฎఽᥧᶋଉdiaoҘ
+ຍԈ  
+ᐿᇫா(පሲय़ԭdfsშ)ݳ
+ߝ(ᗝ)զአ1޾0ਫ
+̶
+ຍԈጱդᎱਫሿԅғ
+ 
+if( n % 2 == 1)
+    // n ฎӻ॰හ
+}
+if(n & 1 == 1){
+    // n ฎӻ॰හ̶
+}
+int team = a;
+a = b;
+b = team;
+a=a^b;//a=a^b
+b=a^b;//b=(a^b)^b=a^0=a
+a=a^b;//a=(a^b)^(a^b^b)=0^b=0
+for(int i = 0; i < (1<<n); i++) //՗0ӗ2^n-1ӻᇫா
+{
+  for(int j = 0; j < n; j++) //֖ وn֖
+{
+    if(i & (1 << j))//හਁiጱᒫjࣁ
+{
+      //ڊ
+}
+  }
+}
+
+=== PDF PAGE 171 ===
+ᳯ᷌  
+̶
+ဩ  
+᷌ፓൈᬿ
+አ+̵-̵*̵/̶
+ຉғ
+ቘᥴጱ̶
+ጱᬩᓒғ0+0=0҅0+1=1,1+1=0(֖)
+ᬩᓒ̶֖᮷ԅ0ԅ0҅0޾1ԅ1.ჿ᪃ᬯᐿᬩᓒ
+ጱ୑౲(ݐݶ1ݐݶ0)౲(ํӞӻ1ԅ1)᮷ᚆჿ᪃.
+҅౯ժᙗਧᬮᵱᥝጱᳯ᷌҅ᬯᐿ
+໐ஞ௏మԅғ
+አӷӻහ҅Ӟӻྋଉmے(ጱ)̶አ୑౲a^b֖(ᮎԍ੪ฎ
+๋ᕣᕮຎ)Ӟӻጱn̶ӷӻ1̶ಅզ౯ժአa&bӨฎᬮํӻᳯ᷌҅
+̶
+౮m+nጱ(ܨn=0ײ)̶
+ਫሿդᎱԅғ
+ 
+ဩғaverage = ҁa&b҂ + ((a^b)>>1) ;
+Ӿ1ጱӻහ  
+೰offer᷌ፓᥝ࿢ᤒᐏӾ1ጱӻහ(Ӿ
+ᨮහአᤑᎱᤒᐏ)̶
+ਁᒧԀፗളຍԈਁᒧ'1'ฎဌํᅎṯ
+௏᪠
+public class Solution {
+      public int Add(int num1,int num2) {
+    /*
+     *  5+3   5^3(0110)   5&3(0001) 
+     *  0101    
+     *  0011 
+     */
+    int a=num1^num2;
+    int b=num1&num2;
+    b=b<<1;
+    if(b==0)return a;
+    else {
+      return Add(a, b);
+    }        
+   }
+}
+
+=== PDF PAGE 172 ===
+ဩӞғ य़ਹᎣ᭲ྯӻ̶֢य़ਹᎣ᭲intฎ(-2^31,2^31 -1)̶ଚ
+Ӭintํ32ฎଚᶋ32᮱አ๶ᤒᐏහഝ̶፥ྋአ๶ᤒᐏහഝय़ੜጱԞฎ31አ๶ᤒᐏྋᨮ̶
+ᥝᎣ᭲ғ
+1<<0=1       =00000000000000000000000000000001
+1<<1=2       =00000000000000000000000000000010
+1<<2=4       =00000000000000000000000000000100
+1<<3=8       =00000000000000000000000000001000
+. . . . . .
+1<<30=2^30 =01000000000000000000000000000000
+1<<31=-2^31 =10000000000000000000000000000000
+ 
+ᬩᓒ&Өᬩᓒ.ݶ֖1ԅ1̶ಅզ౯ժአ2ᬰᤈӨᬩᓒ඙
+̶ইຎᕮຎӧԅ0ԅ1.(ᶎ31ӻ᮷ฎय़ԭ0ԅ1ᮎԍᕮຎᙗ
+ਧӧԅ0)
+դᎱਫሿԅғ
+ဩԫฎᬩአn&(n-1)̶nইຎӧԅ0҅ᮎԍn-1੪ฎᒫӞӻԅ1ԅ0ԅ1.ᬯ໏ጱn&(n-1)Ӟེᬩᓒ
+Ӟӻ1౮0.ᬩᓒጱහԅ0ᬰᤈӣེᬩᓒᮎԍnӾ
+੪ํӣӻ1̶
+ਫሿդᎱԅғ
+public int NumberOf1(int n) {
+  int va=0;
+  for(int i=0;i<32;i++)
+  {
+    if((n&(1<<i))!=0)
+    {             
+      va++;
+    }
+  }
+  return va;        
+}
+
+=== PDF PAGE 173 ===
+ሿӞེጱ(Ӟӻ)හਁɠ  
+ᳯ᷌ൈᬿғ
+ሿӞེզक़҅ሿӷེሿԧӞེጱ
+ᔰ̶
+ํᕚ௔෸ᳵ॔๥ଶ̶ Ҙ
+ຉғ
+ሿӞེጱහਁ(ሿӷེ)ێ
+ᥝဳ఺ӷᅩғ
+0ᕮຎԅහਁ๜᫝.
+ጱහਁᬰᤈ୑౲ጱᕮຎԅ0.
+੪ฎአ0ሿӞེ(॰හེ)
+ጱ꧊̶
+ሿӞེጱ(Ӟӻ)හਁɡ  
+ᳯ᷌ൈᬿғ
+ሿӞེզक़҅ሿԧӣེሿԧӞེ
+ᔰ̶
+ํᕚ௔෸ᳵ॔๥ଶ̶ Ҙ
+ຉғ
+ሿԧ3ک
+՜ᇙ௔ғ֟ګ1޾0ጱ௛ӻහӞਧ
+҅ইຎ0හਁԅ0ԅ1.
+public class Solution {
+    public int NumberOf1(int n) {
+     int count=0;
+     while (n!=0) {
+       n=n&(n-1);
+       count++;
+     }
+     return count;
+  }
+}
+class Solution {
+    public int singleNumber(int[] nums) {
+        int value=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            value^=nums[i];
+        }
+        return value;
+    }
+}
+
+=== PDF PAGE 174 ===
+ࣁintզ੒intጱ32֖
+֖1֟3ԅ1҅ইຎԅ1ԅ1ԅ
+ᒼໜ̶
+դᎱԅғ
+ 
+ሿӞེጱ(ӷӻ)හਁɢ  
+᷌ፓൈᬿ
+හᕟ᯾ᴻԧӷӻහਁԏक़҅ሿԧӷེሿӞེጱහਁ̶
+௏᪠ғ
+ԅӤ
+ᬩᓒԞฎ୑౲^̶
+ဩԅԫጱᙗਧฎa^b(ڦړ
+ԅa޾b)፡୑౲^ԅ1ԅ0. ԅ1ᗝӤa޾bݶ
+ԅ0ӾӞӻᕮຎ
+aԅ1Ӟӻᕮຎb̶
+ၞᑕғ
+ਫሿդᎱԅғ
+class Solution {
+    public int singleNumber(int[] nums) {
+        int value=0;
+        for(int i=0;i<32;i++)
+        {
+            int sum=0;
+            for(int num:nums)
+            {
+                if(((num>>i)&1)==1)
+                {
+                    sum++;
+                }
+            }
+            if(sum%3==1)
+                value+=(1<<i);
+        }
+        return value;
+    }
+}
+public int[] singleNumbers(int[] nums) {
+    int value[]=new int[2];
+    if(nums.length==2)
+
+=== PDF PAGE 175 ===
+ 
+ᕮ᧍  
+֦
+ݸ
+਻҅ස᧗๗இѺ
+ 
+ 
+࿢ᔰහ(ᔰහᓀ)  
+ 
+ 
+ᶎ
+ᅩᑱᏈ—Ձ๶ԧ̶
+ᘏᥝ࿢᩼๶᩼ṛԧ҅ᘒᶎᦶਥԞฎ॒ஞᑌᡤጱ "ᵙ" ᶎᦶ
+ཻ
+ૡବৼঅ҅உग़ኜᛗํACMᶎᦶਥԞฎୟ
+ݗxxᓒဩ̵xxԧ̶
+࿢Ӟӻᨶහ  
+๶ԧ҅Ԟ
+Ӟӥғ
+Ҙ
+౯ғ࿢ᔰහҘ
+ᶎᦶਥғฎጱ҅੪ฎ࿢ᔰහ̶
+ෙӞӻහԅᔰහ҅ᮎԍᙗਧ੪ဌํӷӻහ(޾1)ᵱᥝຍԈ፡፡ํဌ
+զԧ҅ইຎํᮎԍ੪ӧฎᔰහ҅ইຎဌํ҅ᮎԍ੪ฎᔰහ̶
+᧔Ӟӥ̶
+ӥᶎ୏ত୏ত౯ጱᤒᄍғ
+๋҅ᒨጱොဩෙnԅᔰහ҅੪ฎຍԈ[2,n-1]ԏᳵํဌํፗളᚆड़ᤩnࢧfalseᬯ
+੪ฎᔰහ҅դᎱইӥғ
+        return  nums;
+    int val=0;//୑౲࿢ጱ꧊
+    for(int i=0;i<nums.length;i++)
+    {
+        val^=nums[i];
+    }
+    int index=getFirst1(val);
+    int num1=0,num2=0;
+    for(int i=0;i<nums.length;i++)
+    {
+        if(((nums[i]>>index)&1)==0)//ইຎᬯӻහᒫindexԅ0 ޾num1୑౲
+            num1^=nums[i];
+        else//޾ڞވnum2 ୑౲
+            num2^=nums[i];
+    }
+    value[0]=num1;
+    value[1]=num2;
+    return  value;
+}
+private int getFirst1(int val) {
+    int index=0;
+    while (((val&1)==0&&index<32))
+    {
+        val>>=1;// val=val/2
+        index++;
+    }
+    return index;
+}
+boolean isprime(int value){
+  for(int i=2;i<value;i++)
+  {
+     if(value%i==0)
+     {return false;}
+  }
+  return true;
+}
+
+=== PDF PAGE 176 ===
+ෙӞӻᔰහጱ෸ᳵ॔๥ଶԅO(n).
+ဌ஠ᥝᬯ໏҅Ӟӥ ̶ইຎӞӻහӧฎᨶහ҅ᮎԍ஠ਧฎӷӻහጱԙᑌ҅ᘒ
+ᬯӷӻහ᭗ଉӞӻय़Ӟӻੜ҅ଚӬੜጱੜԭᒵԭݩn҅य़ጱय़ԭᒵԭݩn҅፡፡
+ই100=2*50=4*25=5*20=10*10 ᵱᥝತ2—10ܨ
+ጱӞਧํӻ੒ଫጱӧᵱᥝᓕਙ̶
+ᬯ᯾ԏಅզᥝੜԭvalue+1ই 3*3=9.ތ۱3.ӻහฎO(logn)̶ᶎᦶ
+ғ
+ོ౏ጱᒞ਻̶
+ᶎᦶਥғӧᲙӧᲙ҅च๜ᅩഩൎԧ
+ 
+҅ྲই࿢ੜԭn፡፡ெԍ൥Ҙ
+ᶎᦶਥғአӻහᕟአᒫԫᐿොဩ࿢nlogn̶
+࿢ग़ӻᔰහ  
+ײ(ੜԭnጱᔰහ)ԅ හ ԅᔰ
+ሿय़ᰁጱ᯿॔ᦇᓒ҅ইຎᬯӻහྲ᫾य़ᮎԍ੒ᑮᳵၵᩇྲ᫾ग̶़
+ᬰᤈӞᐿ᭓വ̵ᬦᄁഭଧզ๶ᕹᦇᔰහ̶
+इ೉ಓේᇙੰ(Eratosthenes)ᓀဩ  
+ғ
+හຽᦕӞӥ(ܲ
+ᦇᓒ)ۗ׵ݢײ
+ෙ̶ಅզහ̶
+ฎᔰහ҅2ԅᔰහ҅ᮎԍ2کܲ3҅3හຽᦕӞӥҔӥӻฎ5(ԅ4૪ᕪᤩ
+ຽᦕᬦ)کn-1ғ
+դᎱԅғ
+boolean isprime(int value)
+{
+  for(int i=2;i*i<value+1;i++)
+  {
+     if(value%i==0)
+     {return false;}
+  }
+  return true;
+}
+boolean isprime[];
+long prime[];
+
+=== PDF PAGE 177 ===
+ᬯᐿᓀጱᓒဩ॔๥ଶԅO(nloglogn);ੜ᎓ग़ጱᬯӻlogn҅හഝᰁय़Ӟӻlogᚆ੝ӧ੝ӻ0ኜ
+ᛗๅग़ጱ૧᪗̶
+ཾ೉ᓀ  
+ਫᬮဌਠ̶ᬮํӻᕚ௔ᓀ—ཾ೉ᓀ̶ᥡ੊Ӥᬿጱइ࿄ᓀ҅ํஉग़
+ᶎጱᔰහ҅ྲই2޾3හԅ6҅ྯ3ེ2ฎ3इ
+ԧᬯӻ᯿॔ᦇᓒ̶
+አਙԙզ૪Ꭳปጱᔰහጱԙᑌ
+ᬰᤈຽᦕຽᦕ̶
+አ̶
+ے1.
+꧊i؊
+ᬰᤈӥӞ᫪̶
+ 
+ਫሿጱդᎱԅғ
+ࠨif (i % prime[j] == 0)੪ᥝbreak̶
+ইຎi%prime[j]==0҅ᮎԍ੪᧔กi=prime[j]*k. kԅӞӻෆහ̶
+ᮎԍইຎᬰᤈӥӞ᫪ጱᦾ
+i*prime[j+1]=(prime[j]*k)*prime[j+1]=prime[j]*(k*prime[j+1]) ୮i=k*prime[j+1]٫
+ࠩ,ྊ̶
+ 
+ᬯӻᬦᑕ҅6ຽᦕ12ᘒӧຽᦕ18҅18ᤩ9*2Ѻ
+ཾ೉ጱ௏᪠੪ฎᐶ౯᫾ᬪጱ౯ᕳਙຽᦕ̶ཾ೉ᓀጱ෸ᳵ॔๥ଶԅO(n)ຽᦕӞ̶ེ
+void getprime()
+{
+    prime=new long[100001];//ӻprime
+    int index=0;//ຽᦕprimeӥຽ
+    isprime=new boolean [1000001];//ᤩຽᦕᬦ
+    for(int i=2;i<1000001;i++)
+    {
+      if(!isprime[i])
+      {
+        prime[index++]=i;
+      }
+      for(int j=i+i;j<1000000;j=j+i)//හ᮷over
+      {
+        isprime[j]=true;          
+      }
+    }
+}
+boolean isprime[];
+int prime[];
+void getprimeoula()// ཾ೉ᓀ
+{
+    prime = new int[100001];// ӻprime
+    int index = 0;
+    isprime = new boolean[1000001];
+    for (int i = 2; i < 1000001; i++) {
+      if (!isprime[i]) {
+        prime[index++] = i;
+      }
+      for (int j = 0; j < index && i * prime[j] <= 100000; j++){//ຍԈ
+        isprime[i * prime[j]] = true;// ຽᦕԙᑌ
+        if (i % prime[j] == 0)
+          break;
+      }
+    }
+}
+
+=== PDF PAGE 178 ===
+ӧᲙ҅ӥᶎ੪ฎᘱᘱਹଉ҅ᦏ౯ᒵஇӥӞེᶎᦶѺ
+ 
+̵ৼᵞᳯ᷌  
+᥺  
+Hello҅य़ਹঅ҅long time no see̵
+Ѻ
+Ҙ
+ғnݐnᔰ(ᔰ)ጱಅํ٭̶
+Ҙ
+ғnݐmᔰጱಅํ٭(ڜ)̶
+࿢ৼᵞҘ
+ғnᔰጱಅํৼᵞ(٭)̶
+ 
+٭(ڜ)Ҕৼᵞฎ੒
+٭(ڜ)̶
+ৼᵞᳯ᷌ᦊԅฎ
+کํ᯿॔᯿ᥝ
+Ӥ๋ၞᤈጱ੪ฎᮝ᯾԰ഘဩ޾შဩৼᵞᳯ
+चᏐጱ੪ฎᥝഩൎᬯӷᐿොဩਫሿጱڜݒ
+೐઀̶
+ᳯ᷌  
+ฎጱᶲଧ̶
+ڜ  
+ࣁಕ46݄᷌aᦶᦶ̶
+ᳯ᷌ൈᬿғ
+ᕳਧӞӻ ဌํ᯿॔ ̶
+ғ
+ڜ
+შᓒဩғ
+ሿ૪ӧჿ᪃࿢ᥴ
+๵կ෸҅੪“შ”ጱ᪠ஆ.
+ᚆ௔̶Ӟӻᳩଶԅnᚆ௔
+ํnѺጱᦶറᒽኼইӥғ
+1. ᔰ(ํn٭)አ̶
+2. ྍṈ1֟ۃn-1ᔰӾೲᆙ1ӥ᭓୭̶
+3. ӤӞ੶(੶ຽᦕ
+ᔰႴᴻຽᦕ)̶
+ف[1,2,3]
+ڊ:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+=== PDF PAGE 179 ===
+შጱၞᑕইຎ՗։դᎱၞᑕय़ᛘԅᬯ໏ғ
+ڜ 1 2 3 4๶ดᐏғ
+ 
+አդᎱ๶ਫሿ௏᪠Ԟฎྲ᫾ग़ጱ҅ᵱᥝӞӻList౯ժຽᦕԞํӷᐿ॒
+አListӞᐿ௏᪠੪
+አӞӻbooleanԅList᷇ᔺ
+҅ಅզ౯ժӞᛱአӞӻbooleanአ̶
+ਫሿጱդᎱԅғ
+හғ
+  ᔰᤩຽᦕғ
+      ᕮຎᵞӾ
+  ғ
+      Ӿ
+      አ
+      හ
+      (ᬯ੶᭓୭ᕮ๳)አ
+List<List<Integer>> list;
+public List<List<Integer>> permuteUnique(int[] nums) {
+    list=new ArrayList<List<Integer>>();//๋ᕣጱᕮຎ
+    List<Integer> team=new ArrayList<Integer>();//ᔰ
+    boolean jud[]=new boolean[nums.length];//አ๶ຽᦕ
+    dfs(jud, nums, team, 0);
+    return list;
+}
+private  void dfs(boolean[] jud, int[] nums, List<Integer> team, int index) {
+    int len = nums.length;
+    if (index == len)// ྊ
+    {
+        list.add(new ArrayList<Integer>(team));
+    } else
+        for (int i = 0; i < len; i++) {
+            if (jud[i]) //හਁᤩአᬦ አ
+                continue;
+            team.add(nums[i]);
+            jud[i]=true;//አ
+            dfs(jud, nums, team, index + 1);
+            jud[i] = false;// ܻ
+            team.remove(index);//ݳ
+}
+}
+
+=== PDF PAGE 180 ===
+ԞฎӞᛘጱғ
+ 
+ڜ
+ฎ՜ฎӞ
+ᬰᤈᘍᡤ̶
+ғړ޾ړ҅
+๚Ꮯਧ
+޾ེᬰᤈԻഘ(ೡᛔ૩)ٌ
+๶(ܻ)੪ਖ਼හᕟጱ꧊
+ᬰᤈቘᥴғ
+ 
+ਫሿդᎱԅғ
+class Solution {
+     public List<List<Integer>> permute(int[] nums) {
+    List<List<Integer>>list=new ArrayList<List<Integer>>();
+    arrange(nums,0,nums.length-1,list);
+    return list;
+   }
+  private void arrange(int[] nums, int start, int end, List<List<Integer>> list) {
+      if(start==end)//Ӟӻ ᕮຎӾ
+      {
+        List<Integer>list2=new ArrayList<Integer>();
+        for(int a:nums)
+        {
+
+=== PDF PAGE 181 ===
+ 
+ޫڦ܄?ଧ
+შᓒ
+አӞਧጱᩒრ̶
+ 
+ڜ  
+ํ᯿॔੒ଫጱฎಕᒫ47᷌ ҅᷌ፓൈᬿԅғ
+ڜ nums ҅ೲձ఺ᶲଧ ̶
+ֺ1ғ
+ֺ2ғ
+൉ᐏғ
+1 <= nums.length <= 8
+-10 <= nums[i] <= 10
+᯿॔಍ฎ
+ຉ̶
+ຏဩ
+ຏፘྲ᭓୭ᮝ᯾԰ഘොဩๅ
+ጱහਁ
+አӤݒইӥғ
+ᬰᤈഭଧ
+ᗝ
+አ
+Ӟӻහਁ̶
+ 
+          list2.add(a);
+        }
+        list.add(list2);
+      }
+      for(int i=start;i<=end;i++)//୏তԻഘ
+      {
+        swap(nums,i,start);
+        arrange(nums, start+1, end, list);
+        swap(nums, i, start);//ܻ
+    }
+    
+  }
+  private void swap(int[] nums, int i, int j) {
+    int team=nums[i];
+    nums[i]=nums[j];
+    nums[j]=team;
+  }
+}
+ғnums = [1,1,2]
+ғ
+[[1,1,2],
+ [1,2,1],
+ [2,1,1]]
+ғnums = [1,2,3]
+ғ[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+=== PDF PAGE 182 ===
+ғ
+ᮝ᯾԰ഘဩ
+Ҙ
+አHashSetᬰᤈԻഘswap҅ಅզ౯
+ժᥝ᧡Իഘ̶ྲই1 1 2 3ᒫӞӻහ٭(ӷӻ1 1 2 3ԅӞӻᕮຎ)ғ
+1 1 2 3  // 0 0ᗝԻഘ
+2 1 1 3  // 0 2ᗝԻഘ
+3 1 2 1  // 0 3ᗝԻഘ
+क़ྲই3 1 1ڜ3ᶎӷӻ1ሿጱᬰᤈԻ
+ᬦᑕғ
+List<List<Integer>> list;
+public List<List<Integer>> permuteUnique(int[] nums) {
+  list=new ArrayList<List<Integer>>();
+  List<Integer> team=new ArrayList<Integer>();
+  boolean jud[]=new boolean[nums.length];
+  Arrays.sort(nums);
+  dfs(jud, nums, team, 0);
+  return list;
+}
+private  void dfs(boolean[] jud, int[] nums, List<Integer> team, int index) {
+  // TODO Auto-generated method stub
+  int len = nums.length;
+  if (index == len)// ྊ
+  {
+    list.add(new ArrayList<Integer>(team));
+  } else
+    for (int i = 0; i < len; i++) {
+        if (jud[i]||(i>0&&nums[i]==nums[i-1]&&!jud[i-1])) //හਁᤩአᬦ Ӟӻፘᒵጱᬮဌ
+አ
+          continue;
+        team.add(nums[i]);
+        jud[i]=true;
+        dfs(jud, nums, team, index + 1);
+        jud[i] = false;// ܻ
+        team.remove(index);
+    }
+}
+
+=== PDF PAGE 183 ===
+ಅզ҅୮౯ժ՗ӞӻindexғԻഘӞེ(ೡ꧊ᒵԭᛔ૩ጱහ)ᶎ꧊
+አhashSet().̶ಅզ
+ᬯᐿොဩපሲӞᛱᛱ̶
+ਫሿጱդᎱԅғ
+ᳯ᷌  
+ᐿ҅ᳯ᷌ൈᬿҁಕ77᷌҂:
+ᕳਧӷӻෆහ n ޾kࢧ1 ... n ᚆጱ k ̶
+ֺ:
+public List<List<Integer>> permuteUnique(int[] nums) {
+     List<List<Integer>> list=new ArrayList<List<Integer>>();
+     arrange(nums, 0, nums.length-1, list);
+     return list;
+   }
+private void arrange(int[] nums, int start, int end, List<List<Integer>> list) {
+    if(start==end)
+    {
+      List<Integer>list2=new ArrayList<Integer>();
+      for(int a:nums)
+      {
+        list2.add(a);
+      }
+      list.add(list2);
+    }
+    Set<Integer>set=new HashSet<Integer>();   
+    for(int i=start;i<=end;i++)
+    {
+      if(set.contains(nums[i]))
+        continue;
+             set.add(nums[i]);       
+      swap(nums,i,start);
+      arrange(nums, start+1, end, list);
+      swap(nums, i, start);
+    } 
+}
+private void swap(int[] nums, int i, int j) {
+  int team=nums[i];
+  nums[i]=nums[j];
+  nums[j]=team;
+}
+فn = 4, k = 2
+ڊ:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+
+=== PDF PAGE 184 ===
+ຉғ
+ᔰጱᶲଧ҅ྲইa b޾b a̶ᥝᬯ໏ጱ᯿
+॔ฎ໐ஞӞӻintᶎጱහ
+ਁ҅ᘒk̶
+ 
+ਂ੒ଫහਁ҅አbooleanአ҅ᬯ᯾੪ӧአList
+ෙbooleanᤈጱ̶ਫሿդᎱԅғ
+ 
+ৼᵞ  
+̶
+෫᯿॔හᕟৼᵞ  
+ᳯ᷌ൈᬿ(ಕ78᷌)ғ
+Ӟӻෆහහᕟ nums ᔰ ݶ ᚆጱৼᵞҁ଍ᵞ҂̶
+ᥴᵞ ӧᚆ զೲ ձ఺ᶲଧ ᥴᵞ̶
+ֺ1ғ
+class Solution { 
+  public List<List<Integer>> combine(int n, int k) {
+    List<List<Integer>> valueList=new ArrayList<List<Integer>>();//ᕮຎ
+    int num[]=new int[n];//ؙ1-n
+    boolean jud[]=new boolean[n];//አ
+    for(int i=0;i<n;i++)
+    {
+      num[i]=i+1;
+    }
+  
+    List<Integer>team=new ArrayList<Integer>();
+    dfs(num,-1,k,valueList,jud,n);
+    return valueList;
+    }
+  private void dfs(int[] num,int index, int count,List<List<Integer>> valueList,boolean 
+jud[],int n) {
+    if(count==0)//kᔰჿ
+    {
+      List<Integer>list=new ArrayList<Integer>();
+      for(int i=0;i<n;i++)
+      {
+        if (jud[i]) {
+          list.add(i+1);
+        }
+      }
+      valueList.add(list);
+    }
+    else {
+      for(int i=index+1;i<n;i++)//ࣁindexܲ ӥ
+      {
+        jud[i]=true;
+        dfs(num, i, count-1, valueList,jud,n);
+        jud[i]=false;//ܻ
+      
+      }
+    } 
+  }
+}
+ғnums = [1,2,3]
+ғ[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+
+=== PDF PAGE 185 ===
+ֺ2ғ
+൉ᐏғ
+1 <= nums.length <= 10
+-10 <= nums[i] <= 10
+nums ᔰ ݶ
+შጱᒽኼݸ҅ྯᬰᤈጱ
+ᕮຎӾ(٭)̶
+ਫሿጱդᎱԅғ
+ํ᯿॔හᕟৼᵞ  
+᷌ፓൈᬿ(ಕ90᷌)ғ
+ᔰጱෆහහᕟ numsᚆጱৼᵞҁ଍ᵞ҂̶
+᯿॔ጱৼᵞ̶
+ֺ:
+ 
+ጱฎᬯ᯾ᶎᔰᔰ̶
+ғnums = [0]
+ғ[[],[0]]
+class Solution {
+   public List<List<Integer>> subsets(int[] nums) {
+    List<List<Integer>> valueList=new ArrayList<List<Integer>>();
+    boolean jud[]=new boolean[nums.length];
+    List<Integer>team=new ArrayList<Integer>();
+    dfs(nums,-1,valueList,jud);
+    return valueList;
+    }
+  private void dfs(int[] num,int index,List<List<Integer>> valueList,boolean jud[]) {
+    {//ᕮຎӾ
+      List<Integer>list=new ArrayList<Integer>();
+      for(int i=0;i<num.length;i++)
+      {
+        if (jud[i]) {
+          list.add(num[i]);
+        }
+      }
+      valueList.add(list);
+    }
+    {
+      for(int i=index+1;i<num.length;i++)
+      {
+        jud[i]=true;
+        dfs(num, i, valueList,jud);
+        jud[i]=false;
+      
+      }
+    }
+  }
+}
+ف[1,2,2]
+ڊ:
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+
+=== PDF PAGE 186 ===
+Ӟӻboolean[]හᕟຽ
+޾indexᔰ
+boolean[index]ᗝԅtrue(ܻ)̶ྯེ᭓୭තᵞboolean[]හᕟӾtrueӾӞӻৼᵞ̶
+҅Ḓᬰᤈഭଧ꧋
+ჿ᪃๵կ(ᔰ౲ݶ޾
+አ)ғ
+ਫሿդᎱԅғ
+ 
+class Solution {
+  public List<List<Integer>> subsetsWithDup(int[] nums) {
+    Arrays.sort(nums);
+    boolean jud[]=new boolean[nums.length];
+    List<List<Integer>> valueList=new ArrayList<List<Integer>>();
+    dfs(nums,-1,valueList,jud);
+    return valueList;
+  }
+  private void dfs(int[] nums, int index, List<List<Integer>> valueList, boolean[] jud)   
+{
+    // TODO Auto-generated method stub
+    List<Integer>list=new ArrayList<Integer>();
+    for(int i=0;i<nums.length;i++)
+    {
+      if (jud[i]) {
+         list.add(nums[i]);
+      }
+    }
+    valueList.add(list);
+    for(int i=index+1;i<nums.length;i++)
+    {//ᔰ ౲ ݶ  զᖀᖅᬰᤈ
+      if((i==0)||(nums[i]!=nums[i-1])||(i>0&&jud[i-1]&&nums[i]==nums[i-1]))
+      {
+        jud[i]=true;
+        dfs(nums, i, valueList,jud);
+        jud[i]=false;
+      }
+    }
+  }
+}
+
+=== PDF PAGE 187 ===
+ᕮ᧍  
+ጱ
+ᶎස᧗๗இѺ
+හ  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsai̶
+Ӟӻhard೰offerጱᒫ41හ̶̈́
+᷌ፓൈᬿฎᬯ໏ጱғ
+꧊̶
+ই҅
+[2,3,4] හฎ 3
+[2,3] හฎ (2 + 3) / 2 = 2.5
+ጱහഝᕮ຅ғ
+void addNum(int num) - හഝᕮ຅Ӿ̶
+double findMedian() - හ̶
+՜හഝ҅Ԟ੪
+ੱᰁṛපጱਠ౮ਙ̶
+ࣁ᧑జᦫ౯ՋԍѺ
+ሕইᡡ҅Ӟ൉ԻፗളGG̶ӧᬦᬯӻᳯ᷌ฎӻᶋଉঅጱᳯ᷌҅
+፡፡Ѻ
+ຉ̶
+ොဩ(෫ᚏഭଧ)  
+ᘌ੝ጲ਩҅ੜጮԞํੜጮጱොဩ҅ᵙ҅ᚆᬦ੪ᤈ(ߡ)̶
+Ӟᕟහഝؙ҅౯አහᕟ̵Listਫ੪ฎӾᳵӞӻ(꧊)Ѻ
+ӞӻArrayList()ၹᕑጯ૝(හഝ)҅ӞᤈArrays.sort()޾ݳAPI
+զ᫷ຂਫሿѺ
+ᵱᥝഭଧ nlogn҅ັᧃ෸ᳵᬪO(1);ེහग़ጱᦾ෸ᳵ॔๥ଶᬮฎᢡṛ
+ጱ̶
+դᎱԅғ
+/** initialize your data structure here. */
+public MedianFinder() {
+}
+List<Integer>list=new ArrayList<>();
+public void addNum(int num) {
+    list.add(num);
+    list.sort(null);
+}
+public double findMedian() {
+    if(list.size()%2==1)
+        return list.get(list.size()/2);
+    else {
+        return (double) (list.get((list.size()-1)/2)+list.get(list.size()/2))/2;
+    } 
+}
+
+=== PDF PAGE 188 ===
+Ӟ፡ᕮຎ҅2000+msԅ࿢ᬦ̶
+ 
+ጱොဩ(ഭଧ)  
+҅౜஑ग़Ӟᅩ̶
+ғ୏তဌํѺᳩଶ҅ইຎྯེ᮷಑ԤഭଧᮎդհํᅩṛѺಅզ
+ᚆӧᚆ॔አӤེ૪ᕪഭঅଧጱᕮຎҘ
+Ѻ
+ف……
+ӾັತᜰᩇO(n),ԞฎO(n)ᆐฎO(n)̶
+զፗള໑ഝහᰁັತ҅෸ᳵ॔๥ଶԅO(1).ف
+ԅO(n)ፘྲO(nlogn)̶
+ᗝ҅
+Ѻᬯกด੪ฎӞӻړ̶
+ړ+Ҙ
+҅ӧฎO(logn),ັತྯӞེጱ෸ᳵ॔๥ଶᏟਫฎO(logn)෯ฎO(n),௛ጱ෸ᳵ॔
+๥ଶ๋ṛᰁᕆ O(logn)+O(n)=O(n)̶
+ᒼғฎ
+O(n2),ԅO(logn)෯O(n)҅ಅզn෯ԅO(n2)̶
+অԧ෬ᆐᥴ᯽Ⴔ༩,ሕইᡡ҅ፗളӤդᎱғ
+class MedianFinder {
+    /** initialize your data structure here. */
+    public MedianFinder() {
+    }
+    int arr[]=new int[50000];
+    int count=0;
+    public void addNum(int num) {
+        int low=0,high=count-1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int midVal = arr[mid];
+            if (midVal < num)
+                low = mid + 1;
+            else if (midVal > num)
+                high = mid-1 ;
+            else 
+                low++;
+        }
+        
+        for(int i=count-1;i>=low;i--){
+            arr[i+1]=arr[i];
+
+=== PDF PAGE 189 ===
+҅200+msᨳԧ10%አಁ҅᧔กොဩᬮฎӧड़অ҅ᬮฎஉ
+ጮ̶
+ጱᥴဩ(ञ/ڜ)  
+̶
+ᶎ҅౯ժᦖᬦञഭଧ ޾ቘ ,᯾ᶎᧇᕡጱᦖᥴԧ ᶶӞӥञғ
+໅(ᜓᅩᬳᖅ)໅
+ᗝᬰᤈԻഘ̶
+ԅय़໑ञ޾ੜ໑ञғ
+ইຎಅํᜓᅩय़ԭ؉ݞय़໑ञ໑ᜓᅩ̶
+ইຎಅํᜓᅩੜԭ؉ݞੜ໑ञ໑ᜓᅩ̶
+        }
+        arr[low]=num;
+        count++;
+    }
+    public double findMedian() {
+        
+        if(count%2==1)
+            return arr[count/2];
+        else 
+            return (double) (arr[count/2-1]+arr[count/2])/2;
+    }
+}
+
+=== PDF PAGE 190 ===
+ᬯӻӾ
+Ҙ
+හഝ҅य़ጱ
+ञᶮ;Ѻ
+Ӟӻ
+ञ(ڜ)ᔰහᰁӧଘᤍ҅ᮎԍ
+ग़ጱӾ̶
+ᔰӻහᒵԭय़໑ञӻහ(හ)Ӟ(॰හ)੪ፗള
+ԅJavaӾᕡᜓ(ᴚ
+ਫሿ)̶
+ฎO(log n/2)ӷེ҅
+ฎ෸ᳵ॔๥ଶᬮฎO(logn)̶ྲ᩸O(n)ሿ᩼กด̶
+դᎱԅғ
+class MedianFinder {
+    /** initialize your data structure here. */
+    public MedianFinder() {
+    }
+    Queue<Integer>q1=new PriorityQueue<>();//ੜ໑ञ නय़ጱහഝ
+    //य़໑ञ
+    Queue<Integer>q2=new PriorityQueue<>(new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2-o1;
+        }
+    });
+    public void addNum(int num) {
+       if(q1.isEmpty())
+            q1.add(num);
+        else if(num>q1.peek()){//ੜ໑ञ
+            q1.add(num);
+           if (q1.size()>q2.size()+1){
+              q2.add(q1.poll());
+
+=== PDF PAGE 191 ===
+ᳵ75msঅஉग़҅ञ҅፥ጱॡওԧѺ౯ԞฎᒫӞེᥠ̶
+܋  
+֗
+(໅ጱӾଧഭଧ)̶
+ғ
+1.ࣁ0 ک100 ጱᓒဩҘ
+2.ইຎහഝၞӾ 99% ࣁ0 ک100 ጱᓒဩҘ
+Ҙ
+҅ᙗ
+Ѻ
+ࣁ0-100զፗള୏Ӟӻ101ط0-100 զᬯ
+ᤒᐏ̶
+̶
+ᗝ꧊ጱӻහ̶ᬯ໏ᬯӻහᕟ꧊ฎᬳᖅ᭓
+አ۸̶
+            }
+        }
+        else{//य़໑ञ
+            q2.add(num);
+            if (q2.size()>q1.size()){
+            q1.add(q2.poll());
+            }
+        }
+        
+    }
+    public double findMedian() {
+        if(q1.size()==q2.size())
+            return (double)(q1.peek()+q2.peek())/2;
+        else 
+            return q1.peek();
+    }
+}
+
+=== PDF PAGE 192 ===
+Ӟ҅ಅ
+ེහӧ᩻ᬦ50ဩԞӧ᩻ᬦ10හഝྲ᫾ᵞӾ ҅
+አᦇහഭଧฎᶋଉঅጱ̶
+क़҅ইຎ99%ࣁ0-100ᬟᖭᇙ఺ᦡᗝ0޾102҅᩻ᬦ100ک102҅ੜԭ0ک
+0ӥྯེ๶xනx+1ࣁ0-100ᤈѺ
+ԙᴻ  
+ 
+᥺  
+य़ਹঅ҅౯ฎbigsaiय़හᬩᓒጱ
+᷌ፓ҅మ፳ᬯԍܔय़ਹӞ᩸௛ᕮӞӥ̶
+ᔄ ̵bfs̵dfs̵य़හय़හ҅
+᩸๶ௗṛय़Ӥጱ̶
+ 
+ਫ੪ฎஉय़உय़හਁ(ᚆᬱ᩻32̵64෫ဩᤒᐏ)ࣁJavaአӞӻय़හᔄ
+(BigIntegerᒵ)ጱ̶
+҅य़හᬩᓒጱ໐ஞ੪ฎғཛྷ೙ԙ
+౯ժፗളཛྷ
+̶
+ 
+
+=== PDF PAGE 193 ===
+ဩ  
+๋
+̶
+ਫሿӤᵱᥝဳ఺ӞԶᕡᜓ̶
+1᫨ഘᑕchar[]൉ṛපሲ
+2አStringBuider๋
+ᥝᭋᗝӞӥᶲଧ̶
+3ইຎय़ԭᒵԭ10ᗝጱහԞଫᧆฎᧆහ%10ጱᕮ
+ຎ̶
+4ԅ1҅ইຎԅ1ই "991"+"11"ᗝԅ002ᬮํӞ
+҅ಅզଫᧆฎ1002̶
+զᦇᓒԧ̶୮ᆐ౯ᬯ᯾ਫሿጱฎਁᒧԀ՗
+کےStringBuilderӤ̶
+ಕ̓415ےզ༄ḵᛔ૩դᎱ҅ਫሿդᎱԅғ
+ 
+ဩ  
+ݶ
+֖҅׵ᚆԾኞྋᨮԞӧӞਧ̶
+ྋଉ҅ᕮຎฎӞӻྋහҔय़හ҅ᮎԍᕮຎਖ਼ฎӞӻᨮහ҅ଚ
+Ӭᕮຎ॒ቘ᩸๶ྲ᫾Ἃᅸ̶ ᮱᫨౮य़-ੜ॒ቘ(य़-٭)̶
+public String addStrings(String num1, String num2) {
+// ғbigsai ဳ
+    int len1=num1.length()-1,len2=num2.length()-1;
+    char ch1[]=num1.toCharArray();
+    char ch2[]=num2.toCharArray();
+    StringBuilder sb=new StringBuilder();
+    int remainder =0;//හ
+    while (len1>=0||len2>=0)
+    {
+        int n1=len1>=0?(ch1[len1--]-'0'):0;
+        int n2=len2>=0?(ch2[len2--]-'0'):0;
+        int num=n1+n2+remainder;//੒ଫහਁ
+        remainder=num/10;//֖
+        sb.append(num%10);// ᕮຎਁᒧԀӾ
+    }
+    if(remainder>0)//֖
+{
+        sb.append(remainder);
+    }
+    //ԅᕮຎ
+    return sb.reverse().toString();
+}
+
+=== PDF PAGE 194 ===
+1හ(num1)හ(num2)ጱय़ੜ҅ইຎnum1>num2,ᮎԍ੪ཛྷ೙num1-num2ጱᬦᑕ҅ই
+ຎnum1<num2҅ᮎԍᕮຎ੪ԅ-(num2-num1) ਖ਼num1᫾
+Ӟӻif/else.
+2ྲ᫾ӷӻਁᒧԀጱᳩଶ҅ᳩጱᮎӻๅय़Ꭸጱᮎӻๅੜ҅ইຎ
+ᬰᤈྲ᫾(JavaአcompareToොဩ)̶
+3ᖗ0҅ᬯԶ0ই"1100"-"1000"ጱᕮຎ
+֖0100",ᶎጱ0ࢧ100"̶
+4አStringBuilderӤ'-'.
+5ဩᬩᓒ҅ইຎ꧊ੜԭ0֖׵10),֖׵
+ጱ॒ቘӞӥ̶
+ੜᔂOJ̓ٺਫሿጱդᎱԅғ
+public static boolean compare(String num1,String num2)
+{
+    if(num1.length()<num2.length())
+        return  false;
+    else if(num1.length()>num2.length())
+        return true;
+    else
+        return num1.compareTo(num2)>0;
+}
+public static  String subtractString(String num1,String num2) {
+    char sign='+';//ݩ
+    //ᦏnum1>num2 ইຎnum1<num2 ᮎԍᕮຎ੪ฎ—(num2-num1) 
+    //ਖ਼num1޾num2ᕹӞ
+    if(!compare(num1,num2))
+    {
+        sign='-';
+        String team = num2;
+        num2 = num1;
+        num1 = team;
+    }
+    int len1=num1.length()-1;
+    int len2=num2.length()-1;
+    char ch1[] = num1.toCharArray();
+    char ch2[] = num2.toCharArray();
+    StringBuilder sb=new StringBuilder();
+    int borrow=0;//֖׵
+    while (len1>=0||len2>=0)
+    {
+        int n1=len1>=0?(ch1[len1--]-'0'):0;
+        int n2=len2>=0?(ch2[len2--]-'0'):0;
+        int num=n1-n2-borrow;
+        borrow=0;
+        if(num<0)//֖׵ڹݻ
+{
+
+=== PDF PAGE 195 ===
+ 
+य़හԙဩ  
+ฎ1ײ
+੪ᵱᥝ౯ժᔺԅᓌԧ̶
+ग़*ग़ฎইຎग़*Ӟ֖
+̶
+ፗളአintಅᐏ̶
+ᘒग़*ग़ ԅྊ̶
+ᚆտወᳯ҅ইຎԅa޾bޫҘ
+a+bӾӞӻaӞӻb౮๋ੜb+1ײ
+Ԟӧᬦฎa+bᳩଶ҅ಅզᬯ᯾a+bᳩଶ੪ड़ԧ̶
+ᦶᦶ̓43ਁᒧԀፘԙғ
+            borrow=1;
+            num+=10;
+        }
+        sb.append(num);
+    }
+    sb=sb.reverse();//ᘉ᫨
+    int index = 0;//ᶎဌአጱ’0‘
+    while (index<sb.length()&&sb.charAt(index) == '0')
+    {
+        index++;
+    }
+    //ݶ ࢧ0"
+    if(index==sb.length())
+        return "0";
+    if(sign=='+')//ইຎྋහ 
+        return  sb.substring(index);
+    else  return sign+sb.substring(index);//ࢧ
+}
+public String multiply(String num1, String num2) {
+    if("0".equals(num1)||"0".equals(num2))return "0";
+
+=== PDF PAGE 196 ===
+य़හᴻဩ  
+ฎय़හᴻဩԞ᭗ᬦཛྷ೙๶ਫሿҘ
+ଚӧฎ҅੒ԭय़හa/bܨa/b=c……dҁa,b,c,dԅෆ҂;Ԟ੪ฎa᯾ᶎํcӻ
+bӥd࿢cဩ҅՗aٺdک
+ԅྊ̶
+ฎํӻᳯ᷌҅ইຎᤩᴻහaᚆํ੷ग़ӻbᚆಗᤈᮎԍग़ེ҅ᮎԍᵱ
+Ҙ
+ੜጱӞӻ๋অොໜ੪ฎᚆӧᚆಘय़ᴻහb̶ইຎbے
+ӻ'0'๶ጱᕮຎ੪ԙզ10کbጱ๋य़
+10හ(ੜԭa)ٺbԅྊ,ᬯᡱᆐ
+ဩ(ᕮຎӾ)̶
+    char a[]=num1.toCharArray();
+    char b[]=num2.toCharArray();
+    
+    int value[]=new int[a.length+b.length];
+    
+    for(int i=a.length-1;i>=0;i--)
+    {
+        for(int j=b.length-1;j>=0;j--)
+        {
+            int index=a.length-1-i+b.length-1-j;
+            value[index]+=(a[i]-'0')*(b[j]-'0');
+        }
+    }
+    for(int i=0;i<value.length-1;i++)
+    {
+        value[i+1]+=value[i]/10;
+        value[i]=value[i]%10;
+    }
+    int index=value.length-1;
+    while(value[index]==0)
+    {index--;}
+    StringBuilder sBuilder=new StringBuilder();
+    while (index>=0) {
+        sBuilder.append(value[index--]);
+    }
+    return sBuilder.toString();
+}
+
+=== PDF PAGE 197 ===
+զጱ(හ)ਫሿጱ
+ဩ̵
+̶
+ᕳӞӥ(ࠩ)ғ
+ၥᦶԧӥ҅ྋᏟ௔ᬮฎokጱғ
+ኾक़ᓤ  
+॒ቘ҅ӥᶎ
+Ձӷ̶᭲᷌
+ے(ಕ02)
+᷌ፓൈᬿғ
+ӷӻ ᶋᑮ හਁ᮷ฎೲᆙ ᭋଧ ᚆ
+ؙ ֖ ጱ᱾ᤒ
+ᦡᴻԧහਁ 0 ԏक़҅ᬯӷӻහ᮷ӧտզ 0 ୏१̶
+//ᦡ num1>num2
+public static String divideString(String num1,String num2)
+{
+    String value="0";//ᕮຎ
+    while (compare(num1,num2))
+    {
+        StringBuilder sbTeam=new StringBuilder(num2);//ے0 ޾numဩ
+        StringBuilder sbCount=new StringBuilder("1");//ེහ ᚆஉय़
+        int subLen=num1.length()-num2.length();//ӻᵭ 
+        for(int i=0;i<subLen;i++)
+        {
+            sbTeam.append('0');
+            sbCount.append('0');
+        }
+        //ইຎ0 ग़ԧ Ӟӻ ֒12300" / "23" "12300"ྲ"23000"ੜ
+        //ಅզᥝ "2300" ੒ଫྲ"23"ಘय़ "100"Ӟེ"2300" ے100"
+        if(!compare(num1,sbTeam.toString()))
+        {
+            sbTeam=sbTeam.deleteCharAt(sbTeam.length()-1);
+            sbCount=sbCount.deleteCharAt(sbCount.length()-1);
+        }
+        // ײ
+        while (compare(num1,sbTeam.toString()))
+        {
+            num1=subtractString(num1,sbTeam.toString());
+            value=addStrings(sbCount.toString(),value);
+        }
+    }
+    return  value;
+}
+
+=== PDF PAGE 198 ===
+ 
+ 
+ 
+൉ᐏғ
+ࢱ [1, 100] ٖ
+0 <= Node.val <= 9
+੕ᵭ
+Ӟӻහਁ(ؙ)ࣁݸ ᭋଧ ̶
+ғݸ҅ᘒ๜᷌ಅ
+զአӞӻଉහ
+̶
+ਫሿ(᱾ᤒ)ғ
+̶
+֖
+ෙ̶
+ဩғ
+᫨౮ਁᒧԀ̵᱾ᤒ
+զᛔᤈਫሿ̶
+ጱդᎱԅғ
+ //ဩ
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+  ListNode node=new ListNode(0);
+  ListNode team=node;
+  int jin=0;//֖
+  while(l1!=null||l2!=null)
+  {
+    int num=jin;
+    if(l1!=null)
+    {
+      num+=l1.val;l1=l1.next;
+    }
+    if(l2!=null)
+    {
+      num+=l2.val;l2=l2.next;
+    }
+    jin=num/10;
+
+=== PDF PAGE 199 ===
+ے2(ಕ445)
+᷌ፓൈᬿғ
+ӷӻ ᶋᑮ හਁ̶ਖ਼
+Ӟӻෛጱ᱾ᤒ̶
+ᦡᴻԧහਁ 0 ԏक़҅ᬯӷӻහਁ᮷ӧտզᵭ୏१̶
+ᤒӾጱᜓᅩᬰᤈᘉ᫨̶
+ғ
+ғ(7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
+ғ7 -> 8 -> 0 -> 7
+ฎᶎ੒ἶ୏ত҅Ԟ੪ฎቘᦞӤଫᧆ՗᱾ᤒੲ᮱୏
+᱾ᤒ҅ᬯ໏ᬩᓒጱᦾ෸ᳵ॔๥ଶॡṛ҅ಅզ౯ժ̶
+ݢܨ(ইຎӧ१
+ݢ)ғ
+ਫሿդᎱԅғ
+    num%=10;
+    team.next=new ListNode(num);
+    team=team.next;
+  }
+  if(jin!=0)team.next=new ListNode(jin);
+  return node.next;
+}
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        Stack<Integer>stack1=new Stack<>();
+        Stack<Integer>stack2=new Stack<>();
+        while (l1!=null)
+        {
+            stack1.add(l1.val);
+            l1=l1.next;
+        }
+        while (l2!=null)
+        {
+            stack2.add(l2.val);
+            l2=l2.next;
+        }
+        ListNode val=new ListNode(0);//ଃ१ᕮᅩ
+        int moreadd=0;//හ
+        while (!stack1.isEmpty()||!stack2.isEmpty()||moreadd!=0)
+        {
+            int num=moreadd;//num=හ+᱾ᤒ1+᱾ᤒ2
+            if(!stack1.isEmpty())
+                num+=stack1.pop();
+            if(!stack2.isEmpty())
+                num+=stack2.pop();
+            moreadd=num/10;
+            num=num%10;
+            //᱾ᤒ१ൊ
+            ListNode node=new ListNode(num);
+            node.next=val.next;
+            val.next=node;
+        }
+
+=== PDF PAGE 200 ===
+ 
+ᕮੲ  
+॒ቘ҅
+ጱ௏మ᮷ฎӞ໏ጱ̶
+ 
+ᕅቴॢሾᳯ᷌  
+᥺  
+ᳯ᷌ቘᥴฎፘ୮਻ฃጱ҅ଚӬᳯ᷌ൈᬿํᶋଉग़ጱᇇ๜҅ଚӬᕅቴॢ
+ቘᥴ᭗᭗Ѻ
+ 
+Ջԍฎᕅቴॢሾᳯ᷌Ҙ
+ᤩ"۸"೰offerݷ……
+೰offer62ጱൈᬿғӥጱහਁ̶
+ᳯ᷌ൈᬿғ
+0,1,···,n-1ᬯn҅՗හਁ0ᴻᒫm՗ӥӞӻහਁ୏
+Ӟӻහਁ̶
+ই҅0̵1̵2̵3̵4ᬯ5҅՗හਁ0ᴻᒫ3ڹ4ེฎ
+2̵0̵4̵1ӥጱහਁฎ3̶
+୮ᆐ҅ᬯ᯾ᘍᡤm҅nӾ
+1 <= n <= 10^5
+1 <= m <= 10^6
+҅ӥӞ
+Ӟӻ̶
+஗ሾ᱾ᤒཛྷ೙  
+ѺӞӻӞӻᶲ
+Ѻ
+ොғ
+ӥຍԈӧᵱᥝᘍᡤ१ੲᳯ᷌҅ፗളnode=node.nextӥ
+ᴻԞӧᵱᥝᘍᡤ१ੲᳯ᷌҅ፗളnode.next=node.next.nextᴻ
+ො
+Ӟӻᜓᅩጱnextݢܨ
+ܨnode.next=nodeײ
+ᶎᜓ
+ݢܨ
+ 
+ᬯ໏҅௏᪠กᏟ҅ፗള୏ඓդᎱғ
+        return val.next;
+    }
+}
+class Solution {
+    class node//᱾ᤒᜓᅩ
+    {
+        int val;
+        public node(int value) {
+            this.val=value;
+        }
+        node next;
+    }
+    public int lastRemaining(int n, int m) {
+        if(m==1)return n-1;//ݢܨ
+        node head=new node(0);
+        node team=head;//ୌӞӻ᱾ᤒ
+
+=== PDF PAGE 201 ===
+ 
+ጱOJฎ෫ဩACຉ̶
+ཛྷ೙  
+አ᱾ᤒፗളཛྷ೙჋౭ᬦᑕտ᭜౮ᶋଉӸ᯿ᶋଉӸ᯿ጱ᩻෸҅nᒫmԅmইຎᶋଉय़ᬱ
+ᬱय़ԭm̶
+አ֟ཛྷ
+೙҅Ӥᶎጱwhileғ
+ 
+ۗ׵ArrayList޾LinkedListአLinkedListବ੶
+አArrayListአListդᎱොဩӞᛘ̶
+ListአListጱᵙᅩฎӞӻᶲଧᤒெժཛྷ೙౮஗ሾ᱾ᤒҘ
+ᳩଶԅnᒫmӻ(ᦏᬯӻํපጱmӧय़ԭn)ࣁindexڢ
+ӥጱ੪ฎn-1ᳩଶ҅indexᴻᵱ
+Ҙ
+        for(int i=1;i<n;i++)
+        {
+            team.next=new node(i);
+            team=team.next;
+        }
+        team.next=head;//୵౮ሾ
+        int index=0;//՗0୏তᦇහ
+        while (head.next!=head) {//ײ
+            //ইຎindex=m-2 ᮎ੪᧔กӥӻᜓᅩ(m-1)ᴻԧ
+            if(index==m-2)
+            {
+                head.next=head.next.next;
+                index=0;
+            }
+            else {
+                index++;
+            }
+            head=head.next;
+        }
+        return head.val;
+    }
+}
+int len=n;
+while (head.next!=head) {
+  if(index==(m-2)%len)
+  {
+    head.next=head.next.next;
+    index=0;
+    len--;
+  }
+  else {
+    index++;
+  }
+  head=head.next;
+}
+
+=== PDF PAGE 202 ===
+ୗ੪ฎԅғ
+ԅindexฎ՗1ڹm-1ጱᳩଶಘ
+՗indexᗝindex2ᗝindex2%(ᳩଶ)ԅ፥ྋጱ
+ᳩଶ̶
+஑҅෬ᚆ಩Ӥᶎmᦡ౮ᕚ௔
+ғ
+ጱOJդᎱԅғ
+index=(index+m-1)%(list.size());
+class Solution {
+    public int lastRemaining(int n, int m) {
+        if(m==1)
+            return n-1;
+        List<Integer>list=new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            list.add(i);
+        }
+        int index=0;
+        while (list.size()>1)
+        {
+            index=(index+m-1)%(list.size());
+            list.remove(index);
+        }
+        return list.get(0);
+    }
+}
+
+=== PDF PAGE 203 ===
+ 
+٬  
+٬mྲn٭(٭)ฎᬮ
+ࣁn҅෫ᦞฎᶲଧᤒArrayListᬮฎ᱾ᤒLinkedListපጱ̶
+ᔮ̶
+ୗғ
+ຉᬦᑕғ
+ৼ҅ํ0 1 2 3 4 5 6 7 8 9ᦡmԅ3,ᦕ౮f(10,3)౯ժӧᎣ᭲ਙฎ
+ग़੝̶
+ᔰ2 ۃ9֕ᔰ3̶ᒵհ౮3 4 5 6 7 8 9 0 1
+ᬯ9୏তತ̶
+ 
+ 
+ԅf(10,3)޾f(9,3)҅ฎ᮷ฎ9ӻහӬmᒵԭ3֖
+ᗝӤጱහਁӧӞ໏ጱԪఘฎ޾
+f(9,3)꧊ӤํဌํՋԍᘶᔮ̶
+᭗ᬦ%ݩզਖ਼3 4 5 6 7 8 9 0 1፡౮
+(3,4,5,6,7,8,9,10,11)%10.ᬯ᯾ጱ10ԅྌ෸ጱnහ꧊̶
+ᘶᔮጱ(ګ)کf(10,3)޾
+f(9,3)ғ
+ 
+ಅզf(10,3)ԅf(9,3)ጱᤒᬡ,ቘғ
+ӥդᎱғ
+f(n,m)=(f(n-1,m)+m)%n
+f(n,m)೰nӻՈ҅ಸᒫmݩ
+f(10,3)=(f(9,3)+3)%10
+f(9,3)=(f(8,3)+3)%9
+……
+f(2,3)=(f(1,3)+3)%2
+f(1,3)=0
+class Solution {
+    int index=0;
+    public int lastRemaining(int n, int m) {
+         if(n==1)
+            return 0;      
+        return (lastRemaining(n-1,m)+m)%n;
+    }
+}
+
+=== PDF PAGE 204 ===
+ᬽդғ
+ 
+ 
+ᕮ᧍  
+ሿጱ༷ሲஉय़҅ᘍ੊உ᷇ᔺ҅᱾ᤒ
+զग़
+ӞՄጱѺ
+ 
+य़ഭଧ  
+ᚆᳯጱྲ᫾ᕡ
+॔๥ଶጱഩൎํᥝ࿢̶bigsaiԅӞӻᨮᨱձጱJavaᬯොᶎᙗ
+य़ഭଧᓒဩ҅᫷᫷ຂຂഩൎѺ
+ုഭଧ౲ᘏJDKӾጱArrays.sort()ᐿഭଧ੒உग़Ո๶᧔᮷ฎ
+ԧ๜ᓤ෈ᒍѺ
+य़ഭଧᓒဩ
+ԅӷय़ᔄғचԭᶋྲ᫾ഭଧᐿᔄ̶
+ᶋྲ᫾ᔄጱํ໲ഭଧ̵चහഭଧ̵ᦇහഭଧ̶Ԟํஉग़Ոਖ਼ഭଧ୭ᕑԅ8ԅचහഭଧ̵ᦇහഭ
+ᬯ᯾੪ਖ਼՜
+ժ୭ᕑԅ10ԅ
+զ፡ӥᶎጱ
+̶
+ 
+ 
+Իഘᔄ  
+ 
+ုഭଧ  
+ုഭଧฎӞᐿᑞਧഭଧᓒဩ҅෸
+ᳵ॔๥ଶԅO(n^2).च๜௏మฎғ᧣҅ྯེᏟਧӞӻ๋य़(๋ੜ)ݸ
+̶(᧣)̶
+௏మԅ(᧣)ғ
+ᔰय़҅ᮎԍ੪Իഘӷᘏय़
+ᦤզᏟਧ̶
+class Solution {
+    public int lastRemaining(int n, int m) {
+        int value=0;
+            for(int i=1;i<=n;i++)
+            {
+                value=(value+m)%i;
+            }
+            return  value;
+    }
+}
+
+=== PDF PAGE 205 ===
+ฎ
+ᗝ੪ᤈ(ԅᒫӞེ౯ժ૪ᕪᏟਧ๋य़ጱ
+හᒫԫ)
+ᔰํଧ̶
+ 
+ই2 5 3 1 4ഭଧᬦᑕইӥғ
+ਫሿդᎱԅғ
+ 
+ள᭛ഭଧ  
+ုฎӞᐿӧᑞਧഭଧ,෸ᳵ॔๥ଶ๋
+ฎO(n^2),෸ᳵ॔๥ଶԅO(nlogn),ጱ෸ᳵ॔๥ଶԅO(nlogn)̶
+੒ԭளഭ๶᧔҅च๜௏మฎᬯ໏ጱ
+҅੪ฎ᮱ੜԭӞӻහ҅᮱य़ԭӞӻහአ᭓୭ጱ௏మ
+ᬰᤈഭଧ̶
+ฎ᭗ଉӧս
+๋ૢᬟጱᮎӻහ̶
+ਫሿդᎱԅғ
+public void  maopaosort(int[] a) {
+  // TODO Auto-generated method stub
+  for(int i=a.length-1;i>=0;i--)
+  {
+    for(int j=0;j<i;j++)
+    {
+      if(a[j]>a[j+1])
+      {
+        int team=a[j];
+        a[j]=a[j+1];
+        a[j+1]=team;
+      }
+    }
+  }
+}
+public void quicksort(int [] a,int left,int right)
+{
+  int low=left;
+
+=== PDF PAGE 206 ===
+ᔄഭଧ  
+ 
+ഭଧ  
+ײ ̵ೲṛᎩᶲଧഭଧ҅ᮎԍӞञṛ
+ᗝ̶Ӟӻਠ౮ൊ
+ف಍ᚆჿ᪃ํଧ̶
+ྲ᫾෸ᳵ॔๥ଶฎྯེO(n),Իഘጱ෸ᳵ॔๥ଶྯེԞฎO(n),ᮎԍnጱ෸ᳵ॔๥ଶ੪ฎ
+O(n^2)܎(ړ)౮O(nlogn),੝ັತ॔๥ଶྯེԅO(logn),
+ጱ෸ᳵ॔๥ଶྯེԅO(n)ᬮฎO(n^2).
+ྍṈғ
+ᗝ(ᶎ૪ᕪํଧ) ᗝ̶
+ᗝ̶
+පຎ̶
+ 
+ਫሿդᎱԅғ
+  int high=right;
+  //տԾኞහᕟ᩼ኴѺѺѺvery importantѺѺѺ
+  if(low>high)//౼ྊ๵կ
+    return;
+  int k=a[low];//᷐क़ᑮᳵk᮷ྲਙय̶़
+  while(low<high)//ੜԭa[low],य़ԭa[low]̶
+  {
+    while(low<high&&a[high]>=k)//ᒫӞӻੜԭkྊ
+    {
+      high--;
+    }
+    //ᒫӞӻྲਙੜጱԧ
+    a[low]=a[high];//کlowᗝ
+    while(low<high&&a[low]<=k)//ࣁlowᒫӞӻय़ԭk׆ݦکa[high]ᗝ
+    {
+      low++;
+    }
+    a[high]=a[low];     
+  }
+  a[low]=k;//လ࿢ԏ
+  quicksort(a, left, low-1);
+  quicksort(a, low+1, right);   
+}
+public void insertsort (int a[])
+{
+  int team=0;
+  for(int i=1;i<a.length;i++)
+  {
+    System.out.println(Arrays.toString(a));
+    team=a[i];
+    for(int j=i-1;j>=0;j--)
+    {
+      if(a[j]>team)
+      {
+        a[j+1]=a[j];
+        a[j]=team;  
+      } 
+      else {
+        break;
+      }
+    }
+  } 
+}
+
+=== PDF PAGE 207 ===
+ 
+૶ਫ਼ഭଧ  
+ԅฎO(n^2),҅
+ԧํଧ௔஑ଧ
+ഭଧ̶
+੒ԭӞӻᳩԀۆړڜ(ۆړ)ᘒฎೲᆙ຤ӻහཛྷ(֟ݐಸහ1̵2̵3̵4̶1̵2̵3̵4)
+ضۆړഭଧ,ᬯ໏ᶎզ᭗ᬦڹ֖
+̶
+ک
+ഭଧᬮฎᚆᜓ፜ӧ੝෸ᳵጱ̶
+ਫሿդᎱԅғ
+ᭌೠᔄഭଧ  
+ᭌೠഭଧ  
+ᭌೠഭଧҁSelection sort๋ੜҁय़҂
+کጱ
+๛ੲഭଧਠླ̶
+public void shellsort (int a[])
+{
+  int d=a.length;
+  int team=0;//ᰁ
+  for(;d>=1;d/=2)//౮dᕟ
+    for(int i=d;i<a.length;i++)//ݢܨ
+{
+      team=a[i];
+      for(int j=i-d;j>=0;j-=d)
+      {       
+        if(a[j]>team)
+        {
+          a[j+d]=a[j];
+          a[j]=team;  
+        }
+        else {
+          break;
+        }
+      }
+    } 
+}
+
+=== PDF PAGE 208 ===
+ਫሿդᎱԅғ
+ 
+ञഭଧ  
+໅Ӿಅํᜓ
+य़ԭ(౲ੜԭ)٭
+ইຎಅํᜓᅩय़ԭ؉ݞय़໑ञ໑ᜓᅩ̶
+ইຎಅํᜓᅩੜԭ؉ݞੜ໑ञ໑ᜓᅩ̶
+੪ฎୌञ໅(හᕟᤒᐏ)҅౯ժ՗ӥஃӤᬰᤈ᧣ෆ҅՗ৼᜓᅩݻ
+ইӥғ
+ୌञฎӞӻO(n)ᴻ१ഭଧ̶ᕳਧහᕟୌञ(creatHeap)
+ෙԻഘӥᑏ(shiftDown)೮ञጱ௔ᨶ
+ᚆဌᳯ᷌҅੒ইຎԻഘ಑Ꮘৼ਎ৼञᕮ຅௔ᨶ҅ᮎԍ੪ᥝ᯿ෛӥᑏ(shiftDown)ᤩԻഘጱᜓᅩ
+ྊ̶
+public void selectSort(int[] arr) {
+  for (int i = 0; i < arr.length - 1; i++) {
+    int min = i; // ᗝ
+    for (int j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j; // ᗝ
+      }
+    }
+    if (min != i) {
+      swap(arr, i, min); // ӨᒫiᗝᬰᤈԻഘ
+    }
+  }
+}
+private void swap(int[] arr, int i, int j) {
+  int temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+=== PDF PAGE 209 ===
+ 
+ᔰԅ๋ੜ(๋य़)ᔰ҅ইຎᕳ਎ৼ᧣
+ञᕮ຅̶
+ෙԻഘӥᑏ(shiftDown҂,ӧᬦᵱᥝဳ఺ྌ෸ෆӻञጱय़ੜ૪ᕪ
+හ̶
+ྊ̶
+ୌञ෸ᳵ॔๥ଶฎO(n)ԅlogn
+ӻ̶ᬯ໏॔๥ଶ੪ԅO(nlogn).௛ጱ෸ᳵ॔๥ଶԅO(n)+O(nlogn)=O(nlogn).
+ਫሿդᎱԅғ
+static void swap(int arr[],int m,int n)
+{
+  int team=arr[m];
+  arr[m]=arr[n];
+  arr[n]=team;
+}
+//ӥᑏԻഘ ഘ౮Ӟӻञ(ੜ໑)
+static void shiftDown(int arr[],int index,int len)//0 ᗝӧአ
+{
+  int leftchild=index*2+1;//ૢ਎ৼ
+  int rightchild=index*2+2;//਎ৼ
+  if(leftchild>=len)
+    return;
+  else if(rightchild<len&&arr[rightchild]<arr[index]&&arr[rightchild]<arr[leftchild])//ݦ
+ଚӬଫᧆԻഘ
+  {
+    swap(arr, index, rightchild);//Իഘᜓᅩ꧊
+    shiftDown(arr, rightchild, len);//ӥ᯿຅
+  }
+  else if(arr[leftchild]<arr[index])//Իഘૢ਎ৼ
+  {
+    swap(arr, index, leftchild);
+    shiftDown(arr, leftchild, len);
+  }
+}
+//ୌ౮ञ
+static void creatHeap(int arr[])
+{
+  for(int i=arr.length/2;i>=0;i--)
+  {
+    shiftDown(arr, i,arr.length);
+  }
+}
+static void heapSort(int arr[])
+
+=== PDF PAGE 210 ===
+ 
+୭ଚᔄഭଧ  
+ԫ᪠୭ଚ̵ग़᪠୭ଚ҅ᬯ᯾੪ᦖ᫾ग़ጱԫ᪠୭ଚഭଧ҅Ӭአ᭓୭
+ොୗਫሿ̶
+୭ଚഭଧ  
+ளഭ᮷ฎလᓒဩԪਫӤ᭓୭ฎӷ಩Ԫ̶
+ᥴ౮դհ᫾ੜ
+ଚොୗਠ౮Ӟӻഭଧ̶ 
+ᛗԭ୭ଚጱ௏మฎᬯ໏ጱғ
+Ӿ(1 2   3 4   5 6---)ӷӷ୭ଚ౮ํଧ҅୭ଚ
+ਠ(xx xx xx xx----)̶
+ӻ(1 2 3 4    5 6 7 8 ----)ྯӻੜੴ᮱ฎํଧጱ̶
+Ӟӻ҅ᆐᘒᬯӻᘙᩇጱ௛ེහlognฎO(n)̶ಅզ௛
+ጱ෸ᳵ॔๥ଶԅO(nlogn).
+ଚԅӞӻO(n)ጱᬦᑕғ
+{
+  System.out.println("তහᕟԅ         ғ"+Arrays.toString(arr));
+  int val[]=new int[arr.length]; //ਂᕮຎ
+  //step1ୌञ
+  creatHeap(arr);
+  System.out.println("ԅ  ғ"+Arrays.toString(arr));
+  //step2 ᬰᤈnکvalڜ
+  for(int i=0;i<arr.length;i++)
+  {
+    val[i]=arr[0];//ᕮຎӾ
+    arr[0]=arr[arr.length-1-i];//ञᶮ
+    shiftDown(arr, 0, arr.length-i);//ဩጱੜ໑ञ҅ဳ఺(᭦ᬋӤጱ)۸ݒ
+}
+  //ګ
+  for(int i=0;i<arr.length;i++)
+  {
+    arr[i]=val[i];
+  }
+  System.out.println("ԅ:"+Arrays.toString(arr));
+}
+
+=== PDF PAGE 211 ===
+ਫሿդᎱԅғ
+ 
+໲ᔄഭଧ  
+ 
+໲ഭଧ  
+ᚆฎᕚ௔
+O(n)ᯈୗጱ̶໲ഭଧ՗ਁᶎጱ఺௏Ӥ፡ғ
+ᝑଗӻ໲Ӿ̶
+ᔰ̶
+private static void mergesort(int[] array, int left, int right) {
+  int mid=(left+right)/2;
+  if(left<right)
+  {
+    mergesort(array, left, mid);
+    mergesort(array, mid+1, right);
+    merge(array, left,mid, right);
+  }
+}
+private static void merge(int[] array, int l, int mid, int r) {
+  int lindex=l;int rindex=mid+1;
+  int team[]=new int[r-l+1];
+  int teamindex=0;
+  while (lindex<=mid&&rindex<=r) {//ଚ
+    if(array[lindex]<=array[rindex])
+    {
+      team[teamindex++]=array[lindex++];
+    }
+    else {        
+      team[teamindex++]=array[rindex++];
+    }
+  }
+  while(lindex<=mid)//ݢܨے
+{
+    team[teamindex++]=array[lindex++];
+  }
+  while(rindex<=r)
+  {
+    team[teamindex++]=array[rindex++];
+  } 
+  for(int i=0;i<teamindex;i++)
+  {
+    array[l+i]=team[i];
+  }
+}
+
+=== PDF PAGE 212 ===
+ڊ(ॡग़)ӧॡ੝̶
+໲ഭଧጱ௏మԅғഭଧ̶  ٍ
+໲ഭଧጱ
+کO(n),ݳ
+አ໲ഭଧ̶
+໲ഭଧғ
+ᦇහഭଧ  
+ᦇහഭଧฎӞᐿᇙྛጱ໲ഭଧ҅ྯӻ໲ጱय़ੜԅ1አListᤒᐏ҅ᘒ᭗ଉአӞӻ꧊አ๶ᦇහ̶
+ࣁײ๋ੜ꧊minತ๋य़꧊maxᳵय़ੜጱහᕟ,՗minᗝ୏তᦇ
+አපሲ̶
+import java.util.ArrayList;
+import java.util.List;
+//ғbigsai
+public class bucketSort {
+  public static void main(String[] args) {
+    int a[]= {1,8,7,44,42,46,38,34,33,17,15,16,27,28,24};
+    List[] buckets=new ArrayList[5];
+    for(int i=0;i<buckets.length;i++)//۸
+    {
+      buckets[i]=new ArrayList<Integer>();
+    }
+    for(int i=0;i<a.length;i++)//੒ଫ໲Ӿ
+    {
+      int index=a[i]/10;//ݩ
+      buckets[index].add(a[i]);
+    }
+    for(int i=0;i<buckets.length;i++)//ᬰᤈഭଧ(አᔮᕹᛔଃளഭ)
+    {
+      buckets[i].sort(null);
+      for(int j=0;j<buckets[i].size();j++)//ڊ
+      {
+        System.out.print(buckets[i].get(j)+" ");
+      }
+    } 
+  }
+}
+
+=== PDF PAGE 213 ===
+ 
+चහഭଧ  
+ฎྲ᫾ᵙਫሿ(۸)አ
+ᦇහഭଧ(ᦇහഭଧฎӞᐿᇙྛጱ໲ഭଧ)ጱฎ҅चහഭଧଚӧฎਖ਼Ӟ
+Ӟӻ໲Ӿڹ
+̶
+ 
+ᵱᥝᤰ0-9҅ᮎԍ੪ᵱᥝဳ఺ASCII̶
+҅੪೭ 934҅241҅3366҅4399ӻහਁᬰᤈचහഭଧጱӞ᪀ᬦᑕ๶
+ᯈ̵තᵞғ
+public static void countSort(int a[])
+{
+  int min=Integer.MAX_VALUE;int max=Integer.MIN_VALUE;
+  for(int i=0;i<a.length;i++)//کmax޾min
+  {
+    if(a[i]<min) 
+      min=a[i];
+    if(a[i]>max)
+      max=a[i];
+  }
+  int count[]=new int[max-min+1];//ᔰᬰᤈᦇහ
+  for(int i=0;i<a.length;i++)
+  {
+    count[a[i]-min]++;
+  }
+  //꧊
+  int index=0;
+  for(int i=0;i<count.length;i++)
+  {
+    while (count[i]-->0) {
+      a[index++]=i+min;//ํmin಍ฎ፥ྋ꧊
+    }
+  }
+}
+
+=== PDF PAGE 214 ===
+ 
+ᯈ̵තᵞचᏐӤᬰᤈጱ҅ಅզಅ
+ฎํଧጱ̶
+ 
+ 
+զӥฎํଧጱ̶
+ഭଧਠ
+౮̶
+ਫሿդᎱԅғ
+
+=== PDF PAGE 215 ===
+ഭଧᓒဩ ෸ᳵ॔๥ଶ ๋অ ࣕ ᑮᳵ॔๥ଶ ᑞਧ௔
+ုഭଧ O(n^2) O(n) O(n^2) O(1) ᑞਧ
+ள᭛ഭଧ O(nlogn) O(nlogn) O(n^2) O(logn) ӧᑞਧ
+ഭଧ O(n^2) O(n) O(n^2) O(1) ᑞਧ
+૶ਫ਼ഭଧ O(n^1.3) O(n) O(nlog2n) O(1) ӧᑞਧ
+ᭌೠഭଧ O(n^2) O(n^2) O(n^2) O(1) ӧᑞਧ
+ञഭଧ O(nlogn) O(nlogn) O(nlogn) O(1) ӧᑞਧ
+୭ଚഭଧ O(nlogn) O(nlogn) O(nlogn) O(n) ᑞਧ
+໲ഭଧ O(n+k) O(n+k) O(n+k) O(n+k) ᑞਧ
+ᦇහഭଧ O(n+k) O(n+k) O(n+k) O(k) ᑞਧ
+चහഭଧ O(n*k) O(n*k) O(n*k) O(n+k) ᑞਧ
+՜෈ᒍ̶
+ 
+ᕮ᧍  
+Ձ
+ᬯӻᤒ໒ᕳय़ਹғ
+ 
+՜  
+ܖ  
+᥺  
+य़ਹঅ҅౯ฎbigsai҅অԋӧᥠѺ
+ጱ᯿ᥝ௔҅᩼๶᩼ग़
+᩸๶ԧѺ
+static void radixSort(int[] arr)//int ࣳ ஃૢ
+{
+  List<Integer>bucket[]=new ArrayList[10];
+  for(int i=0;i<10;i++)
+  {
+    bucket[i]=new ArrayList<Integer>();
+  }
+  //๋य़꧊
+  int max=0;//ᦡ᮷ฎྋහ
+  for(int i=0;i<arr.length;i++)
+  {
+    if(arr[i]>max)
+      max=arr[i];
+  }
+  int divideNum=1;//1 10 100 100……ጱහਁ
+  while (max>0) {//max ޾num ګ
+    for(int num:arr)
+    {
+      bucket[(num/divideNum)%10].add(num);//ᯈ ੒ଫbucketӾ
+    }
+    divideNum*=10;
+    max/=10;
+    int idx=0;
+    //තᵞ ᯿ෛഗ᩸හഝ
+    for(List<Integer>list:bucket)
+    {
+      for(int num:list)
+      {
+        arr[idx++]=num;
+      }
+      list.clear();//አ
+    }
+  }
+}
+
+=== PDF PAGE 216 ===
+ 
+ጱᛔ૩᮷౤ԧ̶
+ 
+ಕᬯොᶎጱᥡᅩ̶
+Զ᷌Ҙ  
+҅ᮎ
+ᙗਧᥝ಩਻Ҙ
+೰offerғ
+೰offer(https://leetcode-cn.com/problem-list/xb9nqhhg/)೰offer̶
+೰offer೰offerय़ਹ
+ጱ(ᡱᆐํᅩ෸ᳵӧᎣ᭲ᬮํဌํՈᦕ஑)೰offer᷌(உ੝)಩
+ሿwaࣁ
+ᬦԧդᎱच๜Ӥ੪ဌํՋԍ᭦ᬋᄋ၏ԧ̶
+೰offer೰offer೰offer਻ᥟፍ
+ڜ
+ᬩᓒ̵dfs̵bfsஉग़Ѻ
+೰offerሿฎ፥ጱᶋଉṛ᷇ ᭜᷌
+೰offer೰offer੪ฎᶋଉṛ᷇ጱ᷌ପԏӞ̶
+ಕHOT100|ڹ200
+ಕHOT100ғhttps://leetcode-cn.com/problem-list/2cktkvj/
+ڹ200ғhttps://leetcode-cn.com/problemset/all/
+ಕHOT100ಕHOT100ಕ຤Ӟ෸ᳵ(ے)ጱ100೰
+offerಕ
+HOT100೰offerள200ᥡጱԧ̶
+ڹ
+200ڹ200ಕHOT100ӷጯᨶᰁᬮฎஉṛጱ(ݸکڬ
+ॺ᪠ጱ᷌ፓ)ڹ200ጱ̶
+य़༷ᚆड़೜ํളᬪ300᷌ᰁӞ
+๶̶
+
+=== PDF PAGE 217 ===
+᷌ᶲଧҘ  
+Ҙ
+ᔄ౯ఽᥧᬯӻ፡Ոጱ̶
+ቘกጮᚆड़ਫሿ᮱
+೰offerӤᶎጱ᷌ፓํᵙ᷌҅
+ࣁๅग़ํහഝᕮ຅Өᓒဩጱ
+ᬮฎྲ᫾਻ฃgetᛔ૩ጱ"ᚏ
+ପ"̶
+ฎ
+਍ԟॡग़ྲ᫾ᴲኞጱ
+ڟ
+୏তತeasy easy ᮎᐿa+bݱ
+᷌ᬰᤈ᭑ӻධᏈ(ଚ̵ັತ̵
+ഭଧᒵᒵ)૶…… ࢴ
+ሿՋԍᳯ̶᷌
+ 
+ӣӻԅՋԍ  
+Ӟӻ᷌ဌ௏᪠Ҙ
+ᚆ
+ᙋhardᵙଶጱဌ௏᪠ӧฎஉྋଉ̶
+᷌உ਻ฃ౜ਫሿ᩸๶உᵙҘ
+໛ຝ(Map̵
+Set̵List̵Stack̵Queen)᭦ᬋ̶
+֢apiٍ
+౯ժ൉ṛපሲ(މ)̶
+ྲ᫾ग़҅ইຎ
+෸ᳵ꧌᪃വគPATᖫᑕ᧍᥺ഩൎ̶
+᷌Ҙ
+ل
+ᬮᵱᥝय़ᰁᕞԟ಍ᚆ፥ྋഩൎ̶
+Ոጱ௏ᘍ̶՗0ک1ਠෆਫሿ
+ᐿbugᳯ̶᷌
+ԧ1000+ො
+ԧ100Ոጱ᭦ᬋୗጱ॔ሿӞ᭭ਫሿ᧔ํஉग़ᳯ᷌҅ᦕ
+॰ௗጱ̶
+ک100ԧӷӣጯᇫாᬮฎஉ૧ᮎԍ੪ᥝঅঅತӞ
+̶
+ 
+Ӟ᭲᷌ጱ॒ቘၞᑕ  
+Ҙ
+Ꮯਧᘍ੊ᅩ̵Ꮯਧ௏᪠
+ᚆᬯොᶎ੪
+໅҅ᬮฎਁᒧԀጱ҅ᬮํ๋ଉᥠහᕟᕳጱӞञහഝ̶੪
+ߢ
+ᳯ᷌Ӥᬰ
+ᳯ̶᷌
+ፗള፡᷌ᥴ҅፡፡᷌ፓຽᓋጱ൉
+ຏ……
+ 
+ 
+ᴻԧຽᓋ҅ᬮᥝ፡ࢱݶ(ᬯᅩහᕟ᷌᫾ग़҅
+ᗝഘ੒හഝํᥝ࿢)̶
+զ՗ຽᓋຽ᷌Ӿ፡፡ᚆӧᚆํᅎఽ҅ํ
+੪ᚆกጮԧ̶
+
+=== PDF PAGE 218 ===
+ 
+෈҅፡౜ԅྊ҅ᥝฎᬮᛔ૩፡ӧ౜҅ᥝԍ
+Ѻ
+դᎱ̵ၥᦶ
+ݢ
+޾ctrl c + ctrl v҅ૡᑕᶱፓᚆ᪒᩸๶੪ᤈԅԧපሲ᮷ฎcvฎᶎᦶᒟᦶ᷌च๜ᥝ
+ᕚIDEጱ̶
+դᎱଉଉᥝᘍᡤଉᥠᳯ᷌ғၥᦶහഝᬟኴҁྲইInteger.MAX_VALUE,Integer.MIN_VALUEᬯᐿᬟኴහ꧊҂҅஗
+ᬟኴ॒ቘ҅๛ੲහഝ॒ቘ(տᤩ᭳஫॒ቘ)ᚆ
+Ⴔศ҅ဳ᯽᫾ԅਠෆ……
+ԅᬯӻwaԧஉग़ེ……
+ܦ
+౲ᘏdebug಍ᚆac̶
+ 
+ොဩ̵ᕮຎ੒ྲ
+ӧᥝզԅacᥝ፡፡ᛔ૩෸ᳵӤ᩻᩼ԧग़੝Ո҅വគ՗ᬯӷӻᖌଶ๶ᤍᰁᛔ૩ጱդᎱғ
+ᥝ᩻᩼70%զӤጱՈ(໑ഝᛔ૩ᥝ࿢ᭇ୮൉ṛ)᷌᩻᩼70%ݢ
+̶ྲইStringBuilder๊դStringአchar[]හᕟ๊դStringຍԈᒵᒵ̶
+Ո૧1ms֦
+զӧӞਧᥝ᭄࿢100%զ፡
+پࣁms౲ᘏ30%ਫ᮷ฎokՈ4ms,֦5msᳯ
+Ո50ms֦70msՈ80ms֦800msդᎱԧ̶
+Ո෸ᳵ୏ᲀ᫾ੜጱդᎱ(ဌᮎԍள
+ԧ)Ոጱ॒ቘොୗ̶
+
+=== PDF PAGE 219 ===
+ 
+൉ṛ
+ᛔ૩acғ
+զᬯ໏Ѻ
+Ӟӥ̶
+ᕮ᧍  
+զ᪙
+ଙ੪ฎ180+᷌ᰁ҅Ӟଙ੪ฎ365᷌ᰁ҅ፘ୮ਮᥡѺ
+౯(bigsai66)̶᷌
+୩
+(Ѻ
+ᛔ਍Java᪠ᕚ  
+ғbigsai 
+᥺  
+๜෈੪ᛔ਍Javaጱn޾nӞԶୌᦓ҅ଚӬവគԧӞ๵ᛔ਍Javaᳪጱੜጮ̶
+҅మ਍JavaӧᛔኧҔ
+Ҙ
+ᛔ਍JavaጱNᐿᳯ᷌ғ
+ᛔ਍JavaҘ
+ᛔ਍JavaҘ
+ํဌํᶌᨏጱJavaᛔ਍ᩒාവគҘ
+೮ӥ๶Ҙ
+……
+̶
+ᛔ਍Java  
+ᛔ਍Javaӻၥḵ҅๶༄ၥ
+ᛔ਍Java̶
+੒਍ԟJavaஷํग़୩Ҙ
+ړ֗0ړ5Ҙ
+
+=== PDF PAGE 220 ===
+੒਍ԟJavaஷฎ਍ԟJavaੜԭᒵԭ2.5ፗളන୒਍ԟJava
+य़ԭ2.5ጱᘍḵᬦԧѺ
+਍Java܋or ੪ӱҘ
+਍ԟJavaᶎጱᘍḵ᷌
+ᶎጱଗᨵ̶
+ฎԅԧ੪ӱᘒ਍ԟJava҅ᮎ੒਍ԟJavaঅঅᘍᡤ
+ಸቔᬮฎᛔ਍̶
+य़ԭ30਍ԟJavaԧ҅Ӟොᶎ30Ӟොᶎ30઎ጱJavaᕆੜ
+̶
+ੜԭ30զ਍ԟJavaԧ̶
+ړ֗0ړ5Ҙ
+ੜԭ3ಸቔ਍ԟJava݄
+̶҂
+Ԟ
+ᛔ૩ጱ᭲᪠Ѻ
+ᛔ਍JavaӤᶎጱၥᦶ᮷᭗ᬦԧ҅ᬯԶ
+ᔰ̶
+௛ᕮӞӥզӤጱಅํᳯ᷌ғ
+ 
+ฎঀ਎ৼ҅᝕᧍̵හ਍࿜ଘ᫾૧҅ᶋ
+ڊ
+̶
+ᶋᦇᓒ๢ӫӱྲ᫾Ӟӥ̶
+ᶋᦇᓒ๢ӫӱᛔ਍JavaҘ
+ᦇᓒ๢ӫӱฎํ୏ᦡJava
+਍ԟJavaጱ᭲᪠Ӥள᭛ଶᬦ"ۖސٯ"֢
+ԧᥴᦇᓒ๢҅਍ԟ᩸Javaቘᥴ̶
+ᛔ਍JavaᬯԶ
+๛෸ᳵ҅਍ԟᕞԟJavaᫍӞᫍᦇᓒ๢ӫӱ୏ᦡጱJava᧞
+਍ԻၞᏳඊ̶ᛔ਍Java݄ࣈ
+Ѻ
+௛ጱ๶᧔҅ᦇᓒ๢ӫӱᛔ਍Java޾
+உग़෸ᳵኸᕳJavaฎᶋଉय़ጱᘍḵ̶
+੪ᥝ੔࿢অጱොဩ൉ṛᛔ਍Javaމ~
+ṛපᛔ਍JavaᲫᅩ  
+՗ḇጱොໜѺ
+
+=== PDF PAGE 221 ===
+1 ԧᥴJavaᔮ  
+ᛔ਍Java҅ᥝ੒Java޾Javaӻᳯ᷌ԧᥴ
+Java̶
+ՋԍฎJavaҘ
+Javaٟݣଫአᑕଧጱ̵੒᨝᧔҅Javaࣁ
+JVMӤጱ᧍᥺҅JavaฎਁᜓᎱ҅ᘒJVM̶
+JavaᚆଗՋԍҘ
+JavaڹJavaӾզ
+Javaᵱ࿢๋य̶़Javaᵱ࿢ፘ੒᫾੝̶
+አጱԆᥝ᧍᥺᮷ฎJavaӾੜմӱԅԧ౮ᆧᑞਧԞᭌೠ
+JavaጱӾᳵկฎኧJavaইғElasticsearch̵RocketMQ̵Hadoop
+ᒵ̶
+ 
+JavaԶᎣᦩҘ  
+Ӟ̵JavaचᏐ  
+ Javaғ
+JDK̵IDEAਞᤰ҅ᒫӞӻHelloWorld
+ᥢ᝜̵ဳ᯽
+ࣳ
+᷶ᒧ
+ᕆ
+ݙ
+ࣳ
+ᔄӨ੒᨝
+੒᨝ӣय़ᇙ஄ғᖀಥ̵੗ᤰ̵ग़ா
+ԧᥴ҂
+Javaғ
+IO֢
+໛ຝғArrayList̵LinkedList̵HashMap̵HashSet̵ArrayDequeᒵ
+୑ଉ॒ቘ
+ࣳ
+JDBC
+ᗑᕶᖫᑕ
+Java8ෛᇙ௔ҁLambda҂
+੘̵ဳᥴҁํᅩᵙ҂
+ԫ̵Javaṛᕆ  
+ݎ
+23ᐿᦡᦇཛྷୗ
+໅̵ᕁἓ໅̵Bᒵ
+̵൤ᔱᓒဩҁbfs̵dfs҂̵๋Ꭸ᪠ஆ
+ҁDijkstra̵Floyd҂̵๋ੜኞ౮໅ҁPrim̵Kruskal҂̵ଚັᵞ̵KMPᒵᓒဩ
+ӣ̵JavaWebғ  
+HTML̵JavaScript̵CSS
+XML̵JSON
+Tomcat
+Servlet/JSPҁզServletԅԆ҂
+JQuery̵Ajax
+MVC
+Cookie̵Session
+࢏ލ
+෈կӤփӥ᫹ҁServlet3.0҂
+Linux
+̵ଉᥠ໛ຝғ  
+ORM໛ຝғMybatis
+Springਹ໲ғSpring̵SpringMVC̵SpringBoot
+໛ຝғShiro̵Spring Security਍҂
+՜໛ຝғSwagger҂̵Log4j2ҁ෭ப҂̵Quartzҁਧ෸҂ᒵ
+ғSpringCloud̵Dubboᒵ
+ғ  
+ғGit̵SVN
+ᓕቘғMaven̵Gradle
+හഝପғMySQL̵Oracleᒵ
+හഝପғRedisҁᖨਂ҂̵Memcachedҁᖨਂ҂̵MongoDB҂ᒵ
+൤ᔱ୚කғElasticsearch̵Solrᒵ
+ғRocketMQ̵ActiveMQ̵RabbitMQ̵Kafkaᒵ
+WebғApache̵ Nginx
+
+=== PDF PAGE 222 ===
+ғDocker̵K8S
+य़හഝғHadoop̵Spark̵Strom̵Flinkᒵ
+ 
+ຉፊഴҁELKᤒᒵԞ᮷ฎᅾᳪ
+ದ๞҅Java਍ԟ̶
+2 ᛔ਍Javaጱӣय़᭔ஆ—ਮ  
+ᛔ਍Javaᛔ਍Javaᅩ̶
+ 
+፡ԡᛔ਍Java  
+ᭇଫᬯ
+ഠ̶
+਍ԟJavaᬯොᶎଚӧտํॡग़ጱ
+ইJava Swingᚆ
+ฎੜጮ҂̶
+፡ᥤ᷇ᛔ਍Java  
+ྲ᩸ԡᔁ҅ๅग़Ոౄ఺፡ᥤ᷇ᛔ਍Javaฎᥤ᷇੪ӧӞ໏ԧ҅ᥤ᷇Ӿᘌ૵ժ
+Өᘌ૵Իၞ҅অጱᘌ૵տᦏ਍ԟපሲፗ
+̶
+ᚆտၵᩇ
+Ӟᅩ਍ԟጱ෸ᳵ̶
+ਮᛔ਍Java  
+਻ᭌೠԞ
+̶
+ሿ
+ਮฎӞय़೴౴̶
+௛ጱ๶᧔҅ᔮᕹᛔ਍Javaᬮฎ ፡ԡ զ᭗ᬦ
+ත̶
+൤ᵞԧӞူܔզౌౌ
+“Ձአ”̶
+෈ᔄጱරᑕᗑᒊғ
+ោềරᑕғhttps://www.runoob.com/java/java-tutorial.html ᳪ
+W3Cschoolғhttps://www.w3cschool.cn/ ᳪ
+ฃጯරᑕғhttps://www.yiibai.com/ ᳪ
+How2j: https://how2j.cn/ Javaᐿ໛ຝ̵Ӿᳵկරᑕ
+᫣᧞झғhttps://ke.boxuegu.com/ ਻ᨶᰁྲ᫾ṛ
+ԡ຾ᗑғhttps://www.bookstack.cn/ ᕚኪৼԡ̵ᒟᦕ̵෈໩ᗑᒊ
+ইimportNew ፡፡̶
+ 
+ᥤ᷇ᗑ᧞ᗑᒊғ
+ᜓᅩғhttp://www.bjpowernode.com/javavideo.html ᩇӧᲙጱ᧞ᑕ
+ొ᧞ᗑғ https://www.imooc.com/ ᩇํ՞ᩇ
+Bᒊғhttps://www.bilibili.com/ ํ"Bᒊय़਍"ᗦᑍ
+੒ԭᥤ᷇ᔄරᑕᗑᒊ҅ḒവBکBአঅ҅ଚ
+ӬB҅ํஉग़upইփฬඎਮ̵੢Ꮡ
+̵ຄਮ෸ᳵ̵᠗໫ԯ
+ಋӞူ਍ԟ̶
+
+=== PDF PAGE 223 ===
+ᩇ឴஑҅ᬮํӞԶ
+ᗑፏᩒრ҅ᬮฎஉ꧊஑̶
+ 
+᷌ᗑᒊ
+ಕғhttps://leetcode-cn.com/problemset/all/
+ᇍਮғhttps://www.nowcoder.com/
+ᭇአACM᷌ᗑᒊғ๺ኪoj̵ Codeforce̵ Vjudge ̵Atcoder
+Javaܯ(ܯ)೰offer҅
+ڬ2-3ಕhot100ڬ200᭲զӤ಍ᤈ̶
+ 
+՜਍ԟᗑᒊ
+csdnғhttps://blog.csdn.net/ አ
+ғhttps://www.cnblogs.com/ ᆐํஉग़አಁ
+ᎣԒ: https://www.zhihu.com/ ํஉग़ṛᨶᰁᳯᒼ̵෈ᒍ̵ӫໄ
+യᰂғhttps://juejin.cn/ ਻ᨶᰁፘ੒᫾ṛ
+ғhttps://segmentfault.com/ ਻ᨶᰁӧᲙ҅ᳯᒼᨶᰁ᫾ṛ
+githubғhttps://github.com/ ҅ํᶋଉग़ጱ୏რᶱፓ
+Stack Overflow: https://stackoverflow.com/ ݣ
+V2EX :https://www.v2ex.com/ ܄
+ᛗԭ51CTO̵InfoqӷᶱՕᕨጱᎣ
+ଘ
+Ԇᴅ᧛՜ጱӫໄ෈ᒍ҅තፅԞฎஉय़ጱ̶
+വគԡᔁ
+ᛔ਍Java౯വគጱԡᔁԅ̽Java̵դᎱ᪙፳਍உ਻ฃ౜̶
+៪ԡᔁᨶᰁԞӧᲙғ
+̽JAVA᧍᥺ᑕଧᦡᦇ̾----ᕆ
+̽JAVAܫI----ᕆ̵̽JAVAܫII----Ӿᕆ
+̽JAVAᖫᑕ௏మ̾----ᕆ~Ӿᕆ
+̽Effective Java̾----Ӿᕆ
+නӞන҅ᬮํJava Swingق
+ԡ੪᪃ड़ԧ̶
+3 Ꭳᦩᅩ  
+զள᭛
+਻፡Ӟ᭭੪మ᩸๶ԧ̶
+Ⴎ੒Ꭳᦩጱቘ
+᭔ஆํஉग़
+᫝ᬟՈԻၞՁ਍ԟጱ
+ஞ஑Ҕ
+ԻၞӞԶQQӾտํӧ
+ᬮฎஉํ஠ᥝጱ̶
+ಅํՈ҅޾"ᛔ૩"Իၞ๶҅
+̶
+Ӥ๋ਫአጱJava਍ԟ᪠ஆ  
+Ӥᶎ૪ᕪՕᕨԧṛපᛔ਍JavaᲫᅩ҅ӥᶎ๶വគਫአጱJavaᛔ਍᪠ஆ̶
+ғ
+1. JavaचᏐ਍ԟᴤྦྷ
+2. JavaWeb਍ԟᴤྦྷ
+3. ໛ຝ਍ԟᴤྦྷ
+4. ᴤྦྷ
+ᴤྦྷ——ᴤྦྷ——᯾ጱᎣᦩฎJava໛
+਻ฎ̶
+ԅJavaӞᴤྦྷୌᦓ፡
+Ӟਹᥤ̶᷇
+
+=== PDF PAGE 224 ===
+JavaचᏐ਍ԟᴤྦྷ  
+ᧆᴤྦྷ੒ଫJavaᔮӾጱJavaचᏐ҅ොဩԅ਍ԟ+᷌҅ྯॠ਍ԟ8ࣁګ60҅വគզᥤ
+ԡԅᬀ̶
+᫣᧞झጱ̽Javaᳪරᑕ̾ҁ௛෸ᳩᕅ30ੜ෸҂̶ײ1.5හ፡զ
+᯿ᅩ҅᪙፳ළᶋଉ᯿ᥝ҅፡౜ӧ
+ᒵԭ፥౜҂̶
+਻҅വគ̽Javaᔜ᭗̾౲̽Javaܫ Ⅰ਻உ਻ฃ౜ᮎ੪᧔ก਍ԟጱ
+̶
+ک ๺ኪᒫ11ᶭ౲ᘏC᧍᥺ᗑӞԶᓌ
+̶
+ฎӧԧᥴԅՋԍ҅ྲইஉᵙቘᥴԅՋԍArrayListັᧃள҅
+LinkedListᥝᤑӞᤑහഝᕮ຅Өᓒဩ
+޾Bᘌ
+૵ጱහഝᕮ຅Өᓒဩӫໄ҅ᡱᆐᬯӷӻ᮷ฎզCᐿහഝ
+ਮӤັತਫሿොୗ̶
+޾Cڬ“೰offer”೰offerᦇ67᷌
+ಕ ᇍਮਥᗑ੒ଫ᷌ፓ
+զ਍ԟ̶
+JavaWeb਍ԟᴤྦྷ  
+JavaWeb҅ྯॠ਍ԟ8ࣁ30਻
+ইHTML҅JavaScript҅CSS҅JQuery҅MVC҅
+Ajaxᒵ҂̶਍ԟJavaWebവគBᒊᇰᐟJavaWebਫ౴ᥤ᷇,य़༷25਍ԟJavaWeb
+՜ᶾऒጱӳᥜྲইHtml҅JavaScript҅CSS҅MySQLտӞԶच๜ጱ੪
+ײJSPฎຽᓋ̵EL̶
+JavaWeb҅᪡ᬦکݢGithubᬩᤈጱᶱፓᬰᤈ᪒̶ํԶӳᥜӧӞਧᶋᥝྒ
+Ძጱ̶
+਍ԟJavaWebইោềරᑕጱServletԅ᪙፳රᑕ
+ෛ̶
+਍ԟJavaWeb ӾServlet/JspಋළӞӻੜᗑ
+ೡ Servlet̵jsp̵Session̵Cookie̵JDBC̵Ajaxᚆ̵෈կӤփӥ
+ᒒᶭᶎཛྷ຃౲ᘏUI໛ຝҁവគLayui౲ᘏEasyUIץ
+ද̶
+໛ຝ਍ԟᴤྦྷ  
+໛ຝ਍ԟ+ᶱፓਫ౴҅ྯॠ਍ԟ8ࣁ60ॠ҅വគ਍ԟොୗฎᥤ᷇+෈໩ᩒා਍ԟ̶
+JavaWebӾServlet/Jspᕍԅԧ਍ԟଫአጱᦾ
+զ
+૲෭
+๗҅ইຎॡ෱ጱᦾӧୌᦓᥡ፡̶
+໛ຝӾ҅᯿Ӿԏ᯿ጱฎSpring̵SpringMVC̵Mybatis̵SSM̵SpringBootᒵ̶਍ԟᶲଧጱᦾୌᦓ՗Mybatisک
+SpringکSpringMVCݳSSMአSSM਍ԟSpringBoot҅
+አSpringBoot਍ԟ̶
+ᥤ᷇ғ
+ᇰᐟMybatisරᑕғҁhttps://www.bilibili.com/video/BV1NE411Q7Nx҂ ᥤ᷇ᳩ11ݦ
+ᇰᐟSpringරᑕғҁhttps://www.bilibili.com/video/BV1WE411d7Dv҂ ᥤ᷇ᳩ8ݦ
+ᇰᐟSpringMVCරᑕғҁhttps://www.bilibili.com/video/BV1aE41167Tu҂ ᥤ᷇ᳩ10ݦ
+ᇰᐟSSMරᑕғҁhttps://www.bilibili.com/video/BV1RE41127rv҂ ᥤ᷇ᳩ3ݦ
+ᇰᐟSpringBootරᑕғҁhttps://www.bilibili.com/video/BV1PE411i7CV҂ ᥤ᷇ᳩ19ݦ
+ᇰᐟSpringBootᗑᒊ ҁhttps://www.bilibili.com/video/BV19E411v7Ty҂ ᥤ᷇ᳩ5ݦ
+ړݢ
+አᘉᦲ̶
+Ձᕳय़ਹғ
+Spring ܄https://spring.io/projects/spring-boot
+Mybatisਥᗑ෈໩ https://mybatis.org/mybatis-3/zh/index.html
+
+=== PDF PAGE 225 ===
+Mybatis-Spring෈໩Օᕨ http://mybatis.org/spring/zh/index.html
+Mybatis܄ http://www.mybatis.cn/
+SpringBoot܄https://springboot.io/
+ਮ(SpringBoot,SpringCloudරᑕ) https://www.fangzhipeng.com/
+ާDDਮ(SpringBoot,SpringCloud) https://blog.didispace.com/categories/Spring-Boot/
+᜿ሌጱMybatisӫໄғhttps://www.cnblogs.com/xdp-gacl/category/655890.html
+מSpringBoot Githubՙପғhttps://github.com/ityouknow/spring-boot-examples
+ 
+ᴻԧզӤ໛ຝ҅ᬮᥝ਍ԟJavaᒒ஠਍ጱ໛ຝҁShiro౲ᘏSpring SecurityӞ҂ҔRedisᖨਂ҅ၾ௳
+ڜ՜Ӿᳵկ̶
+ᶱፓ๶൉ṛᆧ
+ᶱፓ૥
+਻̶
+ 
+ᴤྦྷ  
+ՕᕨӞӥଚ
+ԡᔁ̶
+Javaᖫᑕғ̽Javaᖫᑕਫ౴̾
+JVMቘᥴJVMᡦ೙๢̾
+MySQLғ̽MySQL଒̾
+23ᐿᦡᦇཛྷୗғ̽य़ᦾᦡᦇཛྷୗ̾
+ຉJavaಕ
+ᔮᕹ̵ᦇᓒ๢ᗑᕶ
+JDKრᎱ̵໛ຝრᎱ
+Redis̵MQᒵԆၞӾᳵկ
+ړ
+࿈҅ᶉӥஞ๶਍ԟ̶
+Javaᛔ਍ଉᥠወᵙᥴᒼ  
+ᛔ਍Javaտӧտํᬯ໏ጱወజғ
+ ᛔ਍JavaҘ
+ ᛔ਍JavaҘ
+ տ“Hello World” Ҙ
+ ୏তᑱᷢሕᬰҘ
+ࠌ֦~
+1 ᛔ਍JavaҘ
+ᦤ8کJavaጱ࿜ଘ๋ளԞᥝ6ڹ5ӻ์ྋଉ਍ԟ
+Javaᶎᦶ̶Javaᇍਮ
+کݢGithubӤತӞӥᶎᕪҁᬯ᯾വគJavaGuideҁhttps://github.com/Snailclimb/JavaGuid
+e҂҂̶
+2 ᛔ਍JavaҘ
+ๅ᯿चᏐ҅੒਍ԟጱJavaቘᥴቘᥴᔮᕹ̵ᦇᓒ๢ᗑᕶ̵
+ᦡᦇཛྷୗ᯿ᅩ̶
+ᬮᥝ൉Ӟᅩ҅҅տᒟᦶᓒဩ᷌೰offerڬ
+2-3ڬ100ڬ200᷌զӤ҂̶
+3 տ“Hello World” Ҙ
+տ"Hello World"ฎcopyӞ
+᮷ӧտ̶
+҅᭦ᬋӤᬮฎํಅ
+௏ᘍ಍ᚆ᭗ᬦ̶
+ಅզᛔ਍Javaෛ̶
+4 ୏তᑱᷢሕᬰҘ
+ጱᬰྍᶌᕞԟ҅Ӟᛱᑱᷢሕᬰտํӷӻᴤྦྷ̶
+ᒫӞӻᑱᷢሕᬰ੪ฎ਍ਠJavaԧ100҅ᛔ૩ጱ᭦ᬋᚆ
+տᥧ஑ᛔ਍Javaဌጮᩇ̶
+کMVCک
+ጱᒫԫེᑱᷢሕᬰ̶
+ṛ୩ଶ਍
+ԟ̵ṛ୩ଶළդᎱ̶
+
+=== PDF PAGE 226 ===
+਍ԟ᪠ஆ਍ԟᩒრ ୌᦓ਍ԟොୗ ୌᦓ਍
+ԟ෸ᳵ
+JavaचᏐ
+਍ԟᴤྦྷ
+1. ᫣᧞झጱJavaᳪරᑕ(᱾ള) 2.޾Bᒊ
+ᘌ૵ጱහഝᕮ຅Өᓒဩӫໄ
+ٍ
+ԡԅᬀ+᷌
+60ॠ
+ݦ
+JavaWeb
+਍ԟᴤྦྷBᒊ[ᇰᐟJavaWebਫ౴ᥤ᷇] ᥤ᷇ԅԆ҅රᑕ
+ᗑᒊԅᬀ
+30ॠ
+ݦ
+໛ຝ਍ԟ
+ᴤྦྷ ᥤ᷇+ਥᗑ෈໩+ᶱፓᥤ᷇ ᥤ᷇+෈໩ᩒා
+਍ԟ
+60ॠ
+ݦ
+܋
+ᴤྦྷ ᖫᑕ+JVM+MySQL+ᦡᦇཛྷୗᒵԡᔁ ԡᔁ ——
+෈ᒍ௛ᕮ  
+᭗ᬦӤᶎᛔ਍Java੒Javaഩൎ҅᭗ᬦӞୟᤒ๶॔ԟӞӥ̶
+ᛔ਍JavaԧᥴJavaොဩ҅
+ᶶԻၞ̶
+ITᦾғ"talk is easy҅show me the code"̶ᛔ਍JavaդᎱ҅ग़ग़ᕞԟฎᶋଉᶋଉ
+ቘฎӞӻձ᯿ᘒ᭲ᬱጱᬦᑕ̶
+ၵѺ
+॓  
+ 
+hello҅य़ਹঅ҅౯ฎbigsai̶
+ԓ
+զᭇ୮ጱ፡፡̶
+؉
+ᶎᕪ̶
+ࡶ  
+௳̵ӻՈದᚆ̵ᒋᩦឍ᥿̵(ํප)ਫԟᕪḵ̵ᶱፓᕪḵ̵
+̶
+ӻՈᦧ
+ጱ᮷உսᐹጱ(ᛔ૩ᬮฎտጱ)؇ٟ
+ԧ…… ᬯӻሾᜓӾ҅ᶱፓᬮฎᶋଉ᯿ᥝጱ҅অጱᶱፓᚆड़ᦏHRӞՄ҅୮ᆐ҅ᬯ᯾ጱঅଚӧӞ
+ᥝᦏHRᶎᦶਥᥧ஑অ̶
+ 
+
+=== PDF PAGE 227 ===
+๶  
+ᦏᛔ૩உ
+๶ጱ̶
+Ԟๅמ̶
+ӱय़ᩦӻ์౲ᘏ
+ᴚय़༷3-5ӻՈ(ଗၚጱय़༷Ԟ੪ᮎ໐ஞӷՈ)ᚆํӷᐿ҅Ӟᐿฎᘌ૵౲ᘏ਍
+Ӟᐿ੪ฎ՗0Өᶱፓጱᦡᦇ
+̵੕૵೰੕ԻၞᬯԶ᮷ᵱᥝ੒
+ᐿ෈໩̵PPTႮᛔ૩੒ᶱፓ
+ᬯᬦᑕᩳਠ(Ӟӻᨮᨱ
+Ո)̶
+ᦇᓒ๢ᔄ᫫կᦡᦇय़ᩦғ ᫫կ๻̵೴౴๻̵԰ᘶᗑ+ԅ๻̵ᦇᓒ๢ᦡᦇ
+ኜᛗ೰੕̶ᬯᔄᩦԪஉग़҅ํጱᩦ
+Ӟ᩸ଗ҅ӧᬦ๋অํӞӻྲ᫾
+ڣ
+ڣᥧ஑զग़፡፡Ḙbabaጱᄍᦖ҅ᆣᵄᆣᵄ̶
+አᔄғ Ԏૡ
+ࢮxxֵف
+ᕰࣈᬯොᶎ੒ᶱፓᬰᤈᧇᕡጱൈᬿ̶
+ਫԟᶱፓ̵ර૵ᶱፓғ Ӿᨮ
+ᥝᎣ᭲ෆӻᶱ
+ᚆ̵ਫԟᥝஉႴ༩̶
+՜᭔ஆғ ԅᶱ
+ԅᶱፓᕪḵ̶
+੒ଫᨮᨱՈ
+ғ
+ 
+ইຎᛔ૩ᶱፓᕪḵҘ
+ᘍᡤӥ(ᧇᕡ੪ӧՕᕨ)ғ
+1.ݻᛔ૩ᆧఀጱՈ(ᳯ᷌Ԟӧय़)ԅᆧ
+ත᩸๶පሲஉṛ̶
+ 
+2.զᥝ๶ᶱፓ਍ԟ҅ᮎԍGithub݄֦੔ತ ᛔ૩ጱ҅
+ӻᳯ᷌ғᶱፓॡय़਍ӧਠ҅ᶱፓॡੜํᅩ೉ᙼ҅ᶱፓဌ෈໩
+ӞӻঅጱᶱፓᏟਫӧ਻ฃ̶
+3.᨟᧗ᵋ఺̶
+ᶱፓᭌ᷌ဳ఺  
+ӧᚆԅԧᶱፓᘒᶱፓ҅ᶱፓᭌ᷌ᦖᑪጱ҅ᬯ᯾ᶎ᧨᧨ӻՈጱ፡ဩғ
+ᘍᡤӞӥғᶱ
+ᶱፓ̶
+ 
+؉(౮๜य़)ฎ
+ጱ
+᪁̶
+
+=== PDF PAGE 228 ===
+զ൥ӻᗑᒊ̵appᐒտՈᗭ҅ইຎᬯӻੜ
+ڬݻ
+؉
+ԏᔄᶱፓ౲ᘏxxݎ
+ጱᮎӻ̶
+ጱӞԶᶱፓ౲᫪ৼ҅᭗ଉᥝ
+ᵙଶ಍ᤈ҅ইຎ੒ᬯොᶎํమဩጱᮎᙗ
+ਧӧտఴํ෫ᶱፓᕪḵጱ̶
+Ӥጱᶱፓ  
+ᅩ̶
+ԭ᧔
+೮ൈᬿᔜᅫ҅ᶱፓՕᕨአ
+զ಩ᶱ
+զՕᕨ҅ӧᬦᶱ
+ᥧ஑ᶇᅩᑖஙᧇᕡӞᅩ̶ 
+೮፥ਫ
+ᶱፓՕᕨᬦᑕӾ੪ᥝՕᕨᛔ૩ᨮᨱ
+ইຎᶱፓᏟਫဌᮎԍṛय़Ӥᮎ੪ᥝஃ፥ਫᵱ࿢̵
+ൈᬿ̶
+ٻ
+ဌํᶱፓӞ໏҅ํጱՈՕᕨॡᬦԭᧇ
+݄HRݦ)ތ۱ ک
+Օᕨದ
+੪ๅঅԧ̶
+ᶱፓහᰁ
+ӤጱᶱፓӞᛱ2-3਻ྲ᫾ᔜ
+ӻՈᥧ஑2ӻᶱፓ੪᪃ड़ԧ̶
+ದ๞ᴯ෯
+کದ๞຾ጱದ๞຾҅
+ྲইইຎӞӻᶱፓӾአJSPᕟ
+կ(ײ)᪁̶
+՜
+̵Ԕᥡ̵ᨄᡦ਍ԟጱாଶ̶
+ᕮ᧍  
+ᚆํӞԶଆ
+̶
+ᶎᦶၞᑕฎᓒဩ+ᙎ෈+ਫ
+ᒼጱ҅ଚӬᶱፓӾᦡᦇཛྷୗ҅HTTPᎣᦩ҅
+MySQL̵Redisཻᳯጱ̶
+ইຎᬮଙ᫷Ԟဌํᶱ
+୏ত՗0ฎᶱፓ
+ᬮฎᎣ᭲Ӟᅩጱ̶ྲᩦེᬮ
+ฎտํஉग़ත឴ጱ̶
+य़঱ጱᶱፓ਍ԟӞӥ̶
+ӞӻՕᕨᑤৼ᭦ᬋᶲ፳᭦ᬋՕᕨ҅ӧᬦग़
+ฎེํᕪḵ੪অԧ̶
+ܲ(౯VX bigsai66)զᎉᎉ̶
+ᓒဩᒋᩦՕᕨ  
+᥺  
+य़ਹঅ҅౯ฎbigsai̶ᬯᓤ෈ᒍᕳय़ਹՕᕨᓒဩᒋᩦ҅෱ᅩᎣ᭲෱ᅩ॓౴Ѻ
+Ꮯਫᢡग़
+ᬯ᯾ᕳഎӞഎ̶
+҅ᬮํጱ
+ฎԅԧॹᰂ̶
+̶໑ഝᛔ᫝๵կ҅ᭌ
+̶
+ՔॠԆᥝᕳय़ਹՕᕨӞԶᓒဩᔄᒋᩦᬦ౲ᘏള᥶ጱྲ᫾ग़҅ํԶᒋᩦॹᶱጱឍ᥿ᚆड़ᦏᛔ૩ᕣ᫝
+᥿(ӧ३ୟ)ๅग़҅ॹᰂஉ੝ํ̶
+಩ӞԶӫӱ๞᧍൥Ⴔ༩ғ
+
+=== PDF PAGE 229 ===
+ACғAccept҅᭗ᬦ
+AKғAll-Killed҅ACԧಅํ᷌
+ᆷᵭғӞ᷌᮷ဌ᭗ᬦ(ᥝᆷᵭԧ)
+WAғWrong Answer҅ᒼໜᲙ᧏
+REғRuntime Error҅ᬩᤈᲙ᧏ҁ᭗ଉฎහᕟ᩼ኴ̵ᆷ຾ԧ҂
+CEғCompilation Error൉Ի̶
+TLEғTime Limit Exceeded҅
+ᕳਧ෸ᳵஞӾԞᥝํӻੜහ҂
+MLEғMemory Limit Exceededਂ᩻ᴴҁ᭗ଉฎහᕟ୏य़ԧ҅හᕟᚆ୏ग़य़ஞ᯾य़༷ํӻහ҂
+PEғଫᧆฎ໒ୗᲙ᧏ҘӧॡᏟਧ
+OLEғOutput Limit Exceededګ
+UKEғUnknown Errorሿ๚ᎣᲙ᧏̶
+ګ  
+ӾACMጱ
+ොဩ҅ᘒOI޾IOIӧᲙጱ౮ᖂ(๻ኧ
+ࢩܻ)̶
+ACMګဌ᭗
+ӥೲᆙᒼ᷌෸ᳵ
++̶
+ACMጱྲᩦғICPC̵CCPC̵codeforcesྲᩦ̵ᇍਮੜጮᩦᕞԟᩦ೴౴ᩦ̵փฬ๻ᒵ̶
+OIګړ
+̶
+OIጱྲᩦғNOIᒋᩦ̵CCF CSP̵᠗໫๻̵ᇍਮOIᩦᒵᒵ̶
+IOIګ̶ྯ᭲᷌᮷ํग़ӻၥᦶ
+Ӟ
+̶IOIԧOI޾ګACMጱᇙᅩ̶
+IOIጱྲᩦғPATᑕଧᦡᦇॠༀᩦ̵CCF CCSP̵၎ᨕ์ᩦ̶
+ 
+ICPC  
+ICPC࿈፥ฎॡय़ԧ҅൉᩸IPCPٖAӞ᭲᷌೯Ӟӻ࿈ቖ……
+ᑍғInternational Collegiate Programming ContestҁᓌᑍICPC҂҂,ᬯӻྲᩦஉ
+ԋզ๶᮷ฎACMݞACM/ICPC,ᓌᑍACMՈ಩ICPC؉ݞACMࣁ֕2018ݸ
+ACM(տ)੪ӧฎICPC๶JetBrainsฎAWS educationԅ̵JetBrains
+̶
+ 
+ײACM̵IMB̶
+
+=== PDF PAGE 230 ===
+຤ӻᓒ
+ᘏғxx,20xxଙACMԵၖxxᦖ᧞҅ᬯӻ᧞ᑕᨶᰁᙗਧᑞ
+ԧ҅ԣԣԣѺ
+ӧᬦICPCᩦ( EC-Final)ᩦ(World Finals),Ӟᛱ๶᧔ऒᩦݑ
+ํ୩໊ጱᴚ಍ᚆᬰWorld Finals̶
+ऒᩦ̶ICPCํ
+ᴚշ(ऒᩦ)ے݇ICPCమ
+̶᷐
+ṛӾํIOฎᓒ
+ਫᬮฎํᅩӧ꧊
+୮ጱ҅ICPCฎંԭᓒဩᔜ᝕ጱྲᩦᘒӧฎฦ᭗Ոጱྲᩦ҅ᘍᎸ̵੪ӱԞํஉय़ଆ
+֕ICPC೰offerဌ஠ᥝ̶
+ګғACMګ
+᷌ᰁғ7ک13ӻᳯ᷌(ᖫᑕ᷌)
+෸ᳩғ5ੜ෸
+ᖫᑕ᧍᥺ғC/C++̵Java޾Python
+ॹᶱᦡᗝᴚහጱ 10%, 20% ޾30%ጱᑍԅ಑᱈̶
+य़ᩦਥᗑғhttps://icpc.global/
+՜ғӞᛱ๜ᑀ҅ቘᦞӤᎸӞ๋य़ଙᕆ҅ӣՈӞᴚ҅AӞ᭲᷌ᛔ૩ग़Ӟӻ࿈ቖ̶
+CCPC  
+य़਍ኞᑕଧᦡᦇᒋᩦҁChina Collegiate Programming Contest҅ CCPC޾
+ICPC๶᧔᪙ICPC؟(ڞ)֕CCPCྲ᫾Ꭸ҅2015ଙ಍୏তᒫӞ੺ಅզํԶᴺ໊ᬮӧ
+ॡᦊᬯӻྲᩦ(ኜᛗӧಸᲀ)̶
+๶᧔᪙ICPC՜
+ྲᩦԧ̶
+੒ԭICPC/CCPC᷌಑ྲ
+਍໊ᑕଧᦡᦇय़ᩦᦤกᛔ૩̶
+
+=== PDF PAGE 231 ===
+޾ڞICPC̶
+य़ᩦਥᗑғhttps://ccpc.io/
+՜꧋ᦜ๜ᑀ̵ӫᑀ
+ 
+᠗໫๻  
+ጱᓒဩᒋᩦ(ᬯ᯾੪ӧ᧔ᶋᅩৼᔄጱ
+ԧ)̶
+ԅғC/C++य़਍Ꮈᑪኞᕟ҅C/C++य़਍Aᕟ҅C/C++य़਍Bᕟ҅C/C++य़਍Cᕟ҅Java
+य़਍Ꮈᑪኞᕟ҅Javaय़਍Aᕟ҅Javaय़਍Bᕟ҅Javaय़਍Cᕟ҅Pythonو9ᚆಸᎸᑪኞᕟ̶Ӟ
+๜ᴺ໊ҁ985̵211ᚆಸय़਍Aಸय़਍Bਙṛᘳ̵ṛ
+ᕟᒋᩦ
+ොୗ҅ᦏଘ෸ᤩ“਍ᶃ”̶
+᠗໫๻ฎOI҅න਼ԧ੒ԭ
+ᚆํԶᲙ᧏ᤩ዇஺ӧᎣ᭲૪ᕪᲙ
+ԧ̶
+҅ᒵஇ਍໊ᗈᩇҁஉग़਍໊
+ฎํጱ਍໊ӧ꧋ᦜ਍ኞ඘ᛔӻ
+ᥝᩳ਍໊᭗᭲ጱԞᥝဳ఺Ӟӥ̶
+ᰂᰁ፡ဩӧӞ҅ACM҅ဌํ
+ACMᰂᰁӞᛱ҅፜Ӟ಍ํᩒ
+ᰂᰁጱ̶
+ګғOIګ
+᷌ᰁғ5᭲ऴᑮ᷌+5ړ150̶
+෸ᳩғ4ੜ෸
+ᖫᑕ᧍᥺ғC/C++̵Java޾Python
+ॹᶱᦡᗝғ
+፜ᩦԅ10%̵20%̵30%ᩦՈහጱ60%ӧ
+ᩦᩒ໒̶
+ᩦӾ҅Ӟᒵॹӧṛԭ5%ܛ20%҅ӣᒵॹӧ
+ԭ25%҅սᐹॹӧ᩻ᬦ50%̶
+ᰂᰁᬮฎํጱ̶
+य़ᩦਥᗑғhttps://dasai.lanqiao.cn/
+՜ڦ
+ 
+ॠༀᩦ  
+ᩦ҅ྯӻᴚӧ᩻ᬦ10ړ3ӻༀᕆғचᏐᕆ̵ᬰᴤᕆ̵ጭᶮᕆ̶զӻՈ
+̶
+
+=== PDF PAGE 232 ===
+ӧฎஉ
+ᰁ̶
+ګғIOIګ
+᷌ᰁғचᏐᕆᦡ 8 ᭲᷌҅ᬰᴤᕆᦡ 4 ᭲᷌҅ጭᶮᕆᦡ 3 ̶᭲᷌
+෸ᳩғ3ੜ෸
+ᖫᑕ᧍᥺ғC̵C++ ޾Java̶
+ॹᶱᦡᗝғᒋᩦጱ 3 ݶ
+ᴚॹ̶
+य़ᩦਥᗑғhttps://gplt.patest.cn/teams
+՜ғᵱ๜ᑀኞ౲ᘏӫᑀኞ
+ 
+CCF CSPᦊᦤ  
+໏ጱᕟᕢ҅೉೚ԧӞԶṛ໊ᬡ౮ӞԶӞᛘ҅
+හ̵ᎸᑪኞCSPᩦ̶
+ 
+CCF CSPጱ਍໊੒CCF CSPᥝಸᘍጱ਍໊੒CCF CSPӞ
+Ѻ
+ଶ҅Ꮯਫᬮӧॡᤈ̶
+ګғOIګ
+᷌ᰁғ 5̶
+෸ᳩғ4ੜ෸
+ᖫᑕ᧍᥺ғC/C++̵Java޾Python
+ॹᶱᦡᗝ҅Ӟᛱ300ӻՈ̶
+य़ᩦਥᗑғhttps://www.cspro.org/
+՜҅CSPے݇CCSP̶
+ 
+
+=== PDF PAGE 233 ===
+PAT  
+PAT:  ֕
+ᘍၭय़ᮎᬯPATԅPATහ̶
+ଶฮ෸ᬮဌᮎԍṛ̶ᬮํӞ
+ᅩPAT੒JavaԅӧᓕՋԍ᧍᥺෸ᳵ᮷ฎӞ໏ጱ(຤ԶྲᩦJava෸ᳵ)҅ಅզᶎ੒य़ᰁහഝጱ෸
+҅ᦕ஑ӧᚆአScanner҅ᥝአBufferedReaderڊ(ᛔᤈ൤ᔱӞӥJavaڊ)̶
+ګғIOIګ
+᷌ᰁғᶮᕆҁ᝕෈҅3᷌҂̵ከᕆҁ᝕෈҅4᷌҂̵ԚᕆҁӾ෈҅5᮷ฎ100̶
+෸ᳩғ4ੜ෸
+ᖫᑕ᧍᥺ғC/C++̵Java޾Python֕JavaአScanner̶
+ॹᶱᦡᗝེ҅ከᕆ90զӤጱᦾ੪ӧᲙԧ
+य़ᩦਥᗑғhttps://www.patest.cn/
+՜ے݇ݢ
+ 
+՜  
+๋ᬪԞ୏তᕟᕢྲᩦ(ইփฬඎਮ)՜
+ᗑᕶᩦྲইጯଶԏจ(؃)᷌
+̶୮ᆐOJԈӞԶय़ਹᆧᎣጱ̶
+ 
+๺ኪojғhttp://acm.hdu.edu.cn/  ᘌᇈoj҅᷌ᰁꂁग़
+य़ojғhttp://poj.org/ ᘌᘌᇈoj(jdkඪ೮1.5……)
+ᇍਮᒋᩦғhttps://ac.nowcoder.com/acm/home ᩦᕟᕢ
+Codeforcesғhttp://codeforces.com/ ᵙଶྲᩦ
+Atcoderғhttps://atcoder.jp/ ݣ
+ᦇ᠄ਮғhttps://nanti.jisuanke.com/oi/ ӤԈᤈ
+၎ᨕғhttps://www.luogu.com.cn/ Ӿ਍ኞ಑OI਍ᘏ
+vjudgeғhttps://vjudge.z180.cn/ ᷌ፓཛྷ೙ᕟ౮᷌ପ(๜ᨶฎӻᆻᡩ)
+ಕғhttps://leetcode-cn.com/problemset/all/ ᩦ
+᠗໫๻ᕞԟᔮᕹғhttp://lx.lanqiao.cn/problemsets.page ப
+PTA: https://pintia.cn/ PATॠༀᩦᘍ᷌oj
+ 
+᧔Ӟӥ֦҅ݳᩇᏟਫӧ៎(ྯଙԈᤈ
+ጱ)զᦶӞᦶICPC/CCPCѺ
+௳҅ᬯ᯾੪
+Ѻ
+ᴨ᯾Ⴃᔮᶎᕪ  
+๜ᓤԅ౯(bigsai)݋(ੜG)ੜGᮎᬟ
+ՁӞ
+ӥ
+
+=== PDF PAGE 234 ===
+1. ᥺  
+य़ਹঅ҅౯ฎੜG᧛ᎸᑪኞӞຍ҅Javaڊ
+ਫԟ̶य़༷ฎ2ԅ̵bilibiliጱਫԟofferฎ๋ᬪ
+ՁӞӥ౯ጱಭ᭓ᕪ
+ොཻ҅ᬨय़ਹ೰ྋ̶
+2. ᩹෱ಭ᭓  
+ݞ
+զಭ᭓
+՜᮱ᳪᶎ
+ํӷེ๢տ̶ಅզ҅෱ᅩಭ᭓҅ፘ୮ԭग़ᕳᛔ૩ӞԶ๢տ̶
+ᚆhcԆᓕ᧨
+զӧአᬰᤈᕹӞጱ๢ᦶ̶
+3. አ  
+ᓀ҅ଚӬग़
+ԧӷଙጱ॔ԟ෸ᳵ̶
+অጱᭌೠ̶
+ܖࣁ
+Ղ຤985ฎইຎํӞӻๅঅጱ
+౮̶
+വ҅ଚਫ෸᪙ᬰᶎᦶᬰଶ҅ଚᕳ
+ӞԶਪᩃጱᕪḵ҅ᬯᅩஉ᯿ᥝ̶
+4. ᙎ෈  
+JavaGuide, CSNote, ᬯ
+Ⴎ੶ེጱԧᥴ̶ᬯԞฎᶎᦶ
+ஞጱ̶
+ྲইMySqlቘҔRedisጱਫሿҔESႮ੶ེጱᦊᦩ̶ํԶᳯ᷌
+ӞӻᅩӤग़᧔ӞԶํհ꧊ጱӳ
+ԧ҅च๜ӤᬯӞᶎԞӧտํॡय़ᳯ̶᷌
+5. ํӞԶํհ꧊ጱᶱፓ  
+ጱӞӻᦞ෈҅ᶎᦶਥ՗๶ӧᳯ҅NLPጱӞӻ
+᫣ጱᶱፓ̶
+ฎӞਧᥝํՄᅩғ
+දັ̶
+̶
+አԧӞԶӾᳵկ҅ྲইRedis҅ES҅Mongodbᥝ಩ᶎᦶਥஃᬯ᯾୚̶
+ 
+౭҅੒አᬦጱದ๞Ӟਧᥝ
+֦API̶
+҅ྲইᑁ๤ᶱፓ҅Ӿᳵ
+ጱӞԶᳯ̶᷌
+6. ժԻၞ  
+Ձ̶உग़ᶎᦶ
+உঅጱපຎ̶
+ժํ
+ACMer҅ํ๜ᑀ੪985҅211ጱय़ᐟ̶১এᦏՈᤩ᩷፳਍ԟ̶
+҅ᕪଉտԻၞӞԶleetcode̶᷌঄้
+ڊ
+̶
+7. ෸ᧃᳯᕮຎ  
+޾hrᶎᦶӾӧᚆ
+Ძฎ҅ᳯਠᛔ૩ஞ᯾
+᪭ਫ̶
+8. ݸ  
+ஞըጱoffer̶
+ᚸᦔIEGᶎᕪ  
+
+=== PDF PAGE 235 ===
+᥺  
+य़ਹঅ҅౯ฎbigsaiՁᛔ૩ಭ᭓ᚸᦔӤၹIEGՁ̶
+ᩳਠHR҅HRฎྯ
+ᳯ᷌҅ᬮํ
+Զ᭳஫ԧ(ᶶጱ)̶
+਻(᧔᧔౯ጱ)਻ఽᥧᬮᤈ҅Ԟဌํᓒဩ
+ᚆྲ
+Ԯ̶ᬩ࿈ྲ᫾
+অѺ
+ 
+ᚸᦔӞᶎ 1h  
+ᛔ౯Օᕨ
+᭗ᬦᶱፓᘱದ๞ғ
+᧨᧨MySQLᔱ୚҅ᘸᓴᔱ୚ᶋᘸᓴᔱ୚
+MySQLᚆᕮຎ
+MVCC
+MySQLොୗ
+ெԍᦡᦇMySQLҘ
+Session ޾Cookie ڦ܄
+ොୗ
+҂
+ᴴၞଉአጱᓒဩ
+linuxե
+linuxັ፡ᶱፓ෭பತᲙ
+ᖨਂ҅ெԍᖨਂ
+٬
+ ……஫ᦕԧ
+᮱ᳪՕᕨ҅ํՋԍወᳯ҅ᚆਫԟग़ԋ
+ 
+ᚸᦔԫᶎ 50min  
+ᛔ౯Օᕨ
+Օᕨᛔ૩ጱӷӻᶱፓ
+٬
+ጱ
+Ҙ
+
+=== PDF PAGE 236 ===
+ଉአIDEAԶൊկ
+۸
+MySQL̵ᚍ᧛
+॒ቘ
+ጱቘᥴ
+ڦ܄
+ොୗ
+GitԆᕚ
+Gitᚆ
+Nginxࡶ
+ᖨਂᳯ᷌(วᳯ)
+Ӟ᭲௏ᖌ᷌
+……
+᮱ᳪՕᕨ҅ํՋԍወᳯ҅ᚆਫԟग़ԋ
+ 
+ᚸᦔӣᶎ 50min  
+ᛔ౯Օᕨ
+ਮ҅ํԶᬮฎꂁํ఺௏ጱ҅ྯӞᓤ᮷ํӞӻԆ᷌
+ᤙฎՋԍҘፓጱฎՋԍҘ
+አҘ
+Ҙ(ICGۖ()ۖ)
+ெԍ፡இᛔ૩Java ՜᧍᥺(᮱ᳪӧአJava)Ҙ
+Օᕨᛔ૩ጱӷӻᶱፓ
+҅ԅՋԍտԾኞ᪜ऒҘๅഘCookieҘ
+ԶҘ
+ᦖᦖMVC҅Cአ
+ᦖᦖAjaxک
+փᕹJSP҅PHPҘฎՋԍොဩҘ
+۸(ᒒᚆ᧔ጱ᮷᧔)
+ḵත឴Ҙ
+ว
+Ӿ
+٬
+……
+ 
+HRᶎ 20min  
+ᛔ౯Օᕨ
+ᒋᩦՕᕨӞӥ
+ᦖӞӥxxժጱ
+ՕᕨӞԶᶱፓӾಥ೅᥯ᜋ
+ጱ
+ՕᕨӞӥ᮱ᳪ
+ํՋԍᥝᳯጱ
+ 
+ᕮ᧍  
+ฎ
+෈ᒍ҅உग़ᳯ᷌ᛔ
+ොໜጱ̶
+؟
+ᒼጱӧঅ̵ቘᥴӧड़҅
+অጱ̶ಅզ
+ᒞԧ(วํᅩమ
+
+=== PDF PAGE 237 ===
+ဩ)ᒼਠෆ̵অӞᅩҁ᨝ֵܨ
+ӧտጱԧ̶
+Ӟူ፥ጱoffer̶
+೏ԧݎofferՂॡᬱ҅੕૵ᚆ؎؎
+౴ᚸᦔԧ̶
+ᶎᕪ  
+ 
+य़ਹঅ҅౯ฎbigsaiՁ̶
+enumᥝਞഭᶎᦶ҅ᮎၞᑕ
+ള፳உள̶
+ᶎᦶ(ᚸᦔӣᶎ) ջ
+ӣ੪ฎhrٍ֛offer੪ӥ๶ԧฎ፥ጱள̶
+਻੪ฎ ᓒဩ᷌+ᶱፓ+ᙎ෈҅ӥᶎտᧇᕡᦖᦖᛔ૩ጱ፡
+ဩ̶
+ਁᜓӞᶎ 1h  
+ps:Ԇᥝದ๞຾ฎGolangӤฎJavaದ๞຾҅
+؉Javaጱ҅ಅզᳯԧӞԶJavaጱᳯ̶᷌
+ᛔ౯Օᕨ
+ᓒဩ᷌(೰offer32 ໅ III)
+ՕᕨӞӥᶱፓ
+ᶱፓӾᨮᨱՋԍ(ᚆᦡᦇᒵᒵ)
+ฎ൥Java҅᧔᧔Springӷय़໐ஞ(IOC,AOP)
+SpringBoot޾Springڦ܄
+JVMࣳ
+ᲁ
+ReentrantLookฎெԍਫሿ
+ᦖᦖRESTful
+ᦖᦖInnerDB
+Ꭳ᭲ጱHTTPᇫாᎱ
+Nginx޾Tomcatڦ܄
+Get޾Postڦ܄
+HTTP᧗࿢ಸ෈໒ୗ
+ེഀಋ
+ᚆ҅ᵱᥝᘍᡤՋԍӳᥜ
+ 
+
+=== PDF PAGE 238 ===
+ਁᜓԫᶎ(ളӞᶎ)1h  
+ᛔ౯Օᕨ
+ᓒဩ᷌(ಕ56. ᳵ)
+ՕᕨӞӥᶱፓ
+ᆧఀጱᦡᦇཛྷୗ
+ᐿොୗ
+ӞӻURLᬦᑕ
+MySQLۓACID
+̵ଝ᧛
+ۓ
+ොဩ
+Session޾Cookieڦ܄
+ڜ
+ᦤWeb௔(మग़੝᧔ग़੝)
+ว᷌ғᦡᦇӞӻᦧᦞᔮᕹ(හഝପ̵ᖨਂ๋᯿ᥝ)զcurdզೲᆙᶭᶎIDັᧃ҅
+አಁIDັᧃ(ഀ)
+ps:՜ӧන(ॡय़
+hhh)
+HRᶎ  
+ᛔ౯ՕᕨӞӥ
+ᶱፓӾಥ೅Ջԍ᥯ᜋ
+۠
+…… 
+ᘳ
+ 
+ᬦӷॠoffer੪ӥ๶ԧ
+ 
+௛ᕮ  
+enum୏ত౯զԅ
+ಮ҅౯զԅዙᇰᦇᗑ̵ዙᇰOSฎӷӻᶎᦶਥ᮷᪙౯ᘱԧஉग़
+؉
+̶॓
+̶
+᷌
+᷌ᥝ࿢ဌྋୗಢᮎԍṛ(ێۖ۞)᷌ਫԟ
+ڊhardӧᇄ(hhh)೰offer೰offerӾᒵ᷌
+҅ᥴ ॎ஫ᦕ௏᪠ෙኪ(Ꮯਫํᬯᐿఘ
+٭)᪙ᶎᦶਥ᧔ғ"᧔
+̶"  ොဩ௏᪠ၞᑕᧇᕡ᧔Ӟӥ̶
+೰offerಕᬯԶच๜᮷ฎ௏ᖌದૣஉ
+॓೰offer޾ಕhot100̶᷌
+ᚆአӞӻԻၞ
+ߢߢ(ӻՈሖၥ)̶
+ᙎ෈
+
+=== PDF PAGE 239 ===
+ํํᴴॠහ҅౯ᬮฎവគGuideጱJavaGuideᇇ҅አ᩸๶ఽᥧஉḕ҅
+ԅᶎᦶṛ᷇ᳯ
+ᚸᦔጱᦾJavaզ፜ኼ᪡ᬦӞӥ̶
+ᵱᥝጱ፡ԧ҅ᬮํሌሴᮎᓤGET޾
+POSTጱ̶
+ܯ(զፗള൤ᬯӻ᮱ᳪ)ᒼӤ๶҅ӧ
+፡፡ᶎᕪ
+Ӟොᶎ੪ฎັᄋᤑᗌ̶
+ᶱፓ
+ᬦஉग़Ոᶌ፳᷌+ᙎ෈ܯ੒ᶱፓጱᥝ࿢กดṛԧ҅տᧇᕡᳯᶱፓӾጱ
+Өጱ̶
+զӥӷӻොᶎғ
+1. ઀ጱᬦᑕ̶
+2. ྲইරᙙԏᔄ(ޖ)̶
+॓2-3ଶ๋҅অӧฎ᧞ᦡ̵ླᦡᬯᐿ஠ᶳᥝ
+๶ጱ(አᶱፓ̵୏რᶱፓᒵᒵ)҅ଚӬᶱፓӾच๜ᥟፍԆၞ
+ᒼጱԞๅঅ̶
+਍
+ᚆᦧհӧॡঅ̶
+՜
+ܲ(෫)̵
+꧌ਫ҅ഭᇇᓌ၄(ᔮᕹ)ἸႴ
+஠॓๵կ҅ᶎᦶ᭔ӾᥝᨄᡦԔᥡ҅ᬯԶӧአग़᧔ԧ̶
+̶॒
+ 
+ݸ  
+ܯofferԧᎸӞ᧛ԧԲଙԡဌਫԟᬦᏟਫฎํԶ᭳
+౛҅ᕳhrሿ঄Ԟฎhrਫԟኞhhhᵙௗ̶
+ฎᬯӻoffer౯ᬮฎ೏ԧՂ๜᮱൥൥ᦞ෈҅
+ᤩ੕૵क़ၝԧ̶
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

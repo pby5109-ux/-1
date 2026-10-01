@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoRa源码四层完成链</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>LoRa源码四层完成链</h1>
+  <p class="lead">目标：不再把“DMA结束、模块发完、网关收到”混成同一件事，并能从RTC唤醒一直讲到再次进入Stop。</p>
+
+  <h2>一条真实源码链</h2>
+  <div class="flow">RTC Alarm经EXTI17唤醒CPU
+→ WFI之后继续执行，恢复HSE/PLL 72MHz与SysTick
+→ AHT20、BH1750、雨滴ADC采集，失败时保留上次值并设置valid位
+→ main.c组装flags与温湿度、光照、降雨参数
+→ LoraNode_SendTelemetry()补NodeID和Sequence
+→ LoraProtocol_EncodeTelemetry()序列化18字节并计算CRC16
+→ M0/M1=00唤醒LoRa模块，等待AUX低
+→ USART3 TX DMA发送，等待HAL_UART_TxCpltCallback()
+→ UART阻塞接收11字节ACK，检查CRC、NodeID、Sequence、status
+→ 超时或无效时最多重发一次；无论成功失败都递增下一轮Sequence
+→ M0/M1=11让LoRa模块休眠
+→ 正常30秒、报警或传感器无效10秒后进入MCU Stop</div>
+
+  <h2>四层证据不能互相替代</h2>
+  <table>
+    <thead><tr><th>层</th><th>证据</th><th>能证明</th><th>不能证明</th></tr></thead>
+    <tbody>
+      <tr><td>应用层</td><td>18字节帧编码成功</td><td>字段、字节序和CRC已经生成</td><td>串口和无线已经发送</td></tr>
+      <tr><td>MCU串口层</td><td>USART3 TX完成回调</td><td>本次缓冲区已完成DMA/UART发送流程</td><td>模块已正确接收并完成RF发射</td></tr>
+      <tr><td>模块层</td><td>AUX由高变低</td><td>模块当前发送、接收或模式切换忙状态结束</td><td>指定网关已经正确解析业务帧</td></tr>
+      <tr><td>端到端应用层</td><td>合法且匹配的ACK</td><td>网关解析并确认了该NodeID和Sequence</td><td>传感器数值本身一定准确</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note good">
+    <strong>ACK不是“随便收到11字节”。</strong> 必须同时通过Magic、版本、类型、CRC、NodeID、Sequence和status检查；否则仍算失败。
+  </div>
+
+  <h2>300ms无ACK时</h2>
+  <ol class="checklist">
+    <li>第一次接收超时，保持同一个Sequence，再发送一次。</li>
+    <li>第二次仍无合法ACK，返回失败状态，不继续重试。</li>
+    <li>LoRa模块切到M0/M1=11休眠，MCU按当前normal状态选择30秒或10秒Stop。</li>
+  </ol>
+  <p>有限重试把一次偶发丢包与电量上限同时纳入设计；无限重试会把网关离线或信道故障放大成电池耗尽。</p>
+
+  <h2>面试边界</h2>
+  <div class="note danger">可以说：LoRa节点软件、二进制协议、PC网关解析和ACK已实现，协议测试与双固件构建通过。不能说：LoRa射频链路、通信距离、RSSI、丢包率或实际功耗已经上板验证。</div>
+
+  <h2>闭卷复测</h2>
+  <ol>
+    <li>为什么TX DMA完成回调不能代替AUX，也不能代替ACK？</li>
+    <li>ACK需要匹配哪些字段？为什么Sequence重试时不改变？</li>
+    <li>正常30秒、异常10秒的设计取舍是什么？</li>
+  </ol>
+  <p>有任何一层不清楚，继续向教师追问，并回到源码逐行定位。</p>
+
+  <h2>一手与源码依据</h2>
+  <ul>
+    <li><code>Core/Src/main.c</code>：采集、flags、调用、30/10秒Stop及USART3完成回调。</li>
+    <li><code>BSP/Src/lora_node.c</code>：M0/M1、AUX、DMA等待、ACK和有限重试。</li>
+    <li><code>BSP/Src/lora_protocol.c</code>：18字节帧、11字节ACK及CRC16。</li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22-433T22D技术手册</a>：M0/M1和AUX定义。</li>
+  </ul>
+</main>
+</body>
+</html>

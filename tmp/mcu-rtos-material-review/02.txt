@@ -1,0 +1,160 @@
+=== PDF PAGE 1 ===
+8/6/2022
+1 / 5
+⽬录
+简单的任务函数
+void ATaskFunction( void *pvParameters )
+{ 
+    int iVariableExample = 0; 
+ 
+    /* 任务通常实现在⼀个死循环中。  */ 
+    for( ;; ) 
+    { 
+        /* 完成任务功能的代码将放在这⾥。  */ 
+    } 
+    /* 如果任务的具体实现会跳出上⾯的死循环，则此任务必须在函数运⾏完之前删除。传入 NULL 参
+数表⽰删除的是当前任务  */ 
+    vTaskDelete( NULL ); 
+} 
+创建任务函数
+/* 函数原型  */
+portBASE_TYPE xTaskCreate( pdTASK_CODE pvTaskCode, 
+                            const signed portCHAR * const pcName, 
+                            unsigned portSHORT usStackDepth, 
+                            void *pvParameters, 
+                            unsigned portBASE_TYPE uxPriority, 
+                            xTaskHandle *pxCreatedTask ); 
+/* 函数⽰例  */
+static TaskHandle_t myTaskHandler = NULL; 
+ 
+xTaskCreate(ATaskFunction, "myTask", 512, NULL, configMAX_PRIORITIES - 4, 
+&myTaskHandler); 
+删除任务函数
+/* 函数原型  */
+void vTaskDelete( xTaskHandle pxTaskToDelete ); 
+任务优先级
+低优先级号表⽰任务的优先级低，优先级号 0 表⽰最低优先级。有效的优先级号范围从 0 到
+(configMAX_PRIORITES – 1)。
+
+=== PDF PAGE 2 ===
+8/6/2022
+2 / 5
+函数 说明函数 说明
+vTaskPrioritySet() 可以动态的更改任务优先级
+uxTaskPriorityGet() 获取任务优先级
+uxTaskPriorityGetFromISR()在 ISR 函数中获取任务优先级
+延时函数
+void vTaskDelay( portTickType xTicksToDelay ); 
+xTicksToDelay 表⽰延时多少个 tick 
+该函数会把 task 切出到阻塞态
+精确延时函数
+void vTaskDelayUntil( portTickType * pxPreviousWakeTime, portTickType 
+xTimeIncrement ); 
+调⽤此函数的任务解除阻塞的时间是绝对时刻，比起 vTaskDelay() 延时时间更精确
+使⽤⽅法：
+void vTaskFunction( void *pvParameters )
+{ 
+    char *pcTaskName; 
+    portTickType xLastWakeTime; 
+    pcTaskName = ( char * ) pvParameters; 
+ 
+    /* 变量 xLastWakeTime 需要被初始化为当前⼼跳计数值。说明⼀下，这是该变量唯⼀⼀次被显式
+赋值。之后， 
+    xLastWakeTime 将在函数 vTaskDelayUntil() 中⾃动更新。  */ 
+    xLastWakeTime = xTaskGetTickCount(); 
+ 
+    for( ;; ) 
+    { 
+        vPrintString( pcTaskName ); 
+        /* 本任务将精确的以 250 毫秒为周期执⾏。同 vTaskDelay() 函数⼀样，时间值是以⼼跳周
+期为单位的， 
+        可以使⽤常量 portTICK_RATE_MS 将毫秒转换为⼼跳周期。变量 xLastWakeTime 会在 
+        vTaskDelayUntil() 中⾃动更新，因此不需要应⽤程序进⾏显⽰更新。  */ 
+        vTaskDelayUntil( &xLastWakeTime, ( 250 / portTICK_RATE_MS ) ); 
+    } 
+} 
+空闲任务
+
+=== PDF PAGE 3 ===
+8/6/2022
+3 / 5
+调⽤ vTaskStartScheduler() 时，调度器会⾃动创建⼀个空闲任务  
+空闲任务拥有最低优先级 ( 优先级 0) 
+空闲任务是⼀个非常短⼩的循环
+具体代码在 vTaskStartScheduler() 中可以看到：
+void vTaskStartScheduler( void )
+{ 
+    BaseType_t xReturn; 
+ 
+    /* Add the idle task at the lowest priority. */ 
+    #if ( INCLUDE_xTaskGetIdleTaskHandle == 1 ) 
+    { 
+        /* Create the idle task, storing its handle in xIdleTaskHandle so it can 
+        be returned by the xTaskGetIdleTaskHandle() function. */ 
+        xReturn = xTaskCreate( prvIdleTask, "IDLE", tskIDLE_STACK_SIZE, ( void * ) 
+NULL, ( tskIDLE_PRIORITY | portPRIVILEGE_BIT ), &xIdleTaskHandle ); /*lint !e961 
+MISRA exception, justified as it is not a redundant explicit cast to all supported 
+compilers. */ 
+    } 
+    #else 
+    { 
+        /* Create the idle task without storing its handle. */ 
+        xReturn = xTaskCreate( prvIdleTask, "IDLE", tskIDLE_STACK_SIZE, ( void * ) 
+NULL, ( tskIDLE_PRIORITY | portPRIVILEGE_BIT ), NULL );  /*lint !e961 MISRA 
+exception, justified as it is not a redundant explicit cast to all supported 
+compilers. */ 
+    } 
+    #endif /* INCLUDE_xTaskGetIdleTaskHandle */ 
+ 
+    ... 
+} 
+队列
+创建队列
+xQueueHandle xQueueCreate( unsigned portBASE_TYPE uxQueueLength,unsigned 
+portBASE_TYPE uxItemSize ); 
+写入到队列⾸
+portBASE_TYPE xQueueSendToFront( xQueueHandle xQueue, 
+                                  const void * pvItemToQueue, 
+                                  portTickType xTicksToWait ); 
+
+=== PDF PAGE 4 ===
+8/6/2022
+4 / 5
+写入到队列尾
+portBASE_TYPE xQueueSendToBack( xQueueHandle xQueue, 
+                                const void * pvItemToQueue, 
+                                portTickType xTicksToWait ); 
+发送队列
+协程 --croutine.c
+系统运⾏过程
+协程 --croutine.c
+4 个链表： readyList pendingList delayList （ 2 个）
+链表设计 --List.c
+系统调度
+任务管理
+内存管理
+优先级反转
+有优先级为 A 、 B 和 C 三个任务，优先级 A>B>C ，任务 A ， B 处于挂起状态，等待某⼀事件发⽣，任务 C 正在运⾏，
+此时任务 C 开始使⽤某⼀共享资源 S 。在使⽤中，任务 A 等待事件到来，任务 A 转为就绪态，因为它比任务 C 优先
+级⾼，所以立即执⾏。当任务 A 要使⽤共享资源 S 时，由于其正在被任务 C 使⽤，因此任务 A 被挂起，任务 C 开始
+运⾏。如果此时任务 B 等待事件到来，则任务 B 转为就绪态。由于任务 B 优先级比任务 C ⾼，因此任务 B 开始运
+⾏，直到其运⾏完毕，任务 C 才开始运⾏。直到任务 C 释放共享资源 S 后，任务 A 才得以执⾏。在这种情况下，优
+先级发⽣了翻转，任务 B 先于任务 A 运⾏。
+优先级继承
+freertos 使⽤优先级继承来解决优先级反转问题  当任务 A 申请共享资源 S 时，  如果 S 正在被任务 C 使⽤，
+通过比较任务 C 与⾃⾝的优先级，如发现任务 C 的优先级⼩于⾃⾝的优先级，  则将任务 C 的优先级提升
+到⾃⾝的优先级，  任务 C 释放资源 S 后，再恢复任务 C 的原优先级。
+freertos HOOK 函数
+vApplicationIdleHook() idle 的 hook 函数
+vApplicationTickHook() 系统 tick 的 hook 函数
+vApplicationMallocFailedHook() malloc 失败的 hook 函数
+vApplicationStackOverflowHook() 栈溢出的 hook 函数
+vApplicationDaemonTaskStartupHook() vTaskStartScheduler() 函数第⼀次执⾏的时候调⽤。
+freertos 栈溢出检测的 2 种⽅法
+
+=== PDF PAGE 5 ===
+8/6/2022
+5 / 5
+第⼀种  每次调度都检查⼀下任务的当前栈有没有超过任务的栈区域。
+第⼆种  每个任务栈最下⾯会有 16 个字节是特定的内容，每次调度的时候如果发现这 16 个字节不正常了，
+就说明有谁踩到了这个栈。

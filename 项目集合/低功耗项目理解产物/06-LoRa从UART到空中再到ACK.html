@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoRa从UART到空中再到ACK</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>仅未用GPIO配置模拟输入，保留唤醒、晶振、通信、电源与模式控制；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>LoRa从UART到空中再到ACK</h1>
+  <p class="lead">适合第一次接触串口LoRa模块：先理解两块模块和三层协议，再把源码函数放回正确位置。</p>
+
+  <h2>1. MCU没有自己生成LoRa波形</h2>
+  <div class="flow">节点传感器 → STM32 → UART → 节点LoRa模块 → LoRa射频 → 网关LoRa模块 → UART → 网关程序</div>
+  <p>STM32只负责准备字节、通过UART发送、管理模块模式和判断是否收到确认。模块内部的控制器与LLCC68负责LoRa调制、功率放大、射频收发和把收到的数据重新输出到UART。</p>
+
+  <h2>2. 需要两个LoRa模块</h2>
+  <table>
+    <thead><tr><th>一端</th><th>主要硬件</th><th>职责</th></tr></thead>
+    <tbody>
+      <tr><td>传感节点</td><td>STM32＋LoRa模块＋天线</td><td>采集、组帧、上传、等待ACK、休眠</td></tr>
+      <tr><td>网关端</td><td>LoRa模块＋USB串口/另一MCU＋PC</td><td>接收遥测、校验、保存/显示、返回ACK</td></tr>
+    </tbody>
+  </table>
+  <p>只有一块模块不能完成真实无线闭环。当前Python程序可解析人工输入的十六进制帧并生成ACK，但还没有连接串口进行持续收发。</p>
+
+  <h2>3. 三层协议不要混在一起</h2>
+  <table>
+    <thead><tr><th>层</th><th>本项目中的内容</th></tr></thead>
+    <tbody>
+      <tr><td>UART层</td><td>STM32与本地LoRa模块之间的9600、8N1字节传输</td></tr>
+      <tr><td>模块/RF层</td><td>透明传输、相同信道和速率等级、LoRa空中收发；由模块固件完成</td></tr>
+      <tr><td>应用协议层</td><td>我们定义的18字节遥测帧、11字节ACK、NodeID、Sequence、Flags和CRC</td></tr>
+    </tbody>
+  </table>
+  <div class="note">当前是串口LoRa模块上的自定义点对点/星型协议，不是LoRaWAN；没有Join、网络服务器、标准网关和LoRaWAN MAC。</div>
+
+  <h2>4. 上电前的一次性模块配置</h2>
+  <ol>
+    <li>两端选择透明传输。</li>
+    <li>两端设为相同信道和相同空中速率等级。</li>
+    <li>开启M0/M1硬件模式控制，并重启使配置生效。</li>
+    <li>接好天线、供电和共地，UART交叉连接：STM32 TX→模块RX，STM32 RX←模块TX。</li>
+  </ol>
+  <p>本项目发送的18字节前没有模块目标地址和信道前缀，所以软件路径假设模块工作在透明传输模式；帧内NodeID属于应用协议，不等于模块硬件地址。</p>
+
+  <h2>5. 一次上传的完整过程</h2>
+  <ol class="checklist">
+    <li><strong>采集：</strong>AHT20、BH1750和雨滴ADC得到本轮数据。</li>
+    <li><strong>标记：</strong>读取成功则设置对应valid位，任一失败或越过阈值则设置alert位。</li>
+    <li><strong>定点化：</strong>25.3℃写成253，避免直接发送float。</li>
+    <li><strong>组帧：</strong>加入NodeID、Sequence、帧头、版本和CRC，得到18字节。</li>
+    <li><strong>唤醒模块：</strong>M0/M1从11切到00；AUX高表示切换中，低表示准备完成。</li>
+    <li><strong>UART发送：</strong>DMA把18字节依次送入USART3，UART线以9600 8N1送给模块。</li>
+    <li><strong>射频发送：</strong>模块缓存字节并完成LoRa调制和空中发送；这一阶段由模块内部实现。</li>
+    <li><strong>网关接收：</strong>第二块模块解调后从UART输出原始18字节，网关校验并解析。</li>
+  </ol>
+
+  <h2>6. ACK沿反方向返回</h2>
+  <div class="flow">网关程序生成11字节ACK
+→ 网关UART写给网关LoRa模块
+→ 模块发射LoRa信号
+→ 节点LoRa模块接收并从UART TX输出
+→ STM32的HAL_UART_Receive()读到11字节
+→ 检查Magic、版本、类型、CRC、NodeID、Sequence、status</div>
+  <p>只有全部匹配才确认成功。ACK是本项目应用层自己设计的，不是透明LoRa模块自动产生的。</p>
+
+  <h2>7. 为什么重试使用同一个Sequence</h2>
+  <p>一次采集只对应一个业务包。若ACK丢失，节点会重发同一业务包，因此Sequence保持不变，网关可据此识别重复包。下一轮重新采集时才使用下一个Sequence。</p>
+
+  <h2>8. 完成事件的层级</h2>
+  <table>
+    <thead><tr><th>事件</th><th>结论</th></tr></thead>
+    <tbody>
+      <tr><td>TX完成回调</td><td>MCU的DMA/UART发送流程结束；不能推出RF成功</td></tr>
+      <tr><td>AUX低</td><td>LoRa模块当前发送、接收或模式切换忙状态结束</td></tr>
+      <tr><td>匹配ACK</td><td>网关应用至少解析并确认了该NodeID和Sequence</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. 失败和低功耗</h2>
+  <div class="flow">无ACK/ACK非法 → 同Sequence重发一次 → 仍失败则停止
+→ M0/M1=11让模块休眠 → 正常30秒、异常10秒进入MCU Stop</div>
+  <p>模块手册给出的典型数据表明发射电流远高于休眠电流，因此无限重试会把通信故障变成电池耗尽。300ms ACK窗口是当前软件参数，还必须在真实空中速率和模块时序下上板验证。</p>
+
+  <h2>10. 18字节遥测帧逐字节布局</h2>
+  <table>
+    <thead><tr><th>索引</th><th>字段</th><th>含义</th></tr></thead>
+    <tbody>
+      <tr><td>0～1</td><td>Magic：A5 5A</td><td>应用协议同步字，用于流式找帧和错位后的重新同步</td></tr>
+      <tr><td>2</td><td>Version</td><td>协议格式版本，当前为1</td></tr>
+      <tr><td>3</td><td>Type</td><td>0x10遥测；ACK使用0x11</td></tr>
+      <tr><td>4～5</td><td>NodeID</td><td>节点编号，大端序</td></tr>
+      <tr><td>6～7</td><td>Sequence</td><td>帧序号，用于ACK匹配、重复检测、重试和丢包统计</td></tr>
+      <tr><td>8</td><td>Flags</td><td>bit0 AHT有效、bit1光照有效、bit2雨滴有效、bit7报警</td></tr>
+      <tr><td>9～10</td><td>Temperature×10</td><td>有符号16位定点数，大端序</td></tr>
+      <tr><td>11～12</td><td>Humidity×10</td><td>无符号16位定点数，大端序</td></tr>
+      <tr><td>13～14</td><td>Light</td><td>照度lux，无符号16位，大端序</td></tr>
+      <tr><td>15</td><td>Rain</td><td>雨滴百分比</td></tr>
+      <tr><td>16～17</td><td>CRC16</td><td>前16字节的CRC16-CCITT，大端序</td></tr>
+    </tbody>
+  </table>
+  <div class="note">Sequence和Flags属于应用协议；LoRa信道、带宽、扩频因子和空中速率属于模块/RF配置，不能填进这两个字段。Magic也不是LoRa射频层的Sync Word。</div>
+
+  <h2>11. 负数补码、大端序和CRC边界</h2>
+  <p>温度先乘10变成整数。例如-12.3℃变成-123；+123为0x007B，按16位取反加一得到0xFF85，所以线上按大端发送FF 85。接收端组合两个字节后转为<code>int16_t</code>，再除以10恢复温度。</p>
+  <p>CRC覆盖索引0～15共16字节，不把索引16～17的CRC字段放回自身计算。CRC16只有65536种余数；在随机独立错误且余数近似均匀的前提下，错误帧碰巧通过的概率约为1/65536，即0.00153%。CRC通过不代表传感器一定正确、数据一定新鲜或业务值一定合理，接收端仍要检查Flags、范围、NodeID、Sequence和时效。</p>
+
+  <h2>12. 当前实现边界</h2>
+  <div class="note good">已经完成：节点协议、节点状态机、CRC、ACK匹配、有限重试、离线网关编解码、协议测试和双固件编译。</div>
+  <div class="note danger">尚未完成实证：真实串口网关收发循环、两模块RF闭环、AUX实测、300ms窗口、距离、RSSI、丢包率和功耗。</div>
+
+  <h2>下一步只检查三件事</h2>
+  <ol>
+    <li>能否画出“STM32—节点模块—空中—网关模块—PC”五段链。</li>
+    <li>能否区分UART层、模块RF层和应用协议层。</li>
+    <li>能否说明ACK由谁生成，以及为什么模块不会自动替你生成本项目ACK。</li>
+  </ol>
+  <p>不清楚任何一段时，向教师追问该段，不需要一次背完全部函数。</p>
+
+  <h2>依据</h2>
+  <ul>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/08/202512086979.pdf">DX-LR22-433T22D技术手册</a></li>
+    <li><a href="https://www.szdx-smart.com/static/upload/2025/12/11/202512113214.pdf">DX-LR22-433T22D串口应用指导</a></li>
+    <li><code>Core/Src/main.c</code>、<code>BSP/Src/lora_node.c</code>、<code>BSP/Src/lora_protocol.c</code>、<code>tools/lora_gateway.py</code></li>
+  </ul>
+</main>
+</body>
+</html>

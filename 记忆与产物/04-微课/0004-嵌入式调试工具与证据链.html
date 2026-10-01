@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>嵌入式调试工具与证据链</title>
+  <link rel="stylesheet" href="assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>嵌入式调试：工具不是答案，工具负责产生证据</h1>
+  <p class="lead"><strong>每次使用工具前先回答四件事：</strong>为什么测、怎么接/怎么看、正常应是什么、异常能把故障缩小到哪里。</p>
+
+  <h2>四类工具分别能看什么</h2>
+  <table>
+    <thead><tr><th>工具</th><th>擅长观察</th><th>基本用法</th><th>不能直接证明</th></tr></thead>
+    <tbody>
+      <tr><td>万用表</td><td>供电、直流平均值、通断和低速电平</td><td>黑表笔接系统地，红表笔测目标节点；先确认量程</td><td>高速SPI时钟、窄脉冲、波形失真和协议内容</td></tr>
+      <tr><td>示波器</td><td>随时间变化的电压、幅值、频率、边沿、噪声和模拟失真</td><td>探头地接板地，探头尖端接节点，设置量程/时基/触发</td><td>复杂协议字段和MCU内部寄存器状态</td></tr>
+      <tr><td>逻辑分析仪</td><td>数字高低电平时序、SPI/I²C/UART协议解析</td><td>共地后接SCL/SDA或SCK/MOSI/CS，设置采样率并选择协议解码</td><td>模拟幅值是否越界、上升沿质量、噪声和过冲的精确形状</td></tr>
+      <tr><td>调试器</td><td>代码是否执行、HAL返回值、寄存器、数组、任务和事件状态</td><td>断点、Watch、Memory和外设寄存器窗口逐级观察</td><td>板外模拟信号真实幅值；断点还会改变实时系统时序</td></tr>
+    </tbody>
+  </table>
+
+  <h2>本综合仪器的真实观测点</h2>
+  <table>
+    <thead><tr><th>链路节点</th><th>观测方法</th><th>证据含义</th></tr></thead>
+    <tbody>
+      <tr><td>PA1 / ADC1_IN1之前的模拟信号</td><td>示波器测幅值、偏置和频率</td><td>证明模拟前端把信号送到ADC输入；不能证明ADC已经转换</td></tr>
+      <tr><td>PA3比较器触发输出</td><td>示波器观察跨过阈值时是否出现边沿；调试器看EXTI回调</td><td>物理边沿正常且回调进入，才证明比较器到EXTI的软件入口贯通</td></tr>
+      <tr><td>TIM3</td><td>调试器看CNT是否变化，并检查主模式TRGO选择为UPDATE</td><td>CNT只证明计数；TRGO配置才决定更新事件是否输出到ADC</td></tr>
+      <tr><td>ADC1</td><td>看启动返回值、状态/EOC、DR或轮询读取值</td><td>EOC/DR变化证明发生了转换；ADC没有可供万用表测量的“数字输出引脚”</td></tr>
+      <tr><td>DMA1 Channel1</td><td>看CNDTR是否从1024递减、内存地址和rawDataBuffer</td><td>EOC出现但CNDTR不变，故障更靠近DMA请求/配置；计数归零但回调不进则查中断</td></tr>
+      <tr><td>波形重绘</td><td>看ADC完成回调、事件组bit7和LCD任务分支</td><td>缓冲区已有数据却无曲线时，故障在数据发布或绘制侧</td></tr>
+    </tbody>
+  </table>
+
+  <h2>TRGO与ARR不是同一个东西</h2>
+  <p><code>ARR</code>是自动重装载寄存器，决定计数器数到哪里发生更新，因此主要决定更新周期。<code>TRGO</code>是定时器向其他片内外设输出的触发信号。当前TIM3把“更新事件”选择为TRGO：计数到ARR产生更新事件，主模式再把这个更新事件送给ADC。</p>
+  <p class="rule">CNT在变化 ≠ 已有TRGO；有TRGO ≠ ADC选对触发源；ADC转换完成 ≠ DMA一定搬运。每个箭头都要单独取证。</p>
+
+  <h2>DR和DMA五项配置</h2>
+  <p><code>DR</code>是ADC Data Register（数据寄存器），不是控制位。ADC每完成一次转换，就把12位结果放入DR。当前DMA的任务是把DR里的16位数据连续搬到<code>rawDataBuffer[1024]</code>。</p>
+  <table>
+    <thead><tr><th>DMA问题</th><th>本工程答案</th><th>配置错误的典型现象</th></tr></thead>
+    <tbody>
+      <tr><td>从哪里搬？</td><td>外设地址=ADC1的DR；外设地址不递增</td><td>ADC转换正常，但RAM没有正确数据</td></tr>
+      <tr><td>搬到哪里？</td><td>内存地址=<code>rawDataBuffer</code>；内存地址递增</td><td>数据写错位置，或所有样本反复覆盖一个元素</td></tr>
+      <tr><td>搬多少个？</td><td>CNDTR初始为1024，每搬一次减1</td><td>长度错误导致少采、越界或回调时机错误</td></tr>
+      <tr><td>每个数据多宽？</td><td>外设和内存均为Halfword（16位）</td><td>数据错位、截断或内存覆盖</td></tr>
+      <tr><td>采用什么模式？</td><td>NORMAL，一帧1024点后停止并产生完成事件</td><td>模式错误会改变停止、重装和回调行为</td></tr>
+    </tbody>
+  </table>
+  <p>调试时先看：DMA1 Channel1是否使能、CNDTR是否递减、外设地址是否指向ADC1->DR、内存地址是否指向<code>rawDataBuffer</code>。如果DR变化而CNDTR不动，ADC已经完成工作，优先查ADC的DMA请求使能、DMA通道使能和地址/方向配置。</p>
+
+  <h2>通道数、地址递增和DMA模式互不等价</h2>
+  <ul>
+    <li><strong>ADC通道数</strong>决定ADC转换哪些模拟输入；本示波器常规组只有ADC1_IN1一个通道，但会对它连续采1024次。</li>
+    <li><strong>外设地址递增</strong>决定DMA每次是否换一个源寄存器。ADC所有常规转换结果都从同一个DR读出，所以不论ADC扫描一个还是多个通道，外设地址通常都不递增。</li>
+    <li><strong>内存地址递增</strong>决定1024个结果是否依次写入数组；必须开启，否则会反复覆盖同一个元素。</li>
+    <li><strong>NORMAL/CIRCULAR</strong>决定CNDTR减到0后停止，还是自动重装并从数组开头继续搬运；它不由ADC通道数决定。</li>
+  </ul>
+  <p>当前示波器需要“每次触发捕获一帧1024点，随后处理和显示，并等待下一次触发”，因此选择NORMAL。下一帧不是由ADC完成回调重新开启，而是Hold-Off结束后重新允许EXTI；下一个比较器边沿或强制触发进入EXTI回调，再调用<code>HAL_ADC_Start_DMA(...,1024)</code>。</p>
+
+  <h2>LCD侧的工具选择</h2>
+  <p>当前SPI1使用PB3=SCK、PB5=MOSI，PD2为LCD_NSS（片选），PC12为RS/DC。NSS拉低表示选中屏幕，不宜泛称“使能引脚”。万用表只能粗看NSS、复位和背光的静态电平；SPI时钟与数据应使用示波器或逻辑分析仪。</p>
+  <p>如果题设已经说明菜单、文字和按键反馈都能正常显示，就已经证明LCD供电、初始化和SPI主链大体正常。此时不应从屏幕硬件重新查起，而应优先看波形数据、事件组bit7和<code>RepaintWaveformPanel()</code>。</p>
+
+  <h2>标准证据表达</h2>
+  <p class="rule">“我用示波器测PA1，看到幅值和偏置正确的输入波形，因此模拟前端到ADC引脚正常；接着用调试器观察EOC和DMA CNDTR，以区分ADC未转换还是DMA未搬运。”</p>
+
+  <p class="question"><strong>自测：</strong>若ADC1->DR不断变化，而DMA CNDTR保持1024，说明ADC和DMA分别处于什么状态？最先检查DMA的哪三项？</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,283 @@
+=== PDF PAGE 1 ===
+8/6/2022
+1 / 10
+⽬录
+arm 内核发展历史
+cortexM0 系列芯片系统框图
+通⽤寄存器
+m0 特殊寄存器
+m3/m4/m7 特殊寄存器
+MSP 和 PSP
+xPSR
+PRIMASK
+CONTROL
+FAULTMASK
+BASEPRI
+栈空间操作
+异常和中断
+系统异常
+NVIC 可嵌套向量中断控制器
+系统操作寄存器
+NVIC 寄存器
+系统控制块 SCB 寄存器
+SysTick 寄存器
+cortex-m0 启动流程
+中断向量表
+⼤⼩端
+堆栈
+压栈的寄存器
+杂项指令集
+M0/M3/M4/M7 区别
+M3 系统框图
+M3 快速开关中断汇编指令
+M3 内核 CONTROL 寄存器
+异常和中断
+MPU 存储器保护单元
+arm 内核发展历史
+arm 内核 架构
+arm7 armv6
+cortex-m0 armv6-m
+cortex-m0+armv6-m
+cortex-m3 armv7-m
+cortex-m4 armv7-m
+
+=== PDF PAGE 2 ===
+8/6/2022
+2 / 10
+arm 内核 架构
+cortex-m7 armv7-m
+arm9 ARMv6
+arm11 ARMv6
+arm12 ARMv6
+cortex-a7 armv7-a
+cortex-a8 armv7-a
+cortex-a9 armv7-a
+cortex-a15 armv7-a
+cortex-A17 armv7-a
+cortex-A53 armv8
+cortex-A57 armv8
+cortex-A72 armv8
+cortexM0 系列芯片系统框图
+系统中包括：
+中断控制器
+M0 内核
+AHB 总线
+
+=== PDF PAGE 3 ===
+8/6/2022
+3 / 10
+存储器和外设
+电源管理
+时钟树
+调试系统
+通⽤寄存器
+R0 R1 R2 R3 R4 R5 R6 R7 R8 R9 R10 R11 R12
+m0 特殊寄存器
+SP(R13) LR(R14) PC(R15) CONTROL xPSR PRIMASK
+m3/m4/m7 特殊寄存器
+SP(R13) LR(R14) PC(R15) CONTROL xPSR PRIMASKFAULTMASK BASEPRI
+MSP 和 PSP
+msp 中断中会使⽤， psp ⽤于线程栈使⽤，通过配置 CONTROL 寄存器切换。 
+系统复位后默认使⽤ msp ，中断中也使⽤ msp 。 
+xPSR
+IPSR 可以⽤来判断当前处于什么中断。 
+PRIMASK
+中断屏蔽寄存器，写 1 屏蔽所有中断 ( 除了不可屏蔽中断和 hardfault) 
+CONTROL
+第 1bit 写 1 表⽰切换成 PSP 
+FAULTMASK
+屏蔽所有的 fault (NMI 不受影响 )
+BASEPRI
+屏蔽所有优先级不⾼于某个具体数值的中断
+
+=== PDF PAGE 4 ===
+8/6/2022
+4 / 10
+栈空间操作
+栈向下递减 
+栈指针始终指向栈的最后⼀个数据，每次执⾏数据存储前 (push) ， SP 会⾸先减⼩ 
+异常和中断
+m0 最多⽀持 32 个外部中断
+系统异常
+主要⽤于操作系统和错误处理
+异常类型异常编号说明
+reset 1 上电复位、系统复位
+NMI 2 不可屏蔽中断
+hardfault 3 硬件错误
+SVCall 11 系统调⽤
+PendSV 13 挂起系统调⽤
+systick 15 系统滴答
+NVIC 可嵌套向量中断控制器
+中断可嵌套
+相同优先级的中断不可嵌套
+相同中断不可嵌套
+系统操作寄存器
+实际上是许多的系统管理的寄存器
+地址范围 寄存器说明
+0xE000E008 - 0xE000E00FSystem Control Block Table
+0xE000E010 - 0xE000E01F预留
+0xE000E010 - 0xE000E01FSysTick 操作寄存器
+0xE000E100 - 0xE000E4EFNVIC 操作寄存器
+0xE000ED00 - 0xE000ED3F系统控制块
+0xE000EF00 - 0xE000EF03NVIC
+NVIC 寄存器
+
+=== PDF PAGE 5 ===
+8/6/2022
+5 / 10
+地址 寄存器名称说明地址 寄存器名称说明
+0xE000E100 ISER 中断使能寄存器
+0xE000E180 ICER 中断失能寄存器
+0xE000E200 ISPR 中断挂起寄存器
+0xE000E280 ICPR 清除挂起中断的寄存器
+0xE000E400 - 0xE000E41CIPR0-7 中断优先级配置寄存器
+系统控制块 SCB 寄存器
+地址 寄存器名称说明
+0xE000ED00 CPUID CPUID
+0xE000ED04 ICSR 中断控制和状态寄存器
+0xE000ED0C AIRCR 应⽤中断和复位的寄存器
+0xE000ED10 SCR 系统控制寄存器
+0xE000ED14 CCR 配置控制寄存器
+0xE000ED1C SHPR2 System Handler Priority Register 2
+0xE000ED20 SHPR3 System Handler Priority Register 3
+SysTick 寄存器
+地址 寄存器名称说明
+0xE000E010 SYST_CSR SysTick 控制和状态寄存器
+0xE000E014SYST_RVR SysTick 重载寄存器
+0xE000E018SYST_CVR SysTick 当前值寄存器
+0xE000E01CSYST_CALIBSysTick 校准寄存器
+cortex-m0 启动流程
+1. 程序从 0x00000000 地址开始执⾏
+2. m0 从程序 bin 文件的开始处第 2 个 word 运⾏ reset_handler
+3. reset_handler 函数开始执⾏⼀些必要的初始化（ ramfunc 函数复制，堆初始化，全局、静态变量初始化
+等）
+4. 跳转到 main 函数中
+中断向量表
+sp 指针
+resetHandler 地址
+
+=== PDF PAGE 6 ===
+8/6/2022
+6 / 10
+NMIHandler 地址
+hardfault 地址
+reserved
+systickHandler 地址
+......
+⼤⼩端
+m0 ⽀持⼤端模式和⼩端模式，不过⼀般芯片公司选择⼩端模式。 
+堆栈
+堆向上增⻓ 
+栈向下增⻓ 
+压栈的寄存器
+xPSR
+PC
+LR
+R12
+R3
+R2
+R1
+R0
+杂项指令集
+指令 说明
+BKPT 断点
+CPSID 关闭总中断
+CPSIE 打开总中断
+DMB 数据存储器隔离  仅当所有在它前⾯的存储器访问操作都执⾏完毕后，才开始后⾯的存储器访问操
+作
+
+=== PDF PAGE 7 ===
+8/6/2022
+7 / 10
+指令 说明
+DSB 数据同步隔离，比 DMB 更严格 : 仅当所有在它前⾯的存储器访问操作都执⾏完毕后，才开始后⾯的
+指令
+ISB 指令同步隔离，最严格 : 会清洗流⽔线，保证所有它前⾯的指令都执⾏完毕之后，才执⾏后⾯的指
+令。
+MRS 从特殊寄存器读取数据到通⽤寄存器
+MSR 从通⽤寄存器读取数据到特殊寄存器
+NOP 空转指令
+SEV 产⽣ event
+SVC 产⽣ SVC 系统调⽤中断
+WFE 等待 event
+WFI 等待中断
+M0/M3/M4/M7 区别
+M0 armv6-M 架构
+M3 armv7-M 架构  多了 basepri 寄存器可以阻⽌某优先级或更低的优先级的中断。  faultmask 寄存器提供了更多
+的错误管理特性。  CONTROL 寄存器的 bit0 ⽤于决定是特权模式还是⽤户线程模式  32 为 thumb 指令  位段特性  位
+域处理  多处理器⽀持  最多 240 个中断  硬件除法  存储器保护单元  更多的调试和跟踪特性
+M4 armv7-M 架构  浮点特性  SIMD 指令 ( 单周期多指令 ) 饱和算法  单周期 MAC(MAC 乘法累加 )
+特性 M0 M3 M4 M7
+basepr
+M3 系统框图
+
+=== PDF PAGE 8 ===
+8/6/2022
+8 / 10
+M3 快速开关中断汇编指令
+指令 效果 说明
+CPSID I PRIMASK=1 关中断
+CPSIE I PRIMASK=0 开中断
+CPSID F FAULTMASK=1关异常
+CPSIE F FAULTMASK=0开异常
+M3 内核 CONTROL 寄存器
+CONTROL[1] 堆栈指针选择  0= 选择主堆栈指针  MSP( 复位后缺省值 ) 1= 选择进程堆栈指针  PSP 在线程或
+基础级 ( 没有在响应异常 —— 译注 ), 可以使⽤  PSP 。在  handler 模式下 , 只允许使⽤  MSP, 所以此时不得往该
+位写  1 。
+CONTROL[0] 0= 特权级的线程模式  1= ⽤户级的线程模式  Handler 模式永远都是特权级的。
+异常和中断
+Cortex-M3 ⽀持⼤量异常 , 包括  16-4-1=11 个系统异常 , 和最多  240 个外部中断 —— 简称  IRQ 。
+编
+号 类型 优先
+级 简介
+
+=== PDF PAGE 9 ===
+8/6/2022
+9 / 10
+编
+号 类型 优先
+级 简介
+0 N/A N/A 没有异常在运⾏
+1 复位 -3( 最
+⾼ ) 复位
+2 NMI -2 不可屏蔽中断 ( 来⾃外部  NMI 输入脚 )
+3 硬 (hard) fault-1 所有被除能的  fault, 都将 “ 上访 ” 成硬  fault 。除能的原因包括当前被禁⽤ , 或者
+FAULTMASK 被置位。
+4 MemManage可编
+程 fault
+5 存储器管理
+fault
+可编
+程
+MPU 访问犯规以及访问非法位置均可引发。企图在 “ 非执⾏区 ” 取指也会引
+发此  fault 总线  fault 从总线系统收到了错误响应 , 原因可以是预取流产 (Abort)
+或数据流产 , 或者企图访问协处理器
+6 ⽤法 (usage) 可编
+程 Fault
+7-
+10 保留 N/A N/A
+11 SVCall 可编
+程 执⾏系统服务调⽤指令 (SVC) 引发的异常
+12 调试监视器 可编
+程 调试监视器 ( 断点 , 数据观察点 , 或者是外部调试请求
+13 保留 N/A N/A
+14 PendSV 可编
+程 为系统设备⽽设的 “ 可悬挂请求 ”(pendable request)
+15 SysTick 可编
+程 系统滴答定时器 ( 也就是周期性溢出的时基定时器 —— 译注 )
+16 IRQ #0 可编程
+17 IRQ #1 可编程
+... ... ... ...
+255 IRQ #239 可编程
+MPU 存储器保护单元
+Cortex-M3 有⼀个可选的存储器保护单元。配上它之后 , 就可以对特权级访问和⽤户级访问分别施加不同的访问
+限制。当检测到犯规 (violated) 时 ,MPU 就会产⽣⼀个  fault 异常 , 可以由  fault 异常的服务例程来分析该错误 , 并且
+在可能时改正它。 MPU 有很多玩法。最常⻅的就是由操作系统使⽤  MPU, 以使特权级代码的数据 , 包括操作系统
+本⾝的数据不被其它⽤户程序弄坏。 MPU 在保护内存时是按区管理的 (“ 区 ” 的原文是  region, 以后不再中译此名
+词 —— 译注 ) 。它可以把某些内存  region 设置成只读 , 从⽽避免了那⾥的内容意外被更改 ; 还可以在多任务系统中
+
+=== PDF PAGE 10 ===
+8/6/2022
+10 / 10
+把不同任务之间的数据区隔离。⼀句话 , 它会使嵌入式系统变得更加健壮 , 更加可靠 ( 很多⾏业标准 , 尤其是航空的 ,
+就规定了必须使⽤  MPU 来⾏使保护职能 —— 译注 ) 。

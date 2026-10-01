@@ -1,0 +1,252 @@
+=== PDF PAGE 1 ===
+8/6/2022
+1 / 27
+嵌入式基础知识概述  - ⼩智课程  - HQ
+[TOC]
+注意
+STM32 学习  - b 站嵌入式⼩智课程
+芯片内部介绍
+STM32F103C8T6 芯片引脚图
+
+=== PDF PAGE 2 ===
+8/6/2022
+2 / 27
+ 
+STM32 与 ST-Link v2 ，串⼝转 TTL 模块接线图
+串⼝打印实验
+1.STM32CubeMX 配置 USART1
+Asynchronous 同步模式， Synchronous 异步模式 ( 需要连同步时钟信号 )
+
+=== PDF PAGE 3 ===
+8/6/2022
+3 / 27
+特别， sys 要设置⼀下
+不知道怎么写程序，怎么函数复⽤，卒
+定时器
+电压
+
+=== PDF PAGE 4 ===
+8/6/2022
+4 / 27
+IO
+串⼝协议
+TTL
+
+=== PDF PAGE 5 ===
+8/6/2022
+5 / 27
+232
+485
+
+=== PDF PAGE 6 ===
+8/6/2022
+6 / 27
+区别
+主控与模块通讯
+开发过程中如何选择什么样的通讯接⼝  & 通讯接⼝如何使⽤
+
+=== PDF PAGE 7 ===
+8/6/2022
+7 / 27
+IIC
+
+
+=== PDF PAGE 8 ===
+8/6/2022
+8 / 27
+SPI
+IIS
+
+=== PDF PAGE 9 ===
+8/6/2022
+9 / 27
+SDIO
+
+
+=== PDF PAGE 10 ===
+8/6/2022
+10 / 27
+其他接⼝
+看⻔狗
+调试 Debug
+可以将变量 a 的值，加入 watch ，查看变量的值得变化
+可以设置单步调试等
+
+=== PDF PAGE 11 ===
+8/6/2022
+11 / 27
+IAP & OTA 远程升级
+设备（物联⽹设备）远程升级、更新功能
+单片机 flash 写入地址设置
+调试中⼼，可查看内存内容
+
+=== PDF PAGE 12 ===
+8/6/2022
+12 / 27
+分区设置
+BOOT 区  -- 引导区，启动
+APP 区  --- 业务代码
+APP 升级包存储区  --- 存储接收到的升级代码（加密码，校验码等 )
+APP 备份区  --- 存储备份，保证异常恢复
+嵌入式 RTOS
+
+=== PDF PAGE 13 ===
+8/6/2022
+13 / 27
+提⾼ CPU 使⽤率，更好的处理各个进程的运⾏
+架构图
+市场情况
+任务管理
+
+=== PDF PAGE 14 ===
+8/6/2022
+14 / 27
+常⽤函数
+1. 任务创建  xTaskCreat
+2. 任务删除  vTaskDelete
+3. 任务挂起  vTaskHandle
+4. 任务恢复  vTaskResume
+任务延迟
+
+=== PDF PAGE 15 ===
+8/6/2022
+15 / 27
+在 FreeRTOS ⾥⾯，提供了相对延迟函数和绝对延迟函数
+相对延迟函数，并非严格的延迟，也包括⼀些中断的耗时
+绝对延时函数，时间比较准确，⽤在如⼼率测试计时情景
+内存管理
+FreeRTOS 提供的五种内存管理⽅案
+
+=== PDF PAGE 16 ===
+8/6/2022
+16 / 27
+FreeRTOS 内核规定的内存管理函数
+信号量  & 互斥量
+消息队列
+比如，传结构体：
+消息队列，传递的是结构体的指针，
+
+=== PDF PAGE 17 ===
+8/6/2022
+17 / 27
+邮箱队列，传递的是整个结构体（开辟⼀块内存，将结构体复制）。
+嵌入式 LINUX
+快捷键
+打开新终端  ctrl + alt + t
+终端多开  ctrl + shift + t
+终端切换  alt + num
+查看提⽰  ls --help
+打印当前路径  pwd
+创建新文件并打开  gedit test.txt && vim test.txt
+删除文件夹  rm test -r
+搜索文件  find -name test.txt
+查看文件⾥的内容  grep -r "hello" && cat test.txt
+增加使⽤权限  chmod 777 test.txt
+进入连接到 linux 的开发板中  adb devices adb push
+把开发板中的文件下载到 linux 中  adb pull
+tar 解压命令是：
+1 、 tar –xvf file.tar // 解压  tar 包
+2 、 tar -xzvf file.tar.gz // 解压 tar.gz
+3 、 tar -xjvf file.tar.bz2 // 解压  tar.bz2
+4 、 tar –xZvf file.tar.Z // 解压 tar.Z
+5 、 unrar e file.rar // 解压 rar
+
+=== PDF PAGE 18 ===
+8/6/2022
+18 / 27
+6 、 unzip file.zip // 解压 zip
+虚拟机中安装 VS Code
+1. 从官⽹下载压缩包 ( 话说下载下来解压就直接可以运⾏了咧 , 都不需要make)
+访问 Visual Studio Code 官⽹  https://code.visualstudio.com/docs?dv=linux64
+我是 64 位的 :
+wget https://az764295.vo.msecnd.net/stable/7ba55c5860b152d999dda59393ca3ebeb1b5c85f/code-
+stable-code_1.7.2-1479766213_amd64.tar.gz
+2. 解压  , 如果文件名不对 , 可能解压不出来的 ( 扩展名 :tar.gz)
+tar jxcv code-stable-code_1.7.2-1479766213_amd64.tar.gz
+3. 然后移动到  /usr/local/ ⽬录
+mv VSCode-linux-x64 /usr/local/
+4. 可能还需要给可执⾏的权限 , 然后就已经可以运⾏了
+chmod +x /usr/local/VSCode-linux-x64/code
+5. 复制⼀个 VScode 图标文件到  /usr/share/icons/ ⽬录 ( 后⾯会有⽤ )
+cp /usr/local/VSCode-linux-x64/resources/app/resources/linux/code.png /usr/share/icons/
+6. 创建启动器 , 在 /usr/share/applications/ ⽬录 , 也可以将它复制到桌⾯⽬录
+直接在中断  使⽤  命令 :
+vim /usr/share/applications/VSCode.desktop
+然后输入以下文本 :
+[
+ ](javascript:void(0)
+[Desktop Entry] 
+Name=Visual Studio Code 
+Comment=Multi-platform code editor for Linux 
+Exec=/usr/local/VSCode-linux-x64/code 
+Icon=/usr/share/icons/code.png 
+Type=Application 
+StartupNotify=true 
+Categories=TextEditor;Development;Utility; 
+MimeType=text/plain; 
+
+=== PDF PAGE 19 ===
+8/6/2022
+19 / 27
+[
+ ](javascript:void(0)
+保存后退出 , 然后可以复制到桌⾯ :
+cp /usr/share/applications/VSCode.desktop ~/ 桌⾯ /
+之后  就会发现  桌⾯和  应⽤程序菜单都有了  VSCode 的快捷⽅式了
+8. 打开 VSCode, 加载插件 : cpptools | vscode-icons
+Linux ⼯程搭建
+1. 最朴素  gcc main.c -o main
+2. 稍微⼤⼀点⼯程，可⼿写  Makefile
+3. 再⼤⼀点⼯程，推荐⽤  autotools( 本质是⾃动化⽣成 makefile)
+4. ⼤⼯程更推荐  cmake( 语法简单，⾼效 )
+安装  sudo apt-get install cmake
+查看版本  cmake -version
+
+
+=== PDF PAGE 20 ===
+8/6/2022
+20 / 27
+Linux 多线程的使⽤
+不同系统的多线程比较
+线程通讯  & 同步
+
+=== PDF PAGE 21 ===
+8/6/2022
+21 / 27
+⾃旋锁  与  互斥 & 读写 & 条件变量  对比
+信号量
+
+=== PDF PAGE 22 ===
+8/6/2022
+22 / 27
+Linux 多进程的使⽤
+多进程
+进程通信⽅式
+socket 通常⽤于多机通讯
+
+=== PDF PAGE 23 ===
+8/6/2022
+23 / 27
+消息队列和管道对比
+
+
+=== PDF PAGE 24 ===
+8/6/2022
+24 / 27
+Linux 文件编程
+案例代码
+
+=== PDF PAGE 25 ===
+8/6/2022
+25 / 27
+Linux ⽹络编程
+⽹络 7 层模型
+
+=== PDF PAGE 26 ===
+8/6/2022
+26 / 27
+服务器 - 客户端通讯过程
+
+=== PDF PAGE 27 ===
+8/6/2022
+27 / 27

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>波形双缓冲与缓冲区所有权</title>
+  <link rel="stylesheet" href="assets/lesson.css">
+</head>
+<body>
+<main>
+  <h1>双缓冲不只要“切换”，还要管理谁正在使用</h1>
+  <p class="lead">当前竞争是ADC完成ISR逐项写<code>waveform[1024]</code>，LCD任务同时读同一数组。结果可能是一帧中前半新、后半旧。双缓冲是正确方向，但只有指针切换还不够。</p>
+
+  <h2>为什么xEventGroupSync不合适</h2>
+  <ul>
+    <li><code>xEventGroupSync()</code>的语义是：任务设置自己的到达位，然后阻塞等待其他任务全部到达同一个屏障。</li>
+    <li>FreeRTOS当前头文件明确说明它不能从中断调用；ADC/DMA完成回调是ISR上下文。</li>
+    <li>事件位会合并，不记录每一帧，也不描述A/B哪个缓冲区归谁。</li>
+    <li>即使两个任务同时越过屏障，生产者仍可能马上覆盖LCD尚未读完的数组。</li>
+  </ul>
+  <p class="rule">通知“有新帧”可继续用事件组；管理“哪个缓冲区可写、可读、何时释放”必须另有所有权状态。</p>
+
+  <h2>最小止撕裂方案：双waveform＋状态</h2>
+  <p>保留当前ISR换算，但把显示数据改成两个<code>float[1024]</code>。每个缓冲区至少有FREE、WRITING、READY、DISPLAYING状态。</p>
+  <ol>
+    <li>生产者只选择FREE缓冲区，标记WRITING并完成全部1024点换算。</li>
+    <li>全部写完后，用一次很短的临界区发布ready索引，改为READY，再置位波形重绘事件。</li>
+    <li>LCD任务取得READY索引，标记DISPLAYING；整个<code>LCD_DrawWaveform()</code>期间只读该数组。</li>
+    <li>绘制完成后将该缓冲区标记FREE。</li>
+    <li>若生产者找不到FREE缓冲区，ISR不能等待：丢弃本次显示帧并保留上一稳定帧。</li>
+  </ol>
+  <p><strong>不要把WRITING写成WAITING：</strong>WAITING容易被理解为任务在等待资源或处于Blocked；这里生产者正在主动写数组，所以是WRITING。</p>
+  <table>
+    <thead><tr><th>状态</th><th>含义</th><th>谁能改变</th></tr></thead>
+    <tbody>
+      <tr><td>FREE</td><td>无人读写，可以成为下一帧目标</td><td>LCD绘制完成后归还</td></tr>
+      <tr><td>WRITING</td><td>生产者正在写，LCD禁止读取</td><td>生产者写完后改READY</td></tr>
+      <tr><td>READY</td><td>完整新帧已发布，等待LCD领取</td><td>LCD领取后改DISPLAYING</td></tr>
+      <tr><td>DISPLAYING</td><td>LCD正在读取，生产者禁止覆盖</td><td>LCD绘制结束后改FREE</td></tr>
+    </tbody>
+  </table>
+  <p class="rule">A=DISPLAYING、B=READY时已经没有FREE缓冲。ISR既不能覆盖，也不能等待，只能丢弃第三帧或增加更多缓冲。任务上下文可以设计阻塞等待，但必须同时解决raw缓冲的背压和下一次采集策略。</p>
+  <p>事件组位只能表达“至少发生过一次新帧通知”：同一位在LCD处理前被设置多次，最终仍只是1。缓冲区索引可以放在共享<code>readyIndex</code>中并用很短的临界区保护，或通过队列传递；缓冲区状态仍负责所有权。</p>
+  <p><strong>如何验证当前确实发生并发：</strong>可临时用两个诊断GPIO分别包围“ISR写waveform”和“LCD_DrawWaveform读数组”的时间区间，再用逻辑分析仪观察两个高电平是否重叠；也可增加帧版本号，让LCD在绘制前后各读一次，版本变化说明绘制期间生产者更新过数据。断点会冻结CPU并改变时序，不适合作为这类竞态的唯一证据。</p>
+  <p>这个方案能防撕裂，但1024次浮点换算仍在ISR中，长中断问题没有解决。</p>
+
+  <h2>完整方案：ISR通知＋转换任务＋缓冲区所有权</h2>
+  <p>更合理的职责是：DMA完成ISR只发布“某个原始缓冲区已完成”；转换任务完成浮点换算并发布READY显示缓冲；LCD任务绘制后归还缓冲。通知可用任务通知或队列中的缓冲区索引，现有事件组只负责触发LCD局部重绘。</p>
+  <p class="rule">若把换算移到任务，单个rawDataBuffer也可能在任务处理时被下一帧DMA覆盖。要么raw也做ping-pong，要么在转换完成前不重新武装下一次采集。</p>
+
+  <h2>内存代价</h2>
+  <table>
+    <thead><tr><th>对象</th><th>单份大小</th><th>增加一份的代价</th></tr></thead>
+    <tbody>
+      <tr><td><code>uint16_t raw[1024]</code></td><td>2048B</td><td>+2KB</td></tr>
+      <tr><td><code>float waveform[1024]</code></td><td>4096B</td><td>+4KB</td></tr>
+      <tr><td>raw＋waveform都双缓冲</td><td>当前合计6KB</td><td>再增加6KB</td></tr>
+    </tbody>
+  </table>
+  <p>当前链接脚本给出48KB RAM；2026-08-20现有map中<code>rawDataBuffer</code>占2KB、<code>waveform</code>占4KB。增加缓冲前仍必须重新编译检查RAM、FreeRTOS heap和任务栈余量，不能只按总容量口算。</p>
+
+  <h2>本课依据</h2>
+  <p>当前工程<code>freertos/Inc/event_groups.h</code>对<code>xEventGroupSync()</code>的定义：用于多个任务屏障同步，且不能从中断调用；<code>waveform_capture.c</code>当前在ADC完成ISR内写整个<code>waveform[]</code>；<code>waveform_panel.c</code>把该数组指针直接交给LCD绘制。</p>
+
+  <p class="question"><strong>自测：</strong>为什么“写完B后交换指针”仍可能覆盖LCD正在读取的A？只有两个缓冲区且LCD过慢时，ISR应该等待、覆盖还是丢帧？</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STM32F103 RTC Alarm + Stop低功耗</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
+<h2>2026-09-17：本页旧参数的统一更新</h2>
+<p>周期采集上报改为900秒；按键开启时先新采集、不额外发送，测量设备回到断电/待机后显示约10秒。BH1750已改单次测量后Power Down；按键不推迟周期，同到期合并，亮屏中到期仍上报。失败字段用有效位与哨兵，网关显示−1并列sensor_errors，OLED显示ERR；合法−1℃与业务越界的真实值不丢弃。</p>
+<p>用户确认整机电池侧：活动0.9秒/90mA、休眠54µA、纯显示10秒/60mA。1500mAh取90%，每天96次周期、额外一次按键采集和10秒显示：日耗3.6437mAh，理论370.5天，非一年续航实测。新固件双配置编译、10项网关测试通过，未烧录复测，0.9秒须重新核验。未新增RF距离、RSSI、丢包率证据。</p>
+<p>2026-09-23源码把确认未用的GPIO在初始化时一次设为模拟输入，Stop保持配置，不再逐轮保存/恢复整组GPIO寄存器；RTC中断改由HAL清标志，重复的Tick恢复已删除。双配置已编译，尚未上板复测。唤醒、晶振、通信、电源与模式控制仍保留；模拟输入不等于无漏电，外部上拉倒灌仍须隔离。原文5秒、30/10秒、缓存显示30秒及连续光照等作为旧版教学背景保留，以本更新为准。完整设计与预算见工作区《低功耗系统设计决策与实施边界》第15节；真实接续位置见唯一记忆的低功耗任务线。</p>
+</section>
+<main>
+  <h1>STM32F103 RTC Alarm + Stop低功耗</h1>
+  <p class="lead">目标：不靠背函数名，能够从电源域、时钟域、中断链和当前源码四个角度解释“为什么能睡、为什么能醒、醒后为什么必须恢复时钟”。</p>
+
+  <section class="card">
+    <strong>一句话模型</strong>
+    <p>Stop模式关闭CPU主执行时钟、HSE/PLL等高速时钟，并让内部稳压器进入低功耗状态；SRAM和大多数寄存器仍供电保留。独立的LSE继续驱动RTC，Alarm匹配后经EXTI17和NVIC唤醒Cortex-M3。</p>
+  </section>
+
+  <h2>1. 三种低功耗模式不要混讲</h2>
+  <table>
+    <thead><tr><th>模式</th><th>停了什么</th><th>保留什么</th><th>唤醒后</th><th>适用</th></tr></thead>
+    <tbody>
+      <tr><td>Sleep</td><td>CPU内核执行</td><td>外设时钟、SRAM、寄存器</td><td>继续执行，延迟最低</td><td>短等待</td></tr>
+      <tr><td>Stop</td><td>CPU与高速时钟，PLL/HSE/HSI关闭</td><td>SRAM、寄存器、RTC/备份域</td><td>从WFI后继续，但SYSCLK先回到HSI，必须重建时钟树</td><td>本项目5秒周期休眠</td></tr>
+      <tr><td>Standby</td><td>1.8V域和内部稳压器</td><td>主要只剩备份域</td><td>类似复位启动，SRAM丢失</td><td>更长休眠、最低MCU功耗</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. 当前工程的完整信号链</h2>
+  <div class="flow">LSE 32.768 kHz
+  → RTC预分频为1 Hz
+  → RTC 32位计数器每秒加1
+  → ALARM = 当前计数 + 5
+  → 计数匹配，RTC置ALRAF
+  → RTC Alarm路由到EXTI Line 17
+  → EXTI17向NVIC提出RTC_Alarm_IRQn
+  → Cortex-M3退出WFI并执行RTC_Alarm_IRQHandler
+  → 中断返回到HAL_PWR_EnterSTOPMode()之后
+  → SystemClock_Config()恢复HSE×9 PLL = 72 MHz
+  → HAL_ResumeTick()
+  → 进入下一轮采集</div>
+
+  <h2>3. Enter_Stop_Mode()逐段含义</h2>
+  <ol>
+    <li>读取<code>RTC-&gt;CNTH/CNTL</code>，计算绝对闹钟值<code>cnt + seconds</code>。</li>
+    <li>等待<code>RTOFF</code>，进入RTC配置模式，写<code>ALRH/ALRL</code>后退出配置模式。</li>
+    <li>使能RTC Alarm中断、EXTI17中断与上升沿。</li>
+    <li>清PWR唤醒标志，避免旧标志干扰本次睡眠。</li>
+    <li><code>HAL_SuspendTick()</code>只关闭SysTick中断使能；并不是把5秒交给SysTick计时。</li>
+    <li><code>HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI)</code>清PDDS、置LPDS、置SLEEPDEEP并执行WFI。</li>
+    <li>Alarm中断唤醒后，代码从WFI之后继续；先恢复PLL和72MHz系统时钟，再恢复SysTick中断。</li>
+    <li>清Alarm/EXTI标志并关闭本次Alarm中断，为下一轮重新设置做准备。</li>
+  </ol>
+
+  <div class="note danger">
+    <strong>SysTick常见误区：</strong>进入真正的Stop后，主时钟已停止，SysTick不会靠72MHz继续完整计时。暂停SysTick的主要目的，是避免进入Stop前后恰逢一个pending tick导致睡眠被打断或立即返回；5秒计时来自LSE驱动的RTC。
+  </div>
+
+  <h2>4. WFI与中断的关系</h2>
+  <p><code>WFI</code>表示Wait For Interrupt。它不是死循环，也不是软件延时，而是告诉Cortex-M3：当前没有工作，直到符合条件的中断到来再恢复。Alarm发生后，CPU先进入RTC中断服务函数；中断返回后，继续执行WFI之后的代码。</p>
+  <p>现行ISR直接调用<code>HAL_RTC_AlarmIRQHandler()</code>清理RTC Alarm和EXTI17挂起标志；旧版<code>rtc_alarm_wakeup</code>没有被主循环读取，已删除。CPU被唤醒依靠硬件RTC→EXTI17→NVIC链。</p>
+
+  <h2>5. 为什么醒后必须重新配置72 MHz</h2>
+  <p>STM32F1退出Stop时自动选择HSI作为SYSCLK，而睡前工程使用HSE 8MHz经PLL×9得到72MHz。若不调用<code>SystemClock_Config()</code>，CPU、APB、定时器和USART会在与原设计不同的时钟下运行，串口实际波特率、定时器周期和延时都会偏离。</p>
+  <div class="note good"><strong>正确顺序：</strong>Alarm唤醒 → ISR清标志 → 回到WFI之后 → 恢复HSE/PLL/总线分频 → 恢复SysTick → 继续业务。</div>
+
+  <h2>6. 当前工程的实际周期</h2>
+  <p>代码设置的是“睡5秒”，不是“每5秒采样一次”。真实采样周期约为：</p>
+  <pre>T周期 = T采集 + T显示 + T判断 + T串口发送 + 5秒Stop</pre>
+  <p>AHT20测量本身约75～100ms，OLED和9600波特率状态发送也需要时间，所以相邻两轮采样间隔一定大于5秒。若要求严格每5秒采样，应根据RTC绝对时间安排固定截止点，而不是每轮完成后再睡5秒。</p>
+
+  <h2>7. MCU低功耗不等于整板低功耗</h2>
+  <p>当前代码没有关闭OLED、蓝牙模块、AHT20和BH1750的供电，也没有熄屏。即使STM32已经进入Stop，外部模块仍可能主导整板电流。调试器的DBG_STOP设置、ADC/DAC使能和悬空GPIO也会影响实测。</p>
+  <ul>
+    <li>先测运行态整板电流。</li>
+    <li>确认GPIO指示出进入Stop，再测Stop阶段电流。</li>
+    <li>分别断开OLED、蓝牙和传感器，定位主要耗电源。</li>
+    <li>不要用“程序能5秒后醒来”代替电流测试；前者验证功能，后者才验证低功耗效果。</li>
+  </ul>
+
+  <h2>8. 上板验收清单</h2>
+  <ol class="checklist">
+    <li>烧录当前<code>dab9a91</code>对应固件，确认OLED与状态蓝牙TX仍工作。</li>
+    <li>确认手机发送GET/SET没有响应，且固定阈值判断仍正常。</li>
+    <li>用GPIO翻转或串口时间戳观察：每轮业务完成后约5秒再醒。</li>
+    <li>醒后串口仍为9600且数据不乱码，证明时钟恢复成功。</li>
+    <li>测运行态和Stop阶段整板电流，记录数值；若差异小，逐个排查OLED/蓝牙/传感器和调试保持。</li>
+    <li>重复至少20轮，确认没有首轮正常、后续不醒或周期漂移异常。</li>
+  </ol>
+
+  <h2>9. 一分钟面试表达</h2>
+  <p>“系统每轮完成传感器采集、OLED显示和UART DMA状态发送后进入Stop模式。RTC使用32.768kHz LSE并预分频到1Hz，程序将Alarm设置为当前计数加5秒。进入Stop前清除唤醒标志、暂停SysTick中断，然后HAL设置SLEEPDEEP、选择低功耗稳压器并执行WFI。RTC计数匹配后经EXTI17和NVIC触发RTC Alarm中断，CPU从WFI唤醒。STM32F1退出Stop时SYSCLK切到HSI，所以我重新执行SystemClock_Config恢复HSE和72MHz PLL，再恢复SysTick。Stop会保留SRAM和寄存器，但外部OLED、蓝牙和传感器仍然耗电，因此功能唤醒测试与整板电流测试需要分开验证。”</p>
+
+  <h2>10. 一手资料</h2>
+  <ul>
+    <li><a href="https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101-103-105-107-stm32f100-series-armbased-32bit-mcus-stmicroelectronics.pdf">ST RM0008参考手册</a></li>
+    <li><a href="https://www.st.com/resource/en/application_note/an2629-stm32f101xx-stm32f102xx-and-stm32f103xx-lowpower-modes-stmicroelectronics.pdf">ST AN2629低功耗应用笔记</a></li>
+  </ul>
+  <p class="lead">不清楚任何一步时，直接向教师追问“该位由谁设置、时钟从哪里来、唤醒后从哪里继续”。</p>
+
+  <h2>11. 2026-08-27 LoRa构建增量</h2>
+  <p>上文5秒链路对应默认BLE构建。当前LoRaDebug源码使用正常30秒、异常10秒Stop；发送链先切M0/M1为00并等待AUX，再完成UART DMA、ACK和重试，结束后切M0/M1为11并再次等待AUX，随后才设置RTC Alarm并进入MCU Stop。</p>
+  <p>30秒是当前可编译的软件策略，不等于最终部署最优值。对于温室或校园试验田的慢变化环境，可以把正常周期设计为5～10分钟、异常周期缩短到10～30秒；在代码实际修改和上板验证前，应称为优化方案。</p>
+  <pre>Iavg(30s)  = (200mA×0.2s + 20mA×0.8s + 0.1mA×29s) / 30s  ≈ 1.963mA
+Iavg(300s) = (200mA×0.2s + 20mA×0.8s + 0.1mA×299s) / 300s ≈ 0.286mA</pre>
+
+  <h2>12. 外设断电必须发生在WFI之前</h2>
+  <div class="flow">完成通信并等ACK
+→ LoRa切11并等AUX
+→ OLED熄屏 / 传感器Power Down
+→ 总线GPIO切安全状态，避免反向供电
+→ 负载开关或P-MOS关闭外设VCC
+→ 设置RTC Alarm
+→ MCU执行WFI进入Stop
+
+RTC唤醒
+→ 恢复HSE/PLL与SysTick
+→ 打开外设VCC
+→ 等待上电稳定并重新初始化
+→ 开始下一轮采集</div>
+  <p>当前工程没有为OLED、AHT20、BH1750和雨滴板定义独立电源使能GPIO，也没有源码证据表明板上已有负载开关。因此现阶段只能使用器件待机命令；真正硬断电需要补充电源开关电路和控制引脚。外设VCC关闭时，MCU通信引脚若仍输出高电平，可能经外设保护二极管反向供电。</p>
+
+  <h2>13. 当前源码与拟议电源状态不要混讲</h2>
+  <table>
+    <thead><tr><th>器件</th><th>当前源码</th><th>拟议休眠状态</th><th>醒后要求</th></tr></thead>
+    <tbody>
+      <tr><td>LoRa</td><td>M0/M1=11并等待AUX，已接入发送结束链</td><td>先保留模块休眠；实测后再决定硬断电</td><td>切00并等待AUX</td></tr>
+      <tr><td>OLED</td><td>有Display Off函数，但主循环睡前未调用</td><td>熄屏，或经负载开关硬断电</td><td>硬断电后完整初始化并重发显存</td></tr>
+      <tr><td>BH1750</td><td>0x10连续高分辨率模式，无Power Down调用</td><td>睡前发0x00 Power Down，或硬断电</td><td>重发工作模式并等待首轮转换</td></tr>
+      <tr><td>AHT20</td><td>只有Init/Measure，无显式Sleep接口</td><td>优先保持供电空闲；量化后再决定门控</td><td>若硬断电，等待上电稳定并重新Init</td></tr>
+      <tr><td>雨滴板</td><td>持续供电，软件只采ADC</td><td>优先使用负载开关断电</td><td>上电稳定后再采样，ADC脚断电期为模拟/高阻</td></tr>
+    </tbody>
+  </table>
+  <div class="note danger"><strong>I2C反向供电：</strong>把MCU引脚改为高阻并不总能解决问题。如果SDA/SCL上拉电阻仍连接常供电3.3V，电流仍可经外设输入保护二极管进入已经断电的VCC。上拉应跟随被控电源域，或增加合适的电平隔离/总线开关。</div>
+  <div class="flow">RTC唤醒 / ISR返回
+→ SystemClock_Config()
+→ HAL_ResumeTick()
+→ 打开负载开关
+→ 等待供电稳定
+→ 恢复总线GPIO并重新初始化器件
+→ 开始采集</div>
+
+  <h2>14. AHT20自动休眠与GPIO电源门控</h2>
+  <div class="note good"><strong>AHT20手册纠正：</strong>表2给出3.3V下休眠电流典型0.25µA、测量电流典型23µA；表10规定Busy Bit7=0时设备空闲并处于休眠状态。当前驱动完成0xAC测量并确认Busy清零后，AHT20会自动回到非测量低功耗状态，不需要额外Sleep命令。</div>
+  <p>GPIO不能直接承担模块VCC电流，也不能软件切断已经直接连接的公共3.3V铜线。真正的电源门控需要增加高边P-MOS或专用负载开关：</p>
+  <div class="flow">3V3_ALWAYS
+→ 高边P-MOS / Load Switch
+→ VPERIPH受控电源域
+→ OLED、传感器或模块VCC
+
+STM32 GPIO
+→ 只控制MOS栅极或Load Switch EN</div>
+  <p>高边开关让外设与MCU保持公共地，适合I2C和ADC。低边切GND会改变外设地参考并增加通信、ADC误差与反向供电风险，通常不作为本项目首选。如果模块已经直连公共3.3V，必须改线或增加转接板，现有GPIO不能凭空把它关掉。</p>
+  <div class="note danger"><strong>共享I2C的额外限制：</strong>OLED和AHT20共享I2C1。若只切断OLED VCC，而SDA/SCL上拉仍由AHT20的常供电域保持高电平，OLED仍可能从I/O脚被反向供电。工程上应在“二者整组断电”“增加总线隔离”“OLED仅熄屏不断电”之间选择，并通过整板电流实测决定。</div>
+
+  <h2>15. 当前接线不改动时的可行方案</h2>
+  <p>用户确认雨滴模块当前只能连接板上公共电源，现有硬件没有电源门控。此时软件无法切断雨滴板VCC，但雨滴读取函数已经在每次读数后调用<code>HAL_ADC_Stop()</code>，所以Stop期间ADC本身不持续转换；持续耗电来自仍然上电的模块电路。</p>
+  <div class="flow">睡前：
+LoRa切11并等待AUX
+→ AHT20测量完成后自动休眠
+→ OLED Display Off
+→ BH1750发送0x00 Power Down
+→ RTC Alarm
+→ STM32 Stop
+
+醒后：
+恢复系统时钟与SysTick
+→ OLED Display On / 必要时刷新显存
+→ BH1750发送0x10
+→ 等待首轮转换
+→ 读取传感器并发送</div>
+  <p>其中OLED Off和BH1750 Power Down尚未接入当前主循环，仍是待实现方案。没有整板电流实测前，应称为“现有硬件接线下可实现的更低功耗方案”，不能宣称为绝对最低功耗。</p>
+</main>
+</body>
+</html>
