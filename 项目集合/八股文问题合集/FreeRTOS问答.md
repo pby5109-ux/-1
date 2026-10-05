@@ -165,3 +165,25 @@
 - 例：A 设置 BIT0，B 设置 BIT1，两者都等 BIT0|BIT1；先到者阻塞，后到者满足条件，双方继续按调度运行。
 - 满足条件不代表同时执行；单核仍按优先级调度。超时可能提前返回，必须检查返回位，超时后的位状态需自行设计。
 - 与 WaitBits 区别：WaitBits 只等待，Sync 将自己的置位和等待作为一个原子同步操作；不能从 ISR 调用。
+
+## 18. 互斥锁的获取和释放函数是什么？
+
+- 普通互斥锁：创建 xSemaphoreCreateMutex()，获取 xSemaphoreTake(mutex, waitTicks)，释放 xSemaphoreGive(mutex)。
+- 递归互斥锁：创建 xSemaphoreCreateRecursiveMutex()，获取 xSemaphoreTakeRecursive()，释放 xSemaphoreGiveRecursive()，成功获取几次需释放几次。
+- 不要混用普通和递归接口；锁必须由持有任务释放，不能在 ISR 中获取或释放互斥锁。
+- 名称为 Semaphore（信号量），公开获取接口不是 xSemaphoreTakeMutex。
+
+## 19. xEventGroupGetBits 获取一位还是多位？
+
+- 正确名称：xEventGroupGetBits(group)，返回整个事件组当前位值，类型 EventBits_t。
+- 单位判断：bits & BIT0；多位任意成立：(bits & mask) != 0；多位全部成立：(bits & mask) == mask。
+- 只读取，不等待、不清位；返回的是查询时的快照，之后可能被其他任务改变。
+- 中断读取使用 xEventGroupGetBitsFromISR()；不要操作内核保留位。
+
+## 20. 任务通知只能在任务之间传一个信号吗？
+
+- 不只能任务间：任务或 ISR 都能通知指定任务，ISR 必须用 FromISR 接口。
+- 可用于唤醒、计数、设置事件位，或传递一个 32 位值；语义由发送动作和接收方式决定。
+- 常见搭配：xTaskNotifyGive / vTaskNotifyGiveFromISR → ulTaskNotifyTake；xTaskNotify / xTaskNotifyFromISR → xTaskNotifyWait。
+- 每个通知槽属于一个接收任务；可有多个发送者，但一次通知不广播给多个任务。
+- 通知存放在 TCB 中，无需单独创建对象；不是消息队列，不能默认缓存多条独立数据，覆盖/计数行为需按模式选择。

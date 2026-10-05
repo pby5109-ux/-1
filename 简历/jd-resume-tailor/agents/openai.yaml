@@ -1,5 +1,5 @@
 interface:
   display_name: "JD定制简历"
-  short_description: "基于最新PDF评判JD，小改手改、大改生成，校园与实习先审批"
+  short_description: "基于最新PDF评判JD，小改手改、大改生成，项目、校园与实习先审批"
   brand_color: "#1F4E78"
-  default_prompt: "Use $jd-resume-tailor to assess this JD against my latest matching PDF: give manual replacements for minor edits, otherwise tailor and generate a verified PDF, waiting for my approval only if campus or internship sections change."
+  default_prompt: "Use $jd-resume-tailor to assess this JD against my latest matching PDF: give manual replacements for minor edits, otherwise tailor and generate a verified PDF, waiting for my approval only if project, campus or internship sections change."

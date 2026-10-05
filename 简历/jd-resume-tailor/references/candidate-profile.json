@@ -23,12 +23,25 @@
     "embedded": {
       "default_target": "嵌入式软件工程师",
       "default_tags": "STM32｜FreeRTOS｜外设驱动｜软硬件联调",
-      "focus": ["MCU", "RTOS", "外设驱动", "实时采集", "通信协议", "软硬件联调"]
+      "focus": [
+        "MCU",
+        "RTOS",
+        "外设驱动",
+        "实时采集",
+        "通信协议",
+        "软硬件联调"
+      ]
     },
     "general": {
       "default_target": "电子信息技术岗",
       "default_tags": "嵌入式研发｜测试验证｜技术支持｜工程实施",
-      "focus": ["技术基础", "测试验证", "工程协作", "文档", "组织与现场执行"]
+      "focus": [
+        "技术基础",
+        "测试验证",
+        "工程协作",
+        "文档",
+        "组织与现场执行"
+      ]
     }
   },
   "skill_boundaries": [
@@ -37,39 +50,64 @@
       "name": "C语言",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["熟悉C语言", "理解指针、结构体、位运算、动态内存及static/const/volatile"],
-      "forbidden": ["精通C语言", "代码能力突出"]
+      "allowed": [
+        "熟悉C语言",
+        "理解指针、结构体、位运算、动态内存及static/const/volatile"
+      ],
+      "forbidden": [
+        "精通C语言",
+        "代码能力突出"
+      ]
     },
     {
       "id": "skill.mcu",
       "name": "MCU平台",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["使用STM32F103/HAL", "使用TI MSPM0G3507 DriverLib/SysConfig"],
-      "forbidden": ["精通所有ARM平台"]
+      "allowed": [
+        "使用STM32F103/HAL",
+        "使用TI MSPM0G3507 DriverLib/SysConfig"
+      ],
+      "forbidden": [
+        "精通所有ARM平台"
+      ]
     },
     {
       "id": "skill.rtos",
       "name": "FreeRTOS/CMSIS-RTOS2",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["熟悉任务调度及队列、事件组、信号量、互斥锁和软件定时器", "能够结合项目解释阻塞点、FromISR和优先级继承", "在综合仪器中完成FreeRTOS移植，并配置FreeRTOSConfig.h中的系统节拍、抢占/时间片、堆空间和内核对象开关"],
-      "forbidden": ["精通RTOS内核移植"]
+      "allowed": [
+        "熟悉任务调度及队列、事件组、信号量、互斥锁和软件定时器",
+        "能够结合项目解释阻塞点、FromISR和优先级继承",
+        "在综合仪器中完成FreeRTOS移植，并配置FreeRTOSConfig.h中的系统节拍、抢占/时间片、堆空间和内核对象开关"
+      ],
+      "forbidden": [
+        "精通RTOS内核移植"
+      ]
     },
     {
       "id": "skill.peripherals",
       "name": "常用外设",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["使用UART/I²C/SPI、ADC/DAC/DMA、TIM/PWM/RTC/EXTI"],
-      "forbidden": ["CAN", "USB", "以太网TCP/IP"]
+      "allowed": [
+        "使用UART/I²C/SPI、ADC/DAC/DMA、TIM/PWM/RTC/EXTI"
+      ],
+      "forbidden": [
+        "CAN",
+        "USB",
+        "以太网TCP/IP"
+      ]
     },
     {
       "id": "skill.toolchain",
       "name": "开发与构建工具",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["使用Keil、IAR、STM32CubeMX、VS Code、CLion、CMake/GCC、OpenOCD和Git"],
+      "allowed": [
+        "使用Keil、IAR、STM32CubeMX、VS Code、CLion、CMake/GCC、OpenOCD和Git"
+      ],
       "notes": "CMake/GCC/OpenOCD/Git按使用过表述，不扩大成熟练维护复杂工程；IAR为user_confirmed（2026-09-28用户确认使用过，可列入开发工具行）"
     },
     {
@@ -77,8 +115,14 @@
       "name": "网络通信协议（TCP/UDP/HTTP）",
       "status": "user_confirmed",
       "resume_policy": "allowed",
-      "allowed": ["熟悉TCP/UDP、HTTP等通信协议（可并入通信与协议行）"],
-      "forbidden": ["TCP/IP协议栈实现", "Linux网络编程", "以太网驱动开发"],
+      "allowed": [
+        "熟悉TCP/UDP、HTTP等通信协议（可并入通信与协议行）"
+      ],
+      "forbidden": [
+        "TCP/IP协议栈实现",
+        "Linux网络编程",
+        "以太网驱动开发"
+      ],
       "notes": "2026-09-28用户确认做过相关实验；按协议使用/熟悉级表述，实现层仍禁写（skill.unsupported的TCP/IP协议栈条目继续有效）"
     },
     {
@@ -86,7 +130,9 @@
       "name": "调试工具",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["使用ST-Link、示波器和万用表定位软硬件问题"],
+      "allowed": [
+        "使用ST-Link、示波器和万用表定位软硬件问题"
+      ],
       "notes": "逻辑分析仪仅看过使用方法，未亲自操作，不能写熟练使用"
     },
     {
@@ -94,14 +140,18 @@
       "name": "文档与办公",
       "status": "verified",
       "resume_policy": "allowed",
-      "allowed": ["使用WPS/Office整理技术文档、测试记录和汇报材料"]
+      "allowed": [
+        "使用WPS/Office整理技术文档、测试记录和汇报材料"
+      ]
     },
     {
       "id": "skill.python",
       "name": "Python",
       "status": "qualified",
       "resume_policy": "allowed_with_qualifier",
-      "allowed": ["了解Python基础，可阅读和修改简单串口数据处理脚本"],
+      "allowed": [
+        "了解Python基础，可阅读和修改简单串口数据处理脚本"
+      ],
       "notes": "默认简历不写；只有JD确实需要且面试前完成网关脚本复习时才加入"
     },
     {
@@ -116,7 +166,14 @@
       "name": "当前无项目证据技术",
       "status": "prohibited",
       "resume_policy": "prohibited",
-      "items": ["C++", "嵌入式Linux驱动", "AUTOSAR", "CAN", "Bootloader", "TCP/IP协议栈"]
+      "items": [
+        "C++",
+        "嵌入式Linux驱动",
+        "AUTOSAR",
+        "CAN",
+        "Bootloader",
+        "TCP/IP协议栈"
+      ]
     }
   ],
   "experience": {
@@ -124,7 +181,7 @@
       "name": "烟台东方威思顿电气有限公司",
       "role": "智能电表测试实习生",
       "period": "2025.10—2025.11",
-      "boundary": "材料可证明培训、产品认知和开发板实操；不能虚构板卡型号、缺陷闭环、测试数量或量产指标"
+      "boundary": "材料可证明培训、产品认知和开发板实操；DTZY178型号与真实采集异常排查闭环（线路短路定位与恢复）经用户2026-10-05确认可写；测试数量、量产指标仍无证据"
     },
     "campus": {
       "organization": "山东建筑大学校学生会科创部",
@@ -192,6 +249,18 @@
       "status": "user_confirmed",
       "resume_policy": "allowed",
       "summary": "校级优秀共青团员、优秀学生（个人）、三好学生"
+    },
+    {
+      "id": "experience.meter_model",
+      "status": "user_confirmed",
+      "resume_policy": "allowed",
+      "summary": "DTZY178三相四线智能电表：产品手册与主板梳理主控/采样计量/通信/显示模块（2026-10-05用户确认）"
+    },
+    {
+      "id": "experience.meter_troubleshoot",
+      "status": "user_confirmed",
+      "resume_policy": "allowed",
+      "summary": "参与电表数据采集异常排查：供电测量、RS485线路检查、载波模块状态观察，定位线路短路及模块异常，处理后采集恢复（2026-10-05用户确认）"
     }
   ]
 }
