@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简历评价报告 · 彭博裕 · 山东建筑大学 · 物联网工程（本科） · 2027 届</title><style>
+:root{--ink:#1f2329;--sub:#5b6168;--line:#e3e6eb;--accent:#2f6df6;--bg:#fff;--soft:#f5f7fa;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:#eceff3;line-height:1.6;padding:24px;}
+.page{max-width:820px;margin:0 auto;background:var(--bg);padding:40px 48px;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.08);}
+header{border-bottom:2px solid var(--accent);padding-bottom:14px;margin-bottom:18px;}
+.name{font-size:28px;font-weight:700;letter-spacing:2px;}
+.contact{color:var(--sub);font-size:13px;margin-top:6px;}
+.intent{color:var(--accent);font-size:14px;margin-top:6px;font-weight:600;}
+section{margin:18px 0;}
+h2{font-size:16px;color:var(--accent);border-left:4px solid var(--accent);padding-left:8px;margin-bottom:10px;letter-spacing:1px;}
+.edu-title{font-weight:600;}
+.meta{color:var(--sub);font-size:13px;}
+ul{list-style:none;padding-left:2px;}
+li{position:relative;padding-left:16px;margin:6px 0;font-size:14px;}
+li::before{content:"•";color:var(--accent);position:absolute;left:2px;}
+.skill-cat{font-weight:600;display:inline-block;min-width:84px;}
+.tag{display:inline-block;background:var(--soft);color:var(--sub);font-size:12px;padding:1px 8px;border-radius:10px;margin:2px 4px 2px 0;}
+.exp-head{font-weight:600;}
+.exp-meta{color:var(--sub);font-size:13px;}
+.gap{color:#c0392b;font-size:13px;}
+footer{margin-top:24px;color:#9aa0a8;font-size:12px;text-align:center;}
+@media print{body{background:#fff;padding:0;}.page{box-shadow:none;border-radius:0;max-width:100%;padding:0 8mm;}}
+
+/* ---- 评审报告样式 ---- */
+.rv-head{border-bottom:3px solid var(--ink);padding-bottom:12px;margin-bottom:16px;}
+.rv-title{font-size:21px;font-weight:700;letter-spacing:.5px;}
+.rv-sub{color:var(--sub);font-size:13px;margin-top:5px;line-height:1.7;}
+.rv-verdict{display:inline-block;margin-top:9px;padding:4px 12px;border-radius:3px;
+  background:#eef2ff;color:#1d4ed8;font-weight:700;font-size:13px;}
+.rv-h2{font-size:16px;font-weight:700;margin:26px 0 10px;padding-left:10px;
+  border-left:5px solid var(--ink);}
+.rv-h3{font-size:14px;font-weight:700;margin:16px 0 7px;color:#3d4557;}
+.rv-cards{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;}
+.rv-card{flex:1 1 140px;border:1px solid var(--line);border-radius:4px;
+  padding:10px 13px;background:var(--soft);}
+.rv-card b{display:block;font-size:23px;line-height:1.25;font-weight:700;}
+.rv-card span{font-size:12px;color:var(--sub);}
+.rv-item{border:1px solid var(--line);border-left:4px solid var(--line);
+  border-radius:3px;padding:10px 14px;margin:10px 0;}
+.rv-item.p0{border-left-color:#b3261e;background:#fdecea;}
+.rv-item.p1{border-left-color:#9a6200;background:#fdf3e0;}
+.rv-item.p2{border-left-color:#0f7b52;background:#e8f6ef;}
+.rv-item h4{margin:0 0 5px;font-size:14px;font-weight:700;}
+.rv-item p{margin:4px 0;}
+.rv-lv{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;
+  padding:1px 7px;border-radius:2px;margin-right:7px;vertical-align:2px;}
+.rv-lv.p0{background:#b3261e;} .rv-lv.p1{background:#9a6200;} .rv-lv.p2{background:#0f7b52;}
+.rv-before{background:#fdecea;border-left:3px solid #b3261e;padding:6px 11px;
+  margin:6px 0;font-size:13px;}
+.rv-after{background:#e8f6ef;border-left:3px solid #0f7b52;padding:6px 11px;
+  margin:6px 0;font-size:13px;}
+.rv-lbl{font-weight:700;font-size:11.5px;letter-spacing:1px;display:block;margin-bottom:2px;}
+.rv-before .rv-lbl{color:#b3261e;} .rv-after .rv-lbl{color:#0f7b52;}
+.rv-pending{background:var(--soft);border:1px dashed var(--sub);border-radius:3px;
+  padding:6px 11px;margin:6px 0;font-size:13px;}
+.rv-qa{border:1px solid var(--line);border-radius:3px;margin:8px 0;}
+.rv-qa .q{background:var(--ink);color:#fff;padding:5px 12px;font-weight:700;font-size:13px;}
+.rv-qa .a{padding:8px 12px;font-size:13px;}
+.rv-foot{margin-top:26px;padding-top:11px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--sub);line-height:1.7;}
+.rv-table{width:100%;border-collapse:collapse;margin:11px 0;font-size:13px;}
+.rv-table th,.rv-table td{border:1px solid var(--line);padding:6px 9px;
+  text-align:left;vertical-align:top;}
+.rv-table th{background:var(--soft);font-weight:700;}
+.rv-num{text-align:center;font-weight:700;white-space:nowrap;}
+.rv-checks{list-style:none;padding-left:2px;}
+.rv-checks li{padding-left:20px;position:relative;margin:5px 0;font-size:13px;}
+.rv-checks li::before{content:"□";position:absolute;left:0;color:var(--accent);font-weight:700;}
+</style></head>
+<body><div class="page"><div class="rv-head">
+<div class="rv-title">简历评价报告</div>
+<div class="rv-sub">彭博裕 · 山东建筑大学 · 物联网工程（本科） · 2027 届</div>
+<div class="rv-sub">目标岗位：嵌入式软件工程师</div>
+<div class="rv-verdict">综合评分 78 / 100 —— 项目底子与量化表达明显高出普通应届模板，但存在 4 处投递前必修问题，约 2 小时可全部修复</div>
+</div>
+<section>
+<p>底子扎实：三个项目真实细节密集、能力面互补（RTOS 并发架构 / AI 视觉融合 / 低功耗与协议网关），量化数字覆盖率高于同类应届简历，竞赛与实习都有真实出处。</p>
+<p>问题集中在规范与真实性呈现：项目时间线缺失、PDF 文字层顺序错乱、一处模糊指标（&quot;误差极小&quot;），以及&quot;硬件电路设计&quot;表述缺证据支撑——四条均为投递前必修。</p>
+<p>按工时表修复约需 2 小时，修完后规范类短板基本清零，综合评分可再提升 7 分左右。</p>
+</section>
+<h2 class="rv-h2">分项评分</h2><table class="rv-table"><tr><th>维度</th><th style="width:76px">得分</th><th>判分依据</th></tr>
+<tr><td><b>项目含金量</b></td><td class="rv-num">22/25</td><td>三项目互补且覆盖不同能力面；双缓冲+状态机、VDDA 估算与多量程换算、CRC+序号+ACK 有限重试、半包粘包坏帧处理等细节非课程作业可编，竞赛/实习出处清晰。扣分：无时间线导致项目间先后关系不可见；项目一职责行&quot;硬件电路设计&quot;缺 bullet 支撑。</td></tr>
+<tr><td><b>硬技能匹配</b></td><td class="rv-num">17/20</td><td>C/FreeRTOS/Cortex-M/UART·I²C·SPI/Keil/CubeMX/Git 等 JD 主干命中，工具链写到具体（CMake/GCC、示波器、万用表），自定义帧协议设计是亮点。扣分：Linux 等高频词缺失（属真实 gap，按 JD 逐个处理）；外设以伞形词概括（既定风格，不算硬伤）。</td></tr>
+<tr><td><b>量化表达</b></td><td class="rv-num">15/20</td><td>98%（200 张评测）、2s/＜1.5cm/＜2cm、54µA 实测、误差 1%、50 Hz～80 kHz、续航估算附假设说明，覆盖性能/规模/等级三类。扣分：&quot;频率测量误差极小&quot;&quot;大幅提高&quot;两处模糊词；实习经历整段零数字。</td></tr>
+<tr><td><b>完整性与规范</b></td><td class="rv-num">12/20</td><td>单页、正文 9pt（实测字号天花板内）、联系方式与届别齐全、照片符合国内惯例。扣分：三个项目无起止时间；获奖无年份；文字层顺序错乱；一处行首逗号；无核心课程。</td></tr>
+<tr><td><b>差异化记忆点</b></td><td class="rv-num">12/15</td><td>双缓冲与状态机协同、54µA 整板实测、双路融合定位属于个人独有记忆点；AI 工具行有新意。扣分：AI 工具句落在&quot;快速产品设计&quot;层面，未挂具体产出。</td></tr>
+</table>
+<h2 class="rv-h2">P0 — 投递前必修</h2>
+<h3 class="rv-h3">投递前必修（4 条）</h3>
+<div class="rv-item p0">
+<h4><span class="rv-lv p0">P0</span>三个项目均无起止时间线</h4>
+<p><b>位置</b>：项目经历 · 三个项目标题行</p>
+<p><b>为什么扣分</b>：HR 按&quot;教育→实习→项目&quot;拉时间线时，无起止时间的项目会被默认降级为临时拼凑的作业；项目与实习（2025.10—2025.11）及在校时间的先后关系也无处核对。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>基于 STM32 与 FreeRTOS 的综合测量平台　FreeRTOS · 实时采集 · 事件驱动（标题行无日期）</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>采用本人 2026-10-03 已确认的真实日期：&quot;2025.12～2026.07 综合测量平台 / 2025.07～08 瞄准系统 / 2025.03～05 LoRa 节点&quot;，可按已设计的截图版格式（日期前置 + 项目描述 + 职责描述）落地。</div>
+<div class="rv-pending"><b>待核实</b>：日期按 2026-10-03 确认值写入（2025.12—2026.07 / 2025.07—08 / 2025.03—05）</div>
+<div class="rv-pending"><b>待核实</b>：是否连同取消&quot;项目名右侧关键词行&quot;改用截图版格式，由你定夺（两套格式不同）</div>
+</div>
+<div class="rv-item p0">
+<h4><span class="rv-lv p0">P0</span>&quot;频率测量误差极小&quot;是模糊指标</h4>
+<p><b>位置</b>：项目经历 · 项目一 · 项目简介</p>
+<p><b>为什么扣分</b>：同一句里&quot;电压与电阻测量误差 1%&quot;已量化，&quot;极小&quot;与之形成反差，会被面试官当作拿不出实测值的软肋。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>…支持波形实时显示及频率、幅度测量，频率测量误差极小，电压与电阻测量误差 1%…</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>…支持波形实时显示及频率、幅度测量，电压与电阻测量误差 1%，频率测量误差 ≤ [?]（50 Hz～80 kHz 全频段）…（若拿不出实测值，删掉&quot;频率测量误差极小&quot;半句，只保留电压电阻 1%）</div>
+<div class="rv-pending"><b>待核实</b>：频率测量的实测误差值（有则填，没有则删该半句）</div>
+</div>
+<div class="rv-item p0">
+<h4><span class="rv-lv p0">P0</span>PDF 文字层顺序错乱，ATS 按错误顺序解析</h4>
+<p><b>位置</b>：项目经历 · 项目一标题行、项目二&quot;项目职责&quot;行</p>
+<p><b>为什么扣分</b>：复制全文到记事本可见：项目一的&quot;项目简介&quot;与&quot;项目职责：&quot;排在项目名称之前；项目二&quot;负责AI&quot;被关键词标签&quot;AI部署·Python·机器视觉&quot;隔断成三段。视觉版面正常，但 ATS 与任何按文字层读取的工具都会把项目名与描述错位关联。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>文字层实际顺序：项目简介 → 项目职责： → FreeRTOS·实时采集·事件驱动 → 基于STM32与FreeRTOS的综合测量平台 → 事件驱动 → 硬件电路设计…</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>在 Word 中核对项目一标题行的实现方式（文本框/表格/层序）是否与其他项目一致，统一后重新导出；导出自检方法：全选复制→粘贴到记事本，文字顺序应与视觉一致。</div>
+</div>
+<div class="rv-item p0">
+<h4><span class="rv-lv p0">P0</span>&quot;硬件电路设计&quot;声称缺证据支撑（真实性风险）</h4>
+<p><b>位置</b>：项目经历 · 项目一 · 项目职责行</p>
+<p><b>为什么扣分</b>：职责行声称&quot;硬件电路设计&quot;，但三条 bullet 全部是软件与测量证据，技能栏也只有&quot;结合原理图、数据手册…定位软硬件问题&quot;（读图调试 ≠ 电路设计）。若被追问 DC-DC 升压拓扑、效率、纹波而答不出，就属于&quot;需要当场编造才能圆上&quot;的表述。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>项目职责：硬件电路设计、软件架构设计与系统开发调试。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>若硬件确为本人设计：在 bullet 中补一条硬件证据（如 DC-DC 拓扑选型与实测输出指标）。若仅参与联调：改为&quot;项目职责：软件架构设计与系统开发调试，参与硬件联调。&quot;</div>
+<div class="rv-pending"><b>待核实</b>：DC-DC 升压电路是否本人完成设计（需本人确认，不代填）</div>
+</div>
+<h2 class="rv-h2">P1 — 显著影响通过率</h2>
+<h3 class="rv-h3">显著影响通过率（3 条）</h3>
+<div class="rv-item p1">
+<h4><span class="rv-lv p1">P1</span>实习经历弱动词 + 零量化</h4>
+<p><b>位置</b>：实习经历 · 三条 bullet</p>
+<p><b>为什么扣分</b>：唯一的产业经历读起来像学习记录：&quot;围绕…梳理&quot;&quot;了解…梳理&quot;&quot;参与…排查&quot;，整段没有一个数字——这是评审标准里&quot;实习写成纯学习记录&quot;的典型形态。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>通信排查：参与电表采集异常排查，通过供电测量、RS485线路检查与载波模块状态观察，结合支路断开前后对比缩小故障范围，定位线路短路及模块异常，确认采集恢复。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>通信排查：完成一次真实采集异常排查闭环：经供电测量、RS485 线路检查与载波模块状态观察，结合支路断开前后状态对比缩小故障范围，定位线路短路及模块异常，处理后采集恢复。（同理把&quot;围绕/了解&quot;句改为动作动词开头）</div>
+<div class="rv-pending"><b>待核实</b>：可真实计数的过程量（如检查了几条支路/几只表）——测试数量与量产指标按既定边界仍不写，只有真实存在且能讲清楚的过程量才补</div>
+</div>
+<div class="rv-item p1">
+<h4><span class="rv-lv p1">P1</span>竞赛与荣誉无年份</h4>
+<p><b>位置</b>：竞赛与荣誉</p>
+<p><b>为什么扣分</b>：省奖的届次与年份是 HR 与面试官的基本核对项；无年份的获奖在拉时间线时同样被降权。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>比赛获奖：全国大学生电子设计竞赛省级二等奖；蓝桥杯省级三等奖。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>比赛获奖：全国大学生电子设计竞赛省级二等奖（[?] 年）；蓝桥杯省级三等奖（[?] 年）。</div>
+<div class="rv-pending"><b>待核实</b>：两个奖项的获奖年份</div>
+</div>
+<div class="rv-item p1">
+<h4><span class="rv-lv p1">P1</span>&quot;大幅提高…识别精度和抗风险能力&quot;程度词无度量</h4>
+<p><b>位置</b>：项目经历 · 项目二 · 融合定位 bullet</p>
+<p><b>为什么扣分</b>：&quot;大幅&quot;无法度量；这条 bullet 的真实价值是双路互备的机制本身，删掉程度副词、落到机制效果更可信。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>…实现AI 视觉和几何识别灵活切换，大幅提高运动过程中的识别精度和抗风险能力。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>…实现 AI 视觉与几何识别灵活切换，保证行驶过程中持续输出有效靶心坐标；任一路失效时自动降级到另一路。</div>
+<div class="rv-pending"><b>待核实</b>：切换与降级机制的表述是否与实际实现一致（本人核实）</div>
+</div>
+<h2 class="rv-h2">P2 — 加分项</h2>
+<h3 class="rv-h3">加分项（5 条）</h3>
+<div class="rv-item p2">
+<h4><span class="rv-lv p2">P2</span>教育背景补核心课程（4–8 门）</h4>
+<p><b>位置</b>：教育背景</p>
+<p><b>为什么扣分</b>：成本最低的 ATS 关键词补充位；嵌入式岗相关课程名本身就是检索关键词。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>2023.09—2027.06　山东建筑大学　物联网工程｜本科　专业综合测评排名前 10%</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>下一行补：核心课程（与岗位相关）：单片机原理、传感器技术、嵌入式系统、通信原理、数据结构等（按真实课表挑 4–8 门）。</div>
+<div class="rv-pending"><b>待核实</b>：课程名按真实课表核对</div>
+</div>
+<div class="rv-item p2">
+<h4><span class="rv-lv p2">P2</span>无 GitHub / 作品链接</h4>
+<p><b>位置</b>：页首联系方式行</p>
+<p><b>为什么扣分</b>：嵌入式岗一个能点开看的仓库胜过任何自我评价；没有就不加，不硬造。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>电话：… ｜ 邮箱：… ｜ 2027 届</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>有可展示仓库则在联系方式行追加 GitHub 链接；没有则保持现状。</div>
+<div class="rv-pending"><b>待核实</b>：是否有可展示的仓库（本人确认）</div>
+</div>
+<div class="rv-item p2">
+<h4><span class="rv-lv p2">P2</span>自我评价板块缺失（与你既定规则冲突，由你决策）</h4>
+<p><b>位置</b>：全文</p>
+<p><b>为什么扣分</b>：dxp 评审标准建议补 2–3 句扣岗位的定位；但你的简历既定规则是&quot;不设自我评价板块&quot;——此为两套标准的冲突点，记录后由你决策，不强制。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>（无自我评价板块——既定模板规则）</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>若采纳：3 句封顶，句句扣岗位（如：扎实的 C/FreeRTOS 基础，3 段项目验证；低功耗实测与自定义协议设计经验；熟练用 AI 工作流加速开发）。若不采纳：维持现状，技能板块已承担定位功能。</div>
+<div class="rv-pending"><b>待核实</b>：是否打破&quot;无自我评价&quot;既定规则（本人决策）</div>
+</div>
+<div class="rv-item p2">
+<h4><span class="rv-lv p2">P2</span>行首标点：实习第二条 bullet 换行后以&quot;，&quot;开头</h4>
+<p><b>位置</b>：实习经历 · 功能理解 bullet</p>
+<p><b>为什么扣分</b>：行首逗号是 Word 避头尾失效的排版硬伤，屏幕与打印都明显。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>…梳理测量输入、主控处理与设备响应之间的联系⏎，理解电表到采集终端的数据传输流程。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>微调该行前半句字数（如&quot;之间的联系&quot;→&quot;的对应联系&quot;）使换行点前移，逗号不再落行首；改后复核 9pt 下的换行与行尾孤字。</div>
+</div>
+<div class="rv-item p2">
+<h4><span class="rv-lv p2">P2</span>文案细节：&quot;lcd&quot;大小写与 AI 工具行落点</h4>
+<p><b>位置</b>：项目一 bullet 1 / 专业技能 · AI 工具</p>
+<p><b>为什么扣分</b>：&quot;lcd 屏幕&quot;应为&quot;LCD&quot;；&quot;AI 工具&quot;行落在&quot;快速产品设计&quot;层面偏泛——新写法要落到具体产出才有记忆点。</p>
+<div class="rv-before"><span class="rv-lbl">现</span>lcd 屏幕按需局部刷新 ／ 熟练使用 Codex、Claude Code、DeepSeek Harness、ZCode 搭建工作流并实现快速产品设计与开发。</div>
+<div class="rv-after"><span class="rv-lbl">建议</span>LCD 屏幕按需局部刷新 ／ AI 工具句尾补一个真实产出例证（用在哪个项目哪个环节、提效多少）；没有合适例证则保持现状。</div>
+<div class="rv-pending"><b>待核实</b>：AI 工作流是否有可写进简历的真实产出例证（本人确认）</div>
+</div>
+<h2 class="rv-h2">面试官大概率追问的地方</h2>
+<p>技术细节密是优势，但每个数字都要经得起追问。以下各处学生必须有准备。</p>
+<div class="rv-qa"><div class="q">&quot;频率测量误差极小&quot;——具体多少？</div><div class="a">必须有实测值（测了什么基准、几个频点、用什么仪器）；答不上来就删掉这半句——这是当前最典型的&quot;答不上即减分&quot;点。</div></div>
+<div class="rv-qa"><div class="q">电压与电阻测量误差 1% 怎么测的？</div><div class="a">说清基准仪器（万用表型号/档位）、量程点数、VDDA 估算的精度与补偿方法；1% 是满量程还是读数误差。</div></div>
+<div class="rv-qa"><div class="q">98% 识别率怎么算的？</div><div class="a">200 张评测图像 197 张正确（3 误），按整机命中判定；说明环境覆盖（光照/距离）与失效的 3 张是什么工况。</div></div>
+<div class="rv-qa"><div class="q">2 秒完成瞄准从何时计时？＜1.5cm 在几米距离？</div><div class="a">整机实测指标（团队结果）：上电到锁定还是检测到目标起算；打靶距离与静态/动态工况；小车行驶时＜2cm 的测试方法。</div></div>
+<div class="rv-qa"><div class="q">54µA 怎么测的？什么工况？</div><div class="a">整板休眠实测：Stop 模式 + RTC 运行 + 外设门控状态；万用表档位与串联位置；是平均电流还是纯休眠电流。</div></div>
+<div class="rv-qa"><div class="q">续航 8 个月按什么算的？</div><div class="a">1100mAh 容量假设 + 既定上报占空比 + 发射峰值电流；如实说明是估算（简历已写&quot;估算&quot;，口径一致即可）。</div></div>
+<div class="rv-qa"><div class="q">FreeRTOS 移植遇到什么坑？</div><div class="a">SysTick/PendSV 配置、堆栈大小、DMA 与缓冲区一致性、局部刷新与传输同步；至少准备 1 个真实定位过程。</div></div>
+<div class="rv-qa"><div class="q">双缓冲切换时机怎么管理？谁写谁读？</div><div class="a">状态机管理读写权限与切换时机；新旧帧如何隔离、绘制期间采集写入到哪个缓冲。</div></div>
+<div class="rv-qa"><div class="q">CRC/ACK 重试参数是什么？</div><div class="a">超时毫秒数、重试上限、序号去重规则、对重传仍回 ACK 的原因（网关侧幂等）。</div></div>
+<div class="rv-qa"><div class="q">DC-DC 升压电路的拓扑、效率、纹波？</div><div class="a">对应 P0-4 待核实项：若保留&quot;硬件电路设计&quot;表述则必须能答；答不出就把表述改为参与联调。</div></div>
+<div class="rv-qa"><div class="q">Otsu 阈值重估是比赛期间做的吗？</div><div class="a">如实回答：赛后迭代优化（既定证据边界：不能说成赛中成果）；比赛期间用的是固定阈值/几何方法。</div></div>
+<div class="rv-qa"><div class="q">电赛省二是哪一年？你负责哪部分？队伍几人？</div><div class="a">年份 + 分工边界 + 队伍构成；与项目一（综合测量平台）的时间线能对上。</div></div>
+<div class="rv-qa"><div class="q">Make Sense / AI Cube 标注与训练的数据集多大？</div><div class="a">自采图像张数、环境类别数、标注质量校验方式；200 张评测集与训练集的关系。</div></div>
+<h2 class="rv-h2">修改优先级与工时</h2>
+<p>按收益/工时排序，标出当天必须完成的组合。</p>
+<table class="rv-table"><tr><th>顺序</th><th>动作</th><th style="width:88px">工时</th><th style="width:96px">预期收益</th></tr>
+<tr><td class="rv-num">1</td><td>补三个项目的起止时间线（真实日期已确认，直接填）</td><td>15 分钟</td><td>最高</td></tr>
+<tr><td class="rv-num">2</td><td>查频率测量实测误差并改写&quot;误差极小&quot;（或删该半句）</td><td>30 分钟</td><td>最高</td></tr>
+<tr><td class="rv-num">3</td><td>核实 DC-DC 是否本人设计，修正&quot;硬件电路设计&quot;表述</td><td>20 分钟</td><td>最高</td></tr>
+<tr><td class="rv-num">4</td><td>排查 Word 中项目一标题行层序，重新导出并做记事本粘贴自检</td><td>40 分钟</td><td>高</td></tr>
+<tr><td class="rv-num">5</td><td>竞赛与荣誉补年份</td><td>5 分钟</td><td>中</td></tr>
+<tr><td class="rv-num">6</td><td>改写&quot;大幅提高&quot;句，落到双路互备机制</td><td>10 分钟</td><td>中</td></tr>
+<tr><td class="rv-num">7</td><td>实习三条 bullet 动词强化（不新增禁止数字）</td><td>20 分钟</td><td>中</td></tr>
+<tr><td class="rv-num">8</td><td>修实习 bullet 行首逗号，并复核行尾孤字</td><td>10 分钟</td><td>低</td></tr>
+<tr><td class="rv-num">9</td><td>补核心课程一行（按真实课表）；其余 P2 视情况</td><td>15 分钟</td><td>低</td></tr>
+</table>
+<h2 class="rv-h2">交付前自查</h2><ul class="rv-checks">
+<li>每个 [?] 处填入实测/真实值之后才投递</li>
+<li>4 条&quot;待核实&quot;逐条本人确认（日期、频率误差、DC-DC 设计归属、切换机制表述）</li>
+<li>导出 PDF 后：全选复制→粘贴到记事本，文字顺序与视觉一致</li>
+<li>改动后重新确认仍为单页、无行首标点、无行尾孤字</li>
+<li>所有新增数字均可追溯到本人确认的真实事实</li>
+</ul>
+<div class="rv-foot">本报告基于简历原件（彭博裕-嵌入式软件工程师-01.pdf）逐项核对，未修改原简历任何内容；所有建议均需本人核实真实数据后执行，任何量化数字不得凭空填写。报告同时标注了 dxp 评审标准与你既定模板规则的两处冲突（项目日期、自我评价板块），冲突项由你决策。</div>
+</div></body></html>
