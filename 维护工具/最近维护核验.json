@@ -394,5 +394,60 @@
       "9.27"
     ],
     "note": "嵌入式岗位简历-空白填写框架.docx 与孤儿锁文件 ~$式岗位简历-空白填写框架.docx 已不在 简历修改版本/（用户自行处理）"
+  },
+  "single_note_merge_20261008": {
+    "date": "2026-10-08",
+    "owner": "01a0f533-9b5b-7f03-b44a-96fcb55e8d92",
+    "task": "用户明确要求单文件内部分区，合并八股文笔记",
+    "status": "完成：单文件内部分区，43个原问答保留，旧三文件已清理",
+    "workspace": "D:/APP/project_practice/codex-project",
+    "replacement": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/八股文复习笔记.md",
+    "deleted_candidates": [
+      {
+        "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/单片机基础问答.md",
+        "bytes": 17800,
+        "sha256": "034CF850BDFCA1858366E63CFDB6F55D1FDDA759ED71023EFE4C6562E151F652",
+        "reason": "问答正文或目录规则已完整并入单一笔记，旧文件无独立历史内容",
+        "regenerate": "以八股文复习笔记.md对应分区与记录规则为内容来源；无需重建拆分副本"
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/FreeRTOS问答.md",
+        "bytes": 15984,
+        "sha256": "CB8CAEC1A4480DEE55A2FD7D2C02C4825BD1E599BAD21C703DAF3500D202B142",
+        "reason": "问答正文或目录规则已完整并入单一笔记，旧文件无独立历史内容",
+        "regenerate": "以八股文复习笔记.md对应分区与记录规则为内容来源；无需重建拆分副本"
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/README.md",
+        "bytes": 2856,
+        "sha256": "5E4F8628671E1A626AF0F881264BF23B2A0BE7917F21C2E9FF65B0121B0714D8",
+        "reason": "问答正文或目录规则已完整并入单一笔记，旧文件无独立历史内容",
+        "regenerate": "以八股文复习笔记.md对应分区与记录规则为内容来源；无需重建拆分副本"
+      }
+    ],
+    "validation": {
+      "question_count": 43,
+      "original_question_titles_preserved": true,
+      "links": "单文件14个主题锚点与目录均已核对；接续入口与资料地图已更新",
+      "path_check": "三个旧文件已逐一解析绝对路径，均在指定笔记目录内且非重解析文件，SHA256与锁后快照一致",
+      "deleted": [
+        {
+          "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/单片机基础问答.md",
+          "exists_after": false
+        },
+        {
+          "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/FreeRTOS问答.md",
+          "exists_after": false
+        },
+        {
+          "path": "D:/APP/project_practice/codex-project/项目集合/八股文问题合集/README.md",
+          "exists_after": false
+        }
+      ],
+      "final_file_count": 1,
+      "final_sha256": "537E59E44B09F8C2B1EE05767EE93A8C4031B67CBA2F53A0C1F9E1DC0856FF8B",
+      "other_memory_content_preserved": true,
+      "old_markdown_links_remaining": 0
+    }
   }
 }
