@@ -2,6 +2,14 @@
 
 > 当前嵌入式生成使用schema v2，见[current-workflow.md](current-workflow.md)及`current-content.json`。下方schema v1仅保留供旧包重建，不要求新稿恢复8条项目、两条校园或自评。
 
+## 当前v2检查与旧生成的区别（2026-10-11）
+
+`build_current_resume.py --check`接受现行v2快照：审批可用`approved_by/approved_on/approval_note`（或历史`source`），校园可用`mode=long/short/none`，long含`name/role/period/bullets`，short使用`text`或`short_text`。可变条目以`source_refs`引用`profile/project`事实ID或`sources`中带status的来源对象；来源字符串元数据不是证据ID，禁止/未解决/设计方案与限定词仍检查。
+
+`approved=true`与上述字段只记录声明，检查不会证明真实批准或工程事实。带`snapshot_kind=dynamic_template_snapshot`的素材不能进入9月17日固定生成器；`sync_status=partial_pending_protected_wording_sync`说明与当前PDF仍有正文差异，需按最新PDF与批准差量处理。成功检查不表示已完成正文同步、当前版式兼容或一页验收。
+
+## 历史schema v1
+
 生成脚本接受UTF-8 JSON。所有字符串必须是最终可排版文字，不允许占位符。
 
 ```json

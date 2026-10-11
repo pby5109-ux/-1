@@ -1,7 +1,8 @@
-"""Current template v2: one content source, optional one-sentence campus section.
+"""Check current schema-v2 snapshots; build only the legacy September 17 template.
 
 Only word/document.xml changes; all other ZIP parts remain byte-identical.
 Use --import-baseline once to establish the content source; normal builds read JSON.
+--check accepts current long-campus snapshots, but does not certify build compatibility.
 """
 from pathlib import Path
 from copy import deepcopy
@@ -10,6 +11,7 @@ import argparse
 import hashlib
 import json
 from lxml import etree as E
+from validate_resume_content import evidence_index, load_json, DEFAULT_PROFILE, DEFAULT_PROJECTS
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT.parent / '定制投递/通用嵌入式-20260917/彭博裕-嵌入式软件工程师-简历-20260917.docx'
@@ -59,23 +61,99 @@ def bootstrap():
     CONTENT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(CONTENT)
 
-def validate(d):
-    assert d['schema_version']==2 and d['approved'] is True, 'Explicit approval required'
-    assert d['approval_record']['source'] and d['content_revision']
-    assert len(d['education'])==4 and len(d['projects'])==3
-    assert len({p['id'] for p in d['projects']})==3
-    assert len(d['enterprise']['bullets'])==3
-    assert d['campus']['text'].count('。')==1 and '\n' not in d['campus']['text']
-    assert 3 <= len(d['skills']) <= 6
-    entries=d['honors']+d['skills']+d['enterprise']['bullets']+[d['campus']]
-    for p in d['projects']:
-        assert p['name'] and p['keywords'] and 1<=len(p['bullets'])<=4
-        entries += [p['intro'],p['duty']]+p['bullets']
-    for it in entries:
-        assert it['text'].strip() and it['source_refs']
-        assert all(s in d['sources'] for s in it['source_refs'])
-    assert d['layout']['line_twips']>=230, 'Do not compress line height below reference'
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+def validate(d, profile=None, projects=None):
+    """Validate v2 structure and reference policy, not facts, layout or real approval."""
+    require(isinstance(d, dict) and d.get('schema_version') == 2, 'schema_version must be 2')
+    require(d.get('approved') is True, 'Explicit approval required')
+    approval=d.get('approval_record')
+    require(isinstance(approval, dict), 'approval_record is required')
+    # Current records use approval_note/by/on; historical packages use source/scope.
+    has_approval=bool(approval.get('source')) or (
+        approval.get('approved_by') == 'user' and bool(approval.get('approved_on'))
+        and bool(approval.get('approval_note')))
+    require(has_approval and bool(d.get('content_revision')), 'Approval provenance and revision required')
+    sources=d.get('sources')
+    require(isinstance(sources, dict), 'sources must be an object')
+    index=evidence_index(profile if profile is not None else load_json(DEFAULT_PROFILE),
+                         projects if projects is not None else load_json(DEFAULT_PROJECTS))
+    # String metadata such as content_source is not an evidence ID.
+    registered={key for key, value in sources.items()
+                if isinstance(value, dict) and value.get('status')}
+    require(isinstance(d.get('education'), list) and len(d['education']) == 4,
+            'education must contain four fields')
+    project_list=d.get('projects')
+    require(isinstance(project_list, list) and len(project_list) == 3,
+            'This v2 snapshot must contain three selected projects')
+    require(all(isinstance(p, dict) for p in project_list), 'project entries must be objects')
+    require(len({p.get('id') for p in project_list}) == 3 and all(p.get('id') for p in project_list),
+            'Project IDs must be nonempty and unique')
+    entries=[]
+    for field in ('honors', 'skills'):
+        items=d.get(field)
+        require(isinstance(items, list) and bool(items), field+' must be a nonempty list')
+        entries.extend((field+f'[{i}]', it) for i, it in enumerate(items))
+    enterprise=d.get('enterprise')
+    require(isinstance(enterprise, dict) and isinstance(enterprise.get('bullets'), list),
+            'enterprise.bullets must be a list')
+    entries.extend((f'enterprise.bullets[{i}]', it) for i, it in enumerate(enterprise['bullets']))
+    campus=d.get('campus')
+    require(isinstance(campus, dict), 'campus must be an object')
+    mode=campus.get('mode', 'short')
+    require(mode in ('long', 'short', 'none'), 'campus.mode must be long, short or none')
+    if mode == 'long':
+        require(all(campus.get(k) for k in ('name', 'role', 'period')), 'Long campus heading required')
+        require(isinstance(campus.get('bullets'), list) and bool(campus['bullets']),
+                'Long campus bullets required')
+        entries.extend((f'campus.bullets[{i}]', it) for i, it in enumerate(campus['bullets']))
+    if mode != 'none':
+        short=campus.get('short_text', campus.get('text'))
+        if mode == 'short' or short is not None:
+            entries.append(('campus.short_text', {'text':short, 'source_refs':campus.get('source_refs')}))
+    for i, p in enumerate(project_list):
+        require(bool(p.get('name')) and bool(p.get('keywords')), f'project {i} name/keywords required')
+        require(isinstance(p.get('bullets'), list) and 1 <= len(p['bullets']) <= 4,
+                f'project {i} must contain 1-4 bullets')
+        entries.extend((f'project {i}.{field}', p.get(field)) for field in ('intro', 'duty'))
+        entries.extend((f'project {i}.bullets[{j}]', it) for j, it in enumerate(p['bullets']))
+    for location, it in entries:
+        require(isinstance(it, dict) and isinstance(it.get('text'), str) and bool(it['text'].strip()),
+                location+': nonempty text required')
+        refs=it.get('source_refs')
+        require(isinstance(refs, list) and bool(refs) and all(isinstance(r, str) for r in refs),
+                location+': source_refs must be a nonempty string list')
+        for ref in refs:
+            require(ref in index or ref in registered, location+': unknown source_ref '+ref)
+            claim=index.get(ref, sources.get(ref))
+            require(claim.get('status') not in ('prohibited', 'unresolved', 'design_only')
+                    and claim.get('resume_policy') != 'prohibited', location+': prohibited source_ref '+ref)
+            if claim.get('resume_policy') == 'allowed_with_qualifier':
+                terms=claim.get('required_qualifier_terms', [])
+                require(not terms or any(term in it['text'] for term in terms),
+                        location+': validation qualifier required for '+ref)
+    layout=d.get('layout')
+    require(isinstance(layout, dict) and isinstance(layout.get('line_twips'), (int, float))
+            and layout['line_twips'] > 0, 'Positive layout.line_twips required')
     return True
+
+def validate_legacy_build(d):
+    """Keep unsupported snapshots from silently entering the fixed old renderer."""
+    validate(d)
+    require(d.get('sync_status') != 'partial_pending_protected_wording_sync',
+            'Snapshot wording sync is pending: merge the selected PDF and approved deltas first')
+    require(d.get('snapshot_kind') != 'dynamic_template_snapshot',
+            'Dynamic snapshot: use the selected current template, not the September 17 renderer')
+    campus=d['campus']
+    require(campus.get('mode', 'short') == 'short' and isinstance(campus.get('text'), str)
+            and campus['text'].count('。') == 1 and '\n' not in campus['text'],
+            'Legacy renderer supports only the historical single-sentence campus structure')
+    require(len(d['enterprise']['bullets']) == 3 and 3 <= len(d['skills']) <= 6,
+            'Legacy renderer requires three enterprise bullets and 3-6 skills')
+    require(d['layout']['line_twips'] >= 230,
+            'Legacy renderer does not implement newer font/spacing; use current-template tools')
 
 def rewrite(p, pieces):
     runs=p.findall('w:r',NS)
@@ -92,7 +170,7 @@ def labelled(template,it,bullet=False):
     return rewrite(deepcopy(template),[(('• ' if bullet else '')+it['label']+'：',0),(it['text'],1)])
 
 def build(d,output,campus,internship=True):
-    validate(d)
+    validate_legacy_build(d)
     if output.exists(): raise ValueError('Output exists; choose a new revision directory')
     root,b=read_base();old=list(b)
     # Header and education remain reference-derived, including embedded photo.
@@ -143,9 +221,13 @@ if __name__=='__main__':
     if a.import_baseline: bootstrap()
     else:
         d=json.loads(a.content.read_text(encoding='utf-8'));validate(d)
-        if a.check: print('OK content structure and source references (not an independent fact verification)')
+        if a.check:
+            if d.get('sync_status') == 'partial_pending_protected_wording_sync':
+                print('WARNING: protected wording sync remains pending; use the selected PDF plus approved deltas, not this whole snapshot')
+            print('OK schema-v2 structure and reference policy; NOT fact, approval, template compatibility or PDF quality verification')
         else:
             assert a.out_dir
+            validate_legacy_build(d)
             variants=[True,False] if a.campus=='both' else [a.campus=='yes']
             outputs=[]
             for campus in variants:

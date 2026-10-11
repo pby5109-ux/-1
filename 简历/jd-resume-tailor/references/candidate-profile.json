@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "last_verified": "2026-08-31",
-  "last_updated": "2026-09-28",
-  "update_scope": "按用户当前简历更正联系方式、排名和实习岗位；未重新验证全部技能。2026-09-28：用户确认IAR使用过、做过TCP/UDP/HTTP相关实验，登记为user_confirmed（见skill.toolchain与skill.network_protocols）；TCP/IP协议栈实现仍禁写。当前正文及独立经历开关见current-content.json。",
+  "last_updated": "2026-10-11",
+  "update_scope": "按用户当前简历更正联系方式、排名和实习岗位；未重新验证全部技能。2026-09-28：用户确认IAR使用过、做过TCP/UDP/HTTP相关实验，登记为user_confirmed（见skill.toolchain与skill.network_protocols）；TCP/IP协议栈实现仍禁写。2026-10-11增量：同步09-17用户已确认的Python熟悉级及撤销旧限制，不升级为精通或独立测试证明。当前正文及独立经历开关见current-content.json。",
   "person": {
     "name": "彭博裕",
     "phone": "17668025109",
@@ -147,12 +147,19 @@
     {
       "id": "skill.python",
       "name": "Python",
-      "status": "qualified",
-      "resume_policy": "allowed_with_qualifier",
+      "status": "user_confirmed",
+      "resume_policy": "allowed",
       "allowed": [
-        "了解Python基础，可阅读和修改简单串口数据处理脚本"
+        "熟悉Python",
+        "结合已有项目说明串口网关、数据处理及视觉流程中的Python使用"
       ],
-      "notes": "默认简历不写；只有JD确实需要且面试前完成网关脚本复习时才加入"
+      "forbidden": [
+        "精通Python",
+        "无项目依据的Python高级框架或工程规模"
+      ],
+      "confirmed_on": "2026-09-17",
+      "reference": "简历/中间文件/简历内容讨论与定稿记录.md 第30.7～30.8节：用户确认熟悉Python并撤销旧限制",
+      "notes": "2026-10-11同步既有用户确认；可沿用母版熟悉级，不再要求JD需要或再次审批才写Python。具体项目贡献仍按项目证据，不把熟悉级扩大为精通。"
     },
     {
       "id": "skill.java",

@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
   "approved": true,
-  "content_revision": "20260928-from-10-pdf-v2",
+  "content_revision": "20261011-metric98-review-v3",
+  "snapshot_kind": "dynamic_template_snapshot",
+  "last_reviewed": "2026-10-11",
+  "sync_status": "partial_pending_protected_wording_sync",
+  "snapshot_review": {
+    "basis": "最新匹配-10 PDF为10月10日版，实习另核对-01 PDF；以下正文除本轮批准98%外保持原快照，不声称已完整同步",
+    "pending": [
+      "项目职责、额外目标筛选条目、LoRa功耗措辞与当前PDF不同，保护正文同步尚待准确差量审批",
+      "实习三条落后于-01 PDF，尚未替换",
+      "竞赛名称与内核表述在-10和-01之间不同，生成时依所选PDF核对，不把本快照当成通用模板"
+    ],
+    "publication": "本轮未改正式DOCX/PDF；其中99%尚待用户手改或授权重导出，不与本快照98%混同"
+  },
   "approval_record": {
     "approved_by": "user",
-    "approved_on": "2026-09-28",
-    "approval_note": "v1按用户09-27的-01.pdf同步；v2按用户09-28 08:40自导出的-10.pdf增量同步：瞄准简介删\"并开启激光\"。注意：瞄准第二条\"融合定位\"按用户PDF口径收录（用户2026-09-28确认该条为其有意修改、非误粘贴，以PDF为准）；磁盘-10.docx尚未由用户存回，其LoRa槽位简介/职责仍为瞄准文案，LoRa文本以本库为准。",
-    "preview_id": "from-01-20260928-v1"
+    "approved_on": "2026-10-11",
+    "approval_note": "本轮用户授权修缮Skill，并明确回复98，批准电赛指标统一为98%；其余正文保留已有快照，需与所选最新版PDF核对。当前-10 DOCX已无旧LoRa误粘贴，但与最新PDF仍有文字差异。此记录不是逐句新批准整篇，也不是新增测试结果；保护正文差异尚未同步，正式模板与PDF未改。",
+    "scope": "existing_snapshot_retained_and_exact_metric98_delta",
+    "previous_record": "20260928-from-10-pdf-v2；历史决策见简历/中间文件/简历内容讨论与定稿记录.md",
+    "preview_id": "skill-review-20261011-metric98"
   },
   "sources": {
     "baseline-20260917": {
@@ -22,8 +36,24 @@
       "status": "user_confirmed_facts_condensed",
       "reference": "科创部部长、人员协调、校级活动及真实设备故障应对"
     },
-    "content_source": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-01.pdf",
-    "content_source_sha256": "见模板目录当前文件（09-27 20:29 导出）"
+    "template-10-20261010": {
+      "path": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-10.pdf",
+      "sha256": "2b89263742dfe742793746e1e87daba8ded39c7ef99465f2f70d38043f998a66",
+      "status": "user_edited_wording_baseline",
+      "reference": "10月11日只读核对，正文差异尚未完整同步，不证明工程量化事实"
+    },
+    "template-01-20261007": {
+      "path": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-01.pdf",
+      "sha256": "728d07ab1c6ffa8d7efa63abddb719cc4cc70c76a3bf3c8480cc3212faa97ebe",
+      "status": "user_edited_wording_baseline",
+      "reference": "实习独立比对来源，正文同步尚未审批；-10不写实习不等于删除实习素材"
+    },
+    "user-metric-20261011": {
+      "status": "user_confirmed_exact_delta",
+      "reference": "用户在Skill修缮本轮明确回复98：电赛指标统一为98%，未新增评测"
+    },
+    "content_source": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-10.pdf",
+    "content_source_sha256": "2b89263742dfe742793746e1e87daba8ded39c7ef99465f2f70d38043f998a66"
   },
   "header": {
     "name": "彭博裕",
@@ -133,10 +163,12 @@
         },
         {
           "label": "融合定位",
-          "text": "将AI检测框与几何四角统一到同帧原图坐标并匹配，优先通过四角对角线交点求心；几何失效但AI有效时通过用户自动切换策略，实现AI视觉和几何识别灵活切换，提高运动过程中的识别精度和抗风险能力，正确识别率达99%。",
+          "text": "将AI检测框与几何四角统一到同帧原图坐标并匹配，优先通过四角对角线交点求心；几何失效但AI有效时通过用户自动切换策略，实现AI视觉和几何识别灵活切换，提高运动过程中的识别精度和抗风险能力，正确识别率达98%。",
           "source_refs": [
             "car_contest.make_sense_labeling",
-            "car_contest.ai_cube_training"
+            "car_contest.ai_cube_training",
+            "car_contest.ai_recognition_eval",
+            "user-metric-20261011"
           ]
         },
         {
