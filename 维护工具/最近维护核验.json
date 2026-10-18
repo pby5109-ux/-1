@@ -1,5 +1,27 @@
 {
   "schema_version": 1,
+  "application_records_location_20261017": {
+    "date": "2026-10-17",
+    "owner": "01a148b0-7f00-7741-b9a9-a6ece76e0e54",
+    "task": "按用户明确指定目录恢复智联投递记录并归集证据",
+    "status": "完成：记录恢复到指定目录，3个本地链接有效，截图复制哈希一致，接续入口已更新，旧任务与核验历史保留",
+    "document_bytes": 3398,
+    "document_sha256": "72080F7F2DFAF863A77436662561C67E34330444E93FD11F796028A87566043F",
+    "destination": "D:/APP/project_practice/codex-project/简历/简历原版/投递记录",
+    "source_document_observation": "原简历/智联招聘投递记录.md在本轮写入前已不存在；只读检索未找到其他同名文档或相同投递流水，指定目录为空。未推断删除者或原因。",
+    "restored_document": "D:/APP/project_practice/codex-project/简历/简历原版/投递记录/智联招聘投递记录.md",
+    "restoration_source": "本对话上一轮已经核验的完整文档与接续记忆；保留确认成功0份、一次点击待核实的事实，修正文档相对链接",
+    "evidence_copy": {
+      "from": "D:/APP/project_practice/codex-project/简历/中间文件/智联投递/20261017-登录状态.png",
+      "to": "D:/APP/project_practice/codex-project/简历/简历原版/投递记录/证据/20261017-登录状态.png",
+      "bytes": 84870,
+      "sha256_before": "0CDB239250A683EA330344BA5088B6C616C94226CC16B05D1A9B0A068813842E",
+      "sha256_after_copy": "0CDB239250A683EA330344BA5088B6C616C94226CC16B05D1A9B0A068813842E",
+      "source_retained_reason": "保留旧聊天中图片的既有绝对路径引用；后续正式记录只引用指定目录内证据"
+    },
+    "path_validation": "复制前GetFullPath逐一验证源/目标在唯一工作区内；目标不存在才创建，不覆盖文件",
+    "deleted_files": []
+  },
   "date": "2026-09-28",
   "task": "简历中间文件迁移（讨论记录与旧版归档）",
   "owner": "zcode-migrate2-20260928",
