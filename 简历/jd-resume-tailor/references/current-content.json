@@ -3,16 +3,54 @@
   "approved": true,
   "content_revision": "20261011-metric98-review-v3",
   "snapshot_kind": "dynamic_template_snapshot",
-  "last_reviewed": "2026-10-11",
+  "last_reviewed": "2026-10-24",
   "sync_status": "partial_pending_protected_wording_sync",
   "snapshot_review": {
-    "basis": "最新匹配-10 PDF为10月10日版，实习另核对-01 PDF；以下正文除本轮批准98%外保持原快照，不声称已完整同步",
+    "basis": "10月24日仅更新核对元数据：当前01/10 PDF均有10月18日更新，对应DOCX仍为10月7日；正文保持10月11日快照（含当轮批准98%），不声称已同步新PDF或新签整篇批准",
+    "observed_templates": [
+      {
+        "variant": "01",
+        "path": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-01.pdf",
+        "observed_sha256": "605cd0c20fa0d07444081662370d2d7b2da11e6e71afd6f5f586e400b2f07439",
+        "modified_on": "2026-10-18T10:17:48+08:00",
+        "observation_only": true,
+        "python_wording": "了解Python"
+      },
+      {
+        "variant": "10",
+        "path": "简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-10.pdf",
+        "observed_sha256": "0246aec914ec71a250c70de3388fbbef215ea3e082849aaff2544272e2aab319",
+        "modified_on": "2026-10-18T18:41:33+08:00",
+        "observation_only": true,
+        "python_wording": "熟悉C语言与Python"
+      }
+    ],
+    "pending_claims": [
+      {
+        "id": "car_metric_wording_conflict",
+        "status": "conflict",
+        "observation": "两版简介98%、融合定位99%；用户10月11日准确指令及本快照为98%",
+        "action": "不自动回退99%，也不在维护Skill时改PDF；生成前核对准确授权和相应差量"
+      },
+      {
+        "id": "feedback_latency_test_context",
+        "status": "needs_test_context",
+        "observation": "当前两版瞄准简介均写移动状态反馈达到ms级别；10版已不同于10月18日上午的低延时反馈",
+        "action": "需明确测量起止点、工具、工况及统计结果；未登记为量化验证，不用已有识别率ID证明延时"
+      },
+      {
+        "id": "packet_loss_test_context",
+        "status": "needs_test_context",
+        "observation": "两版LoRa简介写运行期间数据丢包率低于5%",
+        "action": "需明确发送/接收计数、重试前后口径、样本与工况及用户确认；不是本轮实测结论"
+      }
+    ],
     "pending": [
       "项目职责、额外目标筛选条目、LoRa功耗措辞与当前PDF不同，保护正文同步尚待准确差量审批",
       "实习三条落后于-01 PDF，尚未替换",
       "竞赛名称与内核表述在-10和-01之间不同，生成时依所选PDF核对，不把本快照当成通用模板"
     ],
-    "publication": "本轮未改正式DOCX/PDF；其中99%尚待用户手改或授权重导出，不与本快照98%混同"
+    "publication": "10月24日只维护Skill与核对元数据，未改正式DOCX/PDF、正文、修订号或既有批准；其中99%与本快照98%的冲突仍保留待处理"
   },
   "approval_record": {
     "approved_by": "user",

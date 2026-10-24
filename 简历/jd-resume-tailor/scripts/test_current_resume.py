@@ -2,6 +2,8 @@
 import json
 import tempfile
 import unittest
+import io
+from contextlib import redirect_stdout, redirect_stderr
 from copy import deepcopy
 from pathlib import Path
 from zipfile import ZipFile
@@ -111,5 +113,55 @@ class CurrentResumeTests(unittest.TestCase):
         fusion=next(it for it in car['bullets'] if it['label']=='融合定位')
         self.assertIn('98%', fusion['text'])
         self.assertIn('car_contest.ai_recognition_eval', fusion['source_refs'])
+
+    def test_source_file_match_then_change_detected_without_rewriting(self):
+        with tempfile.TemporaryDirectory(prefix='jd-source-check-') as td:
+            source=Path(td)/'base.txt';source.write_bytes(b'first')
+            d={'sources':{'base':{'path':'base.txt','sha256':m.digest(source)}}}
+            original=deepcopy(d)
+            self.assertEqual(m.source_file_issues(d, td), [])
+            source.write_bytes(b'changed')
+            self.assertIn('hash is stale', m.source_file_issues(d, td)[0])
+            self.assertEqual(d, original)
+            self.assertEqual(source.read_bytes(), b'changed')
+
+    def test_missing_source_reported(self):
+        with tempfile.TemporaryDirectory(prefix='jd-source-check-') as td:
+            d={'sources':{'base':{'path':'missing.pdf','sha256':'a'*64}}}
+            self.assertIn('missing', m.source_file_issues(d, td)[0])
+
+    def test_directory_is_not_valid_source(self):
+        with tempfile.TemporaryDirectory(prefix='jd-source-check-') as td:
+            d={'sources':{'base':{'path':td,'sha256':'a'*64}}}
+            self.assertIn('not a file', m.source_file_issues(d, td)[0])
+
+    def test_invalid_digest_is_not_treated_as_match(self):
+        d={'sources':{'base':{'path':'base.pdf','sha256':'see current file'}}}
+        self.assertIn('invalid SHA256', m.source_file_issues(d)[0])
+
+    def test_non_file_sources_and_metadata_are_not_opened(self):
+        d={'sources':{'user-note':{'status':'user_provided','reference':'conversation'},
+                      'content_source':'metadata, not an evidence object'}}
+        self.assertEqual(m.source_file_issues(d), [])
+
+    def test_strict_check_rejects_stale_file_but_regular_check_warns(self):
+        with tempfile.TemporaryDirectory(prefix='jd-source-check-') as td:
+            source=Path(td)/'base.txt';source.write_bytes(b'actual')
+            d=deepcopy(self.legacy)
+            d['sources']['baseline-20260917']['path']='base.txt'
+            d['sources']['baseline-20260917']['sha256']='0'*64
+            with redirect_stdout(io.StringIO()) as output, redirect_stderr(io.StringIO()):
+                self.assertEqual(m.check_content(d, workspace_root=td), 0)
+                self.assertIn('hash is stale', output.getvalue())
+                self.assertEqual(m.check_content(d, True, td), 2)
+
+    def test_strict_check_accepts_matched_legacy_sources(self):
+        with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+            self.assertEqual(m.check_content(self.legacy, True), 0)
+
+    def test_strict_check_still_rejects_pending_wording_with_matching_hash(self):
+        d=deepcopy(self.legacy);d['sync_status']='partial_pending_protected_wording_sync'
+        with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+            self.assertEqual(m.check_content(d, True), 2)
 
 if __name__=='__main__': unittest.main()

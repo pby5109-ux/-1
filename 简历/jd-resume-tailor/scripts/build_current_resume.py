@@ -4,12 +4,14 @@ Only word/document.xml changes; all other ZIP parts remain byte-identical.
 Use --import-baseline once to establish the content source; normal builds read JSON.
 --check accepts current long-campus snapshots, but does not certify build compatibility.
 """
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from copy import deepcopy
 from zipfile import ZipFile
 import argparse
 import hashlib
 import json
+import re
+import sys
 from lxml import etree as E
 from validate_resume_content import evidence_index, load_json, DEFAULT_PROFILE, DEFAULT_PROJECTS
 
@@ -64,6 +66,51 @@ def bootstrap():
 def require(condition, message):
     if not condition:
         raise ValueError(message)
+
+def source_file_issues(d, workspace_root=None):
+    """Read-only freshness check; never update hashes to hide a changed source."""
+    workspace=Path(workspace_root) if workspace_root is not None else ROOT.parent.parent
+    issues=[]
+    for ref, source in d.get('sources', {}).items():
+        if not isinstance(source, dict) or 'path' not in source:
+            continue
+        raw=source['path']
+        expected=source.get('sha256')
+        if not isinstance(raw, str) or not raw.strip():
+            issues.append(f'{ref}: invalid source path')
+            continue
+        if not isinstance(expected, str) or not re.fullmatch(r'[0-9a-fA-F]{64}', expected):
+            issues.append(f'{ref}: missing or invalid SHA256')
+            continue
+        path=Path(raw)
+        if raw.startswith(('\\\\', '//')) or (PureWindowsPath(raw).is_absolute() and not path.is_absolute()):
+            issues.append(f'{ref}: source unavailable for local checking on this host')
+            continue
+        if not path.is_absolute():
+            path=workspace/path
+        try:
+            if not path.is_file():
+                issues.append(f'{ref}: source file missing or not a file')
+            elif digest(path).lower() != expected.lower():
+                issues.append(f'{ref}: source file changed; recorded hash is stale')
+        except (OSError, ValueError):
+            issues.append(f'{ref}: source file unreadable')
+    return issues
+
+def check_content(d, strict_sources=False, workspace_root=None):
+    """Report structure separately from freshness; strict mode is a preflight gate."""
+    validate(d)
+    issues=source_file_issues(d, workspace_root)
+    for issue in issues:
+        print('WARNING: '+issue)
+    pending=d.get('sync_status') == 'partial_pending_protected_wording_sync'
+    if pending:
+        print('WARNING: protected wording sync remains pending; use the selected PDF plus approved deltas, not this whole snapshot')
+    if strict_sources and (issues or pending):
+        print('ERROR: source freshness or wording sync unresolved; no files generated', file=sys.stderr)
+        return 2
+    print('OK schema-v2 structure and reference policy; NOT fact, approval, template compatibility or PDF quality verification')
+    return 0
 
 def validate(d, profile=None, projects=None):
     """Validate v2 structure and reference policy, not facts, layout or real approval."""
@@ -216,15 +263,17 @@ def build(d,output,campus,internship=True):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--import-baseline',action='store_true');p.add_argument('--content',type=Path,default=CONTENT)
     p.add_argument('--out-dir',type=Path);p.add_argument('--check',action='store_true')
+    p.add_argument('--require-current-sources',action='store_true',
+                   help='With --check, fail if recorded file hashes are stale/unavailable or wording sync is pending')
     p.add_argument('--internship',choices=['yes','no'],default='yes')
     p.add_argument('--campus',choices=['yes','no','both'],default='both');a=p.parse_args()
+    if a.require_current_sources and (not a.check or a.import_baseline):
+        p.error('--require-current-sources requires --check and cannot import a baseline')
     if a.import_baseline: bootstrap()
     else:
-        d=json.loads(a.content.read_text(encoding='utf-8'));validate(d)
+        d=json.loads(a.content.read_text(encoding='utf-8'))
         if a.check:
-            if d.get('sync_status') == 'partial_pending_protected_wording_sync':
-                print('WARNING: protected wording sync remains pending; use the selected PDF plus approved deltas, not this whole snapshot')
-            print('OK schema-v2 structure and reference policy; NOT fact, approval, template compatibility or PDF quality verification')
+            raise SystemExit(check_content(d, a.require_current_sources))
         else:
             assert a.out_dir
             validate_legacy_build(d)

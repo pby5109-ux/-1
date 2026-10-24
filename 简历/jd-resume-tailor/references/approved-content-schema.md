@@ -8,6 +8,8 @@
 
 `approved=true`与上述字段只记录声明，检查不会证明真实批准或工程事实。带`snapshot_kind=dynamic_template_snapshot`的素材不能进入9月17日固定生成器；`sync_status=partial_pending_protected_wording_sync`说明与当前PDF仍有正文差异，需按最新PDF与批准差量处理。成功检查不表示已完成正文同步、当前版式兼容或一页验收。
 
+2026-10-24：`--check`还会只读核对`sources`中带路径的来源对象，SHA256缺失/错误、文件缺失/不可读或内容变化均提示；`--check --require-current-sources`在这些问题或正文待同步时返回2，否则返回0。此选项不能用于生成/导入基准。`snapshot_review.observed_templates`和`pending_claims`只保存文件观察与待核对问题，不作为正文条目的证据ID、批准或实测结论。维护元数据不提高正文修订号或重签旧批准；真实同步后才按准确批准差量更新正文版本与来源。
+
 ## 历史schema v1
 
 生成脚本接受UTF-8 JSON。所有字符串必须是最终可排版文字，不允许占位符。

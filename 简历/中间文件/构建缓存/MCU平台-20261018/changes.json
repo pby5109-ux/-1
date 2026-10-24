@@ -1,0 +1,12 @@
+{
+  "base_sha256": "F9AED1C8FC734340C609E8E39007E1A62773FF8D88CC2E65210B599EFE3B5F1B",
+  "skills": [
+    {"label":"编程基础","text":"熟悉C语言与Python，理解指针、结构体、动态内存管理及常用数据结构，具备嵌入式功能模块开发与调试经验。","source_refs":["skill.c","skill.python","skill.mcu"]},
+    {"label":"内核与实时系统","text":"具备STM32、TI MSPM0及裸机/FreeRTOS项目经验，完成过FreeRTOS移植与配置；使用队列、事件组、信号量和互斥锁实现数据传递、任务同步与共享资源管理。","source_refs":["skill.rtos","skill.mcu","instrument.architecture","instrument.freertos_port"]},
+    {"label":"通信与协议","text":"熟悉UART、I²C、SPI，使用过ADC、DMA与定时器；实现过自定义帧协议、CRC校验、ACK匹配与超时重试。","source_refs":["skill.peripherals","lora.protocol","lora.tx_lifecycle"]},
+    {"label":"开发与调试","text":"使用Keil、STM32CubeMX、VS Code和CMake/GCC完成工程配置、构建及调试，使用Git进行版本管理；结合原理图、手册、示波器及万用表定位问题，整理技术文档与测试记录。","source_refs":["skill.toolchain","skill.debug_tools","skill.docs"]},
+    {"label":"AI工具","text":"熟练使用Codex、Claude Code、DeepSeek Harness、ZCode搭建工作流并实现快速产品设计与开发。","source_refs":["selected-pdf-10"]}
+  ],
+  "metric_change": {"old":"99%","new":"98%","source_ref":"user-metric-20261011"},
+  "packet_loss": {"text":"并在运行期间数据丢包率低于5%","status":"user_confirmed","source_ref":"user-packet-loss-20261018","user_answer":"已有实测，保留；我会补充测试条件","limits":"保留原文适用范围；测试距离、报文总数、重试与统计口径待用户补充，不增加新的保证。"}
+}
