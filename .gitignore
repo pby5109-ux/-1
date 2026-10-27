@@ -1,0 +1,5 @@
+# Short-lived coordination leases and regenerable CPython bytecode only.
+/.workspace-locks/*.lock
+**/__pycache__/
+*.pyc
+*.pyo

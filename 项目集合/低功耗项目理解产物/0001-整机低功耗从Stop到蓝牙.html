@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>整机低功耗：从STM32 Stop到DX-BT24</title>
-  <link rel="stylesheet" href="../assets/lesson.css">
+  <link rel="stylesheet" href="../../assets/lesson.css">
 </head>
 <body>
 <section id="update-20260917" style="border:2px solid #176b52;background:#eefaf4;color:#173b30;padding:16px;margin:16px 0;border-radius:8px">
@@ -126,7 +126,7 @@ AT+PWRM0       // 最后执行</pre>
   <p class="lead">下一步先确认DX-BT24 LINK-STATUS和可控供电的实际接线，再将这份状态机落到源码，不凭空指定GPIO。</p>
   <section id="oled-on-demand">
     <h2>13. 新增：把OLED改为按键查看界面</h2>
-    <p>本节补充OLED按需供电设计，不改写前文历史蓝牙方案，不表示源码已经实现。详细选型和边界见<a href="01-低功耗系统设计决策与实施边界.md">决策文档第13节</a>；当前实施状态只看<a href="../记忆与产物/00-项目接续记忆.md">接续记忆</a>。</p>
+    <p>本节补充OLED按需供电设计，不改写前文历史蓝牙方案，不表示源码已经实现。详细选型和边界见<a href="01-低功耗系统设计决策与实施边界.md">决策文档第13节</a>；当前实施状态只看<a href="../../记忆与产物/00-项目接续记忆.md">接续记忆</a>。</p>
     <p>对3.3V插接OLED，可增加小转接板：高边负载开关只控制OLED VCC，MCU和AHT20保持供电；普通按键接MCU，作为现场查看请求。</p>
     <div class="flow">默认屏幕关闭 → 按键EXTI唤醒 → 恢复时钟并消抖 → 开电源并等稳定
 → 接通OLED信号支路 → 初始化并重绘 → 显示最近有效值和更新时间

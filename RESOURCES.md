@@ -8,9 +8,9 @@
   两个项目已经由源码、配置、构建产物和本地手册核对的事实基线。用于所有项目问题、引脚、数据流和缺陷判断。
 - `D:\APP\project_practice\sensor_project\sensor.design`
   传感器终端唯一源码。历史提交`d46bd46`新增LoRaDebug软件变体、协议层和节点状态机；`59bc46b`新增在线PC串口网关、流式组帧、动态ACK、有界去重和CSV日志。用于裸机循环、UART DMA、RTC Stop和LoRa教学；当前分支及远端状态须现场核对，不沿用旧的“尚未推送”表述。
-- `低功耗项目理解产物/04-2026-08-27-源码支撑的低功耗LoRa一日教学总纲.md`
+- `项目集合/低功耗项目理解产物/04-2026-08-27-源码支撑的低功耗LoRa一日教学总纲.md`
   8月27日课程顺序、代码证据、验收线和RF未实测边界。
-- `低功耗项目理解产物/08-LoRa剩余知识总览-无线参数可靠性故障与验收.html`
+- `项目集合/低功耗项目理解产物/08-LoRa剩余知识总览-无线参数可靠性故障与验收.html`
   用户停止逐题教学后生成的完整阅读资料，覆盖模块预配置、LEVEL/BW/SF/CR/功率、ACK状态机、多节点、RSSI、故障树、实物测试和面试表达。
 - `lessons/0004-lora-from-zero-implementation.html`
   从两个模块透明对传开始，逐步加入STM32 UART、M0/M1/AUX、18B协议、DMA、ACK、网关和RTC Stop，并解释现有LoRa函数的职责、变量生命周期与两层重试。
@@ -55,7 +55,7 @@
 - [AOS AO3401A数据手册](https://www.aosmd.com/res/data_sheets/AO3401A.pdf)：3.3V场景P-MOS高边原型，按VGS和RDS(on)而非只看阈值电压选型。
 - [TI TMUX1121/1122/1123数据手册](https://www.ti.com/lit/ds/symlink/tmux1122.pdf)：双SPST信号开关；1121高使能、1122低使能，不可混接。
 - [TI：断电保护与反向供电](https://www.ti.com/document-viewer/lit/html/SCDA015)：信号路径高阻、ESD倒灌及开关自身供电前提。
-- `低功耗项目理解产物/01-低功耗系统设计决策与实施边界.md`第13节和同目录`0001-整机低功耗从Stop到蓝牙.html#oled-on-demand`：按键查看、软件关屏与硬断电的取舍、共享I²C隔离和RTC期限。
+- `项目集合/低功耗项目理解产物/01-低功耗系统设计决策与实施边界.md`第13节和同目录`0001-整机低功耗从Stop到蓝牙.html#oled-on-demand`：按键查看、软件关屏与硬断电的取舍、共享I²C隔离和RTC期限。
 - 本地CH1116手册第33页：`C:\Users\彭\OneDrive\Desktop\各类外设参考手册\OLED驱动芯片手册_CH1116-defbfae74f48bf57105d60d9d097c386.pdf`，确认0xAE/0xAF及0xAD、0x8A/0x8B命令。
 
 ## Wisdom (Communities)

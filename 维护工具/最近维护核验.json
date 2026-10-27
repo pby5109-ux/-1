@@ -1,5 +1,430 @@
 {
   "schema_version": 1,
+  "last_maintenance_entry": "obsolete_project_cleanup_20261026",
+  "obsolete_project_cleanup_20261026": {
+    "date": "2026-10-26",
+    "owner": "01a09471-1093-7640-a730-36bc9ca37961",
+    "task": "用户要求检查D:/APP/project是否有用，无用则删除",
+    "status": "complete",
+    "explicit_target": "D:/APP/project",
+    "scope_authorization": "用户本轮明确指定工作区外的旧project目录；仅清理该目标，不扩大到project_practice或其他兄弟目录",
+    "git_before": { "branch": "master", "head": "7073e00", "existing_changes_preserved": true },
+    "evidence": "目录完整枚举仅2个文件、4个子目录，无重解析点或Git元数据；2026-10-04接续与专题README已明确其知识及简历候选完成归集。逐份全文核对，现有技术记录、参考资料与简历讨论覆盖旧稿内容，并有后续修订；旧目录仅剩历史路径说明，无有效文件链接或运行依赖。",
+    "files": [
+      {
+        "path": "D:/APP/project/_practice/codex-project/实习集合/实习-威思顿/技术学习与实习记录.md",
+        "bytes": 4416,
+        "sha256": "03F8F11E90477058458589124EA5722548800FE20CF31DFFD55770D2F3877510",
+        "reason": "2026-09-26学习记录已完整归集并由当前专题更新，无独立未归档内容",
+        "replacement": "实习集合/实习-威思顿/技术学习与讨论记录.md；参考资料.md；学习框架与训练安排.md",
+        "rebuild": "无需重建旧误路径，继续读取现有专题资料；历史内容已保留并补充修正",
+        "absence_verified": true
+      },
+      {
+        "path": "D:/APP/project/_practice/codex-project/实习集合/实习-威思顿/实习经历简历草稿.md",
+        "bytes": 1307,
+        "sha256": "E7C89848AABEA5FFE1BD337261B903C9AD4932D4BDA1F0456E8DCC7513F00DD8",
+        "reason": "早期三条学习型候选已由简历内容讨论保留历史并完整替代，旧措辞部分已被用户修正",
+        "replacement": "实习集合/实习-威思顿/简历内容讨论.md",
+        "rebuild": "无需重建旧误路径，历史候选及后续稿读取现有简历讨论",
+        "absence_verified": true
+      }
+    ],
+    "empty_directories_to_remove": [
+      "D:/APP/project/_practice/codex-project/实习集合/实习-威思顿",
+      "D:/APP/project/_practice/codex-project/实习集合",
+      "D:/APP/project/_practice/codex-project",
+      "D:/APP/project/_practice",
+      "D:/APP/project"
+    ],
+    "validation": { "target_absence_verified": true, "current_topic_preserved": true, "topic_body_hashes_unchanged": "6/6专题正文SHA256与清理前一致；README只更新旧路径移除说明", "directories_removed": 5, "files_removed": 2, "bytes_removed": 5723, "method": "apply_patch仅删除已登记的2个文件；5个目录逐层解析路径并检查为空后非递归删除；未改Git索引或工程源码" }
+  },
+  "maintenance_20261025": {
+    "date": "2026-10-25",
+    "owner": "01a00dba-6f26-7130-9e02-6429fbc78613",
+    "task": "工作区运行状况巡检、迁移链接修复与可重建字节码清理",
+    "status": "complete",
+    "workspace": "D:/APP/project_practice/codex-project",
+    "git_before": {
+      "branch": "master",
+      "head": "7073e00",
+      "existing_changes_preserved": true
+    },
+    "links_before": {
+      "documents": 137,
+      "local_links": 305,
+      "broken": 17
+    },
+    "repair_plan": {
+      "repointed_migration_links": 15,
+      "historical_missing_paths_marked": 2,
+      "css_links": 4
+    },
+    "deleted_files": [
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\jd-resume-tailor\\scripts\\__pycache__\\validate_resume_content.cpython-312.pyc",
+        "bytes": 13188,
+        "sha256": "0CEA1B4D67DEE75E90AC9915B5F234CC978A8FCD51B2948FDB3559D257F2E9C5",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\jd-resume-tailor\\scripts\\validate_resume_content.py",
+        "source_exists": true,
+        "source_sha256": "1E8AB764B7D164794B41A71EFDE6B96EE73F9A0881A71094EF1111E246833903",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\__pycache__\\__init__.cpython-312.pyc",
+        "bytes": 715,
+        "sha256": "4990427AAC2A9C824C2E09F353B9DB99B15118A07A00A16B0692C13EC1B43530",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\__init__.py",
+        "source_exists": true,
+        "source_sha256": "399F8DE397746C980C547F7C345D2C90D4CB2922CF7E9532C78B31C088951118",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\__pycache__\\table.cpython-312.pyc",
+        "bytes": 184,
+        "sha256": "06686D064F4B03F3769732FDE7C533169088EAB362D0CD2BAD89C285B85C62EC",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\table.py",
+        "source_exists": true,
+        "source_sha256": "8AB84ABC4A59FF83CDFBE4C95CCDAF6EB4AC438415BDEE3747D0B2D8A65E2713",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\__pycache__\\utils.cpython-312.pyc",
+        "bytes": 184,
+        "sha256": "7C35E2D77014D8767C0258672A35EF864D2F06918DA08E00A7A896B055DC4BF2",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\fitz\\utils.py",
+        "source_exists": true,
+        "source_sha256": "4E72CA23D6BAD3E263113F4A8FDA7B1A5E0CA00BE96847031BD64FEF2C2FA130",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\__init__.cpython-312.pyc",
+        "bytes": 1081219,
+        "sha256": "3AF5DCC5AB765B0C0A1D076A6C908B37910EDEF8F51FB7C139489AC5DD63D5CE",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__init__.py",
+        "source_exists": true,
+        "source_sha256": "E8CDB45ED0AFA21F919CEC30E69B7B572C3DB7BC80D203E4E07E4C7EA2B19CCE",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\__main__.cpython-312.pyc",
+        "bytes": 48381,
+        "sha256": "871F74715C353BAFAF617850115AC1D93E317D1632786322484238288116316A",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__main__.py",
+        "source_exists": true,
+        "source_sha256": "763A97305937D0665A43D4B6920924EFB15D8F87795EC2926C09F9DA69BFD2CB",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_apply_pages.cpython-312.pyc",
+        "bytes": 8656,
+        "sha256": "F3DA82430D465DB77369F0EA9EA6553FD38AE7C7FDDE51230A55B9DF4BF80979",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_apply_pages.py",
+        "source_exists": true,
+        "source_sha256": "720B52015D70320BB3603C1A724C0741C9B53E87A9943EC96A911EF38B5BD457",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_build.cpython-312.pyc",
+        "bytes": 711,
+        "sha256": "ED0FC3BF76DECD88E592994336804D394545F6F6EA5B0B5E0BB8FFFFD627C6A8",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_build.py",
+        "source_exists": true,
+        "source_sha256": "6561CED4E8B28638D0CA36A028D4F91D1AC2CA309750930283F125AA0B04CAE2",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_table_headers.cpython-312.pyc",
+        "bytes": 54469,
+        "sha256": "FDBDC0BA227A160C869EF32A27C97257D9AF12A883D6E7AE6A18A5DFD735F6A1",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_table_headers.py",
+        "source_exists": true,
+        "source_sha256": "881A63053EBCB2CE48C87689380774391BBE09EB0996A14B8DF7F0B2465E9215",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_table_refine.cpython-312.pyc",
+        "bytes": 47961,
+        "sha256": "5787D660BD8311D4121AC9BAAFBF2F0E2BCB785FE6858F1E25844F817552B562",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_table_refine.py",
+        "source_exists": true,
+        "source_sha256": "37E9F101C3285633A4D62181F008FA36DABA1EFDE30EDA1BB7395908AA3AF5D2",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_table_spans.cpython-312.pyc",
+        "bytes": 30726,
+        "sha256": "5700E3A36D1CED90DEA57B86E7F6A8C098FA0BD7FBC7E8B16B04C4FED10FCF52",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_table_spans.py",
+        "source_exists": true,
+        "source_sha256": "CAEC10E8E755984E14F3B27463B9E725897D7B98C22E4B447951A9C563B5F949",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_table_union.cpython-312.pyc",
+        "bytes": 16831,
+        "sha256": "8208A19E4DFCE6E44EE98DD52475696EDAB38AEDC790C9F1C3DBEC0BC6A1948A",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_table_union.py",
+        "source_exists": true,
+        "source_sha256": "EFD332E5B513C758425A53C8B8F6B5B99C15BDDA7F884818EE62E406D9265592",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\_wxcolors.cpython-312.pyc",
+        "bytes": 15667,
+        "sha256": "A96E06932D42152F2F6E021ADD8DA139529E4B770B846AC2373C74E9C96F7838",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\_wxcolors.py",
+        "source_exists": true,
+        "source_sha256": "02363FAAB89D46857E25E7CA88707CA2975D36754A4FA9FD1D15081FC523AC1D",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\extra.cpython-312.pyc",
+        "bytes": 13237,
+        "sha256": "228B4FB72F329DE84F3328E89E2A29F2C7775D962579102C0A222C8EB0297530",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\extra.py",
+        "source_exists": true,
+        "source_sha256": "1888AFFC6F914EDEF4730C87BCB19849D5F10C9F65334FD329E728565A9980A3",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\mupdf.cpython-312.pyc",
+        "bytes": 3670581,
+        "sha256": "F411ECDBB9B214F682062B876053FBEA055B2E21FFA81A90DAD5D72F2C83D396",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\mupdf.py",
+        "source_exists": true,
+        "source_sha256": "527BB3B4BE763143666049EFE255092D847A9A13E15A943FEF63135BC6653186",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\pymupdf.cpython-312.pyc",
+        "bytes": 176,
+        "sha256": "FD80B67FF86347852B39E8C4D37F24AA3DF7A2B6D8E14E0B4F4483F562F8F887",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\pymupdf.py",
+        "source_exists": true,
+        "source_sha256": "4E6040168B78F7DDF96F6CE4B0DDB59E6702A979B55704E62C38B9B430596352",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\table.cpython-312.pyc",
+        "bytes": 121554,
+        "sha256": "9835396C1398DACEE21E205B493AE3C397ED5F34740BCFDE39F25049CE974AEF",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\table.py",
+        "source_exists": true,
+        "source_sha256": "C6523E32DA763BD2B84E7B0CB3D221C9938FF1DC06C19A2D0D97D3635999D6CA",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\__pycache__\\utils.cpython-312.pyc",
+        "bytes": 46323,
+        "sha256": "8A1A2168CB349B97F82BDAB5021A96E76B8B4EB22AEE906E1FC3B9AE8A739236",
+        "source": "D:\\APP\\project_practice\\codex-project\\简历\\中间文件\\构建缓存\\MCU平台-20261018\\packages\\pymupdf\\utils.py",
+        "source_exists": true,
+        "source_sha256": "CC172067FE277068A3ABDB9C8886EFBFACAABC9B261F82ECB686ECD85FB7622D",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      },
+      {
+        "path": "D:\\APP\\project_practice\\codex-project\\项目集合\\电赛视觉加灰度\\中间文件\\__pycache__\\test_threshold_control.cpython-311.pyc",
+        "bytes": 21344,
+        "sha256": "C45FB5157DAD6262703994D2530D66C39DE74624AD62D92338DA734976E5F997",
+        "source": "D:\\APP\\project_practice\\codex-project\\项目集合\\电赛视觉加灰度\\中间文件\\test_threshold_control.py",
+        "source_exists": true,
+        "source_sha256": "69FD29CA9CED9F057FB2650A372FD1A205B592AC61D17731EB4E882456F19306",
+        "reason": "由保留的.py源文件生成的CPython字节码缓存",
+        "rebuild": "以文件名标明的CPython版本导入对应源模块，或运行原生成/验证脚本；不需要重新下载依赖",
+        "status": "removed",
+        "absence_verified": true,
+        "source_hash_unchanged": true
+      }
+    ],
+    "verification": {
+      "status": "passed",
+      "protected_files_checked": 685,
+      "unexpected_protected_changes": [],
+      "history_properties_preserved": true,
+      "patch_content_check": "All 15 edited files match planned changes; memory differs from the reconstruction only by the intentionally deleted header line's empty newline.",
+      "git_diff_check": "passed; Git prints LF/CRLF conversion notices for existing text policy, no whitespace errors",
+      "scope": "Local destination existence only. No network checks, fragment validation, firmware builds or hardware tests."
+    },
+    "retained": [
+      "tmp/sensor_before_20260825/",
+      "题库源数据/脚本/验证证据",
+      "简历母版及成品",
+      "依赖源码与动态库",
+      "Office占用锁，未核实是否仍在使用"
+    ],
+    "open_findings": [
+      {
+        "type": "gitlink_without_gitmodules",
+        "path": "项目集合/电赛视觉加灰度/2025-Dian-Sai",
+        "evidence": "git ls-files --stage=160000 d510c8604a0838ceccf312719b793e3d7109c036; git submodule status: no submodule mapping found",
+        "action": "保留嵌套.git及其改动；未转换仓库、修改索引或联网获取"
+      }
+    ],
+    "links_after": {
+      "documents": 137,
+      "local_links": 311,
+      "broken": 0,
+      "navigation_documents": 13,
+      "navigation_local_links": 146,
+      "navigation_broken": 0
+    },
+    "changed_files": [
+      {
+        "path": "AGENTS.md",
+        "before_sha256": "F48BD08E223B2DD6CC49EE23B9012848634B1CA2F25E0A7CF147781A63B5B76C",
+        "after_sha256": "A928DA47B1FD1B6388480EA3A5E40DE9D4DE00DA78574299A8320EA8DDFD69C9"
+      },
+      {
+        "path": "README.md",
+        "before_sha256": "49051BBB77DFA704D9A21960E20A6225A57B56EC8906EDF959FE16D8B76ABFC7",
+        "after_sha256": "3B210DD6F0C79B8B37E30CB4E07B0F4A8E98F3E4A78BF984AF4F9E77F672C6AB"
+      },
+      {
+        "path": "记忆与产物/README.md",
+        "before_sha256": "F1FCFAE24389DCD26DB3334FC0BB4503B28FE51A69EF0757B6E0F88B39F36A5E",
+        "after_sha256": "F5F7B7B89B2858C715C5BD5482D716C021F6E01C8092B230B504DB3DBA1013CD"
+      },
+      {
+        "path": "RESOURCES.md",
+        "before_sha256": "5552869FE19964F635F123AFD7A9DB5E2910531079F892BB24CB637104C9073F",
+        "after_sha256": "903ECF78FAA146394A62B3D2FC42C9898B49BB55471DBBE412C086E742BA8870"
+      },
+      {
+        "path": "记忆与产物/00-项目接续记忆.md",
+        "before_sha256": "A081EBC0554130D521F961ED809C338A180512285C1E0DEFB378C2A0376CA7AD",
+        "after_sha256": "D5E904AC245EA39B8C20E63E180EB6450539318B894B26647132D1AF2D6E6A4E"
+      },
+      {
+        "path": "lessons/0006-low-power-lora-sensor-node-interview-masterclass.html",
+        "before_sha256": "18FD7269DE676977FCE668D5AB4938EE3281D581AC1A3837AFB3456C5A70F94D",
+        "after_sha256": "0ED9D33E423DD9C61171D4E125D5FE3EAC70596509C8BDEC9FEFEBB78D7665E6"
+      },
+      {
+        "path": "项目集合/电赛视觉加灰度/代码与硬件初步核对.md",
+        "before_sha256": "1856335CB7BF32C0F7B6D53A32B03F16609CD4A4C600D0E708E4DCCBEC4EC2ED",
+        "after_sha256": "C5CD3A2F268085707FE9423B754A461B8CB3464EC997C57EC8FA62614A3102F6"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/0001-整机低功耗从Stop到蓝牙.html",
+        "before_sha256": "B3AADBA650F4CB60842E690CED3831F5D2F39EDA2747E269DB2DD1143122B488",
+        "after_sha256": "5AA1E2A12BA90E01F171FC8E28D2BE22E26C9B9CE1B424F7C0F19996E940FB58"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/01-低功耗系统设计决策与实施边界.md",
+        "before_sha256": "A4F77D9B2515D409886A1B5DB61D27BA43FD462684C9BDCFA6423E1F53C5695D",
+        "after_sha256": "597F110F32BCD63CFC1FB807E99A9522A5CF90554766C359956203620D578F4F"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/05-LoRa源码四层完成链.html",
+        "before_sha256": "F66C65DEB929D2BA46F8C60D3793D53C7EF3F0779CD35FEAAC2CAF44C464B426",
+        "after_sha256": "B51E52627446DFE8D74D210D34FDE13EE192A79879E5F949F839147BA0DFCB78"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/06-LoRa从UART到空中再到ACK.html",
+        "before_sha256": "7F725310BA5207057ADC612376B0B96F416375E3DA8AD77A776DCD68645402EF",
+        "after_sha256": "3C636A9AA55EEED04317950C83BD186BC3D3C015D58C5DEBBAD5714E30C92360"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/08-LoRa剩余知识总览-无线参数可靠性故障与验收.html",
+        "before_sha256": "622518E371CC7F8F6B3A04DB54D4635FCBE66657F11212848FF1D2223D175DB3",
+        "after_sha256": "2958B677CF01DEFE2679F4E5F511FC29F4F1911E3746BB2AF611281792682ABB"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/09-低功耗节点源码教学主线与闭卷自测.md",
+        "before_sha256": "EBEBB3496B6C3483D42ED335404BA3E65215AFD657D65E858403E97635B6D119",
+        "after_sha256": "493D58F5B0C7F2ADD3EF9A97CD8E6F7C35C13A2B0EAB0354BF44668E5D875427"
+      },
+      {
+        "path": "项目集合/低功耗项目理解产物/11-低功耗节点学习问答与题目索引.md",
+        "before_sha256": "D946D77A898052387A2ED7378F585FF9A7C589C8D44052CC3FADADEAAE5B1227",
+        "after_sha256": "CA9389017D6BB1D16A2C0065BA9CD541125FB90AD9375B49720FF71E17C000D4"
+      }
+    ],
+    "added_files": [
+      {
+        "path": "维护工具/检查工作区.ps1",
+        "sha256": "01C2BB2215DB4734798F04A52DB88AB35D4071CA079911CD6277E8A256B5541F"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "A2087CDA2CFF7EB177F6DE3F140F73A404A3EE64E6A7D60EEA03FCBFB4FC262A"
+      }
+    ],
+    "deleted_bytes": 5192107
+  },
   "application_records_location_20261017": {
     "date": "2026-10-17",
     "owner": "01a148b0-7f00-7741-b9a9-a6ece76e0e54",
