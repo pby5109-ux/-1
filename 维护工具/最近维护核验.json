@@ -1,6 +1,347 @@
 {
   "schema_version": 1,
-  "last_maintenance_entry": "obsolete_project_cleanup_20261026",
+  "last_maintenance_entry": "full_cleanup_20261027",
+  "full_cleanup_20261027": {
+    "date": "2026-10-27",
+    "owner": "01a00dba-6f26-7130-9e02-6429fbc78613",
+    "task": "全工作区文件盘点、重复副本判定与旧预览清理",
+    "status": "complete",
+    "workspace": "D:/APP/project_practice/codex-project",
+    "scope": "仅本工作区；跳过.git内部、重解析点和2025-Dian-Sai嵌套仓库；历史归档/参考工程只读盘点",
+    "git_before": {
+      "branch": "master",
+      "head": "5687af2",
+      "status": [
+        " M README.md",
+        " D 简历/简历修改版本/模板简历（随时跟新）/模板简历/小改内容部分/彭博裕-嵌入式软件工程师-10.pdf",
+        " M 简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-10.pdf",
+        " M 维护工具/最近维护核验.json",
+        " M 记忆与产物/00-项目接续记忆.md",
+        " m 项目集合/电赛视觉加灰度/2025-Dian-Sai",
+        "?? 简历/简历修改版本/模板简历（随时跟新）/模板简历/小改内容部分/彭博裕-嵌入式软件工程师.pdf"
+      ],
+      "gitlinks": [
+        "160000 d510c8604a0838ceccf312719b793e3d7109c036 0\t项目集合/电赛视觉加灰度/2025-Dian-Sai"
+      ],
+      "has_gitmodules": false
+    },
+    "inventory_before": {
+      "files": 1782,
+      "bytes": 250744231,
+      "duplicate_groups": 85
+    },
+    "links_before": {
+      "documents": 137,
+      "local_links": 313,
+      "missing": 0
+    },
+    "deletions": [
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/影微创新-20260929/彭博裕-嵌入式软件工程师-10.pdf",
+        "bytes": 372186,
+        "sha256": "FF8A60F2ECC67FCC4B6636BBE736877A2F13BE1FE737B20DE01DFC31B4DD30FA",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/影微创新-嵌入式软件工程师-20260929/彭博裕-嵌入式软件工程师-10.pdf",
+        "retained_sha256": "FF8A60F2ECC67FCC4B6636BBE736877A2F13BE1FE737B20DE01DFC31B4DD30FA",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/青岛乾程科技-20260929/彭博裕-嵌入式软件工程师-01.pdf",
+        "bytes": 376435,
+        "sha256": "E49B5A2A360C238330768673D7AF88FB1259C6D2577DE2DADD8019F62970B9C0",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/青岛乾程科技-嵌入式软件工程师-20260929/彭博裕-嵌入式软件工程师-01.pdf",
+        "retained_sha256": "E49B5A2A360C238330768673D7AF88FB1259C6D2577DE2DADD8019F62970B9C0",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/无人机配套MCU-20260928/彭博裕-MCU嵌入式软件开发工程师-10.pdf",
+        "bytes": 373035,
+        "sha256": "F1409596A19394FD5F78B02527DEA730EC1D0177A5AAF01B22F16CD8C381E429",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/无人机配套MCU嵌入式-深圳-20260928/彭博裕-MCU嵌入式软件开发工程师-10.pdf",
+        "retained_sha256": "F1409596A19394FD5F78B02527DEA730EC1D0177A5AAF01B22F16CD8C381E429",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/自动驾驶-20260930/彭博裕-自动驾驶系统软件工程师-10.pdf",
+        "bytes": 372413,
+        "sha256": "5B8D80D5B0FE681CFD7B12C6C34311D278D5DFA7824623FFA397AB8E2694071D",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/自动驾驶系统软件工程师-20260930/彭博裕-自动驾驶系统软件工程师-10.pdf",
+        "retained_sha256": "5B8D80D5B0FE681CFD7B12C6C34311D278D5DFA7824623FFA397AB8E2694071D",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/智能产品MCU-20260929/彭博裕-嵌入式软件工程师-10.pdf",
+        "bytes": 372240,
+        "sha256": "8D3395021D26366526E93E63C2B07C04F773561578AE35B604C9B6AE844D2EFA",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/智能产品MCU嵌入式-20260929/彭博裕-嵌入式软件工程师-10.pdf",
+        "retained_sha256": "8D3395021D26366526E93E63C2B07C04F773561578AE35B604C9B6AE844D2EFA",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/芜湖车载通信-20260929/彭博裕-嵌入式工程师-10.pdf",
+        "bytes": 372223,
+        "sha256": "D3A0915F76EADAE57905E73A068D043CBE5362A85AF9CBE79488D6A27C3C3A72",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/芜湖车载通信-嵌入式工程师-20260930/彭博裕-嵌入式工程师-10.pdf",
+        "retained_sha256": "D3A0915F76EADAE57905E73A068D043CBE5362A85AF9CBE79488D6A27C3C3A72",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/固德威-20260929/彭博裕-ARM软件工程师-10.pdf",
+        "bytes": 371221,
+        "sha256": "C3E3361D1A3ACCE608232C3094E1EFD41C45879B222EA16400F9A36C83C753E7",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/固德威-ARM软件工程师-20260929/彭博裕-ARM软件工程师-10.pdf",
+        "retained_sha256": "C3E3361D1A3ACCE608232C3094E1EFD41C45879B222EA16400F9A36C83C753E7",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20260921/华曦达-试short.pdf",
+        "bytes": 353551,
+        "sha256": "811888F20720BBEC393AA58D2E50E50A6A84CBFEB4B16BCB2A335B5CD9381AB7",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/定制投递/华曦达-嵌入式开发工程师-20260926/彭博裕-嵌入式开发工程师-10.pdf",
+        "retained_sha256": "811888F20720BBEC393AA58D2E50E50A6A84CBFEB4B16BCB2A335B5CD9381AB7",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/销售简历-20260927/彭博裕-客户经理.docx",
+        "bytes": 245764,
+        "sha256": "709EDE7B9CEE28D10924C9F2D8F4764194D81F9DA5D61CE27626B30CB95ECC5F",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/旧版简历/10.7/彭博裕-客户经理.docx",
+        "retained_sha256": "709EDE7B9CEE28D10924C9F2D8F4764194D81F9DA5D61CE27626B30CB95ECC5F",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20260927/客户经理-试9.docx",
+        "bytes": 245764,
+        "sha256": "709EDE7B9CEE28D10924C9F2D8F4764194D81F9DA5D61CE27626B30CB95ECC5F",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/旧版简历/10.7/彭博裕-客户经理.docx",
+        "retained_sha256": "709EDE7B9CEE28D10924C9F2D8F4764194D81F9DA5D61CE27626B30CB95ECC5F",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20261003/彭博裕-嵌入式软件工程师-01.docx",
+        "bytes": 246838,
+        "sha256": "2564753438D549EE43EE1A32AD85F7CAB8848D8089EBE25612631AF2C001C371",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-01.docx",
+        "retained_sha256": "2564753438D549EE43EE1A32AD85F7CAB8848D8089EBE25612631AF2C001C371",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20261007/彭博裕-嵌入式软件工程师-10.docx",
+        "bytes": 246788,
+        "sha256": "64EA78FE1C6811E39AAADC4585BEB5AB2AA2D5066AD72CBDE9D0A180915374C6",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-10.docx",
+        "retained_sha256": "64EA78FE1C6811E39AAADC4585BEB5AB2AA2D5066AD72CBDE9D0A180915374C6",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20260927/彭博裕-嵌入式软件工程师-01.docx",
+        "bytes": 246674,
+        "sha256": "B4819DDF5F12164DD947E95E7709C1D70B889D40A03BF07040C37DED9568B9B9",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/旧版简历/10.5/彭博裕-嵌入式软件工程师-01.docx",
+        "retained_sha256": "B4819DDF5F12164DD947E95E7709C1D70B889D40A03BF07040C37DED9568B9B9",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20260927/彭博裕-嵌入式软件工程师-10.docx",
+        "bytes": 246631,
+        "sha256": "E911EF38DCA4D0C6C1BFABF012D5BD6611AA3C25871303F33D1104E2C2BAA86E",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/旧版简历/10.7/彭博裕-嵌入式软件工程师-10.docx",
+        "retained_sha256": "E911EF38DCA4D0C6C1BFABF012D5BD6611AA3C25871303F33D1104E2C2BAA86E",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20261007/彭博裕-嵌入式软件工程师-00.docx",
+        "bytes": 246296,
+        "sha256": "C60E632F89C77D0E66577CBE8FEA9A4AF183D617B850F1243D9E2109C443044D",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-嵌入式软件工程师-00.docx",
+        "retained_sha256": "C60E632F89C77D0E66577CBE8FEA9A4AF183D617B850F1243D9E2109C443044D",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20260927/彭博裕-嵌入式软件工程师-00.docx",
+        "bytes": 246136,
+        "sha256": "2DD7185EC5B1542D39E845F0DF19231F47C0D47E9F72BA2496A2AD59F9F44AF9",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/旧版简历/10.7/彭博裕-嵌入式软件工程师-00.docx",
+        "retained_sha256": "2DD7185EC5B1542D39E845F0DF19231F47C0D47E9F72BA2496A2AD59F9F44AF9",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/简历/中间文件/模板更新-20261007/彭博裕-客户经理.docx",
+        "bytes": 245801,
+        "sha256": "5EC0D0A47C8DF1718CB5935E04BA9BB4BE28613A61938AA67EE6E0E2860BBD94",
+        "reason": "已完成生成任务的中间导出副本；与保留的正式投递稿/当前或历史模板逐字节相同，不再承担唯一输入或独立证据职责",
+        "retained_copy": "D:/APP/project_practice/codex-project/简历/简历修改版本/模板简历（随时跟新）/模板简历/彭博裕-客户经理.docx",
+        "retained_sha256": "5EC0D0A47C8DF1718CB5935E04BA9BB4BE28613A61938AA67EE6E0E2860BBD94",
+        "rebuild": "从retained_copy复制回原路径即可逐字节恢复；保留原生成脚本和批准/核验记录",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/tmp/c-pdf-source-check/concise-p1.png",
+        "bytes": 129543,
+        "sha256": "93B633E9B5C3EE0692E8420BCDDF0CB406A2346964823C1EF1DCE49E65D62B21",
+        "reason": "指定源PDF的单页预览缓存；题库正文、PDF提取及逐题检查报告均另存并保留",
+        "retained_copy": "E:/嵌入式学习资料（开发板加freertos）/面试八股文/八股文-购买/嵌入式-面试题八股文&面试题库/1-嵌入式软件-面试八股文资料/3-嵌入式八股文精简版.pdf",
+        "retained_sha256": "B2F799E603361CF6FB43C8DD7E20322B1ED0C357AEAA8C1B0DBF1CE238951514",
+        "rebuild": "先创建原输出目录，再运行：pdftoppm -f 1 -l 1 -singlefile -scale-to-x 848 -scale-to-y 1200 -png <retained_copy> <原输出去扩展名>",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/tmp/c-pdf-source-check/essential-p36.png",
+        "bytes": 247844,
+        "sha256": "A4D41DE5CB3630800BEE0F34A8A6726F4CDCA6AB99BE188A910542C6E357BE68",
+        "reason": "指定源PDF的单页预览缓存；题库正文、PDF提取及逐题检查报告均另存并保留",
+        "retained_copy": "E:/嵌入式学习资料（开发板加freertos）/面试八股文/八股文-购买/嵌入式-面试题八股文&面试题库/1-嵌入式软件-面试八股文资料/2-2026年更新-嵌入式八股文精华版.pdf",
+        "retained_sha256": "F10BE971D10822E6A2AB02D8139B5C220DF8C795D3174D287616964B0B307025",
+        "rebuild": "先创建原输出目录，再运行：pdftoppm -f 36 -l 36 -singlefile -scale-to-x 990 -scale-to-y 1400 -png <retained_copy> <原输出去扩展名>",
+        "status": "removed",
+        "absence_verified": true,
+        "retained_hash_unchanged": true
+      }
+    ],
+    "empty_directories": [
+      {
+        "path": "D:/APP/project_practice/codex-project/tmp/c-pdf-source-check",
+        "reason": "2张可重建预览删除后检查为空，非递归移除",
+        "status": "removed",
+        "absence_verified": true,
+        "rebuild": "需要时使用New-Item -ItemType Directory创建原目录；不需要恢复空目录中的任何数据"
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/tmp/c-training-pdf-check",
+        "reason": "检查为空且无正式产物，仅保留过往用途路径记录",
+        "status": "removed",
+        "absence_verified": true,
+        "rebuild": "需要时使用New-Item -ItemType Directory创建原目录；不需要恢复空目录中的任何数据"
+      },
+      {
+        "path": "D:/APP/project_practice/codex-project/tmp/resume_framework_generator",
+        "reason": "检查为空的旧生成临时目录，无文件",
+        "status": "removed",
+        "absence_verified": true,
+        "rebuild": "需要时使用New-Item -ItemType Directory创建原目录；不需要恢复空目录中的任何数据"
+      }
+    ],
+    "retained_reasons": [
+      "母版/正式投递/归档/证书打包承担不同角色，不以同哈希统一删减",
+      "TI参考工程同内容库、链接脚本、启动文件按工程路径保留",
+      "PDF提取、题库JSON、生成/验证脚本、历史失败或排版证据保留",
+      "MCU平台-20261018成品仍待用户确认，试排PDF、PNG及packages依赖保留",
+      "WPS进程仍在，162B Office占用文件用途未完全确认，保留",
+      "tmp/sensor_before_20260825源码历史快照、当前主资料及未提交用户改动保留"
+    ],
+    "validation": {
+      "status": "passed",
+      "before_files": 1782,
+      "after_files": 1763,
+      "deleted_absent": true,
+      "protected_files": 1760,
+      "unexpected_changes": [],
+      "documents_checked": 137,
+      "local_links_checked": 315,
+      "missing_local_links": 0,
+      "json_files_checked": 13,
+      "json_parse_errors": 0,
+      "git_diff_check": "passed",
+      "retained_sources": "19/19存在并与删前SHA256一致",
+      "scope_limit": "这是文件、引用、JSON与Git差量核验，未重新核验题目技术正文、模型/固件功能、网络链接或文内锚点"
+    },
+    "bytes_planned": 5557383,
+    "duplicate_groups_after": 70,
+    "files_removed": 19,
+    "directories_removed": 3,
+    "bytes_removed": 5557383
+  },
+  "post_cleanup_check_20261027": {
+    "date": "2026-10-27",
+    "owner": "01a09471-1093-7640-a730-36bc9ca37961",
+    "task": "用户自行清理后检查工作区文件、资料入口和本地链接",
+    "status": "complete",
+    "workspace": "D:/APP/project_practice/codex-project",
+    "method": "维护工具/检查工作区.ps1 -Scope All；核心入口存在性、威思顿专题正文SHA256及Git删除清单核对",
+    "coverage": "本地文件目标存在性；跳过tmp/历史归档的链接、依赖包、Git内部、重解析点和嵌套仓库；不检查网络、文内锚点、文档技术正文或硬件运行",
+    "documents_checked": 137,
+    "local_links_checked": 313,
+    "missing_local_links": 0,
+    "core_entries_present": "13/13，包括接续记忆、共享训练、正式题库、C题库JSON、三个项目入口、八股文、简历工具及保留源码快照",
+    "meter_topic": "6/6专题正文SHA256与2026-10-26清理核对值一致，另有README；一个月报告、技术讨论、学习安排、简历讨论及参考资料均保留",
+    "source_roots_exist": "四个唯一工程源码目录均存在；仅检查目录存在，未据此声称源码完整或工程验证通过",
+    "git": {
+      "branch": "master",
+      "initial_head": "7073e00",
+      "head_rechecked": "5687af2",
+      "note": "检查期间外部产生10.27提交，本任务重新读取后核对；未自行提交、恢复删除、改动索引或嵌套仓库",
+      "deleted_since_initial_head": "19个已登记的可重建.pyc缓存及1份旧名彭博裕.pdf；同目录现有新版彭博裕-嵌入式软件工程师-10.pdf，不将两者断言字节相同或内容完全等价",
+      "remaining_existing_state": "项目集合/电赛视觉加灰度/2025-Dian-Sai为160000条目且工作区有修改；根目录缺.gitmodules，是2026-10-25已登记的原有映射问题"
+    },
+    "actions": "仅登记检查结果与接续，并使根README的维护导航读取JSON最新条目；未再删除或恢复用户文件"
+  },
   "obsolete_project_cleanup_20261026": {
     "date": "2026-10-26",
     "owner": "01a09471-1093-7640-a730-36bc9ca37961",
